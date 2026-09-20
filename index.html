@@ -1,1 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-2027 西班牙葡萄牙 15天跨年自由行計畫書</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --accent: #e11d48;
+      --accent-warm: #ea580c;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #b91c1c 100%);
+      color: white;
+      padding: 60px 24px 80px;
+      text-align: center;
+      position: relative;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    header h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+    header p { font-size: 1.05rem; opacity: 0.9; max-width: 650px; margin: 0 auto; }
+    .container { max-width: 1050px; margin: -30px auto 0; padding: 0 20px; position: relative; z-index: 10; }
+    .nav-tabs {
+      display: flex; gap: 10px; overflow-x: auto; padding: 8px; background: white;
+      border-radius: 9999px; box-shadow: var(--shadow); margin-bottom: 30px;
+    }
+    .nav-tab {
+      padding: 8px 18px; border-radius: 9999px; font-size: 0.9rem; font-weight: 600;
+      text-decoration: none; color: var(--text-muted); white-space: nowrap; transition: all 0.2s;
+    }
+    .nav-tab:hover, .nav-tab.active { background: var(--primary); color: white; }
+    .section {
+      background: var(--card-bg); border-radius: var(--radius); padding: 28px;
+      margin-bottom: 28px; box-shadow: var(--shadow-sm); border: 1px solid var(--border);
+    }
+    .section-title {
+      font-size: 1.4rem; font-weight: 700; display: flex; align-items: center; gap: 10px;
+      margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 10px;
+    }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+    .info-box {
+      background: #f1f5f9; border-left: 4px solid var(--primary-light); padding: 18px;
+      border-radius: 8px; margin-bottom: 14px;
+    }
+    .info-box.accent { border-left-color: var(--accent); background: #fff1f2; }
+    .info-box.warm { border-left-color: var(--accent-warm); background: #fff7ed; }
+    .info-box h4 { font-size: 1.05rem; margin-bottom: 6px; }
+    .city-card {
+      border: 1px solid var(--border); border-radius: 12px; padding: 18px; background: #fff;
+    }
+    .city-card h3 { color: var(--primary); margin-bottom: 6px; font-size: 1.2rem; }
+    .city-badge {
+      display: inline-block; padding: 2px 8px; font-size: 0.75rem; border-radius: 4px;
+      background: #e0e7ff; color: #3730a3; font-weight: 600; margin-bottom: 8px;
+    }
+    .day-card {
+      border: 1px solid var(--border); border-radius: 12px; margin-bottom: 18px;
+      overflow: hidden; background: #fff;
+    }
+    .day-header {
+      padding: 14px 18px; background: #f8fafc; border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+    }
+    .day-date { font-weight: 700; color: var(--primary); font-size: 1.05rem; }
+    .day-tag {
+      background: #fee2e2; color: #991b1b; padding: 3px 10px; border-radius: 9999px;
+      font-size: 0.8rem; font-weight: 600;
+    }
+    .day-body { padding: 18px; }
+    .timeline-item { position: relative; padding-left: 24px; margin-bottom: 16px; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item::before {
+      content: ""; position: absolute; left: 5px; top: 6px; bottom: -16px;
+      width: 2px; background: #cbd5e1;
+    }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-dot {
+      position: absolute; left: 0; top: 6px; width: 12px; height: 12px;
+      border-radius: 50%; background: var(--primary-light);
+    }
+    .item-title { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+    .item-desc { color: #475569; font-size: 0.92rem; margin-bottom: 6px; }
+    a.link-pill {
+      display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px;
+      background: #e2e8f0; color: #1e293b; text-decoration: none; border-radius: 6px;
+      font-size: 0.8rem; font-weight: 600; margin-right: 6px; margin-top: 4px; transition: all 0.2s;
+    }
+    a.link-pill:hover { background: var(--primary-light); color: white; }
+    .hotel-card {
+      border: 1px solid var(--border); border-radius: 12px; padding: 18px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .hotel-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    .hotel-name { font-size: 1.1rem; font-weight: 700; }
+    .hotel-rating {
+      background: #fef3c7; color: #92400e; padding: 2px 6px; border-radius: 6px;
+      font-weight: 700; font-size: 0.8rem;
+    }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+    .tag { font-size: 0.75rem; padding: 2px 6px; background: #f1f5f9; color: #475569; border-radius: 4px; }
+    footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 30px; }
+  </style>
+</head>
+<body>
 
+  <header>
+    <div class="badge">✈️ 15-Day Iberia Journey (Dec 19, 2026 – Jan 2, 2027)</div>
+    <h1>西班牙 ＆ 葡萄牙 自由行計畫書</h1>
+    <p>3人同行・巴塞隆納進、里斯本出・不走回頭路・跨年盛會・1/4 準時上班</p>
+  </header>
+
+  <div class="container">
+    <nav class="nav-tabs">
+      <a href="#overview" class="nav-tab active">行程總覽</a>
+      <a href="#flights" class="nav-tab">航班與會合</a>
+      <a href="#hotels" class="nav-tab">3人公寓推薦</a>
+      <a href="#itinerary" class="nav-tab">每日詳細景點</a>
+      <a href="#checklist" class="nav-tab">時程提醒</a>
+    </nav>
+
+    <section id="overview" class="section">
+      <h2 class="section-title">🧭 雙牙4大城市架構總覽</h2>
+      <div class="grid-4">
+        <div class="city-card">
+          <span class="city-badge">12/20 - 12/24 (4晚)</span>
+          <h3>🇪🇸 巴塞隆納</h3>
+          <p class="item-desc">高第建築、聖家堂登塔、碉堡全景、音樂宮與海鮮飯。</p>
+        </div>
+        <div class="city-card">
+          <span class="city-badge">12/24 - 12/26 (2晚)</span>
+          <h3>🇪🇸 馬德里</h3>
+          <p class="item-desc">高鐵直達、主廣場聖誕市集、麗池水晶宮、平安夜自煮。</p>
+        </div>
+        <div class="city-card">
+          <span class="city-badge">12/26 - 12/29 (3晚)</span>
+          <h3>🇵🇹 波多</h3>
+          <p class="item-desc">路易一世大橋、世界最美萊羅書店、聖本篤車站兩萬片瓷磚、酒莊波特酒。</p>
+        </div>
+        <div class="city-card">
+          <span class="city-badge">12/29 - 1/2 (4晚)</span>
+          <h3>🇵🇹 里斯本</h3>
+          <p class="item-desc">下城區、百年葡撻、辛特拉仙境城堡、商業廣場跨年煙火、28號電車。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="flights" class="section">
+      <h2 class="section-title">✈️ 兩路出發航班與機場會合</h2>
+      <div class="grid-2">
+        <div class="info-box">
+          <h4>🇹🇼 台灣出發組（2人）</h4>
+          <p><strong>去程：</strong>2026/12/19 (六) 傍晚出發 ➔ 經多哈/杜拜/歐洲轉機 ➔ 12/20 (日) 上午抵達巴塞隆納（BCN）。</p>
+          <p><strong>回程：</strong>2027/1/2 (六) 午後里斯本（LIS）起飛 ➔ 1/3 (日) 傍晚抵台（休息一整晚，1/4 精神充沛上班）。</p>
+          <div style="margin-top:10px;">
+            <a class="link-pill" href="https://www.google.com/travel/flights?q=flights%20from%20TPE%20to%20BCN" target="_blank">🔍 Google 航班 (TPE➔BCN)</a>
+            <a class="link-pill" href="https://www.qatarairways.com/" target="_blank">🌐 卡達航空</a>
+            <a class="link-pill" href="https://www.emirates.com/" target="_blank">🌐 阿聯酋航空</a>
+          </div>
+        </div>
+
+        <div class="info-box accent">
+          <h4>🇺🇸 佛州 Jacksonville 組（1人）</h4>
+          <p><strong>去程：</strong>2026/12/19 (六) 下午 JAX 出發 ➔ 經美東樞紐搭夜航直飛 ➔ 12/20 (日) 上午抵達巴塞隆納（BCN）。</p>
+          <p><strong>回程：</strong>2027/1/2 (六) 里斯本（LIS）起飛 ➔ 美東轉機 ➔ 因順向時差（相差 5 小時），<strong>1/2 (六) 晚間即可返抵 JAX！</strong></p>
+          <div style="margin-top:10px;">
+            <a class="link-pill" href="https://www.google.com/travel/flights?q=flights%20from%20JAX%20to%20BCN" target="_blank">🔍 Google 航班 (JAX➔BCN)</a>
+            <a class="link-pill" href="https://www.aa.com/" target="_blank">🌐 美國航空 (AA)</a>
+            <a class="link-pill" href="https://www.delta.com/" target="_blank">🌐 達美航空 (Delta)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box warm">
+        <h4>🤝 12/20 巴塞隆納機場會合方案</h4>
+        <p>BCN 第一航廈入境大廳設有連鎖咖啡館（Caffè di Fiore）。先落地者可於咖啡館等候，3 人會合後搭乘 <a href="https://aerobusbarcelona.es/" target="_blank" style="color:var(--primary);font-weight:700;">Aerobús 機場巴士</a>（35分鐘直達加泰隆尼亞廣場）或直接 Uber 前往市區放行李。</p>
+      </div>
+    </section>
+
+    <section id="hotels" class="section">
+      <h2 class="section-title">🏨 3人公寓式住宿推薦（雙臥室首選）</h2>
+      <div class="grid-2">
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-header">
+              <div>
+                <div class="hotel-name">Sonder Paseo de Gracia</div>
+                <div style="color:var(--text-muted); font-size:0.85rem;">巴塞隆納 擴展區 (Eixample)</div>
+              </div>
+              <div class="hotel-rating">★ 8.8</div>
+            </div>
+            <p class="item-desc">位於精品大街旁，街道平坦好推行李。配備完整廚房與客廳，現代化設計。</p>
+            <div class="tag-list"><span class="tag">雙臥室</span><span class="tag">完整廚房</span><span class="tag">電梯</span></div>
+          </div>
+          <div>
+            <a class="link-pill" href="https://www.booking.com/searchresults.zh-tw.html?ss=Sonder+Paseo+de+Gracia+Barcelona" target="_blank">🔗 Booking 查價</a>
+            <a class="link-pill" href="https://maps.google.com/?q=Sonder+Paseo+de+Gracia+Barcelona" target="_blank">📍 Google 地圖</a>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-header">
+              <div>
+                <div class="hotel-name">Eric Vökel Boutique Atocha</div>
+                <div style="color:var(--text-muted); font-size:0.85rem;">馬德里 Atocha 車站旁</div>
+              </div>
+              <div class="hotel-rating">★ 9.0</div>
+            </div>
+            <p class="item-desc">步行5分鐘直達阿托查高鐵站，避開轉車負擔。大廚房與洗衣設備，12/24 平安夜自煮首選！</p>
+            <div class="tag-list"><span class="tag">平安夜自煮</span><span class="tag">近高鐵站</span><span class="tag">設備齊全</span></div>
+          </div>
+          <div>
+            <a class="link-pill" href="https://www.booking.com/searchresults.zh-tw.html?ss=Eric+Vokel+Atocha+Suites+Madrid" target="_blank">🔗 Booking 查價</a>
+            <a class="link-pill" href="https://maps.google.com/?q=Eric+Vokel+Atocha+Suites+Madrid" target="_blank">📍 Google 地圖</a>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-header">
+              <div>
+                <div class="hotel-name">Armazém Luxury Housing</div>
+                <div style="color:var(--text-muted); font-size:0.85rem;">波多 舊城與聖本篤車站旁</div>
+              </div>
+              <div class="hotel-rating">★ 9.4</div>
+            </div>
+            <p class="item-desc">鐵器倉庫改建的設計精品旅店，避開波多最陡峭的石板坡，交通極為便利。</p>
+            <div class="tag-list"><span class="tag">避開陡坡</span><span class="tag">設計感強</span><span class="tag">近聖本篤站</span></div>
+          </div>
+          <div>
+            <a class="link-pill" href="https://www.booking.com/searchresults.zh-tw.html?ss=Armazem+Luxury+Housing+Porto" target="_blank">🔗 Booking 查價</a>
+            <a class="link-pill" href="https://maps.google.com/?q=Armazem+Luxury+Housing+Porto" target="_blank">📍 Google 地圖</a>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-header">
+              <div>
+                <div class="hotel-name">Lisbon Serviced Apartments Baixa</div>
+                <div style="color:var(--text-muted); font-size:0.85rem;">里斯本 龐巴爾下城 (Baixa)</div>
+              </div>
+              <div class="hotel-rating">★ 8.9</div>
+            </div>
+            <p class="item-desc">地勢最平緩的下城區，步行即達商業廣場與地鐵。跨年夜看完煙火散步即可回房休息。</p>
+            <div class="tag-list"><span class="tag">跨年步行回房</span><span class="tag">平坦好走</span><span class="tag">廚房設備</span></div>
+          </div>
+          <div>
+            <a class="link-pill" href="https://www.booking.com/searchresults.zh-tw.html?ss=Lisbon+Serviced+Apartments+Baixa" target="_blank">🔗 Booking 查價</a>
+            <a class="link-pill" href="https://maps.google.com/?q=Lisbon+Serviced+Apartments+Baixa" target="_blank">📍 Google 地圖</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary" class="section">
+      <h2 class="section-title">📅 每日景點行程與連結</h2>
+
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-date">🗓️ 12/19(六) - 12/20(日)｜Day 1 - 2</div>
+          <span class="day-tag">巴塞隆納・會合抵達</span>
+        </div>
+        <div class="day-body">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">班機降落與 BCN 機場會合</div>
+            <div class="item-desc">兩地航班於 BCN 會合，搭乘 Aerobús 機場巴士前往市區公寓入住。</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">Nomad Coffee 職人冷萃</div>
+            <div class="item-desc">舊城區巷弄中的自家烘焙名店，以冷萃喚醒長途飛行的精神。</div>
+            <a class="link-pill" href="https://nomadcoffee.es/" target="_blank">🌐 官網資訊</a>
+            <a class="link-pill" href="https://maps.google.com/?q=Nomad+Coffee+Lab+Barcelona" target="_blank">📍 Google 地圖</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">畢卡索博物館 (Museu Picasso) ＆ 四隻貓咖啡 (Els 4 Gats)</div>
+            <div class="item-desc">由5座中世紀宮殿改建，收藏畢卡索少年時期寫實功底與《侍女》系列；隨後至畢卡索生前常造訪的百年四隻貓咖啡館吃 Tapas。</div>
+            <a class="link-pill" href="http://www.museupicasso.bcn.cat/en/" target="_blank">🎟️ 博物館預約</a>
+            <a class="link-pill" href="https://4gats.com/" target="_blank">☕ 四隻貓官網</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-date">🗓️ 12/21(一)｜Day 3</div>
+          <span class="day-tag">巴塞隆納・高第神作</span>
+        </div>
+        <div class="day-body">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">聖家堂 (Basílica de la Sagrada Família)</div>
+            <div class="item-desc">高第傾注心血之作，樹木分叉柱體與絕美彩繪玻璃。建議提前 60 天預約上午誕生立面登塔。</div>
+            <a class="link-pill" href="https://sagradafamilia.org/en/tickets" target="_blank">🎟️ 聖家堂購票</a>
+            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/聖家堂" target="_blank">📖 建築背景</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">卡梅爾碉堡全景 (Bunkers del Carmel) ＆ Parallelo 手作冰淇淋</div>
+            <div class="item-desc">內戰時期高射砲防空陣地，360度俯瞰棋盤街景與蔚藍地中海；傍晚品嚐學生推薦天然冰淇淋與正宗西班牙海鮮飯。</div>
+            <a class="link-pill" href="https://maps.google.com/?q=Bunkers+del+Carmel" target="_blank">📍 碉堡地圖</a>
+            <a class="link-pill" href="https://maps.google.com/?q=Parallelo+Gelato+Barcelona" target="_blank">📍 冰淇淋地圖</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-date">🗓️ 12/22(二)｜Day 4</div>
+          <span class="day-tag">巴塞隆納・音樂宮與海濱</span>
+        </div>
+        <div class="day-body">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">Federal Café 早午餐 ＆ 加泰隆尼亞音樂宮</div>
+            <div class="item-desc">澳式早午餐後，參觀「花之建築師」代表作，懸掛水滴狀彩繪玻璃穹頂完全依靠自然天光照明。</div>
+            <a class="link-pill" href="https://federalcafe.es/" target="_blank">🌐 Federal Café</a>
+            <a class="link-pill" href="https://www.palaumusica.cat/en" target="_blank">🎟️ 音樂宮預約</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">巴塞隆內塔海灘 ＆ 聖約瑟市場 (La Boqueria)</div>
+            <div class="item-desc">冬日暖陽下漫步海濱，午後穿越蘭布拉大道，走進聖約瑟市場品嚐現切伊比利火腿與海鮮小吃。</div>
+            <a class="link-pill" href="https://www.boqueria.barcelona/en/" target="_blank">🌐 市場官網</a>
+            <a class="link-pill" href="https://maps.google.com/?q=Mercat+de+la+Boqueria" target="_blank">📍 市場地圖</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-date">🗓️ 12/23(三)｜Day 5</div>
+          <span class="day-tag">巴塞隆納・奎爾公園</span>
+        </div>
+        <div class="day-body">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">奎爾公園 (Park Güell) ＆ 格拉西亞大道雙璧</div>
+            <div class="item-desc">欣賞彩色馬賽克蠑螈與波浪人體工學長椅；下午沿格拉西亞大道漫步，造訪屠龍傳說巴特婁之家與米拉之家。</div>
+            <a class="link-pill" href="https://parkguell.barcelona/en" target="_blank">🎟️ 奎爾公園</a>
+            <a class="link-pill" href="https://www.casabatllo.es/en/" target="_blank">🎟️ 巴特婁之家</a>
+            <a class="link-pill" href="https://www.lapedrera.com/en" target="_blank">🎟️ 米拉之家</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-date">🗓️ 12/24(四) - 12/25(五)｜Day 6 - 7</div>
+          <span class="day-tag">馬德里・平安夜與聖誕</span>
+        </div>
+        <div class="day-body">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">12/24 高鐵直達馬德里 ＆ 主廣場聖誕市集</div>
+            <div class="item-desc">搭乘 AVE/iryo 高鐵（約 2.5 小時）抵達馬德里。下午逛主廣場市集。⚠️ 歐洲平安夜店家提早打烊，16:00 前至超市採買，晚上在公寓自煮聖誕大餐！</div>
+            <a class="link-pill" href="https://www.iryo.eu/" target="_blank">🚅 iryo 高鐵</a>
+            <a class="link-pill" href="https://maps.google.com/?q=Plaza+Mayor+Madrid" target="_blank">📍 主廣場地圖</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">12/25 麗池公園 (El Retiro) 水晶宮 ＆ 百年吉拿棒</div>
+            <div class="item-desc">聖誕景點休館，漫步皇家林園與全玻璃水晶宮；傍晚至 1894 年老店品嚐濃純熱巧克力沾吉拿棒。</div>
+            <a class="link-pill" href="https://maps.google.com/?q=Palacio+de+Cristal+Madrid" target="_blank">📍 水晶宮位置</a>
+            <a class="link-pill" href="https://chocolateriasangines.com/" target="_blank">☕ 百年吉拿棒官網</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-date">🗓️ 12/26(六) - 12/28(一)｜Day 8 - 10</div>
+          <span class="day-tag">波多・酒香與藍白瓷磚</span>
+        </div>
+        <div class="day-body">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">12/26 飛往波多 ＆ 路易一世大橋酒莊</div>
+            <div class="item-desc">搭機抵達波多（時區慢1小時），步行走過路易一世金屬鋼拱大橋，參觀加亞新城百年波特酒莊。</div>
+            <a class="link-pill" href="https://www.google.com/travel/flights?q=flights%20from%20MAD%20to%20OPO" target="_blank">🔍 查詢直飛航班</a>
+            <a class="link-pill" href="https://calem.pt/en/" target="_blank">🍷 Cálem 酒莊導覽</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">12/27 萊羅書店 ＆ 聖本篤車站兩萬片瓷磚</div>
+            <div class="item-desc">造訪哈利波特靈感原型最美書店，欣賞聖本篤車站兩萬片手工藍白歷史瓷磚；品嚐濕答答三明治。</div>
+            <a class="link-pill" href="https://www.livrarialello.pt/en" target="_blank">🎟️ 萊羅書店預約</a>
+            <a class="link-pill" href="https://maps.google.com/?q=Sao+Bento+Station+Porto" target="_blank">📍 車站地圖</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">12/28 證券交易所宮 (Palácio da Bolsa) ＆ 杜羅河岸慢活</div>
+            <div class="item-desc">參觀耗費數十年以純金金箔打造的「阿拉伯廳」，午後漫步世界遺產里貝拉水岸彩色列柱屋。</div>
+            <a class="link-pill" href="https://palaciodabolsa.com/en/" target="_blank">🎟️ 交易所宮門票</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card">
+        <div class="day-header">
+          <div class="day-date">🗓️ 12/29(二) - 1/2(六)｜Day 11 - 15</div>
+          <span class="day-tag">里斯本・跨年與返程</span>
+        </div>
+        <div class="day-body">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">12/29 火車南下里斯本 ＆ 聖胡斯塔升降梯</div>
+            <div class="item-desc">搭乘國鐵快車 Alfa Pendular 直達里斯本，漫步商業廣場並搭乘鍛鐵升降梯俯瞰全城。</div>
+            <a class="link-pill" href="https://www.cp.pt/" target="_blank">🚆 CP 國鐵購票</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">12/30 貝倫區修道院 ＆ 百年創始蛋撻</div>
+            <div class="item-desc">參觀大航海曼努埃爾式建築傑作熱羅尼莫斯修道院與貝倫塔，品嚐 1837 年開業的元祖葡式蛋撻。</div>
+            <a class="link-pill" href="https://www.patrimoniocultural.gov.pt/en/museus-e-monumentos/dgpc/m/mosteiro-dos-jeronimos/" target="_blank">🎟️ 修道院門票</a>
+            <a class="link-pill" href="https://pasteisdebelem.pt/en/" target="_blank">🌐 百年蛋撻官網</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">12/31 辛特拉童話佩納宮 ＆ 商業廣場跨年煙火</div>
+            <div class="item-desc">白日前進辛特拉走訪佩納宮與雷加萊拉莊園啟蒙之井；午夜於商業廣場看特茹河煙火跨年！</div>
+            <a class="link-pill" href="https://bilheteira.parquesdesintra.pt/home/en" target="_blank">🎟️ 辛特拉套票</a>
+            <a class="link-pill" href="https://www.regaleira.pt/en" target="_blank">🌐 雷加萊拉莊園</a>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="item-title">1/1 - 1/2 阿爾法瑪 28號電車 ➔ 啟程返航</div>
+            <div class="item-desc">
+              1/1 搭乘 28 號黃色木造電車穿梭老城觀景台；1/2 前往里斯本機場搭機：<br>
+              <strong>🇺🇸 佛州夥伴：</strong>經美東轉機，順向時差<strong>1/2 當晚返抵 Jacksonville</strong>。<br>
+              <strong>🇹🇼 台灣夥伴：</strong>長程轉機，<strong>1/3 傍晚抵台</strong>，睡飽後 <strong>1/4 準時上班！</strong>
+            </div>
+            <a class="link-pill" href="https://www.ana.pt/en/lis/home" target="_blank">✈️ 里斯本機場資訊</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist" class="section">
+      <h2 class="section-title">📝 預約時程與叮嚀</h2>
+      <div class="grid-2">
+        <div class="info-box">
+          <h4>出發前 6 ~ 9 個月 (2026/3~6)</h4>
+          <p>鎖定 TPE-BCN // LIS-TPE 與 JAX-BCN // LIS-JAX 機票；預訂4城市雙臥室公寓。</p>
+        </div>
+        <div class="info-box accent">
+          <h4>出發前 2 ~ 3 個月 (2026/10)</h4>
+          <p>聖家堂官網搶票；預訂馬德里高鐵（iryo）與波多機票/火車早鳥特惠；預約佩納宮時段。</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>💡 將此內容存為 index.html 上傳 GitHub 即可啟用 GitHub Pages 供夥伴點閱！</p>
+      <p style="margin-top:4px;">祝 2026-2027 西葡跨年之旅圓滿順利 🎉</p>
+    </footer>
+  </div>
+
+</body>
+</html>
