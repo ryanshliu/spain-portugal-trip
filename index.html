@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026-2027 西葡 15天深度自由行手冊 (完整時間軸・景點詳解・防竊完全守則)</title>
+  <title>2026-2027 西葡 15天深度自由行手冊 (全景點解密・打卡機位・美饌地圖・實用會話)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@
     }
 
     header h1 { font-size: 2.1rem; font-weight: 800; margin-bottom: 10px; }
-    header p { font-size: 1.05rem; opacity: 0.92; max-width: 700px; margin: 0 auto; }
+    header p { font-size: 1.05rem; opacity: 0.92; max-width: 750px; margin: 0 auto; }
 
     .container { max-width: 1100px; margin: -35px auto 0; padding: 0 16px; position: relative; z-index: 10; }
 
@@ -68,7 +68,7 @@
     .nav-tabs::-webkit-scrollbar { display: none; }
 
     .nav-tab {
-      padding: 8px 18px; border-radius: 9999px; font-size: 0.88rem; font-weight: 600;
+      padding: 8px 16px; border-radius: 9999px; font-size: 0.88rem; font-weight: 600;
       text-decoration: none; color: var(--text-muted); white-space: nowrap; transition: all 0.2s;
     }
     .nav-tab:hover, .nav-tab.active { background: var(--primary); color: white; }
@@ -95,6 +95,17 @@
     .info-box.warm { border-left-color: var(--accent-warm); background: #fffbeb; }
     .info-box.success { border-left-color: var(--success); background: #f0fdf4; }
     .info-box h4 { font-size: 1.05rem; margin-bottom: 6px; color: var(--text); }
+
+    /* Phrase Chips */
+    .phrase-category { margin-bottom: 16px; }
+    .phrase-category h4 { font-size: 1rem; color: var(--primary); margin-bottom: 8px; }
+    .phrase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+    .phrase-card {
+      background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px;
+    }
+    .phrase-orig { font-weight: 700; color: var(--text); font-size: 0.95rem; }
+    .phrase-pron { font-size: 0.8rem; color: #64748b; font-style: italic; }
+    .phrase-trans { font-size: 0.85rem; color: #1e293b; font-weight: 500; }
 
     /* Day Card */
     .day-card {
@@ -134,16 +145,20 @@
       background: #fef3c7; color: #92400e; border-radius: 4px; margin-left: 4px;
     }
 
-    .item-title { font-weight: 700; font-size: 1.1rem; margin: 4px 0; color: var(--text); }
+    .item-title { font-weight: 700; font-size: 1.15rem; margin: 4px 0; color: var(--text); }
     .item-transit {
       background: #f8fafc; border: 1px dashed #cbd5e1; padding: 8px 12px;
       border-radius: 6px; font-size: 0.88rem; color: #475569; margin: 8px 0;
     }
     .item-desc { color: #334155; font-size: 0.94rem; margin-bottom: 8px; }
-    .item-highlight {
-      background: #eff6ff; border-left: 3px solid var(--primary-light);
-      padding: 8px 12px; border-radius: 4px; font-size: 0.9rem; color: #1e293b; margin-bottom: 8px;
+
+    /* In-depth Feature Boxes */
+    .feature-box {
+      margin: 8px 0; padding: 10px 14px; border-radius: 6px; font-size: 0.9rem; line-height: 1.55;
     }
+    .feature-history { background: #f1f5f9; border-left: 3px solid #64748b; color: #1e293b; }
+    .feature-photo { background: #fdf4ff; border-left: 3px solid #c026d3; color: #701a75; }
+    .feature-food { background: #fff7ed; border-left: 3px solid #ea580c; color: #9a3412; }
 
     /* Links and Buttons */
     a.link-pill {
@@ -188,23 +203,143 @@
   <header>
     <div class="badge">✈️ 15-Day Master Travel Guide (Dec 19, 2026 – Jan 2, 2027)</div>
     <h1>2026-2027 西班牙 ＆ 葡萄牙 深度自由行手冊</h1>
-    <p>3人同行・高CP值公寓・巴塞隆納進、里斯本出・詳細時間軸・景點全解・防竊保全守則・1/4準時上班</p>
+    <p>3人同行・高CP值公寓・巴塞隆納進、里斯本出・詳細時間軸・景點歷史全解・打卡機位・在地美食・常用會話・防竊守則</p>
   </header>
 
   <div class="container">
     <nav class="nav-tabs">
-      <a href="#safety" class="nav-tab">🛡️ 防竊守則 (重要)</a>
+      <a href="#phrases" class="nav-tab">🗣️ 常用會話標籤</a>
+      <a href="#safety" class="nav-tab">🛡️ 防竊守則</a>
       <a href="#flights" class="nav-tab">✈️ 航班會合</a>
-      <a href="#hotels" class="nav-tab">🏨 雙臥室公寓推薦</a>
+      <a href="#hotels" class="nav-tab">🏨 住宿推薦</a>
       <a href="#itinerary" class="nav-tab">📅 每日詳細時程與景點</a>
       <a href="#timeline" class="nav-tab">📝 預約搶票時程</a>
     </nav>
 
+    <!-- Travel Phrases Section -->
+    <section id="phrases" class="section">
+      <h2 class="section-title">🗣️ 西班牙語 ＆ 葡萄牙語 常用旅行會話標籤 (點開隨查隨用)</h2>
+      
+      <div class="grid-2">
+        <!-- Spanish Phrases -->
+        <div>
+          <h3 style="color:var(--accent); font-size:1.15rem; margin-bottom:12px;">🇪🇸 西班牙常用實用句 (巴塞隆納、馬德里)</h3>
+          
+          <div class="phrase-category">
+            <h4>👋 日常問候與禮貌</h4>
+            <div class="phrase-grid">
+              <div class="phrase-card">
+                <div class="phrase-orig">¡Hola! / Buenos días</div>
+                <div class="phrase-pron">歐拉 / 不埃諾斯 迪亞斯</div>
+                <div class="phrase-trans">你好！ / 早安</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Muchas gracias</div>
+                <div class="phrase-pron">木洽斯 格拉西亞斯</div>
+                <div class="phrase-trans">非常感謝！</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Por favor / Perdón</div>
+                <div class="phrase-pron">波爾法沃 / 貝爾冬</div>
+                <div class="phrase-trans">請 / 不好意思、藉過</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">¿Habla inglés?</div>
+                <div class="phrase-pron">阿不拉 英格雷斯？</div>
+                <div class="phrase-trans">您會說英文嗎？</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phrase-category">
+            <h4>🍽️ 點餐、買單與求助</h4>
+            <div class="phrase-grid">
+              <div class="phrase-card">
+                <div class="phrase-orig">La cuenta, por favor</div>
+                <div class="phrase-pron">拉 昆塔，波爾法沃</div>
+                <div class="phrase-trans">請結帳 / 買單</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Una mesa para tres</div>
+                <div class="phrase-pron">烏納 梅薩 怕拉 特雷斯</div>
+                <div class="phrase-trans">我們有 3 位（要一張三人桌）</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Agua con / sin gas</div>
+                <div class="phrase-pron">阿瓜 恐 / 辛 嘎斯</div>
+                <div class="phrase-trans">氣泡水 / 一般礦泉水</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">¿Dónde está el baño?</div>
+                <div class="phrase-pron">東疊 耶斯塔 耶爾 邦紐？</div>
+                <div class="phrase-trans">洗手間在哪裡？</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portuguese Phrases -->
+        <div>
+          <h3 style="color:var(--success); font-size:1.15rem; margin-bottom:12px;">🇵🇹 葡萄牙常用實用句 (波多、里斯本)</h3>
+          
+          <div class="phrase-category">
+            <h4>👋 日常問候與禮貌</h4>
+            <div class="phrase-grid">
+              <div class="phrase-card">
+                <div class="phrase-orig">Olá! / Bom dia</div>
+                <div class="phrase-pron">歐拉！ / 崩 迪亞</div>
+                <div class="phrase-trans">你好！ / 早安</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Obrigado (男) / Obrigada (女)</div>
+                <div class="phrase-pron">歐布里嘎度 / 歐布里嘎達</div>
+                <div class="phrase-trans">謝謝（說者為男性/女性）</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Por favor / Com licença</div>
+                <div class="phrase-pron">波爾法沃 / 孔 里森薩</div>
+                <div class="phrase-trans">請 / 不好意思、藉光</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Fala inglês?</div>
+                <div class="phrase-pron">發拉 英格雷斯？</div>
+                <div class="phrase-trans">您會說英文嗎？</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phrase-category">
+            <h4>🍽️ 點餐、買單與求助</h4>
+            <div class="phrase-grid">
+              <div class="phrase-card">
+                <div class="phrase-orig">A conta, por favor</div>
+                <div class="phrase-pron">阿 控塔，波爾法沃</div>
+                <div class="phrase-trans">請結帳 / 買單</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Uma mesa para três</div>
+                <div class="phrase-pron">烏瑪 梅薩 怕拉 特雷斯</div>
+                <div class="phrase-trans">我們 3 位用餐</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Um café / Uma bica</div>
+                <div class="phrase-pron">溫 卡飛 / 烏瑪 碧卡</div>
+                <div class="phrase-trans">一杯義式濃縮黑咖啡</div>
+              </div>
+              <div class="phrase-card">
+                <div class="phrase-orig">Onde fica a casa de banho?</div>
+                <div class="phrase-pron">翁得 飛卡 阿 卡薩 得 邦紐？</div>
+                <div class="phrase-trans">洗手間在哪裡？</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Safety Section -->
     <section id="safety" class="section">
       <h2 class="section-title"><span style="color:var(--accent);">🛡️</span> 西葡治安防禦與防扒手完全守則 (全體行前必讀)</h2>
-      <p style="color:#475569; font-size:0.95rem;">西葡幾乎無暴力衝突，但<strong>職業級集團扒手</strong>極其猖獗，尤其針對放鬆警戒的觀光客。請嚴格遵守下列守則：</p>
-      
       <div class="theft-grid">
         <div class="theft-card">
           <h4>🚨 4 大扒手高危險熱區</h4>
@@ -229,7 +364,7 @@
           <h4>🎒 裝備與財物保全原則</h4>
           <ul style="padding-left: 18px; line-height: 1.6;">
             <li><strong>包包背法：</strong>絕對不要將後背包背在身後或側背無拉鍊托特包。後背包入地鐵請胸前抱著，或使用貼身防盜隱形腰包。</li>
-            <li><strong>財務分散：</strong>護照正本、備用大鈔與備用卡鎖在公寓保險箱。每天出門每人僅帶 €30~€50 零錢，其餘全面使用 Apple Pay / Google Pay（雙牙感應極為普及）。</li>
+            <li><strong>財務分散：</strong>護照正本、備用大鈔與備用卡鎖在公寓保險箱。每天出門每人僅帶 €30~€50 零錢，其餘全面使用 Apple Pay / Google Pay。</li>
             <li><strong>搭高鐵防護：</strong>馬德里高鐵行李架盡量選視線所及處，或自備鋼絲密碼鎖固定於行李架欄杆。</li>
           </ul>
         </div>
@@ -274,8 +409,6 @@
     <!-- Accommodations Section -->
     <section id="hotels" class="section">
       <h2 class="section-title">🏨 3人高CP值雙臥室公寓式酒店精選（附全套廚房）</h2>
-      <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:15px;">三人同行選擇「雙臥室公寓」人均分攤每晚僅約 €45~€75，享獨立起居、洗烘衣機與大廚房，<strong>12/24 平安夜與 12/25 歐洲大休市時自煮極其重要</strong>！</p>
-      
       <div class="grid-2">
         <div class="hotel-card">
           <div>
@@ -353,7 +486,7 @@
 
     <!-- Daily Detailed Timeline Itinerary -->
     <section id="itinerary" class="section">
-      <h2 class="section-title">📅 15天每日行程：時間軸・停留時長・交通銜接・景點詳解</h2>
+      <h2 class="section-title">📅 15天每日行程：時間軸・停留時長・交通銜接・景點詳解・打卡點與美食</h2>
 
       <!-- Day 1 & 2 -->
       <div class="day-card">
@@ -375,8 +508,16 @@
             <span class="time-slot">13:00 - 14:00</span><span class="duration-badge">停留 1 小時</span>
             <div class="item-title">Nomad Coffee (Lab & Roaster) 職人冷萃</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：從加泰隆尼亞廣場步行約 10 分鐘進入舊城區 Passatge Sert 綠意石板巷內。</div>
-            <div class="item-desc">藏身於舊城區窄巷的巴塞隆納傳奇自烘咖啡名所。</div>
-            <div class="item-highlight">⭐ <strong>必嚐項目：</strong>衣索比亞產區冷萃咖啡（Cold Brew）或燕麥奶 Flat White，搭配肉桂麵包，瞬間驅散時差睡意。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>由兩屆西班牙咖啡師冠軍 Jordi Mestre 創辦，藏身在曾是 19 世紀紡織工廠的 Sert 通道。堅持淺焙與產地履歷，是帶動巴塞隆納第三波精品咖啡浪潮的教父級名店。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>Passatge Sert 巷內被懸掛綠意植栽覆蓋的石拱迴廊，坐在門口極簡木凳上手持簡約紙杯，搭配復古石板路特寫。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必嚐特色美食：</strong>衣索比亞單品 Cold Brew（帶有白花與柑橘清香）、燕麥奶 Flat White，搭配店內手工烘烤肉桂捲（Roll de Canela）。
+            </div>
             <a class="link-pill" href="https://nomadcoffee.es/" target="_blank">🌐 官方網站</a>
             <a class="link-pill" href="https://maps.google.com/?q=Nomad+Coffee+Lab+Barcelona" target="_blank">📍 Google 地圖定位</a>
           </div>
@@ -386,8 +527,16 @@
             <span class="time-slot">14:15 - 16:30</span><span class="duration-badge">停留 2 小時 15 分鐘</span>
             <div class="item-title">畢卡索博物館 (Museu Picasso)</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：從 Nomad Coffee 步行約 5 分鐘穿過 Montcada 街即達。</div>
-            <div class="item-desc">由 5 座 13~14 世紀宏偉的加泰隆尼亞哥德式石造宮殿貫通而成，收藏逾 4,000 件畢卡索早年極為珍貴的原始創作。</div>
-            <div class="item-highlight">⭐ <strong>必遊看點：</strong>年僅 15 歲即展現驚人古典學院畫技的巨幅油畫《科學與慈善》（Science and Charity）、早年藍色時期自畫像、以及晚年解構西班牙古典宮廷名家委拉斯蓋茲的 58 幅《侍女變體圖》（Las Meninas）系列。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>由 5 座建於 13~14 世紀的加泰隆尼亞哥德式石造宮殿連通而成。畢卡索本人在世時親自指定設立，館藏超過 4,200 件，完整收錄其 14~16 歲學院寫實極致畫作至立體派過渡期。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>宮殿中央庭院的中世紀露天石造迴旋樓梯（Patio），高聳石柱與哥德式拱廊是經典打卡視角（展廳內部嚴禁攝影，但中庭可拍照）。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必看名作：</strong>《科學與慈善》（Science and Charity，畢卡索 15 歲巨幅寫實巔峰）、《初領聖體》以及晚年拆解西班牙古典宮廷名家委拉斯蓋茲的 58 幅《侍女變體圖》（Las Meninas）。
+            </div>
             <a class="link-pill" href="http://www.museupicasso.bcn.cat/en/" target="_blank">🎟️ 官方門票預約</a>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/畢卡索博物館_(巴塞隆納)" target="_blank">📖 維基百科解說</a>
           </div>
@@ -397,8 +546,16 @@
             <span class="time-slot">17:00 - 19:00</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">四隻貓百年咖啡館 (Els 4 Gats)</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：從畢卡索博物館步行約 8 分鐘穿過主教橋與哥德區古街。</div>
-            <div class="item-desc">建於 1897 年，仿照巴黎黑貓夜總會興建，為加泰隆尼亞現代主義運動藝術家、詩人激辯創作的聚會所。畢卡索 17 歲在此舉辦生平首場個人畫展，連最初的菜單封面都由他親手繪製！</div>
-            <div class="item-highlight">⭐ <strong>必點項目：</strong>西班牙炸火腿可樂餅（Croquetas）、番茄蒜香脆麵包（Pan con Tomate）、熱紅酒與水果氣泡調酒 Sangria。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>1897 年開業，由建築師卡達法爾克設計。仿照巴黎黑貓夜總會建造，是加泰隆尼亞現代主義運動藝術家的大本營。年僅 17 歲的畢卡索在此舉辦生平首場個展，並親手為其繪製第一版菜單。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>紅磚哥德式正門入口懸掛的「雙人協力自行車木雕壁畫」、店內畢卡索素描複製品牆面與挑高吊燈下古董木椅。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必點特色美食：</strong>伊比利火腿可樂餅（Croquetas de Jamón）、番茄抹蒜脆麵包（Pan con Tomate）、西班牙烘蛋（Tortilla Española）與特調水果酒 Sangria。
+            </div>
             <a class="link-pill" href="https://4gats.com/" target="_blank">🌐 官網與菜單</a>
             <a class="link-pill" href="https://maps.google.com/?q=Els+4+Gats+Barcelona" target="_blank">📍 Google 地圖定位</a>
           </div>
@@ -417,10 +574,17 @@
             <span class="time-slot">09:00 - 12:00</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">聖家堂 (Basílica de la Sagrada Família) 深度參觀與登塔</div>
             <div class="item-transit">🚶‍♂️ 前往方式：搭地鐵 L2 或 L5 線至 Sagrada Família 站出站即達。</div>
-            <div class="item-desc">建築鬼才高第傾注 43 年生命的未完神作（1882 年動工至今）。立面宛如刻在石頭上的聖經故事，內部柱體模擬參天樹木向頂部分叉，以雙曲面幾何完全免除傳統飛扶壁。</div>
-            <div class="item-highlight">⭐ <strong>必遊看點：</strong>
-              1. 預約上午 09:00~09:30 入場：晨曦穿透東側「誕生立面」的藍綠冷色彩繪玻璃，教堂宛如初生森林沐浴晨光。<br>
-              2. 登塔推薦「誕生立面（Nativity Tower）」：近距離欣賞高第生前親手指導的石雕瓜果柱頭，俯瞰市區棋盤格網。
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>高第傾注 43 年直至車禍殉道的神作（1882 年動工至今）。立面宛如立體聖經石雕，內部打破傳統拱頂樑柱，模擬森林參天巨木樹冠支撐穹頂，達到自體結構力學平衡。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>教堂外全景倒影：</strong>對面高第公園（Plaça de Gaudí）池塘邊，早晨順光可拍下整座聖家堂倒映水中的明信片級畫面！<br>
+              2. <strong>室內天光彩繪：</strong>中殿仰角 90 度仰拍如同向日葵綻放的森林天井，晨曦穿透東側誕生立面的藍綠冷色彩繪玻璃，如同置身水底仙境。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 登塔要點：</strong>推薦預約「誕生立面（Nativity Tower）」：近距離俯瞰高第生前親手指導的石雕瓜果柱頭與立面雕刻，並從狹窄旋轉石階梯俯瞰巴塞隆納棋盤街網。
             </div>
             <a class="link-pill" href="https://sagradafamilia.org/en/tickets" target="_blank">🎟️ 官網購票 (提前60天搶票)</a>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/聖家堂" target="_blank">📖 深入建築解構</a>
@@ -431,7 +595,9 @@
             <span class="time-slot">12:30 - 14:00</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">在地海鮮餐館午餐（道地海鮮燉飯 Paella）</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：聖家堂周邊步行或叫 Uber。</div>
-            <div class="item-desc">品嚐大鐵鍋現煮的瓦倫西亞海鮮燉飯，米心微硬帶有香脆鍋巴（Socarrat），搭配大蝦、淡菜與蒜香美乃滋（Alioli）。</div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必吃特色美食：</strong>瓦倫西亞傳統大鐵鍋海鮮燉飯（Paella de Marisco）或墨魚汁海鮮燉飯（Arroz Negro），以番紅花高湯慢熬，米心保留微硬嚼勁，鍋底帶有香脆鍋巴（Socarrat），附沾蒜香美乃滋（Alioli）。
+            </div>
           </div>
 
           <div class="timeline-item">
@@ -439,8 +605,13 @@
             <span class="time-slot">15:00 - 17:30</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">卡梅爾碉堡觀景台 (Bunkers del Carmel) 俯瞰日落</div>
             <div class="item-transit">🚶‍♂️ 前往方式：搭地鐵 L4 到 Alfons X 站，轉乘 V17 號公車直達山頂站 Gran Vista，再健行 8 分鐘登頂。</div>
-            <div class="item-desc">1937 年西班牙內戰時期建造的高射砲陣地遺址，如今是全巴塞隆納視野最霸氣的 360 度免費制高點！</div>
-            <div class="item-highlight">⭐ <strong>必看景觀：</strong>整座巴塞隆納整齊劃一的八角形街廓、拔地而起的聖家堂四座尖塔，一路延伸至蔚藍地中海與蒙特惠克山，夕陽灑下金黃暮光，壯闊無比。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>海拔 262 公尺，原為 1937 年西班牙內戰期間建造的高射砲陣地，用以防禦義大利空軍空襲。內戰後被遺忘多年，後成為私房 360 度俯瞰全市的最強免費制高點。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>坐在昔日水泥砲台邊緣，將雙腳懸空於空中，以整齊的擴展區八角形棋盤格、拔地而起的聖家堂四座尖塔及遠方蔚藍地中海為背景，黃金落日時分金色夕照灑滿全城。
+            </div>
             <a class="link-pill" href="https://maps.google.com/?q=Bunkers+del+Carmel" target="_blank">📍 Google 地圖定位</a>
           </div>
 
@@ -449,8 +620,9 @@
             <span class="time-slot">18:30 - 19:30</span><span class="duration-badge">停留 1 小時</span>
             <div class="item-title">Parallelo Gelato 天然純手作冰淇淋</div>
             <div class="item-transit">🚶‍♂️ 前往方式：搭 V17 公車下山，步行至格拉西亞區 Carrer de Sèneca 18。</div>
-            <div class="item-desc">當地大學生與甜點饕客私藏名店，主打 100% 天然純原料，拒絕人工色素香料。</div>
-            <div class="item-highlight">⭐ <strong>必嚐口味：</strong>濃郁西西里開心果（Pistachio）、巴馬乾酪黑胡椒（Parmigiano & Black Pepper）與純黑巧克力雪酪。</div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必嚐特色美食：</strong>被評為全巴塞隆納頂級的 Gelato，標榜 100% 天然時令原料。必嚐濃郁醇厚的「西西里開心果（Pistachio）」、創新鹹甜風味的「巴馬乾酪黑胡椒（Parmigiano e Pepe）」或純黑巧克力雪酪。
+            </div>
             <a class="link-pill" href="https://maps.google.com/?q=Parallelo+Gelato+Barcelona" target="_blank">📍 Google 地圖定位</a>
           </div>
         </div>
@@ -468,8 +640,9 @@
             <span class="time-slot">09:30 - 10:45</span><span class="duration-badge">停留 1 小時 15 分鐘</span>
             <div class="item-title">Federal Café 澳式陽光早午餐</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：地鐵 L2 至 Sant Antoni 站步行 3 分鐘。</div>
-            <div class="item-desc">陽光穿透落地大窗的放鬆早午餐空間，是當地人享受慢活的聚集地。</div>
-            <div class="item-highlight">⭐ <strong>必點推薦：</strong>水波蛋煙燻鮭魚班尼迪克吐司、酪梨酸種麵包配 Flat White。</div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必點推薦：</strong>水波蛋煙燻鮭魚班尼迪克吐司（Eggs Benedict）、酪梨佐檸檬胡椒酸種麵包配極品澳式 Flat White 咖啡。
+            </div>
             <a class="link-pill" href="https://federalcafe.es/" target="_blank">🌐 官網資訊</a>
           </div>
 
@@ -478,8 +651,15 @@
             <span class="time-slot">11:15 - 12:45</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">加泰隆尼亞音樂宮 (Palau de la Música Catalana)</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自 Federal 步行或搭地鐵至 Urquinaona 站，步行 3 分鐘。</div>
-            <div class="item-desc">「花之建築師」多明尼克（Domènech i Montaner）登峰造極之作，世界文化遺產，也是全歐洲唯一一座完全依靠自然天光照明的音樂廳。</div>
-            <div class="item-highlight">⭐ <strong>必看亮點：</strong>大音樂廳中央懸掛如巨大金色水滴的「彩繪玻璃天井」，四周雕刻 18 位各執樂器的繆斯女神半立體雕像，滿牆陶瓷紅玫瑰盛開，華美至極。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>「花之建築師」多明尼克（Domènech i Montaner）登峰造極之作，世界文化遺產，也是全歐洲唯一一座完全依靠自然天光照明的音樂廳。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>水滴琉璃穹頂：</strong>站在二樓觀眾席正中央仰拍重達數噸、垂墜如巨大金色水滴的彩色琉璃穹頂。<br>
+              2. <strong>戶外柱廊陽台（Lluís Millet Hall）：</strong>一整排由五彩馬賽克磁磚拼接拼貼花朵圖案的雙層立柱，光影極其優雅。
+            </div>
             <a class="link-pill" href="https://www.palaumusica.cat/en" target="_blank">🎟️ 導覽團預約</a>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/加泰羅尼亞音樂宮" target="_blank">📖 建築背景解說</a>
           </div>
@@ -489,8 +669,16 @@
             <span class="time-slot">13:30 - 15:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">聖約瑟傳統市場 (Mercat de la Boqueria) 大啖 Tapas</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自音樂宮步行約 12 分鐘穿過哥德區到達蘭布拉大道中段。</div>
-            <div class="item-desc">歐洲最著名的食材集散殿堂，起源於 13 世紀。色彩繽紛的生鮮攤位與鐵板吧檯飄散陣陣香氣。</div>
-            <div class="item-highlight">⭐ <strong>必吃清單：</strong>現切最高評級 5J (Cinco Jotas) 黑標伊比利火腿配哈密瓜、鐵板乾煎小魷魚（Chipirones）、現剖生蠔與純天然現榨綜合果汁杯。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>起源可追溯至 1217 年城門外的肉品露天攤位，1840 年正式奠基為現代室內市場，其鍛鐵鋼架門牌極具十九世紀工業美感，是歐洲最著名的食材殿堂。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>市場正門大拱門招牌、以及攤位前懸掛如林、色澤油亮的整隻伊比利火腿腿架牆。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必吃在地美饌：</strong>現切橡木子等級 5J（Cinco Jotas）黑標伊比利火腿搭配香甜哈密瓜、鐵板乾煎香蒜小魷魚（Chipirones）、加泰隆尼亞辣味馬鈴薯（Patatas Bravas）與一杯純天然現榨綜合果汁。
+            </div>
             <a class="link-pill" href="https://www.boqueria.barcelona/en/" target="_blank">🌐 市場官方網站</a>
             <a class="link-pill" href="https://maps.google.com/?q=Mercat+de+la+Boqueria" target="_blank">📍 Google 地圖定位</a>
           </div>
@@ -500,7 +688,9 @@
             <span class="time-slot">16:00 - 17:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">巴塞隆內塔海灘 (Barceloneta Beach) 冬日漫步</div>
             <div class="item-transit">🚶‍♂️ 前往方式：沿著蘭布拉大道走到盡頭哥倫布紀念碑，接港口木棧道步行 15 分鐘。</div>
-            <div class="item-desc">感受冬日溫煦的地中海海風與金色浪花，沿岸露天酒吧林立，點杯冰涼的 Cava 氣泡酒享受慢節奏。</div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>以帆船造型的奢華 W Barcelona 酒店為背景，坐在平緩金黃沙灘木棧道上拍出度假海景大片。
+            </div>
           </div>
         </div>
       </div>
@@ -517,8 +707,15 @@
             <span class="time-slot">09:30 - 12:00</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">奎爾公園 (Park Güell) 魔幻童話漫步</div>
             <div class="item-transit">🚶‍♂️ 前往方式：搭地鐵 L3 至 Lesseps 站，沿 Avinguda del Santuari de Sant Josep de la Muntanya 步行約 15 分鐘（沿途坡道設有電動手扶梯）。</div>
-            <div class="item-desc">高第將大自然生態融入山坡住宅區規劃的代表作。全園無硬邦邦的直線，所有欄杆、石柱、長椅皆如流水般蜿蜒流動。</div>
-            <div class="item-highlight">⭐ <strong>必遊看點：</strong>中央階梯著名的「彩色馬賽克蠑螈（高第蜥蜴）」；百柱廳上方遼闊的露天廣場，周圍環繞貼合人體脊背曲線的彩色碎磁磚波浪長椅。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>原本是高第與企業家奎爾伯爵規劃的 60 棟高級英式花園別墅社區，因位置偏遠僅售出 2 戶，後改為市立公園。高第將有機自然線條、加泰隆尼亞民族主義與天主教信仰融合，無任何僵硬直線。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>彩色蠑螈（El Drac）：</strong>雙側階梯中央由碎磁磚拼貼（Trencadís）的馬賽克蜥蜴，下雨時更兼具水流導管功能。<br>
+              2. <strong>百柱廳露天廣場波浪長椅：</strong>坐在符合人體工學弧度的彩色碎瓷長椅上，俯瞰入口如薑餅屋般的守衛門房與市區景觀。
+            </div>
             <a class="link-pill" href="https://parkguell.barcelona/en" target="_blank">🎟️ 官網購票 (提前預約時段)</a>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/奎尔公园" target="_blank">📖 維基百科解說</a>
           </div>
@@ -528,8 +725,15 @@
             <span class="time-slot">13:00 - 15:30</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">巴特婁之家 (Casa Batlló) 屠龍傳說巡禮</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從 Lesseps 站搭地鐵 L3 至 Passeig de Gràcia 站出站即達。</div>
-            <div class="item-desc">高第為紡織富商改建的私人宅邸，靈感源自加泰隆尼亞守護聖人「聖喬治屠龍」傳奇。</div>
-            <div class="item-highlight">⭐ <strong>必看細節：</strong>外牆如同莫內睡蓮池般的藍綠陶瓷碎片；陽台骨骼形似面具；屋頂拱起宛如巨龍脊背，煙囪是刺入龍心的十字聖劍；內部天井採用由淺入深的漸層藍磁磚，完美調節水感光影。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>1904~1906 年由高第為紡織富商何塞·巴特婁全面翻新。整棟建築暗喻加泰隆尼亞守護神「聖喬治屠龍」史詩，是現代主義自然造形的最高傑作。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>龍脊天台（The Dragon's Roof）：</strong>彩色陶瓷魚鱗拱起如巨龍背脊，十字架煙囪象徵刺入龍身的屠龍寶劍。<br>
+              2. <strong>蔚藍深海天井：</strong>天井由淺藍漸變至深藍的磁磚陣列，站在木造波浪窗櫺前留影。
+            </div>
             <a class="link-pill" href="https://www.casabatllo.es/en/" target="_blank">🎟️ 官方門票預約</a>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/巴特略之家" target="_blank">📖 深入故事介紹</a>
           </div>
@@ -539,8 +743,13 @@
             <span class="time-slot">16:00 - 17:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">米拉之家 (Casa Milà / La Pedrera)</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自巴特婁之家沿格拉西亞大道往北步行僅 5 分鐘。</div>
-            <div class="item-desc">高第設計的最後一座私人住宅。外觀如巨大粗獷波浪採石場，內部無一承重牆，全由鋼骨結構支撐。</div>
-            <div class="item-highlight">⭐ <strong>必看亮點：</strong>宛如外星奇幻戰士戴著頭盔的神秘煙囪群天台，此處亦可遠眺聖家堂尖頂。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>高第設計的最後一座私人住宅。白色波浪石材外觀宛如採石場（La Pedrera），創新的無承重牆鋼骨樑柱結構，讓每一戶內牆皆可隨意拆移變更。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>起伏如沙丘的屋頂天台上，外型如同星際大戰外星戰士戴著頭盔的神秘煙囪群，透過煙囪石拱孔洞剛好能框住遠方的聖家堂！
+            </div>
             <a class="link-pill" href="https://www.lapedrera.com/en" target="_blank">🎟️ 官方門票預約</a>
           </div>
         </div>
@@ -568,8 +777,16 @@
             <span class="time-slot">13:00 - 15:00</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">主廣場 (Plaza Mayor) 經典聖誕市集巡禮</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從 Atocha 站搭地鐵 1 號線直達 Sol（太陽門站），步行 3 分鐘穿入主廣場。</div>
-            <div class="item-desc">哈布斯堡王朝經典紅色迴廊環繞的方形廣場。12 月聚集上百座傳統木造棚屋，是全西班牙最具傳統節慶氣息的地方。</div>
-            <div class="item-highlight">⭐ <strong>必逛亮點：</strong>傳統手工耶穌誕生木雕與泥偶（Belén）、搞笑節慶假髮、肉桂香料熱紅酒。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>建於 17 世紀哈布斯堡王朝菲利普三世時期，曾是鬥牛賽、皇家婚禮與宗教裁判火刑的歷史舞台。每年 12 月廣場擺滿上百座紅色木造棚屋，是全馬德里最古老的聖誕市集。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>站在菲利普三世青銅騎馬雕像旁，以麵包房之家（Casa de la Panadería）古典外牆巴洛克神話濕壁畫與紅色連續拱廊為背景。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必吃特色小吃：</strong>主廣場周邊百年酒吧名物「炸魷魚三明治（Bocadillo de Calamares）」，外層法棍酥脆，夾入爆滿炸至金黃彈牙的裹粉小魷魚圈，淋上黃檸檬汁。
+            </div>
             <a class="link-pill" href="https://maps.google.com/?q=Plaza+Mayor+Madrid" target="_blank">📍 Google 地圖定位</a>
           </div>
 
@@ -578,8 +795,9 @@
             <span class="time-slot">15:30 - 17:30</span><span class="duration-badge">採買 2 小時</span>
             <div class="item-title">🚨 重要任務：平安夜超市大採買 ＆ 公寓溫馨自煮</div>
             <div class="item-transit">🚶‍♂️ 前往地點：公寓旁的 Mercadona 或 英國宮 El Corte Inglés 高級生鮮超市。</div>
-            <div class="item-desc">⚠️ 西班牙 12/24 傍晚多數餐館、小吃店強制休業，街上全空！</div>
-            <div class="item-highlight">⭐ <strong>備料指南：</strong>採買伊比利生火腿切片、加泰隆尼亞起司拼盤、頂級肋眼牛排、大明蝦、Cava 氣泡酒與新鮮水果。晚上 3 人在溫暖舒適的雙臥室公寓大展廚藝，歡慶平安夜！</div>
+            <div class="feature-box feature-food">
+              <strong>🍴 平安夜大餐美饌清單：</strong>伊比利黑豬肋眼生肉排、曼徹格老起司（Queso Manchego）、西班牙白毛生火腿（Jamón Serrano）、大西洋野生紅蝦、經典西班牙氣泡酒 Cava 與節慶傳統杏仁糖糕（Turrón）。
+            </div>
           </div>
         </div>
       </div>
@@ -596,8 +814,15 @@
             <span class="time-slot">10:00 - 13:00</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">麗池公園 (El Retiro) ＆ 全透明水晶宮 (Palacio de Cristal)</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從 Atocha 火車站北口沿著普拉多大道步行 8 分鐘進入麗池公園南端林道。</div>
-            <div class="item-desc">世界文化遺產，昔日西班牙皇室離宮花園。建於 1887 年的水晶宮以鑄鐵骨架與純平板玻璃拼嵌，冬日陽光穿透樹影灑落宮內，晶瑩剔透宛如巨大童話寶盒。</div>
-            <div class="item-highlight">⭐ <strong>必遊項目：</strong>人工大湖畔觀賞街頭吉他藝人演奏、阿爾卡拉門（Puerta de Alcalá）前拍下經典聖誕紀念照。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>17 世紀原本作為菲利普四世的皇家夏宮花園，世界文化遺產。園內著名的水晶宮建於 1887 年，受倫敦水晶宮啟發，為菲律賓熱帶動植物博覽會而建。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>水晶宮湖畔倒影：</strong>站在人工湖對岸，拍下整座全玻璃宮殿與湖中噴泉、落羽杉的倒影。<br>
+              2. <strong>阿爾卡拉新古典門（Puerta de Alcalá）：</strong>卡洛斯三世建立的宏偉五孔石造凱旋門。
+            </div>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/丽池公园" target="_blank">📖 麗池公園歷史</a>
             <a class="link-pill" href="https://maps.google.com/?q=Palacio+de+Cristal+Madrid" target="_blank">📍 水晶宮位置</a>
           </div>
@@ -607,7 +832,9 @@
             <span class="time-slot">14:30 - 16:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">格蘭大道 (Gran Vía) 漫步 ＆ 欣賞璀璨聖誕燈海</div>
             <div class="item-transit">🚶‍♂️ 前往方式：由阿爾卡拉門沿著阿爾卡拉街向西步行 10 分鐘進入格蘭大道起點。</div>
-            <div class="item-desc">馬德里的百老匯大街，兩側林立華麗的新古典與裝飾藝術大樓。抬頭即可看見馬德里市政府精心打造的懸吊式聖誕燈飾連綿數公里。</div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>站在格蘭大道與阿爾卡拉街交匯處，拍下頭頂懸掛金色勝利女神雕像的大都會大廈（Edificio Metrópolis）搭配橫跨整條街的星光聖誕垂吊燈飾。
+            </div>
           </div>
 
           <div class="timeline-item">
@@ -615,8 +842,13 @@
             <span class="time-slot">17:00 - 18:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">Chocolatería San Ginés 百年吉拿棒名店朝聖</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從太陽門廣場往西走入 Pasadizo de San Ginés 5 號石板小徑。</div>
-            <div class="item-desc">創立於 1894 年的國寶級甜點殿堂，綠色天鵝絨座椅與白色大理石桌面散發濃烈十九世紀沙龍氛圍。</div>
-            <div class="item-highlight">⭐ <strong>必點組合：</strong>細吉拿棒（Churros）配濃郁微苦的西班牙純黑熱巧克力漿（Chocolate Caliente），外酥內軟，暖胃無比。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>創始於 1894 年，超過 130 年歷史的馬德里甜點傳奇。白大理石吧檯、十九世紀復古綠天鵝絨沙龍座，是文豪與政商名流夜飲熱巧克力的精神地標。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必吃特色美食：</strong>剛起鍋金黃酥脆的細吉拿棒（Churros）與膨鬆厚實的粗吉拿棒（Porras），沾裹稠厚微苦的 Spanish Hot Chocolate；亦可來份糖漬烤布丁。
+            </div>
             <a class="link-pill" href="https://chocolateriasangines.com/" target="_blank">☕ 百年吉拿棒官網</a>
             <a class="link-pill" href="https://maps.google.com/?q=Chocolateria+San+Gines+Madrid" target="_blank">📍 Google 地圖定位</a>
           </div>
@@ -644,8 +876,15 @@
             <span class="time-slot">14:30 - 16:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">路易一世大橋 (Ponte Dom Luís I) 徒步跨河</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從盟軍大道沿聖本篤車站往南步行 10 分鐘，直登大橋上層。</div>
-            <div class="item-desc">1886 年竣工，由艾菲爾的傑出門生特奧菲勒·塞里格設計。雄偉的雙層鍛鐵拱橋橫跨杜羅河。</div>
-            <div class="item-highlight">⭐ <strong>必看美景：</strong>漫步於上層橋面（行走於行人與輕軌軌道旁），低頭俯瞰杜羅河上搖曳的傳統運酒木船（Barcos Rabelos）與里貝拉區沿峭壁依山而建的彩色排屋，氣勢非凡。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>1886 年落成，由艾菲爾鐵塔設計師居斯塔夫·艾菲爾的徒弟特奧菲勒·塞里格獨立操刀。跨度 172 公尺，曾是當時全球最大的金屬拱形雙層大橋，上層通行輕軌與行人，下層通行汽車。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>上層大橋中央：</strong>站在軌道旁，以杜羅河兩岸依山而建的彩色排屋與古老運酒木船（Barcos Rabelos）為背景。<br>
+              2. <strong>皮拉爾修道院觀景台（Mosteiro da Serra do Pilar）：</strong>跨過大橋到加亞側山頂，居高臨下拍攝「大橋圓拱弧度 + 波多全景日落」經典明信片角度！
+            </div>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/路易一世大桥" target="_blank">📖 建築背景解說</a>
             <a class="link-pill" href="https://maps.google.com/?q=Ponte+Luís+I+Porto" target="_blank">📍 Google 地圖定位</a>
           </div>
@@ -655,8 +894,13 @@
             <span class="time-slot">17:00 - 18:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">加亞新城 (Vila Nova de Gaia) 頂級波特酒莊品酩</div>
             <div class="item-transit">🚶‍♂️ 前往方式：由路易一世大橋上層搭乘 Gaia 纜車或沿坡道步行至河岸酒莊街。</div>
-            <div class="item-desc">走入具有數百年歷史的陳年地下酒窖（如 Cálem 或 Sandeman），參觀巨型橡木酒桶。</div>
-            <div class="item-highlight">⭐ <strong>必嚐美酒：</strong>品嚐果香豐沛的寶石紅波特酒（Ruby Port）與陳年堅果香氣濃郁的茶色波特酒（Tawny Port）。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>17 世紀英法戰爭期間英國無法進口法國酒，轉向葡萄牙杜羅河谷採購。為防止長途海運變質，酒商在葡萄酒發酵中途加入白蘭地烈酒終止發酵，成就高酒精度、果香甜潤濃郁的波特酒（Port Wine）。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必嚐特色美酒：</strong>預約走入 Cálem 或 Sandeman 數百年地下橡木桶地窖，對比品嚐帶有鮮明紅櫻桃莓果香氣的「寶石紅（Ruby）」與在橡木桶熟成數十年、洋溢烤堅果太妃糖香氣的「茶色波特（Tawny Port）」。
+            </div>
             <a class="link-pill" href="https://calem.pt/en/" target="_blank">🍷 Cálem 酒莊導覽預訂</a>
           </div>
         </div>
@@ -674,8 +918,13 @@
             <span class="time-slot">09:00 - 11:00</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">世界最美萊羅書店 (Livraria Lello) ＆ 牧師塔</div>
             <div class="item-transit">🚶‍♂️ 前往方式：地鐵 Aliados 站或 São Bento 站步行約 7 分鐘抵達獅子廣場旁。</div>
-            <div class="item-desc">創立於 1906 年的新哥特式書店。最吸睛的是中央那座帶有雕花紅色扶手的雙向旋轉木階梯，宛如魔幻浪潮蜿蜒向上，天花板為巨型彩繪玻璃天窗，是傳聞中 J.K. 羅琳構思霍格華茲奇幻場景的靈感起點。</div>
-            <div class="item-highlight">⭐ <strong>參觀叮嚀：</strong>務必提前上網預約 Ticket-Voucher 時段，門票可折抵購書費用。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>建於 1906 年的新哥特與新藝術風格書店。店內中央那座帶有雕花紅色扶手、宛如流動木雕浪潮的雙向旋轉樓梯，天花板為 8x3 公尺大型彩繪玻璃天窗，是 J.K. 羅琳旅居波多任教時構思霍格華茲奇幻場景的靈感起點。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>站在紅色旋轉階梯正中央平台向上仰拍彩繪玻璃天窗，或從二樓向下俯拍紅色雙樓梯如交織蝴蝶雙翼的立體幾何構圖。
+            </div>
             <a class="link-pill" href="https://www.livrarialello.pt/en" target="_blank">🎟️ 官網購票預約</a>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/莱罗书店" target="_blank">📖 深入故事介紹</a>
           </div>
@@ -685,8 +934,13 @@
             <span class="time-slot">11:15 - 12:30</span><span class="duration-badge">停留 1 小時 15 分鐘</span>
             <div class="item-title">聖本篤車站 (Estação de São Bento) 兩萬片藍白瓷磚</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自萊羅書店順著緩坡向下步行 6 分鐘即見古典外觀的火車站。</div>
-            <div class="item-desc">建於 16 世紀本篤會修道院原址。大廳四周被整整兩萬片葡萄牙國寶級手工手繪瓷磚（Azulejo）包覆，由藝術大師豪爾赫·科拉索歷時 11 年精心彩繪。</div>
-            <div class="item-highlight">⭐ <strong>必看畫面：</strong>大廳上層繪有葡萄牙交通運輸史，下方大壁畫重現若昂一世進入波多的盛大慶典與關鍵的休達攻城戰。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>建於 16 世紀毀於祝融的本篤會修道院原址。大廳四周被整整兩萬片葡萄牙國寶級手工手繪瓷磚（Azulejo）包覆，由藝術大師豪爾赫·科拉索歷時 11 年精心彩繪。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>大廳中央站立，利用對稱構圖拍下四周滿覆藍白瓷磚的大型挑高拱門；細拍重現 1387 年若昂一世與英國菲莉帕王后締結同盟進入波多的歷史大壁畫。
+            </div>
             <a class="link-pill" href="https://maps.google.com/?q=Sao+Bento+Station+Porto" target="_blank">📍 Google 地圖定位</a>
           </div>
 
@@ -695,7 +949,10 @@
             <span class="time-slot">13:00 - 14:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">挑戰波多魔王級名菜：濕答答三明治 (Francesinha)</div>
             <div class="item-transit">🚶‍♂️ 推薦餐廳：Café Santiago 或 Brasão Cervejaria（步行約 5 分鐘）。</div>
-            <div class="item-desc">波多最具傳奇色彩的邪惡靈魂美食。厚切吐司夾入厚片牛排、葡式煙燻香腸與火腿，外層鋪滿厚厚融化起司，最後浸潤在以啤酒、番茄與秘製香料熬煮的滾燙微辣醬汁中，頂部放半熟太陽蛋配薯條。</div>
+            
+            <div class="feature-box feature-food">
+              <strong>🍴 必嚐特色美食：</strong>源於 1960 年代法國回流移民改良法式吐司。厚切白吐司內層層夾入嫩煎厚牛排、葡式蒜香肉腸（Linguiça）、煙燻火腿，頂部鋪滿融化起司片，浸潤在以啤酒、番茄、牛骨高湯與辣椒熬煮的滾燙秘醬中，放一顆半熟太陽蛋配酥脆薯條。
+            </div>
           </div>
         </div>
       </div>
@@ -712,7 +969,13 @@
             <span class="time-slot">09:30 - 11:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">證券交易所宮 (Palácio da Bolsa) 純金阿拉伯廳</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從聖本篤車站向河岸方向步行 8 分鐘抵達恩里克王子廣場。</div>
-            <div class="item-desc">波多商會於 19 世紀興建的奢華地標。最震撼的「阿拉伯廳（Salão Árabe）」花費整整 18 年模仿阿罕布拉宮建造，滿雕 18 公斤純金金箔飾紋，光彩奪目。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>1842 年由波多商會建立在新古典主義外觀之下的金融總部。內部最震撼的「阿拉伯廳（Salão Árabe）」花費整整 18 年，以西班牙格拉納達阿罕布拉宮為藍本，貼覆 18 公斤純金金箔石膏雕飾。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>阿拉伯廳璀璨奪目的摩爾式純金馬蹄形拱門與琉璃雕花吊燈，抬頭拍攝滿覆阿拉伯銘文與金色蔓藤紋飾的穹頂。
+            </div>
             <a class="link-pill" href="https://palaciodabolsa.com/en/" target="_blank">🎟️ 官方導覽預訂</a>
             <a class="link-pill" href="https://maps.google.com/?q=Palacio+da+Bolsa+Porto" target="_blank">📍 Google 地圖定位</a>
           </div>
@@ -722,7 +985,10 @@
             <span class="time-slot">12:00 - 15:00</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">里貝拉老城區 (Ribeira) 石板巷弄 ＆ 六橋遊船</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自交易所宮向下步行 3 分鐘抵達河岸水畔。</div>
-            <div class="item-desc">被聯合國評定為世界遺產的河岸街區。漫步在掛滿萬國旗般彩色列柱排屋下，搭乘傳統木造運酒船進行 50 分鐘的六橋巡禮，午餐品嚐剛捕撈上岸的炭烤大章魚（Polvo à Lagareiro）。</div>
+            
+            <div class="feature-box feature-food">
+              <strong>🍴 必吃特色海鮮：</strong>水岸露天餐館品嚐波多經典「橄欖油烤大章魚（Polvo à Lagareiro）」，章魚腳經長時間慢煮後以熱橄欖油與大蒜香烤至軟嫩化口，搭配敲扁烤小馬鈴薯；亦可品嚐烤沙丁魚（Sardinhas Assadas）。
+            </div>
           </div>
         </div>
       </div>
@@ -748,7 +1014,13 @@
             <span class="time-slot">13:30 - 15:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">龐巴爾下城 (Baixa) ＆ 商業廣場 (Praça do Comércio)</div>
             <div class="item-transit">🚶‍♂️ 前往方式：公寓出門即為奧古斯塔步行街（Rua Augusta），直通海灣廣場。</div>
-            <div class="item-desc">1755 年大地震後龐巴爾侯爵建立的方正防震棋盤街區。穿過氣勢恢宏的凱旋門，來到面向浩瀚特茹河的巨型三合院黃色迴廊廣場，此處曾是昔日大航海商船卸載東方香料與黃金的核心港灣。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>1755 年萬聖節里斯本發生規模 8.7 毀滅性大地震、海嘯與大火，全城化為烏有。開明宰相龐巴爾侯爵引進世界最早的模組化木造「籠形防震結構（Gaiola pombalina）」，重新規劃幾何方正大街。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>穿過奧古斯塔街凱旋門，站在商業廣場黃色迴廊中庭，拍攝若瑟一世國王騎馬青銅雕像與特茹河波光粼粼的交會海景。
+            </div>
           </div>
 
           <div class="timeline-item">
@@ -756,7 +1028,13 @@
             <span class="time-slot">16:00 - 17:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">聖胡斯塔鍛鐵升降梯 (Elevador de Santa Justa)</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自商業廣場沿奧古斯塔街往北走 6 分鐘即見黑色鋼鐵高塔。</div>
-            <div class="item-desc">1902 年落成的新哥德式鍛鐵垂直電梯，高 45 公尺，由艾菲爾的學生勞爾·梅斯尼爾設計，連接低窪的下城與高聳的卡爾莫廣場。頂層觀景台可俯瞰整個里斯本老城紅瓦屋頂與對面的聖喬治城堡。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>1902 年啟用，由艾菲爾的學生勞爾·梅斯尼爾設計。高 45 公尺的新哥德式鍛鐵垂直電梯，車廂內部採用原木板與黃銅飾件，當初建造是為了解決下城與上城陡峭落差的市民通勤痛點。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>走出頂層天橋，拍攝俯瞰龐巴爾下城整齊棋盤屋頂群、聖喬治城堡（Castelo de S. Jorge）盤踞山頭與特茹河大橋的壯麗視角。
+            </div>
             <a class="link-pill" href="https://maps.google.com/?q=Santa+Justa+Lift+Lisbon" target="_blank">📍 Google 地圖定位</a>
           </div>
         </div>
@@ -781,7 +1059,15 @@
             <span class="time-slot">10:00 - 12:30</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">熱羅尼莫斯修道院 (Mosteiro dos Jerónimos)</div>
             <div class="item-desc">世界文化遺產，曼努埃爾式建築（Manueline）的頂峰之作。曼努埃爾一世為感謝達伽馬開闢印度航線，動用航海胡椒稅收打造。</div>
-            <div class="item-highlight">⭐ <strong>必看細節：</strong>中庭雙層迴廊石柱上滿雕水手繩索、貝殼、海錨、星盤與神秘海怪雕刻，大航海家達伽馬與葡萄牙詩魂卡蒙斯長眠於教堂大廳石棺。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>大航海時代黃金與香料貿易財富的極致展現。達伽馬在出航印度前一晚曾在此徹夜祈禱，歸來後曼努埃爾一世下令以胡椒 5% 關稅興建這座世界奇觀。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>雙層內庭迴廊：</strong>每根石柱都雕滿繩索、珊瑚、貝殼、海錨、星盤與神話海獸圖騰，漫步其中如沉浸海底神殿。<br>
+              2. <strong>航海英雄石棺：</strong>大堂入口兩側分別長眠著航海家達伽馬（Vasco da Gama）與詩魂卡蒙斯（Luís de Camões）的華麗石棺。
+            </div>
             <a class="link-pill" href="https://www.patrimoniocultural.gov.pt/en/museus-e-monumentos/dgpc/m/mosteiro-dos-jeronimos/" target="_blank">🎟️ 官方門票預訂</a>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/热罗尼莫斯修道院" target="_blank">📖 深入歷史背景</a>
           </div>
@@ -791,8 +1077,16 @@
             <span class="time-slot">12:45 - 14:00</span><span class="duration-badge">停留 1 小時 15 分鐘</span>
             <div class="item-title">正宗葡式蛋撻始祖：Pastéis de Belém</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從修道院正門向東步行僅 3 分鐘。</div>
-            <div class="item-desc">全球葡式蛋撻發源地，自 1837 年開業至今。秘密配方直接傳承自熱羅尼莫斯修道院修女。外皮由數十層薄如蟬翼的千層酥皮手工捲疊，烘烤至焦脆，內餡奶香滑嫩微熱。</div>
-            <div class="item-highlight">⭐ <strong>正宗吃法：</strong>趁熱大口咬下，依傳統灑上少許純肉桂粉與細糖粉，搭配一杯濃醇的葡萄牙濃縮黑咖啡（Bica）。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>1820 年自由主義革命修道院關閉，修女為求生存，利用昔日蛋白用來洗滌修士袍與澄酒後剩餘的大量蛋黃，研發出這款酥皮點心。自 1837 年在現址獨家烘焙至今，密方鎖在保險庫中，世上僅 3 位大師知曉。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>坐在鋪滿 17 世紀古老藍白瓷磚壁畫的古老內堂，拍下盛裝在藍白瓷盤上熱騰騰焦糖斑紋的蛋撻特寫。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 正宗吃法：</strong>一定要趁剛出爐微燙時咬下，外殼薄脆層次分明如千層酥，內餡滑嫩如布丁，依傳統撒上純肉桂粉（Canela）與細糖粉（Açúcar），搭配一杯微苦濃縮黑咖啡（Bica）。
+            </div>
             <a class="link-pill" href="https://pasteisdebelem.pt/en/" target="_blank">🌐 百年蛋撻官網</a>
             <a class="link-pill" href="https://maps.google.com/?q=Pasteis+de+Belem" target="_blank">📍 Google 地圖定位</a>
           </div>
@@ -802,7 +1096,15 @@
             <span class="time-slot">14:30 - 16:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">發現者紀念碑 ＆ 貝倫塔 (Torre de Belém)</div>
             <div class="item-transit">🚶‍♂️ 前往方式：穿過景觀地下通道步行至特茹河畔。</div>
-            <div class="item-desc">五十二公尺高的巨大卡拉維爾帆船造型「發現者紀念碑」，船頭站立恩里克王子，率領達伽馬與麥哲倫凝視大西洋；貝倫塔則是昔日扼守特茹河口的防禦堡壘，宛如佇立水上的曼努埃爾式珠寶盒。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>1515 年建造的貝倫塔矗立在特茹河出海口，曾是水手離港告別家鄉的最後一眼，也是抵達里斯本的象徵地標；1960 年落成的發現者紀念碑高 52 公尺，外型宛如一艘揚帆啟航的卡拉維爾三桅帆船。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>貝倫塔石橋：</strong>走在通往水中城堡的木棧道上，以這座擁有摩爾式崗哨亭與曼努埃爾式繩結浮雕的防禦水上寶盒為背景。<br>
+              2. <strong>風向玫瑰羅盤地面：</strong>發現者紀念碑前方廣場由南非致贈的巨型大理石世界地圖羅盤，站在標註 1498 年開闢印度航線的地圖上拍照。
+            </div>
           </div>
         </div>
       </div>
@@ -825,8 +1127,15 @@
             <div class="timeline-dot"></div>
             <span class="time-slot">09:45 - 12:30</span><span class="duration-badge">停留 2 小時 45 分鐘</span>
             <div class="item-title">佩納宮 (Palácio da Pena) 夢幻彩色城堡</div>
-            <div class="item-desc">英國詩人拜倫眼中的「人間伊甸園」。十九世紀德國親王費迪南二世為葡萄牙皇室打造的浪漫主義避暑夏宮。鮮艷黃、磚紅與淡紫色的城垛塔樓在山頂雲霧間交織，融合摩爾式穹頂、哥德式雕飾與曼努埃爾風格。</div>
-            <div class="item-highlight">⭐ <strong>參觀要點：</strong>務必提前上網預約宮殿內部入場時段，提早 15 分鐘抵達宮門，避免排隊逾時。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>英國詩人拜倫盛讚為「人間璀璨伊甸園」。1842 年德國親王費迪南二世（瑪麗亞二世女王的丈夫）買下毀於地震的修道院廢墟，融合新哥德、新文藝復興、摩爾式與曼努埃爾式，打造出這座歐洲浪漫主義建築典範。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>女王露台（Queen's Terrace）：</strong>明艷黃色塔樓與磚紅色尖拱城垛交界處，俯瞰整座大西洋海岸線與山巒雲海。<br>
+              2. <strong>特里同之門（Porta do Tritão）：</strong>半人半海妖的特里同石雕，象徵大地與水元素的創造。
+            </div>
             <a class="link-pill" href="https://bilheteira.parquesdesintra.pt/home/en" target="_blank">🎟️ 辛特拉票務官網</a>
             <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/佩纳宫" target="_blank">📖 城堡故事解說</a>
           </div>
@@ -836,8 +1145,18 @@
             <span class="time-slot">13:00 - 15:30</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">雷加萊拉莊園 (Quinta da Regaleira) 啟蒙之井探秘</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自佩納宮搭 434 公車下山或叫車 5 分鐘抵達莊園大門。</div>
-            <div class="item-desc">充滿神秘共濟會與鍊金術符號的新哥特式莊園。</div>
-            <div class="item-highlight">⭐ <strong>必遊奇觀：</strong>深入 27 公尺深的「啟蒙之井（Poço Iniciático）」，沿著象徵但丁《神曲》九重地獄的螺旋石梯拾級而下，穿越幽暗的地下岩洞迷宮與水上踏石步道，震撼非凡！</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>由富有巴西採礦商安東尼奧·卡瓦略與義大利舞台佈景設計師曼尼尼聯手打造。融合共濟會、聖殿騎士團與但丁《神曲》的神秘哲學符號。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>啟蒙之井（Poço Iniciático）：</strong>深達 27 公尺的地下石井，站在井底抬頭向上仰拍九層螺旋迴旋石階，井口綠苔與天空光芒宛如神聖儀式。<br>
+              2. <strong>湖泊踏石步道：</strong>穿越幽暗地底岩洞迷宮後，走出洞口踩著露出水面的石塊步道跨越綠色瀑布池塘。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 辛特拉必吃點心：</strong>在老城區 Piriquita 甜點名店品嚐以起司、杏仁與肉桂製作的百年「辛特拉起司塔（Queijadas de Sintra）」與「枕頭酥（Travesseiros）」。
+            </div>
             <a class="link-pill" href="https://www.regaleira.pt/en" target="_blank">🌐 雷加萊拉莊園官網</a>
             <a class="link-pill" href="https://maps.google.com/?q=Quinta+da+Regaleira+Sintra" target="_blank">📍 Google 地圖定位</a>
           </div>
@@ -854,7 +1173,10 @@
             <span class="time-slot">22:00 - 00:30</span><span class="duration-badge">狂歡 2.5 小時</span>
             <div class="item-title">🎆 商業廣場萬人跨年音樂會 ＆ 特茹河倒數煙火秀</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從下城公寓步行僅 3~5 分鐘直達商業廣場（免擠地鐵，散步即達）。</div>
-            <div class="item-desc">加入廣場上的萬人跨年狂歡派對！遵照葡式傳統，在午夜 12 響鐘聲響起時，每響吞下一顆葡萄（共 12 顆象徵新年 12 個月順遂）。特茹河畔璀璨煙火騰空而起，在倒數聲中迎接 2027！</div>
+            
+            <div class="feature-box feature-photo">
+              <strong>📸 跨年儀式感亮點：</strong>遵照葡萄牙道地跨年習俗，自備 12 顆葡萄乾或新鮮葡萄，在午夜 00:00 伴隨教堂鐘聲每響吃下一顆祈福；手持香檳在特茹河岸欣賞夜空中倒映在水面的跨年煙火。
+            </div>
           </div>
         </div>
       </div>
@@ -878,15 +1200,26 @@
             <span class="time-slot">13:30 - 16:30</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">搭乘 28 號木造電車穿梭阿爾法瑪 (Alfama) 迷宮</div>
             <div class="item-transit">🚋 交通：在 Martim Moniz 起始站排隊搭乘 1930 年代黃色木造電車。</div>
-            <div class="item-desc">電車在寬度僅容一車的極陡石板坡道間驚險攀爬，兩側是掛著萬國旗般彩色列柱排屋的老宅。在聖露西亞觀景台（Miradouro de Santa Luzia）下車，眺望阿爾法瑪一片紅瓦與特茹河波光。</div>
+            
+            <div class="feature-box feature-history">
+              <strong>🏛️ 歷史背景與亮點：</strong>阿爾法瑪是里斯本最古老的街區，1755 年大地震中因基岩堅硬奇蹟倖存，保留了摩爾統治時期的蜿蜒迷宮小徑。28 號古董電車自 1930 年代服役至今，是少數能克服高達 14% 陡坡與窄巷的經典車型。
+            </div>
+            <div class="feature-box feature-photo">
+              <strong>📸 最佳打卡拍照點：</strong>
+              1. <strong>聖露西亞觀景台（Miradouro de Santa Luzia）：</strong>九重葛盛開的藍白瓷磚涼亭，眺望特茹河大景。<br>
+              2. <strong>里斯本主教座堂前轉彎道：</strong>站在大教堂正面，抓拍 28 號黃色電車驚險轉彎穿梭的標誌性鏡頭。
+            </div>
             <a class="link-pill" href="https://maps.google.com/?q=Miradouro+de+Santa+Luzia+Lisbon" target="_blank">📍 聖露西亞觀景台</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">17:30 - 20:00</span><span class="duration-badge">停留 2.5 小時</span>
-            <div class="item-title">阿爾法瑪老城餐館：葡式海鮮燉飯 ＆ 聆聽法朵 (Fado)</div>
+            <div class="item-title">阿爾法瑪老城餐館：葡式海鮮泡飯 ＆ 聆聽法朵 (Fado)</div>
             <div class="item-desc">走進微弱燭光的傳統小酒館，享用盛滿鮮蝦蛤蜊的葡式海鮮泡飯（Arroz de Marisco），靜靜聆聽葡萄牙國粹「法朵」歌者深情吟唱與十二弦吉他的動人交織。</div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必嚐特色美食：</strong>滿滿螃蟹、鮮蝦與淡菜的陶鍋葡式海鮮泡飯（Arroz de Marisco）、香煎大蒜蛤蜊（Amêijoas à Bulhão Pato）與櫻桃酒（Ginjinha）。
+            </div>
           </div>
 
           <div class="timeline-item">
