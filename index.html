@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026-2027 西葡15天跨年深度自由行手冊 (全景地圖・避雷與必去・美饌・常用會話)</title>
+  <title>2026-2027 西葡15天深度自由行手冊 (全景機場動線地圖・真人語音示範・多平台訂票)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -14,7 +14,9 @@
       --accent: #dc2626;
       --accent-warm: #d97706;
       --success: #15803d;
-      --avoid: #b45309;
+      --kkday: #00b0ab;
+      --klook: #ff5b00;
+      --gyg: #ff4742;
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text: #0f172a;
@@ -56,9 +58,9 @@
     }
 
     header h1 { font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; }
-    header p { font-size: 1.05rem; opacity: 0.92; max-width: 780px; margin: 0 auto; }
+    header p { font-size: 1.05rem; opacity: 0.92; max-width: 800px; margin: 0 auto; }
 
-    .container { max-width: 1120px; margin: -40px auto 0; padding: 0 16px; position: relative; z-index: 10; }
+    .container { max-width: 1160px; margin: -40px auto 0; padding: 0 16px; position: relative; z-index: 10; }
 
     /* Sticky Nav */
     .nav-tabs {
@@ -97,53 +99,86 @@
     .info-box.success { border-left-color: var(--success); background: #f0fdf4; }
     .info-box h4 { font-size: 1.05rem; margin-bottom: 6px; color: var(--text); }
 
-    /* Visual Route Map Styling */
+    /* Visual Route Map Styling with Airports */
     .map-container {
       background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-      border-radius: 12px;
-      padding: 24px 16px;
+      border-radius: 14px;
+      padding: 26px 20px;
       color: white;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       overflow-x: auto;
     }
     .map-header {
-      display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;
-      border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 10px; flex-wrap: wrap; gap: 8px;
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 12px; flex-wrap: wrap; gap: 10px;
     }
-    .map-header h3 { font-size: 1.15rem; color: #60a5fa; }
+    .map-header h3 { font-size: 1.2rem; color: #60a5fa; }
     .map-flow {
-      display: flex; align-items: center; justify-content: space-between; min-width: 720px; padding: 15px 10px;
+      display: flex; align-items: center; justify-content: space-between; min-width: 980px; padding: 20px 10px;
       position: relative;
     }
     .map-flow::before {
-      content: ""; position: absolute; top: 40px; left: 40px; right: 40px; height: 4px;
-      background: linear-gradient(90deg, #3b82f6 0%, #ef4444 33%, #10b981 66%, #f59e0b 100%);
+      content: ""; position: absolute; top: 46px; left: 30px; right: 30px; height: 4px;
+      background: linear-gradient(90deg, #38bdf8 0%, #3b82f6 20%, #ef4444 40%, #10b981 65%, #f59e0b 85%, #a855f7 100%);
       z-index: 1; border-radius: 2px;
     }
     .map-node {
-      position: relative; z-index: 2; text-align: center; width: 150px;
-      background: #1e293b; border: 2px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 12px 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;
+      position: relative; z-index: 2; text-align: center; width: 145px;
+      background: #1e293b; border: 2px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 12px 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35); transition: transform 0.2s, border-color 0.2s;
     }
     .map-node:hover { transform: translateY(-4px); border-color: #60a5fa; }
-    .node-badge {
-      width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 8px; font-weight: 800; font-size: 0.85rem; color: white;
+    .map-node.airport {
+      background: #0f172a; border-style: dashed; border-color: #38bdf8; width: 125px;
     }
-    .node-city { font-weight: 700; font-size: 1.05rem; margin-bottom: 2px; }
-    .node-dates { font-size: 0.78rem; opacity: 0.8; }
+    .node-badge {
+      width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 6px; font-weight: 800; font-size: 0.8rem; color: white;
+    }
+    .node-city { font-weight: 800; font-size: 0.98rem; margin-bottom: 2px; }
+    .node-dates { font-size: 0.75rem; opacity: 0.85; }
     .node-sub { font-size: 0.72rem; color: #94a3b8; margin-top: 4px; line-height: 1.3; }
 
-    /* Phrases Grid */
-    .phrase-category { margin-bottom: 16px; }
-    .phrase-category h4 { font-size: 1rem; color: var(--primary); margin-bottom: 8px; }
-    .phrase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
-    .phrase-card {
-      background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px;
+    .transit-label {
+      color: #94a3b8; font-weight: 700; font-size: 0.75rem; z-index: 2; background: #0f172a;
+      padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.15); white-space: nowrap;
     }
-    .phrase-orig { font-weight: 700; color: var(--text); font-size: 0.95rem; }
-    .phrase-pron { font-size: 0.8rem; color: #64748b; font-style: italic; }
-    .phrase-trans { font-size: 0.85rem; color: #1e293b; font-weight: 500; }
+
+    /* Voice Phrase Card with Visible Pronunciation & Distinct Play Button */
+    .phrase-category { margin-bottom: 18px; }
+    .phrase-category h4 { font-size: 1rem; color: var(--primary); margin-bottom: 10px; }
+    .phrase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    
+    .phrase-card {
+      background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 12px 14px;
+      display: flex; justify-content: space-between; align-items: center; gap: 10px;
+      box-shadow: var(--shadow-sm); transition: transform 0.15s, border-color 0.15s;
+    }
+    .phrase-card:hover { border-color: var(--primary-light); transform: translateY(-2px); }
+    .phrase-content { flex: 1; }
+    .phrase-orig { font-weight: 800; color: #0f172a; font-size: 1.02rem; line-height: 1.3; }
+    .phrase-pron { font-size: 0.82rem; color: #64748b; font-style: italic; margin-top: 2px; }
+    .phrase-trans { font-size: 0.88rem; color: #1e293b; font-weight: 600; margin-top: 2px; }
+    
+    /* PROMINENT AUDIO BUTTON */
+    .audio-btn {
+      background: #2563eb; color: white; border: none; padding: 8px 12px;
+      border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.85rem; font-weight: 700; transition: all 0.2s; flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(37,99,235,0.3);
+    }
+    .audio-btn:hover { background: #1e3a8a; transform: scale(1.05); }
+    .audio-btn:active { transform: scale(0.95); }
+
+    /* City Pass Banner */
+    .pass-card {
+      background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+      border: 1px solid #99f6e4; border-radius: 10px; padding: 14px 18px; margin-bottom: 16px;
+    }
+    .pass-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 6px; }
+    .pass-title { font-weight: 800; color: #0f766e; font-size: 1.05rem; }
+    .pass-badge { background: #0d9488; color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: 999px; font-weight: 700; }
+    .pass-desc { font-size: 0.88rem; color: #134e4a; margin-bottom: 8px; }
 
     /* Day Card */
     .day-card {
@@ -190,33 +225,39 @@
     }
     .item-desc { color: #334155; font-size: 0.94rem; margin-bottom: 8px; }
 
-    /* Highlight & Avoid Boxes (避雷與必去) */
+    /* Highlight & Avoid Boxes */
     .highlight-box {
       background: #ecfdf5; border-left: 4px solid #059669; border-radius: 6px;
       padding: 10px 14px; margin: 8px 0; font-size: 0.9rem; color: #064e3b;
     }
-    .highlight-box strong { color: #065f46; }
-
     .avoid-box {
       background: #fffbeb; border-left: 4px solid #d97706; border-radius: 6px;
       padding: 10px 14px; margin: 8px 0; font-size: 0.9rem; color: #78350f;
     }
-    .avoid-box strong { color: #92400e; }
-
     .feature-box {
       margin: 8px 0; padding: 10px 14px; border-radius: 6px; font-size: 0.9rem; line-height: 1.55;
     }
-    .feature-history { background: #f1f5f9; border-left: 3px solid #64748b; color: #1e293b; }
     .feature-photo { background: #fdf4ff; border-left: 3px solid #c026d3; color: #701a75; }
     .feature-food { background: #fff7ed; border-left: 3px solid #ea580c; color: #9a3412; }
 
-    /* Links and Buttons */
-    a.link-pill {
-      display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px;
-      background: #e2e8f0; color: #1e293b; text-decoration: none; border-radius: 6px;
-      font-size: 0.8rem; font-weight: 600; margin-right: 6px; margin-top: 4px; transition: all 0.2s;
+    /* Multi-platform Tickets & Passes Buttons */
+    .booking-links {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; align-items: center;
     }
-    a.link-pill:hover { background: var(--primary-light); color: white; }
+    a.link-pill {
+      display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px;
+      background: #f1f5f9; color: #1e293b; text-decoration: none; border-radius: 6px;
+      font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border); transition: all 0.2s;
+    }
+    a.link-pill:hover { background: var(--primary-light); color: white; border-color: var(--primary-light); }
+    a.link-pill.official { background: #e0e7ff; color: #3730a3; border-color: #c7d2fe; }
+    a.link-pill.official:hover { background: #3730a3; color: white; }
+    a.link-pill.kkday { background: #e6fffa; color: #00897b; border-color: #b2dfdb; }
+    a.link-pill.kkday:hover { background: var(--kkday); color: white; }
+    a.link-pill.klook { background: #fff7ed; color: #c2410c; border-color: #ffedd5; }
+    a.link-pill.klook:hover { background: var(--klook); color: white; }
+    a.link-pill.gyg { background: #fef2f2; color: #b91c1c; border-color: #fee2e2; }
+    a.link-pill.gyg:hover { background: var(--gyg); color: white; }
 
     /* Hotel Card */
     .hotel-card {
@@ -253,57 +294,64 @@
   <header>
     <div class="badge">✈️ 15-Day Master Travel Guide (Dec 19, 2026 – Jan 2, 2027)</div>
     <h1>2026-2027 西班牙 ＆ 葡萄牙 深度自由行手冊</h1>
-    <p>3人同行・高CP值公寓・巴塞隆納進、里斯本出・視覺化旅遊地圖・避雷與必去・美饌打卡・常用會話・防竊守則・1/4準時上班</p>
+    <p>3人同行・高CP值公寓・巴塞隆納進、里斯本出・含機場動線地圖・真人語音示範・多平台訂票・1/4準時上班</p>
   </header>
 
   <div class="container">
     <nav class="nav-tabs">
-      <a href="#map-section" class="nav-tab active">🗺️ 視覺化地圖</a>
-      <a href="#phrases" class="nav-tab">🗣️ 常用會話</a>
+      <a href="#map-section" class="nav-tab active">🗺️ 機場與城市地圖</a>
+      <a href="#phrases" class="nav-tab">🗣️ 常用會話 (點擊發音)</a>
+      <a href="#passes-section" class="nav-tab">🎫 城市套票與交通卡</a>
       <a href="#safety" class="nav-tab">🛡️ 防竊守則</a>
       <a href="#flights" class="nav-tab">✈️ 航班會合</a>
       <a href="#hotels" class="nav-tab">🏨 住宿推薦</a>
-      <a href="#itinerary" class="nav-tab">📅 每日時程與避雷指南</a>
-      <a href="#timeline" class="nav-tab">📝 預約時程表</a>
+      <a href="#itinerary" class="nav-tab">📅 每日行程與訂票</a>
+      <a href="#timeline" class="nav-tab">📝 預約搶票時程</a>
     </nav>
 
-    <!-- Visual Route Map Section -->
+    <!-- Visual Route Map Section with AIRPORTS -->
     <section id="map-section" class="section">
-      <h2 class="section-title">🗺️ 視覺化資訊旅遊地圖 (跨國順時針動線)</h2>
-      <p style="color:#475569; font-size:0.95rem; margin-bottom:14px;">全程採<strong>巴塞隆納進、里斯本出</strong>，以高鐵與直飛航班串聯 4 大經典城市，不走回頭路：</p>
+      <h2 class="section-title">🗺️ 視覺化資訊旅遊地圖 (含各大機場出入境與城際交通銜接)</h2>
+      <p style="color:#475569; font-size:0.95rem; margin-bottom:14px;">全程採<strong>巴塞隆納機場（BCN）入境會合、里斯本機場（LIS）出境返航</strong>，不走回頭路：</p>
       
       <div class="map-container">
         <div class="map-header">
-          <h3>📍 雙牙 15 天大環線移動路徑示意圖</h3>
-          <span style="font-size:0.8rem; background:rgba(255,255,255,0.1); padding:3px 10px; border-radius:20px;">總里程約 1,850 km</span>
+          <h3>📍 雙牙 15 天大環線：出發地 ➔ 機場 ➔ 4 大城市動線示意圖</h3>
+          <span style="font-size:0.8rem; background:rgba(255,255,255,0.1); padding:3px 10px; border-radius:20px;">跨越 2 國・全程高鐵/內陸機無縫銜接</span>
         </div>
         
         <div class="map-flow">
-          <!-- Node 1 -->
+          <!-- Departure / Arrival Node -->
+          <div class="map-node airport">
+            <div class="node-badge" style="background:#0284c7;">🛫</div>
+            <div class="node-city" style="color:#38bdf8;">BCN 機場</div>
+            <div class="node-dates">12/20 上午抵達</div>
+            <div class="node-sub">台灣TPE / 佛州JAX 兩路於 T1 大會合</div>
+          </div>
+          
+          <div class="transit-label">🚌 Aerobús 35m</div>
+
+          <!-- City 1 -->
           <div class="map-node">
             <div class="node-badge" style="background:#2563eb;">1</div>
             <div class="node-city">巴塞隆納</div>
             <div class="node-dates">12/20 - 12/24 (4晚)</div>
-            <div class="node-sub">高第建築・聖家堂・碉堡全景・地中海海鮮</div>
+            <div class="node-sub">聖家堂・卡梅爾碉堡・加泰隆尼亞音樂宮</div>
           </div>
           
-          <div style="color:#94a3b8; font-weight:700; font-size:0.85rem; z-index:2; background:#0f172a; padding:2px 8px; border-radius:4px;">
-            🚄 高鐵 2.5h
-          </div>
+          <div class="transit-label">🚄 高鐵 2.5h</div>
 
-          <!-- Node 2 -->
+          <!-- City 2 -->
           <div class="map-node">
             <div class="node-badge" style="background:#dc2626;">2</div>
             <div class="node-city">馬德里</div>
             <div class="node-dates">12/24 - 12/26 (2晚)</div>
-            <div class="node-sub">聖誕市集・麗池水晶宮・平安夜自煮大餐</div>
+            <div class="node-sub">主廣場聖誕市集・麗池水晶宮・平安夜自煮</div>
           </div>
 
-          <div style="color:#94a3b8; font-weight:700; font-size:0.85rem; z-index:2; background:#0f172a; padding:2px 8px; border-radius:4px;">
-            ✈️ 直飛 1.2h
-          </div>
+          <div class="transit-label">✈️ MAD ➔ OPO 1.2h</div>
 
-          <!-- Node 3 -->
+          <!-- City 3 -->
           <div class="map-node">
             <div class="node-badge" style="background:#059669;">3</div>
             <div class="node-city">波多</div>
@@ -311,29 +359,40 @@
             <div class="node-sub">路易一世橋・萊羅書店・兩萬片瓷磚・波特酒</div>
           </div>
 
-          <div style="color:#94a3b8; font-weight:700; font-size:0.85rem; z-index:2; background:#0f172a; padding:2px 8px; border-radius:4px;">
-            🚆 國鐵 3h
-          </div>
+          <div class="transit-label">🚆 國鐵 AP 3h</div>
 
-          <!-- Node 4 -->
+          <!-- City 4 -->
           <div class="map-node">
             <div class="node-badge" style="background:#d97706;">4</div>
             <div class="node-city">里斯本</div>
             <div class="node-dates">12/29 - 1/2 (4晚)</div>
-            <div class="node-sub">辛特拉仙境・百年葡撻・商業廣場萬人跨年煙火</div>
+            <div class="node-sub">辛特拉仙境・百年葡撻・商業廣場跨年煙火</div>
+          </div>
+
+          <div class="transit-label">🚕 Uber 15m</div>
+
+          <!-- Departure Airport Node -->
+          <div class="map-node airport">
+            <div class="node-badge" style="background:#9333ea;">🛬</div>
+            <div class="node-city" style="color:#c084fc;">LIS 機場</div>
+            <div class="node-dates">1/2 午後啟程</div>
+            <div class="node-sub">佛州1/2晚抵達 / 台灣1/3抵台・1/4上班</div>
           </div>
         </div>
 
-        <div style="margin-top:15px; font-size:0.85rem; color:#94a3b8; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;">
-          <div>🛫 <strong>去程抵達：</strong>12/20 上午降落 BCN 機場會合</div>
-          <div>🛬 <strong>回程返航：</strong>1/2 里斯本起飛 ➔ 1/3 抵台休整 ➔ 1/4 精神充沛上班</div>
+        <div style="margin-top:16px; font-size:0.85rem; color:#94a3b8; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; border-top:1px dashed rgba(255,255,255,0.15); padding-top:10px;">
+          <div>🛫 <strong>會合點：</strong>巴塞隆納埃爾普拉特機場 (BCN) 第一航廈 T1 入境大廳</div>
+          <div>🛬 <strong>返航點：</strong>里斯本溫貝托·德爾加多機場 (LIS) 第一航廈 T1 辦理退稅登機</div>
         </div>
       </div>
     </section>
 
-    <!-- Travel Phrases Section -->
+    <!-- Travel Phrases with Speech Synthesis & PROMINENT SPEAKER BUTTONS -->
     <section id="phrases" class="section">
-      <h2 class="section-title">🗣️ 常用會話 (西語 ＆ 葡語雙語即查卡)</h2>
+      <h2 class="section-title">🗣️ 常用會話 (點擊藍色「🔊 播放」按鈕，立即真人原生發音示範)</h2>
+      <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:18px;">
+        已為每個單字及句子加入專屬語音功能。點擊即可在手機或電腦上聆聽純正<strong>西班牙語（es-ES）</strong>與<strong>葡萄牙語（pt-PT）</strong>真人語音示範，語速調慢至 0.85x 方便現場跟讀：
+      </p>
       
       <div class="grid-2">
         <!-- Spanish Phrases -->
@@ -344,50 +403,107 @@
             <h4>👋 日常問候與禮貌</h4>
             <div class="phrase-grid">
               <div class="phrase-card">
-                <div class="phrase-orig">¡Hola! / Buenos días</div>
-                <div class="phrase-pron">歐拉 / 不埃諾斯 迪亞斯</div>
-                <div class="phrase-trans">你好！ / 早安</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">¡Hola!</div>
+                  <div class="phrase-pron">歐拉</div>
+                  <div class="phrase-trans">你好！</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('¡Hola!', 'es-ES')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Muchas gracias</div>
-                <div class="phrase-pron">木洽斯 格拉西亞斯</div>
-                <div class="phrase-trans">非常感謝！</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Buenos días</div>
+                  <div class="phrase-pron">不埃諾斯 迪亞斯</div>
+                  <div class="phrase-trans">早安 / 日安</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Buenos días', 'es-ES')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Por favor / Perdón</div>
-                <div class="phrase-pron">波爾法沃 / 貝爾冬</div>
-                <div class="phrase-trans">請 / 不好意思、藉過</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Muchas gracias</div>
+                  <div class="phrase-pron">木洽斯 格拉西亞斯</div>
+                  <div class="phrase-trans">非常感謝！</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Muchas gracias', 'es-ES')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">¿Habla inglés?</div>
-                <div class="phrase-pron">阿不拉 英格雷斯？</div>
-                <div class="phrase-trans">您會說英文嗎？</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Por favor</div>
+                  <div class="phrase-pron">波爾法沃</div>
+                  <div class="phrase-trans">請 / 拜託</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Por favor', 'es-ES')">🔊 播放</button>
+              </div>
+
+              <div class="phrase-card">
+                <div class="phrase-content">
+                  <div class="phrase-orig">Perdón / Disculpe</div>
+                  <div class="phrase-pron">貝爾冬 / 迪斯庫爾佩</div>
+                  <div class="phrase-trans">不好意思 / 借過</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Perdón, disculpe', 'es-ES')">🔊 播放</button>
+              </div>
+
+              <div class="phrase-card">
+                <div class="phrase-content">
+                  <div class="phrase-orig">¿Habla inglés?</div>
+                  <div class="phrase-pron">阿不拉 英格雷斯？</div>
+                  <div class="phrase-trans">您會說英文嗎？</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('¿Habla inglés?', 'es-ES')">🔊 播放</button>
               </div>
             </div>
           </div>
 
           <div class="phrase-category">
-            <h4>🍽️ 點餐、買單與求助</h4>
+            <h4>🍽️ 點餐、買單與問路</h4>
             <div class="phrase-grid">
               <div class="phrase-card">
-                <div class="phrase-orig">La cuenta, por favor</div>
-                <div class="phrase-pron">拉 昆塔，波爾法沃</div>
-                <div class="phrase-trans">請結帳 / 買單</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">La cuenta, por favor</div>
+                  <div class="phrase-pron">拉 昆塔，波爾法沃</div>
+                  <div class="phrase-trans">請結帳 / 買單</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('La cuenta, por favor', 'es-ES')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Una mesa para tres</div>
-                <div class="phrase-pron">烏納 梅薩 怕拉 特雷斯</div>
-                <div class="phrase-trans">我們有 3 位（三人桌）</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Una mesa para tres</div>
+                  <div class="phrase-pron">烏納 梅薩 怕拉 特雷斯</div>
+                  <div class="phrase-trans">我們 3 位（三人桌）</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Una mesa para tres personas', 'es-ES')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Agua con / sin gas</div>
-                <div class="phrase-pron">阿瓜 恐 / 辛 嘎斯</div>
-                <div class="phrase-trans">氣泡水 / 一般礦泉水</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Agua con gas</div>
+                  <div class="phrase-pron">阿瓜 恐 嘎斯</div>
+                  <div class="phrase-trans">氣泡水</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Agua con gas', 'es-ES')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">¿Dónde está el baño?</div>
-                <div class="phrase-pron">東疊 耶斯塔 耶爾 邦紐？</div>
-                <div class="phrase-trans">洗手間在哪裡？</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Agua sin gas</div>
+                  <div class="phrase-pron">阿瓜 辛 嘎斯</div>
+                  <div class="phrase-trans">一般礦泉水（無氣）</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Agua sin gas', 'es-ES')">🔊 播放</button>
+              </div>
+
+              <div class="phrase-card">
+                <div class="phrase-content">
+                  <div class="phrase-orig">¿Dónde está el baño?</div>
+                  <div class="phrase-pron">東疊 耶斯塔 耶爾 邦紐？</div>
+                  <div class="phrase-trans">洗手間在哪裡？</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('¿Dónde está el baño?', 'es-ES')">🔊 播放</button>
               </div>
             </div>
           </div>
@@ -401,52 +517,175 @@
             <h4>👋 日常問候與禮貌</h4>
             <div class="phrase-grid">
               <div class="phrase-card">
-                <div class="phrase-orig">Olá! / Bom dia</div>
-                <div class="phrase-pron">歐拉！ / 崩 迪亞</div>
-                <div class="phrase-trans">你好！ / 早安</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Olá!</div>
+                  <div class="phrase-pron">歐拉！</div>
+                  <div class="phrase-trans">你好！</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Olá!', 'pt-PT')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Obrigado (男) / Obrigada (女)</div>
-                <div class="phrase-pron">歐布里嘎度 / 歐布里嘎達</div>
-                <div class="phrase-trans">謝謝（說者為男性/女性）</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Bom dia</div>
+                  <div class="phrase-pron">崩 迪亞</div>
+                  <div class="phrase-trans">早安</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Bom dia', 'pt-PT')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Por favor / Com licença</div>
-                <div class="phrase-pron">波爾法沃 / 孔 里森薩</div>
-                <div class="phrase-trans">請 / 不好意思、藉光</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Obrigado / Obrigada</div>
+                  <div class="phrase-pron">歐布里嘎度 / 歐布里嘎達</div>
+                  <div class="phrase-trans">謝謝（男說/女說）</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Obrigado, obrigada', 'pt-PT')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Fala inglês?</div>
-                <div class="phrase-pron">發拉 英格雷斯？</div>
-                <div class="phrase-trans">您會說英文嗎？</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Por favor / Com licença</div>
+                  <div class="phrase-pron">波爾法沃 / 孔 里森薩</div>
+                  <div class="phrase-trans">請 / 不好意思、借過</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Por favor, com licença', 'pt-PT')">🔊 播放</button>
+              </div>
+
+              <div class="phrase-card">
+                <div class="phrase-content">
+                  <div class="phrase-orig">Fala inglês?</div>
+                  <div class="phrase-pron">發拉 英格雷斯？</div>
+                  <div class="phrase-trans">您會說英文嗎？</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Fala inglês?', 'pt-PT')">🔊 播放</button>
               </div>
             </div>
           </div>
 
           <div class="phrase-category">
-            <h4>🍽️ 點餐、買單與求助</h4>
+            <h4>🍽️ 點餐、買單與問路</h4>
             <div class="phrase-grid">
               <div class="phrase-card">
-                <div class="phrase-orig">A conta, por favor</div>
-                <div class="phrase-pron">阿 控塔，波爾法沃</div>
-                <div class="phrase-trans">請結帳 / 買單</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">A conta, por favor</div>
+                  <div class="phrase-pron">阿 控塔，波爾法沃</div>
+                  <div class="phrase-trans">請結帳 / 買單</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('A conta, por favor', 'pt-PT')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Uma mesa para três</div>
-                <div class="phrase-pron">烏瑪 梅薩 怕拉 特雷斯</div>
-                <div class="phrase-trans">我們 3 位用餐</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Uma mesa para três</div>
+                  <div class="phrase-pron">烏瑪 梅薩 怕拉 特雷斯</div>
+                  <div class="phrase-trans">我們 3 位用餐</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Uma mesa para três pessoas', 'pt-PT')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Um café / Uma bica</div>
-                <div class="phrase-pron">溫 卡飛 / 烏瑪 碧卡</div>
-                <div class="phrase-trans">一杯義式濃縮黑咖啡</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Um café / Uma bica</div>
+                  <div class="phrase-pron">溫 卡飛 / 烏瑪 碧卡</div>
+                  <div class="phrase-trans">一杯義式黑咖啡</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Um café, uma bica, por favor', 'pt-PT')">🔊 播放</button>
               </div>
+
               <div class="phrase-card">
-                <div class="phrase-orig">Onde fica a casa de banho?</div>
-                <div class="phrase-pron">翁得 飛卡 阿 卡薩 得 邦紐？</div>
-                <div class="phrase-trans">洗手間在哪裡？</div>
+                <div class="phrase-content">
+                  <div class="phrase-orig">Água sem gás</div>
+                  <div class="phrase-pron">阿瓜 幸 嘎斯</div>
+                  <div class="phrase-trans">無氣泡礦泉水</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Água sem gás', 'pt-PT')">🔊 播放</button>
+              </div>
+
+              <div class="phrase-card">
+                <div class="phrase-content">
+                  <div class="phrase-orig">Onde fica a casa de banho?</div>
+                  <div class="phrase-pron">翁得 飛卡 阿 卡薩 得 邦紐？</div>
+                  <div class="phrase-trans">洗手間在哪裡？</div>
+                </div>
+                <button class="audio-btn" onclick="speakText('Onde fica a casa de banho?', 'pt-PT')">🔊 播放</button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Combined Tickets & City Passes Section -->
+    <section id="passes-section" class="section">
+      <h2 class="section-title">🎫 4大城市實用交通卡與整合景點套票 (省錢省時首選)</h2>
+      
+      <div class="grid-2">
+        <!-- Barcelona Pass -->
+        <div class="pass-card">
+          <div class="pass-header">
+            <span class="pass-title">🇪🇸 巴塞隆納交通卡 & 高第景點通票</span>
+            <span class="pass-badge">省時必備</span>
+          </div>
+          <p class="pass-desc">
+            1. <strong>Hola Barcelona 交通卡 (48/72/96/120小時)：</strong>無限次搭乘地鐵、公車、路面電車及機場地鐵 L9S，免去每次買單程票排隊。<br>
+            2. <strong>高第通票組合（聖家堂 + 奎爾公園）：</strong>KKday / Klook 均有官方認證雙景點套票，省去分別搶票時間。
+          </p>
+          <div class="booking-links">
+            <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/18579-hola-barcelona-travel-card" target="_blank">🛒 KKday Hola BCN 交通卡</a>
+            <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/6799-hola-bcn-barcelona-travel-card-barcelona/" target="_blank">🛒 Klook 巴塞隆納交通卡</a>
+            <a class="link-pill gyg" href="https://www.getyourguide.com/barcelona-l45/barcelona-sagrada-familia-park-guell-guided-tour-t172161/" target="_blank">🛒 GYG 聖家堂+奎爾公園組合票</a>
+          </div>
+        </div>
+
+        <!-- Madrid Pass -->
+        <div class="pass-card">
+          <div class="pass-header">
+            <span class="pass-title">🇪🇸 馬德里 10次交通卡 (Multi Card)</span>
+            <span class="pass-badge">3人共用最划算</span>
+          </div>
+          <p class="pass-desc">
+            馬德里地鐵卡「Tarjeta Multi」可<strong>多人共用</strong>！在 Atocha 或地鐵站售票機購買一張空卡（€2.5）並儲值 10 次票（Metrobús 10 Viajes 約 €12.2），進站時 3 人依序感應同一張卡刷過閘門，人均成本大幅低於單程票。
+          </p>
+          <div class="booking-links">
+            <a class="link-pill official" href="https://www.metromadrid.es/en/travel-in-the-metro/card-types/multi" target="_blank">🌐 馬德里地鐵 Multi 卡說明</a>
+            <a class="link-pill klook" href="https://www.klook.com/zh-TW/city/37-madrid-things-to-do/" target="_blank">🛒 Klook 馬德里景點票券專區</a>
+          </div>
+        </div>
+
+        <!-- Porto Pass -->
+        <div class="pass-card">
+          <div class="pass-header">
+            <span class="pass-title">🇵🇹 波多卡 Porto Card ＆ 杜羅河六橋船票</span>
+            <span class="pass-badge">含交通+免排隊</span>
+          </div>
+          <p class="pass-desc">
+            <strong>Porto Card (Walker / Transportation 24~72小時)：</strong>含交通版可無限次搭乘地鐵公車，並享有證券交易所宮（Palácio da Bolsa）、牧師塔門票 50% 折扣及酒莊品酒特惠！搭配杜羅河 6 橋遊船套票最順暢。
+          </p>
+          <div class="booking-links">
+            <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/124707-porto-card-portugal" target="_blank">🛒 KKday 波多卡預約</a>
+            <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/9349-porto-card-portugal/" target="_blank">🛒 Klook 波多城市卡</a>
+            <a class="link-pill gyg" href="https://www.getyourguide.com/porto-l151/six-bridges-cruise-douro-river-t58348/" target="_blank">🛒 GYG 杜羅河六橋遊船票</a>
+          </div>
+        </div>
+
+        <!-- Lisbon Card -->
+        <div class="pass-card">
+          <div class="pass-header">
+            <span class="pass-title">🇵🇹 里斯本神卡 Lisboa Card (24/48/72小時)</span>
+            <span class="pass-badge">🔥 全程CP值王</span>
+          </div>
+          <p class="pass-desc">
+            <strong>自由行必買神卡：</strong>
+            1. 里斯本所有地鐵、公車、<strong>28 號木造電車、15E 電車全免費</strong>！<br>
+            2. <strong>聖胡斯塔鍛鐵升降梯免費搭乘</strong>（省 €5.3）！<br>
+            3. <strong>熱羅尼莫斯修道院、貝倫塔免排隊直接免費入場</strong>！<br>
+            4. 包含<strong>里斯本直達辛特拉（Sintra）的近郊火車免費搭乘</strong>！一張卡搞定所有交通與核心古蹟。
+          </p>
+          <div class="booking-links">
+            <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/12521-lisbon-card-portugal" target="_blank">🛒 KKday 里斯本卡 (電子兌換)</a>
+            <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/13214-lisboa-card-lisbon/" target="_blank">🛒 Klook 里斯本城市通票</a>
+            <a class="link-pill gyg" href="https://www.getyourguide.com/lisbon-l42/lisboa-card-24-48-or-72-hour-pass-t172167/" target="_blank">🛒 GYG 官方里斯本卡</a>
           </div>
         </div>
       </div>
@@ -495,10 +734,10 @@
           <p><strong>首選航空：</strong>卡達航空（多哈轉機）或 阿聯酋航空（杜拜轉機），行李 25~30kg，票價性價比最高。</p>
           <p><strong>去程：</strong>2026/12/19 (六) 傍晚 TPE 起飛 ➔ 12/20 (日) 08:30~10:00 抵達巴塞隆納（BCN）。</p>
           <p><strong>回程：</strong>2027/1/2 (六) 14:00~16:00 里斯本（LIS）起飛 ➔ 1/3 (日) 傍晚抵台，留完整一晚睡飽調時差，<strong>1/4 (一) 順利上班！</strong></p>
-          <div style="margin-top:10px;">
+          <div class="booking-links">
             <a class="link-pill" href="https://www.google.com/travel/flights?q=flights%20from%20TPE%20to%20BCN" target="_blank">🔍 Google 航班 (TPE➔BCN)</a>
-            <a class="link-pill" href="https://www.qatarairways.com/" target="_blank">🌐 卡達航空</a>
-            <a class="link-pill" href="https://www.emirates.com/" target="_blank">🌐 阿聯酋航空</a>
+            <a class="link-pill official" href="https://www.qatarairways.com/" target="_blank">🌐 卡達航空官網</a>
+            <a class="link-pill official" href="https://www.emirates.com/" target="_blank">🌐 阿聯酋航空官網</a>
           </div>
         </div>
 
@@ -507,10 +746,10 @@
           <p><strong>首選航空：</strong>美國航空 (AA) / 達美 (Delta) / 聯合 (UA)，經美東樞紐轉機。</p>
           <p><strong>去程：</strong>2026/12/19 (六) 下午 JAX 出發 ➔ 經 CLT/MIA/JFK 搭跨大西洋夜航直飛 ➔ 12/20 (日) 上午抵達 BCN，剛好大會合。</p>
           <p><strong>回程：</strong>2027/1/2 (六) 里斯本（LIS）起飛 ➔ 美東轉機 ➔ 由於 5 小時順向時差，<strong>1/2 (六) 當晚即可返抵 JAX！</strong></p>
-          <div style="margin-top:10px;">
+          <div class="booking-links">
             <a class="link-pill" href="https://www.google.com/travel/flights?q=flights%20from%20JAX%20to%20BCN" target="_blank">🔍 Google 航班 (JAX➔BCN)</a>
-            <a class="link-pill" href="https://www.aa.com/" target="_blank">🌐 美國航空 (AA)</a>
-            <a class="link-pill" href="https://www.delta.com/" target="_blank">🌐 達美航空 (Delta)</a>
+            <a class="link-pill official" href="https://www.aa.com/" target="_blank">🌐 美國航空 (AA)</a>
+            <a class="link-pill official" href="https://www.delta.com/" target="_blank">🌐 達美航空 (Delta)</a>
           </div>
         </div>
       </div>
@@ -537,7 +776,7 @@
             <p class="item-desc">位於安靜且治安極佳的擴展區，街道方正平整無台階。配備全套烤箱、爐具、洗碗機與大客廳。</p>
             <div class="tag-list"><span class="tag">雙臥室</span><span class="tag">大廚房</span><span class="tag">平坦好推行李</span><span class="tag">電梯</span></div>
           </div>
-          <div>
+          <div class="booking-links">
             <a class="link-pill" href="https://www.booking.com/searchresults.zh-tw.html?ss=Eric+Vokel+Gran+Via+Suites+Barcelona" target="_blank">🔗 Booking 查價</a>
             <a class="link-pill" href="https://maps.google.com/?q=Eric+Vokel+Gran+Via+Suites+Barcelona" target="_blank">📍 Google 地圖</a>
           </div>
@@ -555,7 +794,7 @@
             <p class="item-desc"><strong>最推薦首選！</strong>步行 5 分鐘直達阿托查高鐵站，12/24 下車與 12/26 去機場免轉地鐵免搬行李，內附大廚房與洗衣機。</p>
             <div class="tag-list"><span class="tag">平安夜自煮首選</span><span class="tag">步行5分到高鐵</span><span class="tag">免轉地鐵</span></div>
           </div>
-          <div>
+          <div class="booking-links">
             <a class="link-pill" href="https://www.booking.com/searchresults.zh-tw.html?ss=Eric+Vokel+Atocha+Suites+Madrid" target="_blank">🔗 Booking 查價</a>
             <a class="link-pill" href="https://maps.google.com/?q=Eric+Vokel+Atocha+Suites+Madrid" target="_blank">📍 Google 地圖</a>
           </div>
@@ -573,7 +812,7 @@
             <p class="item-desc">波多為劇烈石板坡山城，此住宿點巧妙避開最陡路段，靠近主要地鐵與聖本篤車站，出入極其省力。</p>
             <div class="tag-list"><span class="tag">避開陡坡</span><span class="tag">設計感極佳</span><span class="tag">近地鐵樞紐</span></div>
           </div>
-          <div>
+          <div class="booking-links">
             <a class="link-pill" href="https://www.booking.com/searchresults.zh-tw.html?ss=Armazem+Luxury+Housing+Porto" target="_blank">🔗 Booking 查價</a>
             <a class="link-pill" href="https://maps.google.com/?q=Armazem+Luxury+Housing+Porto" target="_blank">📍 Google 地圖</a>
           </div>
@@ -591,7 +830,7 @@
             <p class="item-desc">地處平坦的下城區，步行 3 分鐘到商業廣場，去辛特拉在 Rossio 搭車、去貝倫搭 15E 電車均近。跨年夜看完煙火可直接散步回房！</p>
             <div class="tag-list"><span class="tag">跨年步行回房</span><span class="tag">地勢平緩</span><span class="tag">交通核心</span></div>
           </div>
-          <div>
+          <div class="booking-links">
             <a class="link-pill" href="https://www.booking.com/searchresults.zh-tw.html?ss=Lisbon+Serviced+Apartments+Baixa" target="_blank">🔗 Booking 查價</a>
             <a class="link-pill" href="https://maps.google.com/?q=Lisbon+Serviced+Apartments+Baixa" target="_blank">📍 Google 地圖</a>
           </div>
@@ -599,9 +838,9 @@
       </div>
     </section>
 
-    <!-- Daily Detailed Timeline Itinerary with Highlights & Pitfall Avoidance -->
+    <!-- Daily Detailed Timeline Itinerary with Highlights, Pitfalls & Multi-Platform Booking -->
     <section id="itinerary" class="section">
-      <h2 class="section-title">📅 15天每日行程：時間軸・必去亮點・避雷指南・打卡點與美食</h2>
+      <h2 class="section-title">📅 15天每日行程：時間軸・多平台購票・避雷指南・打卡點與美食</h2>
 
       <!-- Day 1 & 2 -->
       <div class="day-card">
@@ -623,7 +862,6 @@
             <span class="time-slot">13:00 - 14:00</span><span class="duration-badge">停留 1 小時</span>
             <div class="item-title">Nomad Coffee (Lab & Roaster) 職人冷萃</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：從加泰隆尼亞廣場步行約 10 分鐘進入舊城區 Passatge Sert 綠意石板巷內。</div>
-            
             <div class="highlight-box">
               <strong>🔥 必去亮點：</strong>藏身曾是 19 世紀紡織廠的寧靜綠意通道內，西班牙兩屆咖啡冠軍 Jordi Mestre 打造。堅持淺焙產地原味，是巴塞隆納精品咖啡天花板！
             </div>
@@ -636,8 +874,10 @@
             <div class="feature-box feature-food">
               <strong>🍴 必嚐特色美食：</strong>衣索比亞單品 Cold Brew（帶有白花與柑橘清香）、燕麥奶 Flat White，搭配店內手工烘烤肉桂捲（Roll de Canela）。
             </div>
-            <a class="link-pill" href="https://nomadcoffee.es/" target="_blank">🌐 官方網站</a>
-            <a class="link-pill" href="https://maps.google.com/?q=Nomad+Coffee+Lab+Barcelona" target="_blank">📍 Google 地圖定位</a>
+            <div class="booking-links">
+              <a class="link-pill official" href="https://nomadcoffee.es/" target="_blank">🌐 官方網站</a>
+              <a class="link-pill" href="https://maps.google.com/?q=Nomad+Coffee+Lab+Barcelona" target="_blank">📍 Google 地圖定位</a>
+            </div>
           </div>
 
           <div class="timeline-item">
@@ -645,18 +885,17 @@
             <span class="time-slot">14:15 - 16:30</span><span class="duration-badge">停留 2 小時 15 分鐘</span>
             <div class="item-title">畢卡索博物館 (Museu Picasso)</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：從 Nomad Coffee 步行約 5 分鐘穿過 Montcada 街即達。</div>
-            
             <div class="highlight-box">
               <strong>🔥 必去亮點：</strong>由 5 座 13~14 世紀加泰隆尼亞哥德式石造宮殿連通，收錄逾 4,200 件畢卡索少年時期巨作。必看《科學與慈善》（畢卡索 15 歲寫實巔峰）與晚年 58 幅《侍女變體圖》（Las Meninas）。
             </div>
             <div class="avoid-box">
               <strong>⚠️ 避雷指南：</strong><strong>絕對不要現場排隊買票</strong>，隊伍動輒 1.5 小時起跳！必須提早 1~2 週上官網預訂指定入場時間；展廳內部禁止拍照，但中庭迴旋樓梯可拍照。
             </div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>宮殿中央庭院的中世紀露天石造迴旋樓梯（Patio），高聳石柱與哥德式拱廊是經典打卡視角。
+            <div class="booking-links">
+              <a class="link-pill official" href="http://www.museupicasso.bcn.cat/en/" target="_blank">🎟️ 官網購票預約</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/101851-picasso-museum-skip-the-line-guided-tour-barcelona" target="_blank">🛒 KKday 快速通關門票</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/7901-picasso-museum-guided-tour-barcelona/" target="_blank">🛒 Klook 畢卡索導覽票</a>
             </div>
-            <a class="link-pill" href="http://www.museupicasso.bcn.cat/en/" target="_blank">🎟️ 官方門票預約</a>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/畢卡索博物館_(巴塞隆納)" target="_blank">📖 維基百科解說</a>
           </div>
 
           <div class="timeline-item">
@@ -664,21 +903,16 @@
             <span class="time-slot">17:00 - 19:00</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">四隻貓百年咖啡館 (Els 4 Gats)</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：從畢卡索博物館步行約 8 分鐘穿過主教橋與哥德區古街。</div>
-            
             <div class="highlight-box">
               <strong>🔥 必去亮點：</strong>1897 年開業，加泰隆尼亞現代主義文人大本營。年僅 17 歲的畢卡索在此舉辦首場個展並親手繪製菜單封面。
             </div>
             <div class="avoid-box">
               <strong>⚠️ 避雷指南：</strong>正餐主菜價格偏高且評價平淡，<strong>建議定位為「下午茶 / Tapas 小食站」</strong>，點咖啡、熱紅酒、西班牙烘蛋或火腿可樂餅小坐即可，不要花大錢吃昂貴正餐大菜。
             </div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>正門紅磚入口處「雙人協力車木雕壁畫」、店內畢卡索素描複製品牆面與十九世紀吊燈。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://4gats.com/" target="_blank">🌐 官網與菜單</a>
+              <a class="link-pill" href="https://maps.google.com/?q=Els+4+Gats+Barcelona" target="_blank">📍 Google 地圖定位</a>
             </div>
-            <div class="feature-box feature-food">
-              <strong>🍴 必點特色美食：</strong>西班牙炸火腿可樂餅（Croquetas de Jamón）、番茄抹蒜脆麵包（Pan con Tomate）與 Sangria 水果酒。
-            </div>
-            <a class="link-pill" href="https://4gats.com/" target="_blank">🌐 官網與菜單</a>
-            <a class="link-pill" href="https://maps.google.com/?q=Els+4+Gats+Barcelona" target="_blank">📍 Google 地圖定位</a>
           </div>
         </div>
       </div>
@@ -695,33 +929,27 @@
             <span class="time-slot">09:00 - 12:00</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">聖家堂 (Basílica de la Sagrada Família) 深度參觀與登塔</div>
             <div class="item-transit">🚶‍♂️ 前往方式：搭地鐵 L2 或 L5 線至 Sagrada Família 站出站即達。</div>
-            
             <div class="highlight-box">
               <strong>🔥 必去亮點：</strong>高第傾注 43 年的神作！內部如參天森林巨木樹冠支撐穹頂。推薦預約<strong>上午 09:00~09:30 入場</strong>，東側「誕生立面」的藍綠冷色彩繪玻璃在晨光下呈現水底森林奇觀；登塔務必選高第生前親自雕刻的「誕生立面（Nativity Tower）」。
             </div>
             <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>
-              1. <strong>搶票陷阱：</strong>現場<strong>完全不販售實體門票</strong>！必須於參觀前 60 天在官方 App/官網準時搶票。<br>
-              2. <strong>登塔限制：</strong>孕婦、6 歲以下兒童與嚴重幽閉恐懼者不可登塔；下塔為 400 階狹窄旋轉石階，需穿好走的防滑球鞋。<br>
-              3. <strong>周邊排隊圍欄：</strong>聖家堂外圍圍欄是全巴塞隆納扒手最密集的地方，拍照時切記手機繩與包包貼胸！
+              <strong>⚠️ 避雷指南：</strong>現場完全不售實體門票！必須提早 60 天預約；登塔限制嚴格，孕婦及幼童禁止登塔；外圍圍欄拍照需嚴防扒手。
             </div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>對面高第公園（Plaça de Gaudí）池塘邊，早晨順光拍下聖家堂倒映水中的明信片級畫面；室內中殿 90 度仰拍向日葵天井。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://sagradafamilia.org/en/tickets" target="_blank">🎟️ 官方預售 (提前60天搶票)</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/8422-sagrada-familia-tickets-barcelona" target="_blank">🛒 KKday 聖家堂快速通關 (含登塔)</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/4114-sagrada-familia-guided-tour-barcelona/" target="_blank">🛒 Klook 聖家堂門票+中文導覽</a>
+              <a class="link-pill gyg" href="https://www.getyourguide.com/barcelona-l45/sagrada-familia-fast-track-ticket-with-audio-guide-t64757/" target="_blank">🛒 GYG 官方免排隊語音導覽</a>
             </div>
-            <a class="link-pill" href="https://sagradafamilia.org/en/tickets" target="_blank">🎟️ 官網購票 (提前60天搶票)</a>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/聖家堂" target="_blank">📖 深入建築解構</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">12:30 - 14:00</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">在地海鮮餐館午餐（道地海鮮燉飯 Paella）</div>
-            <div class="item-transit">🚶‍♂️ 下一站前往方式：聖家堂周邊步行或叫 Uber。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>品嚐瓦倫西亞傳統大鐵鍋海鮮燉飯（Paella de Marisco），米心保留微硬嚼勁，鍋底帶有香脆鍋巴（Socarrat）。
-            </div>
+            <div class="item-transit">🚶‍♂️ 前往方式：聖家堂周邊步行至非觀光客大街巷弄。</div>
             <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong><strong>拒絕菜單門口印有鮮豔照片的「觀光客餐廳」</strong>！很多是冷凍微波料理（Paellador）。點菜時認明現點現做（需等待 20~25 分鐘），且正統海鮮飯米心微硬（Al Dente）非軟爛稀飯。
+              <strong>⚠️ 避雷指南：</strong>拒絕門口擺放鮮豔彩色微波食物立牌的餐廳，認明現點現熬 20 分鐘的正統燉飯。
             </div>
           </div>
 
@@ -730,17 +958,15 @@
             <span class="time-slot">15:00 - 17:30</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">卡梅爾碉堡觀景台 (Bunkers del Carmel) 俯瞰日落</div>
             <div class="item-transit">🚶‍♂️ 前往方式：搭地鐵 L4 到 Alfons X 站，轉乘 V17 號公車直達山頂站 Gran Vista，再健行 8 分鐘登頂。</div>
-            
             <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>海拔 262 公尺，1937 年西班牙內戰防空砲陣地。全城視野最霸氣的 360 度免費制高點，八角形棋盤街廓、聖家堂、蔚藍地中海全收眼底！
+              <strong>🔥 必去亮點：</strong>海拔 262 公尺，1937 年西班牙內戰防空砲陣地。全城視野最霸氣的 360 度免費制高點，棋盤街廓、聖家堂、蔚藍地中海全收眼底！
             </div>
             <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>政府為防夜間派對噪音，<strong>冬季傍晚 17:30~18:00 會準時清場鎖門</strong>！請務必在 15:30 前抵達搶好視角，不要等到天黑才上山吃閉門羹；山上風極大，需帶厚防風外套。
+              <strong>⚠️ 避雷指南：</strong>冬季傍晚 17:30 準時清場鎖門，必須在 15:30 前抵達；山上風大注意保暖。
             </div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>坐在昔日水泥砲台邊緣，雙腳懸空於空中，以整齊的八角形棋盤格、聖家堂尖塔與地中海為背景。
+            <div class="booking-links">
+              <a class="link-pill" href="https://maps.google.com/?q=Bunkers+del+Carmel" target="_blank">📍 Google 地圖定位</a>
             </div>
-            <a class="link-pill" href="https://maps.google.com/?q=Bunkers+del+Carmel" target="_blank">📍 Google 地圖定位</a>
           </div>
 
           <div class="timeline-item">
@@ -749,9 +975,11 @@
             <div class="item-title">Parallelo Gelato 天然純手作冰淇淋</div>
             <div class="item-transit">🚶‍♂️ 前往方式：搭 V17 公車下山，步行至格拉西亞區 Carrer de Sèneca 18。</div>
             <div class="feature-box feature-food">
-              <strong>🍴 必嚐特色美食：</strong>100% 天然純原料手工製作，必嚐濃郁「西西里開心果（Pistachio）」與創新鹹甜風味「巴馬乾酪黑胡椒（Parmigiano e Pepe）」。
+              <strong>🍴 必嚐特色美食：</strong>100% 天然純原料，必嚐濃郁「西西里開心果」與「巴馬乾酪黑胡椒」。
             </div>
-            <a class="link-pill" href="https://maps.google.com/?q=Parallelo+Gelato+Barcelona" target="_blank">📍 Google 地圖定位</a>
+            <div class="booking-links">
+              <a class="link-pill" href="https://maps.google.com/?q=Parallelo+Gelato+Barcelona" target="_blank">📍 Google 地圖定位</a>
+            </div>
           </div>
         </div>
       </div>
@@ -767,11 +995,13 @@
             <div class="timeline-dot"></div>
             <span class="time-slot">09:30 - 10:45</span><span class="duration-badge">停留 1 小時 15 分鐘</span>
             <div class="item-title">Federal Café 澳式陽光早午餐</div>
-            <div class="item-transit">🚶‍♂️ 下一站前往方式：地鐵 L2 至 Sant Antoni 站步行 3 分鐘。</div>
+            <div class="item-transit">🚶‍♂️ 前往方式：地鐵 L2 至 Sant Antoni 站步行 3 分鐘。</div>
             <div class="feature-box feature-food">
               <strong>🍴 必點推薦：</strong>水波蛋煙燻鮭魚班尼迪克吐司配 Flat White 咖啡。
             </div>
-            <a class="link-pill" href="https://federalcafe.es/" target="_blank">🌐 官網資訊</a>
+            <div class="booking-links">
+              <a class="link-pill official" href="https://federalcafe.es/" target="_blank">🌐 官網資訊</a>
+            </div>
           </div>
 
           <div class="timeline-item">
@@ -779,18 +1009,14 @@
             <span class="time-slot">11:15 - 12:45</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">加泰隆尼亞音樂宮 (Palau de la Música Catalana)</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自 Federal 步行或搭地鐵至 Urquinaona 站，步行 3 分鐘。</div>
-            
             <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>多明尼克名作，歐洲唯一全自然天光採光的音樂廳。大廳中央向下垂墜的金色水滴「彩繪玻璃穹頂」與 18 位浮雕繆斯女神令人嘆為觀止。
+              <strong>🔥 必去亮點：</strong>歐洲唯一全自然天光採光音樂廳。大廳向下垂墜的金色水滴「彩繪玻璃穹頂」璀璨奪目。
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>若無英文導覽團名額，可買自由參觀門票（Self-Guided Ticket），但<strong>參觀結束時不可在觀眾席逗留過久</strong>，館方清場速度極快，拍照要把握前 20 分鐘空檔。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.palaumusica.cat/en" target="_blank">🎟️ 官方導覽預約</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/12204-palau-de-la-musica-catalana-ticket-barcelona" target="_blank">🛒 KKday 音樂宮自導/導覽門票</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/7154-palau-de-la-musica-catalana-tour-barcelona/" target="_blank">🛒 Klook 加泰隆尼亞音樂宮票券</a>
             </div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>二樓觀眾席正中央仰拍水滴琉璃穹頂、以及二樓陽台由五彩馬賽克磁磚拼貼花朵的雙層立柱迴廊。
-            </div>
-            <a class="link-pill" href="https://www.palaumusica.cat/en" target="_blank">🎟️ 導覽團預約</a>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/加泰羅尼亞音樂宮" target="_blank">📖 建築背景解說</a>
           </div>
 
           <div class="timeline-item">
@@ -798,27 +1024,20 @@
             <span class="time-slot">13:30 - 15:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">聖約瑟傳統市場 (Mercat de la Boqueria) 大啖 Tapas</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自音樂宮步行約 12 分鐘穿過哥德區到達蘭布拉大道中段。</div>
-            
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>歐洲最著名食材殿堂，起源於 13 世紀。大啖現切 5J 橡木子黑標伊比利火腿、鐵板香煎小魷魚（Chipirones）與現打果汁。
-            </div>
             <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>
-              1. <strong>價格陷阱：</strong>入口第一排攤位價格最貴（果汁 €3~€4），<strong>往市場中央或後排走，完全相同的果汁只要 €1.5~€2</strong>！<br>
-              2. <strong>扒手黑洞：</strong>市場窄道人貼人，邊走邊吃時包包絕對不要側背在後腰，手機切勿放外套插袋。
+              <strong>⚠️ 避雷指南：</strong>門口第一排果汁 €3~€4，走到市場中後段只要 €1.5~€2，切勿一進門就衝動購買！
             </div>
-            <a class="link-pill" href="https://www.boqueria.barcelona/en/" target="_blank">🌐 市場官方網站</a>
-            <a class="link-pill" href="https://maps.google.com/?q=Mercat+de+la+Boqueria" target="_blank">📍 Google 地圖定位</a>
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.boqueria.barcelona/en/" target="_blank">🌐 市場官網</a>
+              <a class="link-pill" href="https://maps.google.com/?q=Mercat+de+la+Boqueria" target="_blank">📍 Google 地圖定位</a>
+            </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">16:00 - 17:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">巴塞隆內塔海灘 (Barceloneta Beach) 冬日漫步</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：沿著蘭布拉大道走到盡頭哥倫布紀念碑，接港口木棧道步行 15 分鐘。</div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>海灘上兜售大浴巾、啤酒或Mojito的無牌攤販<strong>千萬不要搭理</strong>，酒水多為不衛生的自製品；個人包包坐沙灘上時不可離手。
-            </div>
+            <div class="item-transit">🚶‍♂️ 前往方式：沿蘭布拉大道走至哥倫布紀念碑，接港口木棧道步行 15 分鐘。</div>
           </div>
         </div>
       </div>
@@ -834,21 +1053,18 @@
             <div class="timeline-dot"></div>
             <span class="time-slot">09:30 - 12:00</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">奎爾公園 (Park Güell) 魔幻童話漫步</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：搭地鐵 L3 至 Lesseps 站，沿 Avinguda del Santuari de Sant Josep de la Muntanya 步行約 15 分鐘（沿途坡道設有電動手扶梯）。</div>
-            
+            <div class="item-transit">🚶‍♂️ 前往方式：搭地鐵 L3 至 Lesseps 站，沿 Avinguda del Santuari 步行 15 分鐘（坡道設有電動手扶梯）。</div>
             <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>高第將自然生態融入建築的代表作。中央階梯著名的彩色馬賽克蠑螈（高第蜥蜴）、百柱廳上方符合人體工學曲線的波浪長椅。
+              <strong>🔥 必去亮點：</strong>百柱廳上方波浪長椅、彩色馬賽克蠑螈階梯。
             </div>
             <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>
-              1. <strong>爬坡陷阱：</strong>從地鐵 Vallcarca 站走的坡度極陡手扶梯常故障，<strong>改從 Lesseps 站順著標誌走電動手扶梯坡道最省力</strong>，或 3 人直接在市區叫 Uber 上山（約 €10）。<br>
-              2. <strong>遲到作廢：</strong>預約門票<strong>嚴格管制入場時間（僅寬限 30 分鐘）</strong>，超時直接作廢不退款。
+              <strong>⚠️ 避雷指南：</strong>遲到超過 30 分鐘門票作廢；從 Lesseps 站走電動手扶梯最省力。
             </div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>百柱廳上方波浪長椅，俯瞰入口如薑餅屋般的兩座守衛門房；彩色蠑螈階梯正面特寫。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://parkguell.barcelona/en" target="_blank">🎟️ 官方預售</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/18440-park-guell-admission-ticket-barcelona" target="_blank">🛒 KKday 奎爾公園門票</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/4117-park-guell-guided-tour-barcelona/" target="_blank">🛒 Klook 奎爾公園快速通關</a>
             </div>
-            <a class="link-pill" href="https://parkguell.barcelona/en" target="_blank">🎟️ 官網購票 (提前預約時段)</a>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/奎尔公园" target="_blank">📖 維基百科解說</a>
           </div>
 
           <div class="timeline-item">
@@ -856,29 +1072,26 @@
             <span class="time-slot">13:00 - 15:30</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">巴特婁之家 (Casa Batlló) 屠龍傳說巡禮</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從 Lesseps 站搭地鐵 L3 至 Passeig de Gràcia 站出站即達。</div>
-            
             <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>靈感取自聖喬治屠龍傳奇。屋頂彩色魚鱗如巨龍背脊，十字架煙囪象徵屠龍寶劍；內部天井採用由淺入深的漸層藍磁磚，水感光影極其夢幻。
+              <strong>🔥 必去亮點：</strong>聖喬治屠龍主題，巨龍脊背天台與水感漸層藍天井。
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>巴特婁之家門票偏貴（約 €35 起），<strong>建議購買最基礎的 Blue Ticket 即可</strong>，Gold Ticket 附加的私人房間大多看頭有限；務必領取官方提供的 AR 智慧導覽平板（科技感極佳）。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.casabatllo.es/en/" target="_blank">🎟️ 官方購票</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/12200-casa-batllo-ticket-barcelona" target="_blank">🛒 KKday 巴特婁之家門票 (含AR導覽)</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/7156-casa-batllo-admission-ticket-barcelona/" target="_blank">🛒 Klook 快速入場券</a>
             </div>
-            <a class="link-pill" href="https://www.casabatllo.es/en/" target="_blank">🎟️ 官方門票預約</a>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/巴特略之家" target="_blank">📖 深入故事介紹</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">16:00 - 17:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">米拉之家 (Casa Milà / La Pedrera)</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：自巴特婁之家沿格拉西亞大道往北步行僅 5 分鐘。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>無承重牆的創新建築。天台上宛如外星奇幻戰士戴著頭盔的神秘煙囪群，透過煙囪石拱孔洞剛好能框住遠方的聖家堂！
+            <div class="item-transit">🚶‍♂️ 前往方式：自巴特婁之家沿格拉西亞大道往北步行 5 分鐘。</div>
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.lapedrera.com/en" target="_blank">🎟️ 官方購票</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/18442-casa-mila-admission-ticket-barcelona" target="_blank">🛒 KKday 米拉之家免排隊門票</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/4116-casa-mila-admission-ticket-barcelona/" target="_blank">🛒 Klook 門票含語音導覽</a>
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>若遇強風或大雨，<strong>屋頂天台會暫時封閉</strong>！參觀前務必查看當天天氣，天晴時再前往。
-            </div>
-            <a class="link-pill" href="https://www.lapedrera.com/en" target="_blank">🎟️ 官方門票預約</a>
           </div>
         </div>
       </div>
@@ -895,11 +1108,11 @@
             <span class="time-slot">08:30 - 11:30</span><span class="duration-badge">車程 2.5 小時</span>
             <div class="item-title">搭乘 AVE / iryo 高鐵直達馬德里 Atocha 站</div>
             <div class="item-transit">🚅 前往方式：自 Barcelona Sants 搭乘高鐵直達 Madrid Puerta de Atocha，下車步行 5 分鐘入住所選公寓。</div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>西班牙高鐵登車前<strong>必須通過行李 X 光安檢</strong>！務必提早 40 分鐘抵達車站，避免因排隊安檢錯過班次；大行李放車廂行李架請用鋼絲鎖固定。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.iryo.eu/" target="_blank">🚅 iryo 高鐵官網</a>
+              <a class="link-pill official" href="https://www.renfe.com/" target="_blank">🚅 Renfe 西班牙國鐵</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/rails-32/1012-spain/" target="_blank">🛒 Klook 西班牙點對點火車預訂</a>
             </div>
-            <a class="link-pill" href="https://www.iryo.eu/" target="_blank">🚅 iryo 高鐵官網</a>
-            <a class="link-pill" href="https://www.renfe.com/" target="_blank">🚅 Renfe 西班牙國鐵</a>
           </div>
 
           <div class="timeline-item">
@@ -907,13 +1120,9 @@
             <span class="time-slot">13:00 - 15:00</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">主廣場 (Plaza Mayor) 經典聖誕市集巡禮</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從 Atocha 站搭地鐵 1 號線直達 Sol（太陽門站），步行 3 分鐘穿入主廣場。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>哈布斯堡王朝經典紅色迴廊廣場，上百座聖誕木造棚屋販售傳統耶穌降生木雕（Belén）、搞笑節慶假髮與熱紅酒。
+            <div class="booking-links">
+              <a class="link-pill" href="https://maps.google.com/?q=Plaza+Mayor+Madrid" target="_blank">📍 Google 地圖定位</a>
             </div>
-            <div class="feature-box feature-food">
-              <strong>🍴 必吃特色小吃：</strong>主廣場周邊名物「炸魷魚三明治（Bocadillo de Calamares）」，外層法棍酥脆，夾入爆滿炸至金黃彈牙的裹粉小魷魚圈。
-            </div>
-            <a class="link-pill" href="https://maps.google.com/?q=Plaza+Mayor+Madrid" target="_blank">📍 Google 地圖定位</a>
           </div>
 
           <div class="timeline-item">
@@ -922,10 +1131,7 @@
             <div class="item-title">🚨 重要任務：平安夜超市大採買 ＆ 公寓溫馨自煮</div>
             <div class="item-transit">🚶‍♂️ 前往地點：公寓旁的 Mercadona 或 英國宮 El Corte Inglés 高級生鮮超市。</div>
             <div class="avoid-box">
-              <strong>⚠️ 全程最高警報避雷點：</strong><strong>12/24 傍晚 18:00 後馬德里全城餐館、超市、地鐵部分班次全面提早關閉！</strong>如果不提早在 16:00 前採買完畢，當晚街上完全找不到任何開門的餐廳，極可能挨餓！
-            </div>
-            <div class="feature-box feature-food">
-              <strong>🍴 平安夜自煮清單：</strong>伊比利黑豬肋眼排、曼徹格老起司、大西洋野生紅蝦、Cava 氣泡酒與節慶杏仁糖糕（Turrón）。
+              <strong>⚠️ 全程最高警報避雷點：</strong>12/24 傍晚 18:00 後馬德里全城餐館全面打烊，必須於 16:00 前備齊食材在公寓自煮！
             </div>
           </div>
         </div>
@@ -942,47 +1148,28 @@
             <div class="timeline-dot"></div>
             <span class="time-slot">10:00 - 13:00</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">麗池公園 (El Retiro) ＆ 全透明水晶宮 (Palacio de Cristal)</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：從 Atocha 火車站北口沿著普拉多大道步行 8 分鐘進入麗池公園南端林道。</div>
-            
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>世界文化遺產，昔日皇家夏宮。全透明水晶宮建於 1887 年，冬日陽光穿透玻璃灑落宮內，宛如置身巨型童話溫室。
+            <div class="item-transit">🚶‍♂️ 前往方式：從 Atocha 火車站北口沿普拉多大道步行 8 分鐘進入麗池公園。</div>
+            <div class="booking-links">
+              <a class="link-pill" href="https://maps.google.com/?q=Palacio+de+Cristal+Madrid" target="_blank">📍 水晶宮位置</a>
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>12/25 聖誕節當日普拉多美術館、王宮等室內古蹟<strong>全數閉館</strong>，安排戶外麗池公園是最聰明的選擇；水晶宮如遇特展佈展期間可能僅能欣賞外觀。
-            </div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>人工湖對岸拍水晶宮倒影、阿爾卡拉門（Puerta de Alcalá）新古典石拱門全景。
-            </div>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/丽池公园" target="_blank">📖 麗池公園歷史</a>
-            <a class="link-pill" href="https://maps.google.com/?q=Palacio+de+Cristal+Madrid" target="_blank">📍 水晶宮位置</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">14:30 - 16:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">格蘭大道 (Gran Vía) 漫步 ＆ 欣賞璀璨聖誕燈海</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：由阿爾卡拉門沿著阿爾卡拉街向西步行 10 分鐘進入格蘭大道起點。</div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>站在格蘭大道起點拍大都會大廈（Edificio Metrópolis）金色女神圓頂與連綿數公里的聖誕星光懸掛燈飾。
-            </div>
+            <div class="item-transit">🚶‍♂️ 前往方式：由阿爾卡拉門沿阿爾卡拉街向西步行 10 分鐘即達。</div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">17:00 - 18:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">Chocolatería San Ginés 百年吉拿棒名店朝聖</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：從太陽門廣場往西走入 Pasadizo de San Ginés 5 號石板小徑。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>1894 年開業至今，綠天鵝絨座與白大理石吧檯散發十九世紀古典沙龍風華。
+            <div class="item-transit">🚶‍♂️ 前往方式：從太陽門廣場往西走入 Pasadizo de San Ginés 5 號小巷。</div>
+            <div class="booking-links">
+              <a class="link-pill official" href="https://chocolateriasangines.com/" target="_blank">☕ 百年吉拿棒官網</a>
+              <a class="link-pill" href="https://maps.google.com/?q=Chocolateria+San+Gines+Madrid" target="_blank">📍 Google 地圖定位</a>
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>下午尖峰時段排隊隊伍極長（常排到巷外），<strong>請先在外側櫃台點餐結帳拿票，再由服務員引導找位入座</strong>，切勿直接走進去找位子坐下傻等。
-            </div>
-            <div class="feature-box feature-food">
-              <strong>🍴 必吃特色美食：</strong>酥脆細吉拿棒（Churros）與膨鬆粗吉拿棒（Porras），沾裹濃純 Spanish Hot Chocolate。
-            </div>
-            <a class="link-pill" href="https://chocolateriasangines.com/" target="_blank">☕ 百年吉拿棒官網</a>
-            <a class="link-pill" href="https://maps.google.com/?q=Chocolateria+San+Gines+Madrid" target="_blank">📍 Google 地圖定位</a>
           </div>
         </div>
       </div>
@@ -998,40 +1185,32 @@
             <div class="timeline-dot"></div>
             <span class="time-slot">09:30 - 12:30</span><span class="duration-badge">航程 1 小時 15 分</span>
             <div class="item-title">搭機飛往波多 (MAD ✈ OPO) ➔ 地鐵直通市中心</div>
-            <div class="item-transit">✈️ 交通：自 Madrid Barajas 搭乘直飛班機抵達波多機場，轉乘地鐵紫線直達 Trindade 站，步行至公寓。（葡萄牙時差慢 1 小時，現賺 1 小時！）。</div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>歐洲內陸段廉航（如 Ryanair / Vueling）<strong>對手提行李尺寸極其嚴苛</strong>，購票時務必確認 3 人皆有加購 20kg 托運行李，切勿心存僥倖帶大登機箱上機。
+            <div class="item-transit">✈️ 交通：搭機抵達波多機場，轉乘地鐵紫線直達市中心。（時差慢 1 小時）。</div>
+            <div class="booking-links">
+              <a class="link-pill" href="https://www.google.com/travel/flights?q=flights%20from%20MAD%20to%20OPO" target="_blank">🔍 查詢直飛航班</a>
             </div>
-            <a class="link-pill" href="https://www.google.com/travel/flights?q=flights%20from%20MAD%20to%20OPO" target="_blank">🔍 查詢直飛航班</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">14:30 - 16:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">路易一世大橋 (Ponte Dom Luís I) 徒步跨河</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：從盟軍大道沿聖本篤車站往南步行 10 分鐘，直登大橋上層。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>艾菲爾愛徒塞里格操刀的 172 米跨度鋼鐵雙層大橋。上層漫步俯瞰杜羅河岸彩色排屋與古老運酒木船（Barcos Rabelos）。
+            <div class="item-transit">🚶‍♂️ 前往方式：從盟軍大道沿聖本篤車站往南步行 10 分鐘直登大橋上層。</div>
+            <div class="booking-links">
+              <a class="link-pill" href="https://maps.google.com/?q=Ponte+Luís+I+Porto" target="_blank">📍 Google 地圖定位</a>
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>上層橋面<strong>輕軌列車與行人共用</strong>，雖然車速放慢，但拍照時千萬不要背對軌道後退，聽見清脆叮叮警示鐘聲務必立刻退至兩側黃線內。
-            </div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>跨過大橋到加亞側山頂「皮拉爾修道院觀景台（Mosteiro da Serra do Pilar）」，拍下「大橋圓拱弧度 + 波多全景日落」經典角度！
-            </div>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/路易一世大桥" target="_blank">📖 建築背景解說</a>
-            <a class="link-pill" href="https://maps.google.com/?q=Ponte+Luís+I+Porto" target="_blank">📍 Google 地圖定位</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">17:00 - 18:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">加亞新城 (Vila Nova de Gaia) 頂級波特酒莊品酩</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：由路易一世大橋上層搭乘 Gaia 纜車或沿坡道步行至河岸酒莊街。</div>
-            <div class="feature-box feature-food">
-              <strong>🍴 必嚐特色美酒：</strong>走訪 Cálem 或 Sandeman 數百年地下橡木桶地窖，對比品嚐鮮明莓果甜香的「寶石紅（Ruby）」與陳年堅果香氣濃郁的「茶色波特（Tawny Port）」。
+            <div class="item-transit">🚶‍♂️ 前往方式：由大橋上層搭乘 Gaia 纜車或沿坡道步行至河岸酒莊街。</div>
+            <div class="booking-links">
+              <a class="link-pill official" href="https://calem.pt/en/" target="_blank">🍷 Cálem 官網品酒預約</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/124709-calem-wine-cellar-tour-porto" target="_blank">🛒 KKday Cálem 酒窖導覽+法朵表演</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/13217-calem-wine-cellars-tour-porto/" target="_blank">🛒 Klook 波多酒窖導覽門票</a>
             </div>
-            <a class="link-pill" href="https://calem.pt/en/" target="_blank">🍷 Cálem 酒莊導覽預訂</a>
           </div>
         </div>
       </div>
@@ -1047,42 +1226,32 @@
             <div class="timeline-dot"></div>
             <span class="time-slot">09:00 - 11:00</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">世界最美萊羅書店 (Livraria Lello) ＆ 牧師塔</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：地鐵 Aliados 站或 São Bento 站步行約 7 分鐘抵達獅子廣場旁。</div>
-            
+            <div class="item-transit">🚶‍♂️ 前往方式：地鐵 Aliados 站或 São Bento 站步行約 7 分鐘抵達。</div>
             <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>建於 1906 年新哥特式奇觀。中央帶有紅色雕花扶手的流動雙向木雕旋轉梯與巨型彩繪玻璃天窗，哈利波特霍格華茲靈感原型。
+              <strong>🔥 必去亮點：</strong>新哥特式奇觀，紅色雙向旋轉木階梯與彩繪玻璃天窗，霍格華茲靈感原型。門票費用可全額折抵買書！
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>
-              1. <strong>門票規定：</strong>現場不售票，<strong>務必提早在官網購買「Ticket-Voucher」</strong>；即使持有時段票，門口仍常需排隊 20~30 分鐘。<br>
-              2. <strong>購書折抵：</strong>門票費用（約 €8~€10）<strong>可全額折抵店內買書</strong>！記得在結帳時出示門票條碼折抵，買本小王子或葡萄牙詩集非常划算。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.livrarialello.pt/en" target="_blank">🎟️ 官方門票預約 (必買Voucher)</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/124712-livraria-lello-ticket-porto" target="_blank">🛒 KKday 萊羅書店快速通關</a>
+              <a class="link-pill gyg" href="https://www.getyourguide.com/porto-l151/porto-clerigos-tower-ticket-t387609/" target="_blank">🛒 GYG 牧師塔登頂門票</a>
             </div>
-            <a class="link-pill" href="https://www.livrarialello.pt/en" target="_blank">🎟️ 官網購票預約</a>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/莱罗书店" target="_blank">📖 深入故事介紹</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">11:15 - 12:30</span><span class="duration-badge">停留 1 小時 15 分鐘</span>
             <div class="item-title">聖本篤車站 (Estação de São Bento) 兩萬片藍白瓷磚</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：自萊羅書店順著緩坡向下步行 6 分鐘即見古典外觀的火車站。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>建於 16 世紀修道院原址，整整兩萬片手工手繪歷史瓷磚（Azulejo）包覆大廳，國寶畫家科拉索耗費 11 年繪成。
+            <div class="item-transit">🚶‍♂️ 前往方式：自萊羅書店順緩坡向下步行 6 分鐘即達。</div>
+            <div class="booking-links">
+              <a class="link-pill" href="https://maps.google.com/?q=Sao+Bento+Station+Porto" target="_blank">📍 Google 地圖定位</a>
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>這裡是真正的運作中火車站且免費進入，大廳人流極其雜亂，<strong>仰頭專心拍照時是扒手下手黃金期</strong>，同行 3 人需互相看顧背後包包。
-            </div>
-            <a class="link-pill" href="https://maps.google.com/?q=Sao+Bento+Station+Porto" target="_blank">📍 Google 地圖定位</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">13:00 - 14:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">挑戰波多魔王級名菜：濕答答三明治 (Francesinha)</div>
-            <div class="item-transit">🚶‍♂️ 推薦餐廳：Café Santiago 或 Brasão Cervejaria（步行約 5 分鐘）。</div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>份量極其厚重罪惡（牛排、肉腸、火腿、滿滿起司與微辣啤酒番茄濃醬）！<strong>建議 3 人點 2 份分食即可</strong>，一人獨享一份通常到後半段會嚴重發膩。
-            </div>
+            <div class="item-transit">🚶‍♂️ 推薦餐廳：Café Santiago 或 Brasão Cervejaria（步行 5 分鐘）。</div>
           </div>
         </div>
       </div>
@@ -1099,14 +1268,10 @@
             <span class="time-slot">09:30 - 11:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">證券交易所宮 (Palácio da Bolsa) 純金阿拉伯廳</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從聖本篤車站向河岸方向步行 8 分鐘抵達恩里克王子廣場。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>最震撼的「阿拉伯廳（Salão Árabe）」花費 18 年模仿阿罕布拉宮建造，貼覆 18 公斤純金金箔石膏雕飾，極盡奢華。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://palaciodabolsa.com/en/" target="_blank">🎟️ 官方導覽預約</a>
+              <a class="link-pill gyg" href="https://www.getyourguide.com/porto-l151/palacio-da-bolsa-guided-tour-t394628/" target="_blank">🛒 GYG 交易所宮導覽門票</a>
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong><strong>不開放自由自由行參觀</strong>，必須參加官方專人導覽團（約 30 分鐘）；導覽語言有英、法、西、葡，熱門英文團名額有限，早晨需先上網預約好場次。
-            </div>
-            <a class="link-pill" href="https://palaciodabolsa.com/en/" target="_blank">🎟️ 官方導覽預訂</a>
-            <a class="link-pill" href="https://maps.google.com/?q=Palacio+da+Bolsa+Porto" target="_blank">📍 Google 地圖定位</a>
           </div>
 
           <div class="timeline-item">
@@ -1114,8 +1279,9 @@
             <span class="time-slot">12:00 - 15:00</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">里貝拉老城區 (Ribeira) 石板巷弄 ＆ 六橋遊船</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自交易所宮向下步行 3 分鐘抵達河岸水畔。</div>
-            <div class="feature-box feature-food">
-              <strong>🍴 必吃特色海鮮：</strong>水岸露天餐館品嚐波多經典「橄欖油烤大章魚（Polvo à Lagareiro）」，章魚腳經長時間慢煮後以熱橄欖油與大蒜香烤至軟嫩化口，搭配敲扁烤小馬鈴薯。
+            <div class="booking-links">
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/124705-douro-river-six-bridges-cruise-porto" target="_blank">🛒 KKday 杜羅河六橋遊船票</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/9350-douro-river-cruise-porto/" target="_blank">🛒 Klook 六橋巡禮船票</a>
             </div>
           </div>
         </div>
@@ -1132,37 +1298,30 @@
             <div class="timeline-dot"></div>
             <span class="time-slot">08:30 - 11:45</span><span class="duration-badge">車程 3 小時 15 分</span>
             <div class="item-title">搭乘 CP 國鐵擺式快車 (Alfa Pendular) 直達里斯本</div>
-            <div class="item-transit">🚆 交通：自 Porto Campanhã 車站搭乘最高級 AP 快車直達 Lisboa Santa Apolónia，轉乘地鐵藍線 2 站至 Terreiro do Paço 或 Baixa-Chiado 站，入住下城公寓。</div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>波多市中心的「聖本篤車站」多為區間短程車，<strong>前往里斯本的高鐵快車是在「Porto Campanhã」大站發車</strong>！持票可免費自聖本篤搭 5 分鐘接駁車前往 Campanhã 轉乘，切勿跑錯出發火車站。
+            <div class="item-transit">🚆 交通：自 Porto Campanhã 車站搭乘最高級 AP 快車直達 Lisboa Santa Apolónia，轉乘地鐵藍線 2 站至 Baixa-Chiado 站。</div>
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.cp.pt/" target="_blank">🚆 CP 國鐵官網 (提早60天特惠)</a>
             </div>
-            <a class="link-pill" href="https://www.cp.pt/" target="_blank">🚆 CP 國鐵官網 (提早60天早鳥票)</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">13:30 - 15:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">龐巴爾下城 (Baixa) ＆ 商業廣場 (Praça do Comércio)</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：公寓出門即為奧古斯塔步行街（Rua Augusta），直通海灣廣場。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>1755 年大地震後建立的世界首批模組化防震街區。穿過奧古斯塔街凱旋門，來到面向浩瀚特茹河的巨型三合院黃色迴廊廣場。
-            </div>
+            <div class="item-transit">🚶‍♂️ 前往方式：公寓出門即為奧古斯塔步行街，直通海灣廣場。</div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">16:00 - 17:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">聖胡斯塔鍛鐵升降梯 (Elevador de Santa Justa)</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：自商業廣場沿奧古斯塔街往北走 6 分鐘即見黑色鋼鐵高塔。</div>
+            <div class="item-transit">🚶‍♂️ 前往方式：自商業廣場沿奧古斯塔街往北走 6 分鐘即達。</div>
             <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>艾菲爾學生設計的 45 公尺哥德式鍛鐵電梯，頂層觀景台俯瞰龐巴爾下城與對面聖喬治城堡。
+              <strong>🔥 省錢必知：</strong>持 <strong>Lisboa Card（里斯本卡）免費搭乘</strong>！或從卡爾莫修道院旁小徑免費走上天橋飽覽夜景。
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷省錢指南：</strong>
-              1. <strong>免花 €5.3 排隊搭乘：</strong>搭乘電梯單程收費高且常排隊 1 小時；<strong>持 Viva Viagem 交通一日券可免費搭乘</strong>！<br>
-              2. <strong>隱藏免費路線：</strong>從卡爾莫修道院（Convento do Carmo）旁的小徑可直接免費走上頂部觀景天橋，完全免排隊就能飽覽相同百萬夜景！
+            <div class="booking-links">
+              <a class="link-pill" href="https://maps.google.com/?q=Santa+Justa+Lift+Lisbon" target="_blank">📍 Google 地圖定位</a>
             </div>
-            <a class="link-pill" href="https://maps.google.com/?q=Santa+Justa+Lift+Lisbon" target="_blank">📍 Google 地圖定位</a>
           </div>
         </div>
       </div>
@@ -1177,11 +1336,8 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">09:00 - 09:45</span><span class="duration-badge">車程 40 分鐘</span>
-            <div class="item-title">搭乘路面電車 15E 前往貝倫區 (Belém)</div>
-            <div class="item-transit">🚋 交通：從 Cais do Sodré 車站搭乘 15E 電車直達 Mosteiro Jerónimos 站。</div>
-            <div class="avoid-box">
-              <strong>⚠️ 里斯本頭號扒手熱線：</strong>15E 號電車車廂內外極度擁擠，扒手常利用車門開關推擠時掏摸後背包，<strong>上車請將包包抱在胸前，或直接 3 人叫 Uber（單程約 €7~€9）</strong>，比搭電車更便宜、舒適且安全！
-            </div>
+            <div class="item-title">前往貝倫區 (Belém)</div>
+            <div class="item-transit">🚋 交通：搭 15E 電車或 3 人直接叫 Uber（約 €7~€9）更安全舒適。</div>
           </div>
 
           <div class="timeline-item">
@@ -1189,43 +1345,36 @@
             <span class="time-slot">10:00 - 12:30</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">熱羅尼莫斯修道院 (Mosteiro dos Jerónimos)</div>
             <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>世界遺產，曼努埃爾式建築巔峰。雙層迴廊石柱滿雕水手繩索、貝殼與神秘海怪，大教堂長眠著航海英雄達伽馬與詩魂卡蒙斯。
+              <strong>🔥 必去亮點：</strong>大航海時代曼努埃爾式代表作，達伽馬與卡蒙斯石棺長眠處。<strong>持 Lisboa Card 免費入場</strong>！
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>修道院門口通常有兩條隊伍：<strong>左邊排「教堂內部」（免費進入），右邊排「世界遺產迴廊」（需門票）</strong>！不要排了 40 分鐘進去才發現排錯隊伍；強烈建議提早線上購票掃 QR Code 入場。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.patrimoniocultural.gov.pt/en/museus-e-monumentos/dgpc/m/mosteiro-dos-jeronimos/" target="_blank">🎟️ 官方門票預約</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/12521-lisbon-card-portugal" target="_blank">🛒 KKday 里斯本卡 (免費進修道院)</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/13214-lisboa-card-lisbon/" target="_blank">🛒 Klook 里斯本卡</a>
             </div>
-            <a class="link-pill" href="https://www.patrimoniocultural.gov.pt/en/museus-e-monumentos/dgpc/m/mosteiro-dos-jeronimos/" target="_blank">🎟️ 官方門票預訂</a>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/热罗尼莫斯修道院" target="_blank">📖 深入歷史背景</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">12:45 - 14:00</span><span class="duration-badge">停留 1 小時 15 分鐘</span>
             <div class="item-title">正宗葡式蛋撻始祖：Pastéis de Belém</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：從修道院正門向東步行僅 3 分鐘。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>1837 年開業至今的正宗發源地，修女傳承秘方。外皮薄脆多達數十層，內餡奶香滑嫩焦香。
-            </div>
+            <div class="item-transit">🚶‍♂️ 前往方式：從修道院正門向東步行 3 分鐘。</div>
             <div class="avoid-box">
-              <strong>⚠️ 避雷排隊秘訣：</strong>門口排著長長人龍的是「外帶隊伍」（Take Away）；<strong>想內用請直接大膽往裡面走！</strong>店內有多達 400 個座位的復古藍白瓷磚沙龍大廳，入座點餐往往比外帶排隊快得多，還能享受剛出爐微燙的最佳口感。
+              <strong>⚠️ 避開外帶長龍：</strong>直接大膽走進室內內用區找位入座，400 個座位的藍白瓷磚大廳點餐更快！
             </div>
-            <div class="feature-box feature-food">
-              <strong>🍴 正宗吃法：</strong>依傳統灑上純肉桂粉（Canela）與細糖粉（Açúcar），搭配一杯微苦濃縮黑咖啡（Bica）。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://pasteisdebelem.pt/en/" target="_blank">🌐 百年蛋撻官網</a>
+              <a class="link-pill" href="https://maps.google.com/?q=Pasteis+de+Belem" target="_blank">📍 Google 地圖定位</a>
             </div>
-            <a class="link-pill" href="https://pasteisdebelem.pt/en/" target="_blank">🌐 百年蛋撻官網</a>
-            <a class="link-pill" href="https://maps.google.com/?q=Pasteis+de+Belem" target="_blank">📍 Google 地圖定位</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">14:30 - 16:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">發現者紀念碑 ＆ 貝倫塔 (Torre de Belém)</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：穿過景觀地下通道步行至特茹河畔。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>大理石羅盤地面紀念大航海開闢印度航線，水上防禦堡壘貝倫塔見證無數水手出海與歸航。
-            </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>貝倫塔<strong>內部非常狹窄且空無一物</strong>，上下旋轉樓梯實施單向紅綠燈管制常堵塞 40 分鐘；<strong>強烈建議在外面木棧道與河岸拍照打卡即可</strong>，無須浪費時間買票進去塔內排隊爬樓梯。
+            <div class="item-transit">🚶‍♂️ 前往方式：穿過地下通道步行至河畔。在木棧道欣賞外觀與大理石羅盤即可。</div>
+            <div class="booking-links">
+              <a class="link-pill" href="https://maps.google.com/?q=Torre+de+Belem" target="_blank">📍 貝倫塔地圖</a>
             </div>
           </div>
         </div>
@@ -1242,7 +1391,7 @@
             <div class="timeline-dot"></div>
             <span class="time-slot">08:30 - 09:30</span><span class="duration-badge">車程 45 分鐘</span>
             <div class="item-title">前往辛特拉 (Sintra) 童話山城</div>
-            <div class="item-transit">🚆 交通：自里斯本 Rossio 車站搭乘郊區火車直達 Sintra 站，出站後轉乘 434 號環線巴士或直接叫 Uber 直奔山頂佩納宮。</div>
+            <div class="item-transit">🚆 交通：自 Rossio 車站搭火車直達 Sintra（<strong>持 Lisboa Card 免費搭乘</strong>！），出站 3 人直接叫 Uber 上山避開公車排隊。</div>
           </div>
 
           <div class="timeline-item">
@@ -1250,54 +1399,38 @@
             <span class="time-slot">09:45 - 12:30</span><span class="duration-badge">停留 2 小時 45 分鐘</span>
             <div class="item-title">佩納宮 (Palácio da Pena) 夢幻彩色城堡</div>
             <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>拜倫筆下的人間伊甸園。明艷黃、磚紅城堡矗立山巔雲霧中，融合摩爾穹頂與曼努埃爾風格。
+              <strong>🔥 必去亮點：</strong>浪漫主義高空城堡，黃紅塔樓與女王露台。
             </div>
             <div class="avoid-box">
-              <strong>⚠️ 辛特拉三大避雷血淚提醒：</strong>
-              1. <strong>宮殿內部嚴格限時：</strong>預訂佩納宮內部必須準時入場，<strong>超過指定時間 15 分鐘直接作廢</strong>！從花園入口走到宮門需要步行爬坡 20 分鐘，務必提早 40 分鐘抵達園區大門。<br>
-              2. <strong>花園票即可：</strong>佩納宮內部房間較為昏暗逼仄，<strong>真正絕美的是戶外露台與外觀城堡</strong>，若不想趕時間，買「花園與露台票（Park Ticket）」CP 值最高也最從容！<br>
-              3. <strong>拒搭 434 巴士排隊大排長龍：</strong>跨年旺季 434 巴士站人滿為患，3 人同行<strong>直接在辛特拉火車站叫 Uber 上山（約 €8~€12）</strong>，省下 1 小時排隊時間。
+              <strong>⚠️ 避雷指南：</strong>宮殿內部遲到 15 分鐘作廢；買「花園露台票」性價比最高。
             </div>
-            <a class="link-pill" href="https://bilheteira.parquesdesintra.pt/home/en" target="_blank">🎟️ 辛特拉票務官網</a>
-            <a class="link-pill" href="https://zh.wikipedia.org/zh-tw/佩纳宫" target="_blank">📖 城堡故事解說</a>
+            <div class="booking-links">
+              <a class="link-pill official" href="https://bilheteira.parquesdesintra.pt/home/en" target="_blank">🎟️ 辛特拉官方預售</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/18444-park-and-national-palace-of-pena-admission-ticket-sintra" target="_blank">🛒 KKday 佩納宮快速通關門票</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/4119-pena-palace-park-ticket-lisbon/" target="_blank">🛒 Klook 佩納宮花園與宮殿門票</a>
+            </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">13:00 - 15:30</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">雷加萊拉莊園 (Quinta da Regaleira) 啟蒙之井探秘</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：自佩納宮搭 434 公車下山或叫車 5 分鐘抵達莊園大門。</div>
+            <div class="item-transit">🚶‍♂️ 前往方式：自佩納宮搭車 5 分鐘抵達莊園大門。</div>
             <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>神祕主義與鍊金術莊園。深入 27 米深的「啟蒙之井（Poço Iniciático）」，沿九重地獄螺旋石階而下，穿越地底岩洞迷宮與踏石水潭，震撼非凡！
+              <strong>🔥 必去亮點：</strong>深入 27 公尺深「啟蒙之井」，穿行九重地獄螺旋階梯與岩洞瀑布。
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>啟蒙之井洞內階梯濕滑且幽暗，<strong>嚴禁穿拖鞋或高跟鞋</strong>；水上踏石步道需看準腳步前行，避免踩空落水。
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.regaleira.pt/en" target="_blank">🌐 莊園官方網站</a>
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/124715-quinta-da-regaleira-e-ticket-sintra" target="_blank">🛒 KKday 雷加萊拉莊園門票</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/65545-quinta-da-regaleira-admission-ticket-sintra/" target="_blank">🛒 Klook 快速入場電子票</a>
             </div>
-            <div class="feature-box feature-food">
-              <strong>🍴 辛特拉必吃點心：</strong>老城區 Piriquita 品嚐百年「辛特拉起司塔（Queijadas）」與酥皮「枕頭酥（Travesseiros）」。
-            </div>
-            <a class="link-pill" href="https://www.regaleira.pt/en" target="_blank">🌐 雷加萊拉莊園官網</a>
-            <a class="link-pill" href="https://maps.google.com/?q=Quinta+da+Regaleira+Sintra" target="_blank">📍 Google 地圖定位</a>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <span class="time-slot">16:30 - 21:00</span><span class="duration-badge">休整 4.5 小時</span>
-            <div class="item-title">返回里斯本公寓梳洗、換裝、享用跨年大餐</div>
-            <div class="item-desc">搭火車返回里斯本，在公寓稍事休息補充體力，換上保暖衣物。準備迎接跨年！</div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">22:00 - 00:30</span><span class="duration-badge">狂歡 2.5 小時</span>
             <div class="item-title">🎆 商業廣場萬人跨年音樂會 ＆ 特茹河倒數煙火秀</div>
-            <div class="item-transit">🚶‍♂️ 前往方式：從下城公寓步行僅 3~5 分鐘直達商業廣場（免擠地鐵，散步即達）。</div>
-            <div class="highlight-box">
-              <strong>🔥 跨年儀式感亮點：</strong>自備 12 顆葡萄乾，在午夜 00:00 伴隨教堂鐘聲每響吃下一顆祈福；特茹河畔璀璨煙火騰空而起，在倒數聲中迎接 2027！
-            </div>
-            <div class="avoid-box">
-              <strong>⚠️ 跨年夜安全避雷：</strong>散場時數萬人湧向地鐵站，<strong>地鐵會進行人流管制且極其混亂</strong>；我們入住 Baixa 下城公寓最大的優勢就是<strong>完全不用搭地鐵，散步 5 分鐘直接走回公寓睡覺</strong>！
-            </div>
+            <div class="item-transit">🚶‍♂️ 前往方式：自下城公寓步行 3~5 分鐘直達廣場，免擠地鐵。</div>
           </div>
         </div>
       </div>
@@ -1311,36 +1444,21 @@
         <div class="day-body">
           <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <span class="time-slot">11:00 - 13:00</span><span class="duration-badge">停留 2 小時</span>
-            <div class="item-title">1/1 (五) 元旦悠閒睡到自然醒 ＆ 早午餐</div>
-            <div class="item-desc">跨年夜後充分補眠，在下城區咖啡館享受悠閒的新年第一天早午餐。</div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
             <span class="time-slot">13:30 - 16:30</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">搭乘 28 號木造電車穿梭阿爾法瑪 (Alfama) 迷宮</div>
-            <div class="item-transit">🚋 交通：在 Martim Moniz 起始站排隊搭乘 1930 年代黃色木造電車。</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>古董電車在極陡坡道與石板窄巷驚險攀爬，在聖露西亞觀景台（Miradouro de Santa Luzia）俯瞰特茹河景。
+            <div class="item-transit">🚋 交通：務必到 Martim Moniz 始發站排隊上車才有位子！<strong>持 Lisboa Card 免費搭乘</strong>。</div>
+            <div class="booking-links">
+              <a class="link-pill" href="https://maps.google.com/?q=Miradouro+de+Santa+Luzia+Lisbon" target="_blank">📍 聖露西亞觀景台</a>
             </div>
-            <div class="avoid-box">
-              <strong>⚠️ 28 號電車終極避雷守則：</strong>
-              1. <strong>別在中途站傻等：</strong>中途站車廂永遠滿載不停車，<strong>務必到「Martim Moniz 起始站」排隊上車才有座位</strong>。<br>
-              2. <strong>扒手最愛：</strong>車廂人擠人時扒手最猖獗，切勿將手機掛在胸前晃蕩或放後口袋，坐定後雙手抱住隨身包！
-            </div>
-            <a class="link-pill" href="https://maps.google.com/?q=Miradouro+de+Santa+Luzia+Lisbon" target="_blank">📍 聖露西亞觀景台</a>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">17:30 - 20:00</span><span class="duration-badge">停留 2.5 小時</span>
             <div class="item-title">阿爾法瑪老城餐館：葡式海鮮泡飯 ＆ 聆聽法朵 (Fado)</div>
-            <div class="highlight-box">
-              <strong>🔥 必去亮點：</strong>在微弱燭光下享用陶鍋海鮮泡飯（Arroz de Marisco），聆聽國寶級法朵女伶深情歌聲與葡萄牙十二弦吉他演奏。
-            </div>
-            <div class="avoid-box">
-              <strong>⚠️ 避雷指南：</strong>桌上送上的麵包、奶油、橄欖與起司<strong>不是免費招待</strong>，只要動過就會計費（若不吃可在點菜時禮貌請服務員收走）；法朵表演進行時全場保持安靜不可喧嘩。
+            <div class="booking-links">
+              <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/124708-live-fado-show-ticket-lisbon" target="_blank">🛒 KKday 里斯本法朵音樂秀預約</a>
+              <a class="link-pill klook" href="https://www.klook.com/zh-TW/activity/9355-fado-in-chiado-show-lisbon/" target="_blank">🛒 Klook 希亞多法朵現場門票</a>
             </div>
           </div>
 
@@ -1353,7 +1471,9 @@
               <strong>🇺🇸 佛州夥伴：</strong>搭機經美東轉機，順向時差<strong>1/2 (六) 當晚即可平安返抵 Jacksonville</strong>。<br>
               <strong>🇹🇼 台灣夥伴：</strong>搭乘國際長程線轉機一次，於 <strong>1/3 (日) 傍晚安抵台灣桃園機場</strong>，返家好好洗漱睡飽一整晚，<strong>1/4 (一) 精神飽滿準時上班！</strong>
             </div>
-            <a class="link-pill" href="https://www.ana.pt/en/lis/home" target="_blank">✈️ 里斯本機場航班資訊</a>
+            <div class="booking-links">
+              <a class="link-pill official" href="https://www.ana.pt/en/lis/home" target="_blank">✈️ 里斯本機場航班資訊</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1375,7 +1495,7 @@
           <ul style="padding-left: 18px; font-size: 0.92rem; color:#1e293b; line-height: 1.6;">
             <li><strong>聖家堂搶票：</strong>官網於參觀日前 60 天開放，第一時間鎖定上午登塔時段。</li>
             <li><strong>跨城高鐵車票：</strong>馬德里高鐵（iryo/Renfe 早鳥票開賣）。</li>
-            <li><strong>景點門票：</strong>萊羅書店、加泰隆尼亞音樂宮、佩納宮預約指定入場時段。</li>
+            <li><strong>景點門票與交通卡：</strong>預訂 Lisboa Card、萊羅書店、加泰隆尼亞音樂宮、佩納宮。</li>
           </ul>
         </div>
       </div>
@@ -1386,6 +1506,38 @@
       <p style="margin-top:4px;">祝 2026-2027 西葡跨年之旅平安順遂、收穫滿滿 🎉</p>
     </footer>
   </div>
+
+  <!-- Web Speech Synthesis Script with Audio Engine Tuning -->
+  <script>
+    function speakText(text, lang) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel(); // 停止先前尚未播完的聲音
+        const cleanText = text.replace(/[¡!¿?]/g, ''); // 去除標點以利清楚發音
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = lang; // 'es-ES' 或 'pt-PT'
+        utterance.rate = 0.85; // 放慢語速至 0.85x 便於清楚跟讀
+        utterance.pitch = 1.0;
+        
+        // 抓取最合適的原生語音包
+        const voices = window.speechSynthesis.getVoices();
+        const targetVoice = voices.find(v => v.lang.startsWith(lang.substring(0, 2)));
+        if (targetVoice) {
+          utterance.voice = targetVoice;
+        }
+
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('您的瀏覽器不支援 Web Speech 語音發音功能，建議使用最新版 Safari 或 Chrome。');
+      }
+    }
+
+    // 啟動時預載語音引擎，避免首次點擊無聲
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = function() {
+        window.speechSynthesis.getVoices();
+      };
+    }
+  </script>
 
 </body>
 </html>
