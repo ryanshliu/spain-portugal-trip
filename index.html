@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026-2027 西葡15天深度自由行手冊 (全景機場動線地圖・真人語音示範・多平台訂票)</title>
+  <title>2026-2027 西葡15天深度自由行手冊 (全景機場地圖・語音示範・網紅私房機位・風土民情)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -14,6 +14,7 @@
       --accent: #dc2626;
       --accent-warm: #d97706;
       --success: #15803d;
+      --ig-pink: #c026d3;
       --kkday: #00b0ab;
       --klook: #ff5b00;
       --gyg: #ff4742;
@@ -58,7 +59,7 @@
     }
 
     header h1 { font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; }
-    header p { font-size: 1.05rem; opacity: 0.92; max-width: 800px; margin: 0 auto; }
+    header p { font-size: 1.05rem; opacity: 0.92; max-width: 820px; margin: 0 auto; }
 
     .container { max-width: 1160px; margin: -40px auto 0; padding: 0 16px; position: relative; z-index: 10; }
 
@@ -97,9 +98,10 @@
     .info-box.accent { border-left-color: var(--accent); background: #fef2f2; }
     .info-box.warm { border-left-color: var(--accent-warm); background: #fffbeb; }
     .info-box.success { border-left-color: var(--success); background: #f0fdf4; }
+    .info-box.culture { border-left-color: #8b5cf6; background: #f5f3ff; }
     .info-box h4 { font-size: 1.05rem; margin-bottom: 6px; color: var(--text); }
 
-    /* Visual Route Map Styling with Airports */
+    /* Visual Route Map Styling with All Airports */
     .map-container {
       background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
       border-radius: 14px;
@@ -114,28 +116,28 @@
     }
     .map-header h3 { font-size: 1.2rem; color: #60a5fa; }
     .map-flow {
-      display: flex; align-items: center; justify-content: space-between; min-width: 980px; padding: 20px 10px;
+      display: flex; align-items: center; justify-content: space-between; min-width: 1040px; padding: 22px 10px;
       position: relative;
     }
     .map-flow::before {
-      content: ""; position: absolute; top: 46px; left: 30px; right: 30px; height: 4px;
-      background: linear-gradient(90deg, #38bdf8 0%, #3b82f6 20%, #ef4444 40%, #10b981 65%, #f59e0b 85%, #a855f7 100%);
+      content: ""; position: absolute; top: 48px; left: 25px; right: 25px; height: 4px;
+      background: linear-gradient(90deg, #38bdf8 0%, #3b82f6 18%, #ef4444 38%, #ec4899 50%, #10b981 68%, #f59e0b 86%, #a855f7 100%);
       z-index: 1; border-radius: 2px;
     }
     .map-node {
-      position: relative; z-index: 2; text-align: center; width: 145px;
+      position: relative; z-index: 2; text-align: center; width: 140px;
       background: #1e293b; border: 2px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 12px 6px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.35); transition: transform 0.2s, border-color 0.2s;
     }
     .map-node:hover { transform: translateY(-4px); border-color: #60a5fa; }
     .map-node.airport {
-      background: #0f172a; border-style: dashed; border-color: #38bdf8; width: 125px;
+      background: #0f172a; border: 2px dashed #38bdf8; width: 125px;
     }
     .node-badge {
-      width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 6px; font-weight: 800; font-size: 0.8rem; color: white;
+      width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 6px; font-weight: 800; font-size: 0.85rem; color: white;
     }
-    .node-city { font-weight: 800; font-size: 0.98rem; margin-bottom: 2px; }
+    .node-city { font-weight: 800; font-size: 0.95rem; margin-bottom: 2px; }
     .node-dates { font-size: 0.75rem; opacity: 0.85; }
     .node-sub { font-size: 0.72rem; color: #94a3b8; margin-top: 4px; line-height: 1.3; }
 
@@ -144,31 +146,43 @@
       padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.15); white-space: nowrap;
     }
 
-    /* Voice Phrase Card with Visible Pronunciation & Distinct Play Button */
+    /* Sound Notice Banner */
+    .audio-notice {
+      background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 14px;
+      font-size: 0.88rem; color: #1e40af; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 8px;
+    }
+
+    /* Phrase Grid & High-contrast Audio Button */
     .phrase-category { margin-bottom: 18px; }
     .phrase-category h4 { font-size: 1rem; color: var(--primary); margin-bottom: 10px; }
-    .phrase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .phrase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 12px; }
     
     .phrase-card {
       background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 12px 14px;
       display: flex; justify-content: space-between; align-items: center; gap: 10px;
-      box-shadow: var(--shadow-sm); transition: transform 0.15s, border-color 0.15s;
+      box-shadow: var(--shadow-sm);
     }
-    .phrase-card:hover { border-color: var(--primary-light); transform: translateY(-2px); }
     .phrase-content { flex: 1; }
     .phrase-orig { font-weight: 800; color: #0f172a; font-size: 1.02rem; line-height: 1.3; }
     .phrase-pron { font-size: 0.82rem; color: #64748b; font-style: italic; margin-top: 2px; }
     .phrase-trans { font-size: 0.88rem; color: #1e293b; font-weight: 600; margin-top: 2px; }
     
-    /* PROMINENT AUDIO BUTTON */
     .audio-btn {
-      background: #2563eb; color: white; border: none; padding: 8px 12px;
+      background: #2563eb; color: #ffffff !important; border: none; padding: 9px 14px;
       border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
-      font-size: 0.85rem; font-weight: 700; transition: all 0.2s; flex-shrink: 0;
+      font-size: 0.88rem; font-weight: 800; transition: all 0.2s; flex-shrink: 0;
       box-shadow: 0 2px 4px rgba(37,99,235,0.3);
     }
-    .audio-btn:hover { background: #1e3a8a; transform: scale(1.05); }
-    .audio-btn:active { transform: scale(0.95); }
+    .audio-btn:hover { background: #1e3a8a; }
+    .audio-btn.playing { background: #16a34a !important; }
+
+    /* Creator Spot Card */
+    .ig-box {
+      background: #fdf4ff; border-left: 4px solid var(--ig-pink); border-radius: 6px;
+      padding: 10px 14px; margin: 8px 0; font-size: 0.9rem; color: #701a75;
+    }
+    .ig-box strong { color: #86198f; }
 
     /* City Pass Banner */
     .pass-card {
@@ -294,34 +308,35 @@
   <header>
     <div class="badge">✈️ 15-Day Master Travel Guide (Dec 19, 2026 – Jan 2, 2027)</div>
     <h1>2026-2027 西班牙 ＆ 葡萄牙 深度自由行手冊</h1>
-    <p>3人同行・高CP值公寓・巴塞隆納進、里斯本出・含機場動線地圖・真人語音示範・多平台訂票・1/4準時上班</p>
+    <p>3人同行・高CP值公寓・巴塞隆納進、里斯本出・全景機場動線地圖・真人語音示範・網紅私房機位・風土民情・1/4準時上班</p>
   </header>
 
   <div class="container">
     <nav class="nav-tabs">
       <a href="#map-section" class="nav-tab active">🗺️ 機場與城市地圖</a>
       <a href="#phrases" class="nav-tab">🗣️ 常用會話 (點擊發音)</a>
+      <a href="#culture-section" class="nav-tab">🍷 風土民情</a>
       <a href="#passes-section" class="nav-tab">🎫 城市套票與交通卡</a>
       <a href="#safety" class="nav-tab">🛡️ 防竊守則</a>
       <a href="#flights" class="nav-tab">✈️ 航班會合</a>
       <a href="#hotels" class="nav-tab">🏨 住宿推薦</a>
-      <a href="#itinerary" class="nav-tab">📅 每日行程與訂票</a>
+      <a href="#itinerary" class="nav-tab">📅 每日行程與網紅機位</a>
       <a href="#timeline" class="nav-tab">📝 預約搶票時程</a>
     </nav>
 
-    <!-- Visual Route Map Section with AIRPORTS -->
+    <!-- Visual Route Map Section with ALL AIRPORTS -->
     <section id="map-section" class="section">
-      <h2 class="section-title">🗺️ 視覺化資訊旅遊地圖 (含各大機場出入境與城際交通銜接)</h2>
+      <h2 class="section-title">🗺️ 視覺化資訊旅遊地圖 (含各大機場出入境、跨國班機與高鐵動線)</h2>
       <p style="color:#475569; font-size:0.95rem; margin-bottom:14px;">全程採<strong>巴塞隆納機場（BCN）入境會合、里斯本機場（LIS）出境返航</strong>，不走回頭路：</p>
       
       <div class="map-container">
         <div class="map-header">
-          <h3>📍 雙牙 15 天大環線：出發地 ➔ 機場 ➔ 4 大城市動線示意圖</h3>
+          <h3>📍 雙牙 15 天大環線：出發地 ➔ 機場 ➔ 4 大城市完整動線圖</h3>
           <span style="font-size:0.8rem; background:rgba(255,255,255,0.1); padding:3px 10px; border-radius:20px;">跨越 2 國・全程高鐵/內陸機無縫銜接</span>
         </div>
         
         <div class="map-flow">
-          <!-- Departure / Arrival Node -->
+          <!-- Node 1: BCN Airport -->
           <div class="map-node airport">
             <div class="node-badge" style="background:#0284c7;">🛫</div>
             <div class="node-city" style="color:#38bdf8;">BCN 機場</div>
@@ -331,7 +346,7 @@
           
           <div class="transit-label">🚌 Aerobús 35m</div>
 
-          <!-- City 1 -->
+          <!-- Node 2: Barcelona City -->
           <div class="map-node">
             <div class="node-badge" style="background:#2563eb;">1</div>
             <div class="node-city">巴塞隆納</div>
@@ -341,27 +356,27 @@
           
           <div class="transit-label">🚄 高鐵 2.5h</div>
 
-          <!-- City 2 -->
+          <!-- Node 3: Madrid City & Airport -->
           <div class="map-node">
             <div class="node-badge" style="background:#dc2626;">2</div>
             <div class="node-city">馬德里</div>
             <div class="node-dates">12/24 - 12/26 (2晚)</div>
-            <div class="node-sub">主廣場聖誕市集・麗池水晶宮・平安夜自煮</div>
+            <div class="node-sub">主廣場市集・麗池水晶宮 ➔ MAD 機場搭機</div>
           </div>
 
-          <div class="transit-label">✈️ MAD ➔ OPO 1.2h</div>
+          <div class="transit-label">✈️ 直飛 1h15m</div>
 
-          <!-- City 3 -->
+          <!-- Node 4: Porto Airport & City -->
           <div class="map-node">
             <div class="node-badge" style="background:#059669;">3</div>
             <div class="node-city">波多</div>
             <div class="node-dates">12/26 - 12/29 (3晚)</div>
-            <div class="node-sub">路易一世橋・萊羅書店・兩萬片瓷磚・波特酒</div>
+            <div class="node-sub">OPO 機場落地 ➔ 路易一世橋・最美書店</div>
           </div>
 
           <div class="transit-label">🚆 國鐵 AP 3h</div>
 
-          <!-- City 4 -->
+          <!-- Node 5: Lisbon City -->
           <div class="map-node">
             <div class="node-badge" style="background:#d97706;">4</div>
             <div class="node-city">里斯本</div>
@@ -371,7 +386,7 @@
 
           <div class="transit-label">🚕 Uber 15m</div>
 
-          <!-- Departure Airport Node -->
+          <!-- Node 6: LIS Airport -->
           <div class="map-node airport">
             <div class="node-badge" style="background:#9333ea;">🛬</div>
             <div class="node-city" style="color:#c084fc;">LIS 機場</div>
@@ -381,18 +396,21 @@
         </div>
 
         <div style="margin-top:16px; font-size:0.85rem; color:#94a3b8; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; border-top:1px dashed rgba(255,255,255,0.15); padding-top:10px;">
-          <div>🛫 <strong>會合點：</strong>巴塞隆納埃爾普拉特機場 (BCN) 第一航廈 T1 入境大廳</div>
-          <div>🛬 <strong>返航點：</strong>里斯本溫貝托·德爾加多機場 (LIS) 第一航廈 T1 辦理退稅登機</div>
+          <div>🛫 <strong>BCN 機場會合：</strong>第一航廈 T1 出境/入境大廳連鎖咖啡館（Caffè di Fiore）碰面</div>
+          <div>✈️ <strong>MAD ➔ OPO 內陸跨國：</strong>馬德里巴拉哈斯機場直飛波多費爾南多·薩·卡內羅機場（賺 1 小時時差）</div>
+          <div>🛬 <strong>LIS 機場返航：</strong>里斯本溫貝托·德爾加多機場 T1 辦理跨國退稅與登機</div>
         </div>
       </div>
     </section>
 
     <!-- Travel Phrases with Speech Synthesis & PROMINENT SPEAKER BUTTONS -->
     <section id="phrases" class="section">
-      <h2 class="section-title">🗣️ 常用會話 (點擊藍色「🔊 播放」按鈕，立即真人原生發音示範)</h2>
-      <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:18px;">
-        已為每個單字及句子加入專屬語音功能。點擊即可在手機或電腦上聆聽純正<strong>西班牙語（es-ES）</strong>與<strong>葡萄牙語（pt-PT）</strong>真人語音示範，語速調慢至 0.85x 方便現場跟讀：
-      </p>
+      <h2 class="section-title">🗣️ 常用會話 (點擊右側藍色「🔊 播放」按鈕，聽取原生真人發音)</h2>
+      
+      <div class="audio-notice">
+        <span>💡 <strong>發音提示：</strong>若手機點擊無聲，請確認 iPhone 側邊<strong>「靜音開關」已切換回響鈴模式</strong>（非靜音），並調高媒體音量！</span>
+        <button class="audio-btn" type="button" onclick="playVoiceAudio('¡Hola! Bienvenidos a España', 'es-ES')" style="padding:4px 10px; font-size:0.8rem;">🔊 測試發音 (西語)</button>
+      </div>
       
       <div class="grid-2">
         <!-- Spanish Phrases -->
@@ -408,7 +426,7 @@
                   <div class="phrase-pron">歐拉</div>
                   <div class="phrase-trans">你好！</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('¡Hola!', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('¡Hola!', 'es-ES')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -417,7 +435,7 @@
                   <div class="phrase-pron">不埃諾斯 迪亞斯</div>
                   <div class="phrase-trans">早安 / 日安</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Buenos días', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Buenos días', 'es-ES')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -426,7 +444,7 @@
                   <div class="phrase-pron">木洽斯 格拉西亞斯</div>
                   <div class="phrase-trans">非常感謝！</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Muchas gracias', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Muchas gracias', 'es-ES')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -435,7 +453,7 @@
                   <div class="phrase-pron">波爾法沃</div>
                   <div class="phrase-trans">請 / 拜託</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Por favor', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Por favor', 'es-ES')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -444,7 +462,7 @@
                   <div class="phrase-pron">貝爾冬 / 迪斯庫爾佩</div>
                   <div class="phrase-trans">不好意思 / 借過</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Perdón, disculpe', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Perdón, disculpe', 'es-ES')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -453,7 +471,7 @@
                   <div class="phrase-pron">阿不拉 英格雷斯？</div>
                   <div class="phrase-trans">您會說英文嗎？</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('¿Habla inglés?', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('¿Habla inglés?', 'es-ES')">🔊 播放</button>
               </div>
             </div>
           </div>
@@ -467,7 +485,7 @@
                   <div class="phrase-pron">拉 昆塔，波爾法沃</div>
                   <div class="phrase-trans">請結帳 / 買單</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('La cuenta, por favor', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('La cuenta, por favor', 'es-ES')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -476,7 +494,7 @@
                   <div class="phrase-pron">烏納 梅薩 怕拉 特雷斯</div>
                   <div class="phrase-trans">我們 3 位（三人桌）</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Una mesa para tres personas', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Una mesa para tres personas', 'es-ES')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -485,7 +503,7 @@
                   <div class="phrase-pron">阿瓜 恐 嘎斯</div>
                   <div class="phrase-trans">氣泡水</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Agua con gas', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Agua con gas', 'es-ES')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -494,7 +512,7 @@
                   <div class="phrase-pron">阿瓜 辛 嘎斯</div>
                   <div class="phrase-trans">一般礦泉水（無氣）</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Agua sin gas', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Agua sin gas', 'es-ES')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -503,7 +521,7 @@
                   <div class="phrase-pron">東疊 耶斯塔 耶爾 邦紐？</div>
                   <div class="phrase-trans">洗手間在哪裡？</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('¿Dónde está el baño?', 'es-ES')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('¿Dónde está el baño?', 'es-ES')">🔊 播放</button>
               </div>
             </div>
           </div>
@@ -522,7 +540,7 @@
                   <div class="phrase-pron">歐拉！</div>
                   <div class="phrase-trans">你好！</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Olá!', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Olá!', 'pt-PT')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -531,7 +549,7 @@
                   <div class="phrase-pron">崩 迪亞</div>
                   <div class="phrase-trans">早安</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Bom dia', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Bom dia', 'pt-PT')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -540,7 +558,7 @@
                   <div class="phrase-pron">歐布里嘎度 / 歐布里嘎達</div>
                   <div class="phrase-trans">謝謝（男說/女說）</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Obrigado, obrigada', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Obrigado, obrigada', 'pt-PT')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -549,7 +567,7 @@
                   <div class="phrase-pron">波爾法沃 / 孔 里森薩</div>
                   <div class="phrase-trans">請 / 不好意思、借過</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Por favor, com licença', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Por favor, com licença', 'pt-PT')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -558,7 +576,7 @@
                   <div class="phrase-pron">發拉 英格雷斯？</div>
                   <div class="phrase-trans">您會說英文嗎？</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Fala inglês?', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Fala inglês?', 'pt-PT')">🔊 播放</button>
               </div>
             </div>
           </div>
@@ -572,7 +590,7 @@
                   <div class="phrase-pron">阿 控塔，波爾法沃</div>
                   <div class="phrase-trans">請結帳 / 買單</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('A conta, por favor', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('A conta, por favor', 'pt-PT')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -581,7 +599,7 @@
                   <div class="phrase-pron">烏瑪 梅薩 怕拉 特雷斯</div>
                   <div class="phrase-trans">我們 3 位用餐</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Uma mesa para três pessoas', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Uma mesa para três pessoas', 'pt-PT')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -590,7 +608,7 @@
                   <div class="phrase-pron">溫 卡飛 / 烏瑪 碧卡</div>
                   <div class="phrase-trans">一杯義式黑咖啡</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Um café, uma bica, por favor', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Um café, uma bica, por favor', 'pt-PT')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -599,7 +617,7 @@
                   <div class="phrase-pron">阿瓜 幸 嘎斯</div>
                   <div class="phrase-trans">無氣泡礦泉水</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Água sem gás', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Água sem gás', 'pt-PT')">🔊 播放</button>
               </div>
 
               <div class="phrase-card">
@@ -608,7 +626,7 @@
                   <div class="phrase-pron">翁得 飛卡 阿 卡薩 得 邦紐？</div>
                   <div class="phrase-trans">洗手間在哪裡？</div>
                 </div>
-                <button class="audio-btn" onclick="speakText('Onde fica a casa de banho?', 'pt-PT')">🔊 播放</button>
+                <button class="audio-btn" type="button" onclick="playVoiceAudio('Onde fica a casa de banho?', 'pt-PT')">🔊 播放</button>
               </div>
             </div>
           </div>
@@ -616,10 +634,34 @@
       </div>
     </section>
 
+    <!-- Cultural Insights Section -->
+    <section id="culture-section" class="section">
+      <h2 class="section-title">🍷 西班牙與葡萄牙在地風土民情 (融入當地生活步調)</h2>
+      <div class="grid-2">
+        <div class="info-box culture">
+          <h4>🇪🇸 西班牙生活哲學與跨年習俗</h4>
+          <ul style="padding-left: 18px; font-size: 0.92rem; line-height: 1.65; color: #334155;">
+            <li><strong>超遲的用餐時間：</strong>午餐通常在 14:00~16:00，晚餐更是 21:00 以後才開始！19:00~21:00 是當地人的「Tapas Bar Hop」時間，點杯啤酒小酌配火腿。</li>
+            <li><strong>午休與店家時間 (Siesta)：</strong>中小型獨立店鋪下午 14:00~17:00 會拉下鐵捲門休息，晚上再營業至 20:30。大商場與超市則全天營業。</li>
+            <li><strong>跨年 12 顆幸運葡萄 (Las 12 Uvas)：</strong>12/31 午夜鐘聲敲響 12 下，每響吃下一顆葡萄，象徵新年 12 個月順遂好運；當地人還習慣在跨年夜穿上紅色內衣褲祈求幸運！</li>
+            <li><strong>小費習慣：</strong>西葡無強迫性小費，若服務滿意，在找零時留下 €1~€2 硬幣即可。</li>
+          </ul>
+        </div>
+
+        <div class="info-box success">
+          <h4>🇵🇹 葡萄牙靈魂與餐桌禮儀</h4>
+          <ul style="padding-left: 18px; font-size: 0.92rem; line-height: 1.65; color: #1e3a8a;">
+            <li><strong>Saudade 靈魂與法朵 (Fado)：</strong>葡人個性溫和謙讓，骨子裡流淌著大航海思念遠方水手的命定情懷（Saudade）。在小酒館聽法朵演唱時，<strong>音樂響起必須全場安靜、停止交談與用餐</strong>以示尊重。</li>
+            <li><strong>餐前小食 (Couvert) 潛規則：</strong>入座後服務生送上的麵包、奶油、橄欖與起司<strong>不是免費招待</strong>！只要吃了就會算錢（€2~€5），若不想吃，可在送上時禮貌說「No, obrigado」，服務生就會收走。</li>
+            <li><strong>咖啡文化 (Uma Bica)：</strong>葡萄牙人極度熱愛咖啡，站著在吧檯喝一杯濃郁的濃縮黑咖啡只要 €0.8~€1.2，是早晨與午後的靈魂提神劑。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- Combined Tickets & City Passes Section -->
     <section id="passes-section" class="section">
       <h2 class="section-title">🎫 4大城市實用交通卡與整合景點套票 (省錢省時首選)</h2>
-      
       <div class="grid-2">
         <!-- Barcelona Pass -->
         <div class="pass-card">
@@ -838,9 +880,9 @@
       </div>
     </section>
 
-    <!-- Daily Detailed Timeline Itinerary with Highlights, Pitfalls & Multi-Platform Booking -->
+    <!-- Daily Detailed Timeline Itinerary -->
     <section id="itinerary" class="section">
-      <h2 class="section-title">📅 15天每日行程：時間軸・多平台購票・避雷指南・打卡點與美食</h2>
+      <h2 class="section-title">📅 15天每日行程：時間軸・必去亮點・避雷指南・網紅私房機位・美食推薦</h2>
 
       <!-- Day 1 & 2 -->
       <div class="day-card">
@@ -868,8 +910,8 @@
             <div class="avoid-box">
               <strong>⚠️ 避雷指南：</strong>店內座位極少（僅數張吧檯木凳），<strong>不提供 WiFi 與插座</strong>，純粹品飲咖啡，不要當成辦公打電腦咖啡廳；週日可能提早打烊，務必核對營業時間。
             </div>
-            <div class="feature-box feature-photo">
-              <strong>📸 最佳打卡拍照點：</strong>Passatge Sert 巷內被懸掛綠意植栽覆蓋的石拱迴廊，坐在門口極簡木凳上手持簡約紙杯，搭配復古石板路特寫。
+            <div class="ig-box">
+              <strong>📸 IG網紅私房機位：</strong>Passatge Sert 巷弄正上方由茂密常春藤覆蓋的空中拱廊，手持純白極簡咖啡杯，以延伸的古典紅磚石階做景深，隨手拍出文青大片。
             </div>
             <div class="feature-box feature-food">
               <strong>🍴 必嚐特色美食：</strong>衣索比亞單品 Cold Brew（帶有白花與柑橘清香）、燕麥奶 Flat White，搭配店內手工烘烤肉桂捲（Roll de Canela）。
@@ -883,13 +925,18 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">14:15 - 16:30</span><span class="duration-badge">停留 2 小時 15 分鐘</span>
-            <div class="item-title">畢卡索博物館 (Museu Picasso)</div>
+            <div class="item-title">畢卡索博物館 (Museu Picasso) ＆ 自由之吻壁畫</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：從 Nomad Coffee 步行約 5 分鐘穿過 Montcada 街即達。</div>
             <div class="highlight-box">
               <strong>🔥 必去亮點：</strong>由 5 座 13~14 世紀加泰隆尼亞哥德式石造宮殿連通，收錄逾 4,200 件畢卡索少年時期巨作。必看《科學與慈善》（畢卡索 15 歲寫實巔峰）與晚年 58 幅《侍女變體圖》（Las Meninas）。
             </div>
             <div class="avoid-box">
               <strong>⚠️ 避雷指南：</strong><strong>絕對不要現場排隊買票</strong>，隊伍動輒 1.5 小時起跳！必須提早 1~2 週上官網預訂指定入場時間；展廳內部禁止拍照，但中庭迴旋樓梯可拍照。
+            </div>
+            <div class="ig-box">
+              <strong>📸 IG網紅爆款拍照點：</strong>
+              1. <strong>博物館中庭 Patio：</strong>陽光灑落哥德式露天石造螺旋階梯。<br>
+              2. <strong>自由之吻壁畫（The Kiss of Freedom）：</strong>離博物館步行 3 分鐘，由 4,000 張巴塞隆納市民微型照片拼貼而成的大型接吻瓷磚牆，情侶與好友必拍打卡！
             </div>
             <div class="booking-links">
               <a class="link-pill official" href="http://www.museupicasso.bcn.cat/en/" target="_blank">🎟️ 官網購票預約</a>
@@ -901,13 +948,19 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">17:00 - 19:00</span><span class="duration-badge">停留 2 小時</span>
-            <div class="item-title">四隻貓百年咖啡館 (Els 4 Gats)</div>
+            <div class="item-title">四隻貓百年咖啡館 (Els 4 Gats) ＆ 主教橋</div>
             <div class="item-transit">🚶‍♂️ 下一站前往方式：從畢卡索博物館步行約 8 分鐘穿過主教橋與哥德區古街。</div>
             <div class="highlight-box">
               <strong>🔥 必去亮點：</strong>1897 年開業，加泰隆尼亞現代主義文人大本營。年僅 17 歲的畢卡索在此舉辦首場個展並親手繪製菜單封面。
             </div>
             <div class="avoid-box">
               <strong>⚠️ 避雷指南：</strong>正餐主菜價格偏高且評價平淡，<strong>建議定位為「下午茶 / Tapas 小食站」</strong>，點咖啡、熱紅酒、西班牙烘蛋或火腿可樂餅小坐即可，不要花大錢吃昂貴正餐大菜。
+            </div>
+            <div class="ig-box">
+              <strong>📸 網紅構圖密技（主教橋 Pont del Bisbe）：</strong>站在比斯貝街（Carrer del Bisbe）兩側，把手機放低貼近地面微仰角拍攝，避開路上遊客，框出中世紀新哥德式天橋與兩旁高牆的電影感氛圍。
+            </div>
+            <div class="feature-box feature-food">
+              <strong>🍴 必點特色美食：</strong>西班牙炸火腿可樂餅（Croquetas de Jamón）、番茄抹蒜脆麵包（Pan con Tomate）與 Sangria 水果酒。
             </div>
             <div class="booking-links">
               <a class="link-pill official" href="https://4gats.com/" target="_blank">🌐 官網與菜單</a>
@@ -934,6 +987,9 @@
             </div>
             <div class="avoid-box">
               <strong>⚠️ 避雷指南：</strong>現場完全不售實體門票！必須提早 60 天預約；登塔限制嚴格，孕婦及幼童禁止登塔；外圍圍欄拍照需嚴防扒手。
+            </div>
+            <div class="ig-box">
+              <strong>📸 IG網紅頂級機位（水潭倒影）：</strong>絕不在教堂大門口拍人頭！走至正對面的高第廣場（Plaça de Gaudí）池塘邊，早上順光時蹲在池畔，拍下聖家堂完整尖塔倒映在湖水中的世紀神作！
             </div>
             <div class="booking-links">
               <a class="link-pill official" href="https://sagradafamilia.org/en/tickets" target="_blank">🎟️ 官方預售 (提前60天搶票)</a>
@@ -963,6 +1019,9 @@
             </div>
             <div class="avoid-box">
               <strong>⚠️ 避雷指南：</strong>冬季傍晚 17:30 準時清場鎖門，必須在 15:30 前抵達；山上風大注意保暖。
+            </div>
+            <div class="ig-box">
+              <strong>📸 網紅構圖視角：</strong>坐在殘存的水泥碉堡矮牆上，雙腿自然懸空，攝影師從後方或側方 45 度連同被夕陽染成金黃色的巴塞隆納市區與海平線一起入鏡。
             </div>
             <div class="booking-links">
               <a class="link-pill" href="https://maps.google.com/?q=Bunkers+del+Carmel" target="_blank">📍 Google 地圖定位</a>
@@ -1012,6 +1071,9 @@
             <div class="highlight-box">
               <strong>🔥 必去亮點：</strong>歐洲唯一全自然天光採光音樂廳。大廳向下垂墜的金色水滴「彩繪玻璃穹頂」璀璨奪目。
             </div>
+            <div class="ig-box">
+              <strong>📸 網紅必拍秘境：</strong>二樓室外迴廊（Lluís Millet Hall），站在滿覆精緻立體馬賽克彩瓷花朵的雙層列柱之間，陽光斜射時拍出宛如歐陸皇家宮廷大片。
+            </div>
             <div class="booking-links">
               <a class="link-pill official" href="https://www.palaumusica.cat/en" target="_blank">🎟️ 官方導覽預約</a>
               <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/12204-palau-de-la-musica-catalana-ticket-barcelona" target="_blank">🛒 KKday 音樂宮自導/導覽門票</a>
@@ -1060,6 +1122,9 @@
             <div class="avoid-box">
               <strong>⚠️ 避雷指南：</strong>遲到超過 30 分鐘門票作廢；從 Lesseps 站走電動手扶梯最省力。
             </div>
+            <div class="ig-box">
+              <strong>📸 網紅最佳取景位：</strong>坐在百柱廳露天廣場的彩色波浪碎瓷長椅上，將鏡頭拉廣，剛好將兩棟如童話薑餅屋的守衛小屋框進背景正中央。
+            </div>
             <div class="booking-links">
               <a class="link-pill official" href="https://parkguell.barcelona/en" target="_blank">🎟️ 官方預售</a>
               <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/18440-park-guell-admission-ticket-barcelona" target="_blank">🛒 KKday 奎爾公園門票</a>
@@ -1087,6 +1152,9 @@
             <span class="time-slot">16:00 - 17:30</span><span class="duration-badge">停留 1.5 小時</span>
             <div class="item-title">米拉之家 (Casa Milà / La Pedrera)</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自巴特婁之家沿格拉西亞大道往北步行 5 分鐘。</div>
+            <div class="ig-box">
+              <strong>📸 網紅構圖特寫：</strong>天台上外星奇幻頭盔煙囪的鏤空拱門，剛好可作為天然畫框，把遠方的聖家堂四座尖塔完美圈在中心！
+            </div>
             <div class="booking-links">
               <a class="link-pill official" href="https://www.lapedrera.com/en" target="_blank">🎟️ 官方購票</a>
               <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/18442-casa-mila-admission-ticket-barcelona" target="_blank">🛒 KKday 米拉之家免排隊門票</a>
@@ -1149,6 +1217,9 @@
             <span class="time-slot">10:00 - 13:00</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">麗池公園 (El Retiro) ＆ 全透明水晶宮 (Palacio de Cristal)</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從 Atocha 火車站北口沿普拉多大道步行 8 分鐘進入麗池公園。</div>
+            <div class="ig-box">
+              <strong>📸 網紅日系/歐風清新機位：</strong>站在水晶宮內部玻璃穹頂正下方，利用穿透落葉的柔和漫射天光拍攝全身逆光剪影；或在戶外人工湖畔拍攝玻璃倒影。
+            </div>
             <div class="booking-links">
               <a class="link-pill" href="https://maps.google.com/?q=Palacio+de+Cristal+Madrid" target="_blank">📍 水晶宮位置</a>
             </div>
@@ -1159,6 +1230,9 @@
             <span class="time-slot">14:30 - 16:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">格蘭大道 (Gran Vía) 漫步 ＆ 欣賞璀璨聖誕燈海</div>
             <div class="item-transit">🚶‍♂️ 前往方式：由阿爾卡拉門沿阿爾卡拉街向西步行 10 分鐘即達。</div>
+            <div class="ig-box">
+              <strong>📸 網紅電影感機位：</strong>大都會大廈（Edificio Metrópolis）交界路口安全島，藍調時刻（Blue Hour）長曝光拍攝雙向穿梭的紅色雙層觀光巴士車軌與聖誕燈飾。
+            </div>
           </div>
 
           <div class="timeline-item">
@@ -1184,8 +1258,8 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">09:30 - 12:30</span><span class="duration-badge">航程 1 小時 15 分</span>
-            <div class="item-title">搭機飛往波多 (MAD ✈ OPO) ➔ 地鐵直通市中心</div>
-            <div class="item-transit">✈️ 交通：搭機抵達波多機場，轉乘地鐵紫線直達市中心。（時差慢 1 小時）。</div>
+            <div class="item-title">MAD 機場搭機 ✈️ 降落 OPO 波多機場 ➔ 地鐵直通市中心</div>
+            <div class="item-transit">✈️ 交通：搭機飛抵波多機場，轉乘地鐵紫線直達市中心。（時差慢 1 小時）。</div>
             <div class="booking-links">
               <a class="link-pill" href="https://www.google.com/travel/flights?q=flights%20from%20MAD%20to%20OPO" target="_blank">🔍 查詢直飛航班</a>
             </div>
@@ -1196,6 +1270,11 @@
             <span class="time-slot">14:30 - 16:30</span><span class="duration-badge">停留 2 小時</span>
             <div class="item-title">路易一世大橋 (Ponte Dom Luís I) 徒步跨河</div>
             <div class="item-transit">🚶‍♂️ 前往方式：從盟軍大道沿聖本篤車站往南步行 10 分鐘直登大橋上層。</div>
+            <div class="ig-box">
+              <strong>📸 歐美網紅必去隱藏機位：</strong>
+              1. <strong>莫羅花園草坪（Jardim do Morro）：</strong>上層大橋走到加亞端，斜坡草地上聚集著各國青年彈吉他等日落，大橋與波多老城全景一覽無遺！<br>
+              2. <strong>Guindais 石階縫隙（Escadas dos Guindais）：</strong>從 Batalha 纜車站旁小巷石階往下走，兩側老宅夾縫中框出鋼鐵大橋的垂直縱深，超震撼！
+            </div>
             <div class="booking-links">
               <a class="link-pill" href="https://maps.google.com/?q=Ponte+Luís+I+Porto" target="_blank">📍 Google 地圖定位</a>
             </div>
@@ -1240,8 +1319,11 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <span class="time-slot">11:15 - 12:30</span><span class="duration-badge">停留 1 小時 15 分鐘</span>
-            <div class="item-title">聖本篤車站 (Estação de São Bento) 兩萬片藍白瓷磚</div>
+            <div class="item-title">聖本篤車站 (Estação de São Bento) ＆ 卡爾莫教堂藍白瓷磚</div>
             <div class="item-transit">🚶‍♂️ 前往方式：自萊羅書店順緩坡向下步行 6 分鐘即達。</div>
+            <div class="ig-box">
+              <strong>📸 IG網紅必收打卡點：</strong>除聖本篤大廳外，步行 5 分鐘至「卡爾莫教堂（Igreja do Carmo）」，側牆整片由純藍白 Azulejo 磁磚覆蓋的大壁畫，穿素色長裙站在牆前拍照，色彩對比強烈吸睛！
+            </div>
             <div class="booking-links">
               <a class="link-pill" href="https://maps.google.com/?q=Sao+Bento+Station+Porto" target="_blank">📍 Google 地圖定位</a>
             </div>
@@ -1419,6 +1501,9 @@
             <div class="highlight-box">
               <strong>🔥 必去亮點：</strong>深入 27 公尺深「啟蒙之井」，穿行九重地獄螺旋階梯與岩洞瀑布。
             </div>
+            <div class="ig-box">
+              <strong>📸 網紅神秘視角：</strong>站在啟蒙之井（Poço Iniciático）井底圓形石陣正中央，廣角鏡頭垂直 90 度向上仰拍，井壁的螺旋石階梯、翠綠青苔與圓形天光如同但丁神曲中的救贖之光！
+            </div>
             <div class="booking-links">
               <a class="link-pill official" href="https://www.regaleira.pt/en" target="_blank">🌐 莊園官方網站</a>
               <a class="link-pill kkday" href="https://www.kkday.com/zh-tw/product/124715-quinta-da-regaleira-e-ticket-sintra" target="_blank">🛒 KKday 雷加萊拉莊園門票</a>
@@ -1447,6 +1532,9 @@
             <span class="time-slot">13:30 - 16:30</span><span class="duration-badge">停留 3 小時</span>
             <div class="item-title">搭乘 28 號木造電車穿梭阿爾法瑪 (Alfama) 迷宮</div>
             <div class="item-transit">🚋 交通：務必到 Martim Moniz 始發站排隊上車才有位子！<strong>持 Lisboa Card 免費搭乘</strong>。</div>
+            <div class="ig-box">
+              <strong>📸 歐美攝影師私房機位（太陽門觀景台 Miradouro das Portas do Sol）：</strong>觀景台階梯下方，以盛開九重葛與聖文生修道院白色雙塔為背景，等待黃色 28 號電車轉彎而過的經典明信片瞬間。
+            </div>
             <div class="booking-links">
               <a class="link-pill" href="https://maps.google.com/?q=Miradouro+de+Santa+Luzia+Lisbon" target="_blank">📍 聖露西亞觀景台</a>
             </div>
@@ -1507,31 +1595,45 @@
     </footer>
   </div>
 
-  <!-- Web Speech Synthesis Script with Audio Engine Tuning -->
+  <!-- Audio Playback Script (Web Speech API with Fallback & Visual State) -->
   <script>
-    function speakText(text, lang) {
+    function playVoiceAudio(text, lang) {
+      const cleanText = text.replace(/[¡!¿?,.]/g, '').trim();
+      const simpleLang = lang.startsWith('es') ? 'es' : 'pt';
+
+      // 檢查 Web Speech 支援
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel(); // 停止先前尚未播完的聲音
-        const cleanText = text.replace(/[¡!¿?]/g, ''); // 去除標點以利清楚發音
+
         const utterance = new SpeechSynthesisUtterance(cleanText);
         utterance.lang = lang; // 'es-ES' 或 'pt-PT'
-        utterance.rate = 0.85; // 放慢語速至 0.85x 便於清楚跟讀
+        utterance.rate = 0.85; // 語速調慢至 0.85x
         utterance.pitch = 1.0;
-        
-        // 抓取最合適的原生語音包
+
+        // 搜尋合適的原生語音包
         const voices = window.speechSynthesis.getVoices();
-        const targetVoice = voices.find(v => v.lang.startsWith(lang.substring(0, 2)));
+        const targetVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith(simpleLang));
         if (targetVoice) {
           utterance.voice = targetVoice;
         }
 
+        // 監聽發音事件
+        utterance.onstart = function() {
+          console.log('Speaking:', cleanText);
+        };
+
+        utterance.onerror = function(event) {
+          console.warn('Speech error:', event);
+          alert('語音朗讀提示：請確認您的手機「靜音鍵」已關閉，並已調高媒體音量！');
+        };
+
         window.speechSynthesis.speak(utterance);
       } else {
-        alert('您的瀏覽器不支援 Web Speech 語音發音功能，建議使用最新版 Safari 或 Chrome。');
+        alert('抱歉，您的手機瀏覽器不支援 Web Speech 語音朗讀，建議使用 Safari 或 Chrome。');
       }
     }
 
-    // 啟動時預載語音引擎，避免首次點擊無聲
+    // 啟動時預載語音清單
     if ('speechSynthesis' in window) {
       window.speechSynthesis.onvoiceschanged = function() {
         window.speechSynthesis.getVoices();
