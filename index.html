@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026-2027 歐洲跨年三大方案旗艦手冊：西葡全景 vs 希臘古典 vs 義大利文藝帝國</title>
+  <title>2026-2027 歐洲跨年三大方案旗艦手冊：西葡全景 vs 希臘古典 vs 義大利文藝復興</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@
     }
 
     header {
-      background: linear-gradient(135deg, #15803d 0%, #0369a1 35%, #c2410c 70%, #9a3412 100%);
+      background: linear-gradient(135deg, #0c4a6e 0%, #15803d 35%, #c2410c 70%, #9a3412 100%);
       color: white;
       padding: 50px 20px 75px;
       text-align: center;
@@ -60,27 +60,43 @@
 
     .container { max-width: 1180px; margin: -35px auto 0; padding: 0 16px; position: relative; z-index: 10; }
 
-    /* Master 3-Way Mode Switcher */
-    .mode-switcher {
-      display: flex; justify-content: center; gap: 10px; margin-bottom: 24px; flex-wrap: wrap;
+    /* 主方案切換器 */
+    .main-mode-switcher {
+      display: flex; justify-content: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;
     }
-    .mode-btn {
-      flex: 1; min-width: 260px; max-width: 380px; padding: 13px 18px; border-radius: 12px; font-size: 1rem;
+    .main-mode-btn {
+      flex: 1; min-width: 260px; max-width: 360px; padding: 14px 20px; border-radius: 12px; font-size: 1.05rem;
       font-weight: 800; text-align: center; cursor: pointer; border: 2px solid transparent;
       box-shadow: var(--shadow); transition: all 0.25s ease; background: white; color: #475569;
     }
-    .mode-btn:hover { transform: translateY(-2px); }
-    .mode-btn.active-spain {
+    .main-mode-btn:hover { transform: translateY(-2px); }
+    .main-mode-btn.active-spain {
       background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);
-      color: white; border-color: #9a3412; box-shadow: 0 8px 16px -2px rgba(194, 65, 12, 0.3);
+      color: white; border-color: #9a3412; box-shadow: 0 10px 15px -3px rgba(194, 65, 12, 0.3);
     }
-    .mode-btn.active-greece {
+    .main-mode-btn.active-greece {
       background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-      color: white; border-color: #075985; box-shadow: 0 8px 16px -2px rgba(2, 132, 199, 0.3);
+      color: white; border-color: #075985; box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.3);
     }
-    .mode-btn.active-italy {
+    .main-mode-btn.active-italy {
       background: linear-gradient(135deg, #15803d 0%, #166534 100%);
       color: white; border-color: #14532d; box-shadow: 0 8px 16px -2px rgba(21, 128, 61, 0.3);
+    }
+
+    /* 次標籤頁列 (Sub Tabs Navigation) */
+    .sub-tabs-bar {
+      display: flex; justify-content: center; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;
+      background: white; padding: 10px; border-radius: 12px; border: 1px solid var(--border);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04); position: sticky; top: 15px; z-index: 50;
+    }
+    .sub-tab-btn {
+      padding: 9px 18px; border-radius: 8px; font-size: 0.92rem; font-weight: 700;
+      border: 1px solid var(--border); background: #f8fafc; color: #475569; cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .sub-tab-btn:hover { background: #e2e8f0; }
+    .sub-tab-btn.active-sub {
+      background: #0f172a; color: white; border-color: #0f172a;
     }
 
     .section {
@@ -88,21 +104,17 @@
       margin-bottom: 26px; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05); border: 1px solid var(--border);
     }
     .section-title {
-      font-size: 1.4rem; font-weight: 700; display: flex; align-items: center; gap: 10px;
+      font-size: 1.35rem; font-weight: 800; display: flex; align-items: center; gap: 10px;
       margin-bottom: 18px; border-bottom: 2px solid var(--border); padding-bottom: 10px;
       color: var(--text);
     }
 
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
 
     /* Visual Route Map */
     .map-container {
       background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-      border-radius: 14px;
-      padding: 24px 18px;
-      color: white;
-      margin-bottom: 22px;
-      overflow-x: auto;
+      border-radius: 14px; padding: 24px 18px; color: white; margin-bottom: 22px; overflow-x: auto;
     }
     .map-header {
       display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;
@@ -110,22 +122,14 @@
     }
     .map-header h3 { font-size: 1.15rem; color: #38bdf8; }
     .map-flow {
-      display: flex; align-items: center; justify-content: space-between; min-width: 1140px; padding: 20px 10px;
-      position: relative;
+      display: flex; align-items: center; justify-content: space-between; min-width: 1140px; padding: 20px 10px; position: relative;
     }
     .map-flow::before {
-      content: ""; position: absolute; top: 48px; left: 30px; right: 30px; height: 4px;
-      z-index: 1; border-radius: 2px;
+      content: ""; position: absolute; top: 48px; left: 30px; right: 30px; height: 4px; z-index: 1; border-radius: 2px;
     }
-    .flow-spain::before {
-      background: linear-gradient(90deg, #3b82f6 0%, #c2410c 25%, #d97706 50%, #0284c7 75%, #0f766e 100%);
-    }
-    .flow-greece::before {
-      background: linear-gradient(90deg, #3b82f6 0%, #0284c7 25%, #0369a1 50%, #0284c7 75%, #0c4a6e 100%);
-    }
-    .flow-italy::before {
-      background: linear-gradient(90deg, #3b82f6 0%, #15803d 25%, #b45309 50%, #b91c1c 75%, #0369a1 100%);
-    }
+    .flow-spain::before { background: linear-gradient(90deg, #3b82f6 0%, #c2410c 25%, #d97706 50%, #0284c7 75%, #0f766e 100%); }
+    .flow-greece::before { background: linear-gradient(90deg, #3b82f6 0%, #0284c7 25%, #0369a1 50%, #0284c7 75%, #0c4a6e 100%); }
+    .flow-italy::before { background: linear-gradient(90deg, #3b82f6 0%, #15803d 25%, #b45309 50%, #b91c1c 75%, #0369a1 100%); }
 
     .map-node {
       position: relative; z-index: 2; text-align: center; width: 140px;
@@ -146,18 +150,13 @@
     }
 
     /* Day Card */
-    .day-card {
-      border: 1px solid var(--border); border-radius: 12px; margin-bottom: 22px;
-      overflow: hidden; background: #fff;
-    }
+    .day-card { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 22px; overflow: hidden; background: #fff; }
     .day-header {
       padding: 14px 18px; background: #f8fafc; border-bottom: 1px solid var(--border);
       display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
     }
     .day-date { font-weight: 700; font-size: 1.05rem; }
-    .day-tag {
-      padding: 3px 12px; border-radius: 9999px; font-size: 0.8rem; font-weight: 700;
-    }
+    .day-tag { padding: 3px 12px; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; }
     .tag-spain { background: #ffedd5; color: #9a3412; }
     .tag-greece { background: #e0f2fe; color: #0369a1; }
     .tag-italy { background: #dcfce7; color: #15803d; }
@@ -166,22 +165,18 @@
     .timeline-item { position: relative; padding-left: 28px; margin-bottom: 24px; }
     .timeline-item:last-child { margin-bottom: 0; }
     .timeline-item::before {
-      content: ""; position: absolute; left: 6px; top: 8px; bottom: -24px;
-      width: 2px; background: #cbd5e1;
+      content: ""; position: absolute; left: 6px; top: 8px; bottom: -24px; width: 2px; background: #cbd5e1;
     }
     .timeline-item:last-child::before { display: none; }
     .timeline-dot {
-      position: absolute; left: 0; top: 6px; width: 14px; height: 14px;
-      border-radius: 50%; border: 2px solid white; box-shadow: 0 0 0 1px #94a3b8;
+      position: absolute; left: 0; top: 6px; width: 14px; height: 14px; border-radius: 50%;
+      border: 2px solid white; box-shadow: 0 0 0 1px #94a3b8;
     }
     .dot-spain { background: var(--spain-red); }
     .dot-greece { background: var(--greece-blue); }
     .dot-italy { background: var(--italy-green); }
 
-    .time-slot {
-      display: inline-block; font-size: 0.8rem; font-weight: 700; padding: 2px 8px;
-      border-radius: 4px; margin-bottom: 4px;
-    }
+    .time-slot { display: inline-block; font-size: 0.8rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 4px; }
     .slot-spain { background: #ffedd5; color: #9a3412; }
     .slot-greece { background: #e0f2fe; color: #0369a1; }
     .slot-italy { background: #dcfce7; color: #15803d; }
@@ -191,7 +186,7 @@
       background: #fef3c7; color: #92400e; border-radius: 4px; margin-left: 4px;
     }
 
-    .item-title { font-weight: 700; font-size: 1.12rem; margin: 4px 0; color: var(--text); }
+    .item-title { font-weight: 700; font-size: 1.1rem; margin: 4px 0; color: var(--text); }
     .item-transit {
       background: #f8fafc; border: 1px dashed #cbd5e1; padding: 8px 12px;
       border-radius: 6px; font-size: 0.88rem; color: #475569; margin: 8px 0;
@@ -199,9 +194,7 @@
     .item-desc { color: #334155; font-size: 0.94rem; margin-bottom: 8px; }
 
     /* Tactical Box System */
-    .tactical-box {
-      border-radius: 8px; padding: 10px 14px; margin: 8px 0; font-size: 0.89rem; line-height: 1.65;
-    }
+    .tactical-box { border-radius: 8px; padding: 10px 14px; margin: 8px 0; font-size: 0.89rem; line-height: 1.65; }
     .box-must { background: #f0fdf4; border-left: 4px solid #16a34a; color: #14532d; }
     .box-avoid { background: #fef2f2; border-left: 4px solid #dc2626; color: #991b1b; }
     .box-photo { background: #eff6ff; border-left: 4px solid #2563eb; color: #1e40af; }
@@ -210,16 +203,22 @@
     .box-transit { background: #fdf4ff; border-left: 4px solid #c026d3; color: #701a75; }
     .box-custom { background: #fffbeb; border-left: 4px solid #d97706; color: #78350f; }
     .box-safety { background: #f1f5f9; border-left: 4px solid #475569; color: #1e293b; }
-
     .tactical-label { font-weight: 800; margin-right: 6px; }
 
     .links-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; }
     a.link-pill {
-      display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px;
+      display: inline-flex; align-items: center; gap: 4px; padding: 5px 12px;
       background: #f1f5f9; color: #1e293b; text-decoration: none; border-radius: 6px;
-      font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border); transition: all 0.2s;
+      font-size: 0.82rem; font-weight: 600; border: 1px solid var(--border); transition: all 0.2s;
     }
-    a.link-pill:hover { background: var(--spain-red); color: white; border-color: var(--spain-red); }
+    a.link-pill:hover { background: #0f172a; color: white; border-color: #0f172a; }
+
+    /* Hotel & Flight Cards */
+    .card-recommend {
+      background: #ffffff; border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 14px;
+    }
+    .card-recommend h4 { font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
+    .card-recommend p { font-size: 0.9rem; color: #475569; line-height: 1.6; }
 
     /* Audio Speak Button */
     .speak-btn {
@@ -230,54 +229,109 @@
     .speak-btn:hover { background: #e2e8f0; color: #0284c7; }
 
     /* Phrase Table */
-    .phrase-table {
-      width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.88rem;
-    }
-    .phrase-table th, .phrase-table td {
-      border: 1px solid var(--border); padding: 8px 12px; text-align: left; vertical-align: middle;
-    }
+    .phrase-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.88rem; }
+    .phrase-table th, .phrase-table td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; vertical-align: middle; }
     .phrase-table th { background: #f8fafc; font-weight: 800; color: #334155; }
 
-    footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 30px; }
-
-    .flow-italy::before {
-      background: linear-gradient(90deg, #3b82f6 0%, #15803d 25%, #b45309 50%, #b91c1c 75%, #0369a1 100%);
-    }
-    .mode-btn.active-italy {
-      background: linear-gradient(135deg, #15803d 0%, #166534 100%);
-      color: white; border-color: #14532d; box-shadow: 0 8px 16px -2px rgba(21, 128, 61, 0.3);
-    }
-    .dot-italy { background: var(--italy-green); }
-    .tag-italy { background: #dcfce7; color: #15803d; }
-    .slot-italy { background: #dcfce7; color: #15803d; }
+    footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 40px; }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="badge">✈️ 2026/12/19 - 2027/1/2 跨年自由行三大方案旗艦手冊</div>
+    <div class="badge">✈️ 2026/12/19 - 2027/1/2 跨年出國自由行三大方案旗艦手冊</div>
     <h1>歐洲跨年雙向出發三大提案決策手冊</h1>
-    <p>台灣 (TPE) ＆ 佛羅里達 (JAX) 雙向出發會師・【西葡全景】vs【希臘古典文明】vs【義大利文藝千禧】完整 15 天行程三大方案一鍵切換</p>
+    <p>台灣 (TPE) ＆ 佛羅里達 (JAX) 雙向出發會師・【西葡全景】vs【希臘古典】vs【義大利文藝復興】次標籤頁秒速直達</p>
   </header>
 
   <div class="container">
-    <!-- MASTER 3-WAY SWITCHER -->
-    <div class="mode-switcher">
-      <div id="btn-spain" class="mode-btn active-spain" onclick="switchPlan('spain')">
+    <!-- 主方案切換器 -->
+    <div class="main-mode-switcher">
+      <div id="btn-spain" class="main-mode-btn active-spain" onclick="switchMainPlan('spain')">
         🇪🇸🇵🇹 方案一：西葡 15 天全景跨年
       </div>
-      <div id="btn-greece" class="mode-btn" onclick="switchPlan('greece')">
+      <div id="btn-greece" class="main-mode-btn" onclick="switchMainPlan('greece')">
         🇬🇷 方案二：希臘 15 天神話與愛琴海
       </div>
-      <div id="btn-italy" class="mode-btn" onclick="switchPlan('italy')">
+      <div id="btn-italy" class="main-mode-btn" onclick="switchMainPlan('italy')">
         🇮🇹 方案三：義大利 15 天文藝復興與帝國
       </div>
     </div>
 
-    <!-- ==================== PLAN A: SPAIN & PORTUGAL ==================== -->
+    <!-- ==================== PLAN SPAIN ==================== -->
     <div id="plan-spain">
-      <!-- Visual Map -->
-      <section class="section">
+      <!-- 次標籤頁列 -->
+      <div class="sub-tabs-bar">
+        <button class="sub-tab-btn active-sub" onclick="switchSubTab('spain', 'flight-hotel', this)">✈️ 機票與住宿推薦</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('spain', 'map-transit', this)">🗺️ 路線地圖與套票</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('spain', 'itinerary', this)">📅 15 天詳細行程全覽</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('spain', 'customs-phrases', this)">🛡️ 風土民情與會話</button>
+      </div>
+
+      <!-- 子分頁 1：西葡機票與住宿 -->
+      <div id="spain-sub-flight-hotel" class="spain-sub-content">
+        <section class="section">
+          <h2 class="section-title" style="color:var(--spain-red);">✈️ 西葡雙向出發機票配置方案 (12/19 去 - 1/2 返)</h2>
+          <div class="grid-2">
+            <div class="card-recommend">
+              <h4>🇹🇼 起點 A：台灣 (TPE) 出發航班配置</h4>
+              <p>
+                • <strong>去程 (12/19 六)：</strong>台北 (TPE) ➔ 巴塞隆納 (BCN)（長榮航空轉土耳其航空伊斯坦堡，或阿聯酋航空轉杜拜，飛行時間約 16~18 小時）。<br>
+                • <strong>回程 (01/02 六)：</strong>里斯本 (LIS) ➔ 台北 (TPE)（法航轉巴黎戴高樂，或阿聯酋轉杜拜返回台灣）。<br>
+                • <strong>預估票價：</strong>約 NT$36,000 ~ NT$44,000／人。<br>
+                • <strong>抵達會師時間：</strong>預計 12/19 中午 12:30 ~ 14:00 降落 BCN 機場。
+              </p>
+            </div>
+            <div class="card-recommend">
+              <h4>🇺🇸 起點 B：佛羅里達傑克遜維爾 (JAX) 出發航班配置</h4>
+              <p>
+                • <strong>去程 (12/19 六)：</strong>傑克遜維爾 (JAX) ➔ 邁阿密/紐約甘迺迪 ➔ 巴塞隆納 (BCN)（美國航空或達美航空直飛歐陸，航程約 10~11 小時）。<br>
+                • <strong>回程 (01/02 六)：</strong>里斯本 (LIS) ➔ 波士頓/紐約 ➔ JAX。<br>
+                • <strong>預估票價：</strong>約 US$850 ~ US$1,200／人。<br>
+                • <strong>大會師點：</strong>12/19 下午於 BCN 機場入境大廳大會師，搭車直達市區公寓！
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title" style="color:var(--spain-red);">🏨 西葡推薦住宿（含廚房雙臥室公寓・12/24 平安夜自煮必備）</h2>
+          <div class="grid-2">
+            <div class="card-recommend">
+              <h4>巴塞隆納 (D1-D3・3晚)：Eric Vökel Boutique Apartments - Sagrada Familia Suites</h4>
+              <p>
+                • <strong>位置：</strong>擴展區，步行至聖家堂僅 5 分鐘，距地鐵站步行 3 分鐘。<br>
+                • <strong>房型特點：</strong>北歐極簡木質雙臥室套房、雙獨立衛浴、全套洗碗機、烤箱與瓦斯爐，客廳採光通透，性價比極高。
+              </p>
+            </div>
+            <div class="card-recommend">
+              <h4>馬德里 (D4-D8・4晚)：Gran View Apartments (太陽門廣場旁)</h4>
+              <p>
+                • <strong>位置：</strong>坐落格蘭大道與太陽門廣場旁，樓下即是 Mercadona 與英國宮百貨超市。<br>
+                • <strong>房型特點：</strong><strong>12/24 平安夜全馬德里餐廳關門，此公寓備有全套電磁爐與大冰箱，完美支援 3 人香煎肋眼牛排大餐！</strong>
+              </p>
+            </div>
+            <div class="card-recommend">
+              <h4>波多 (D9-D10・2晚)：Flores Village Hotel & Spa Apartments</h4>
+              <p>
+                • <strong>位置：</strong>波多老城歷史核心鮮花街（Rua das Flores），步行至聖本篤車站 5 分鐘。<br>
+                • <strong>房型特點：</strong>18 世紀古老宅邸改建，房間陽台遠眺紅瓦山城與藍白瓷磚壁畫，出門叫 Uber 極為順暢。
+              </p>
+            </div>
+            <div class="card-recommend">
+              <h4>里斯本 (D11-D14・4晚)：The Lisboans Apartments (下城區近商業廣場)</h4>
+              <p>
+                • <strong>位置：</strong>下城區平坦路段，免受里斯本陡峭石板爬坡之苦，步行至特茹河畔商業廣場僅 6 分鐘。<br>
+                • <strong>房型特點：</strong>大航海風格裝潢，每日早晨房門口掛上剛出爐的新鮮麵包，12/31 跨年倒數煙火結束後步行即可回房溫暖入睡！
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 子分頁 2：路線地圖與套票 -->
+      <div id="spain-sub-map-transit" class="spain-sub-content" style="display:none;">
+        <section class="section">
         <h2 class="section-title" style="color:var(--spain-red);">🗺️ 西葡雙向出發視覺路徑全圖 (雙起點匯流 ➔ 跨國單向推進)</h2>
         <div class="map-container">
           <div class="map-header">
@@ -334,9 +388,7 @@
           </div>
         </div>
       </section>
-
-      <!-- Transportation & Pass Guide Spain with Booking Links -->
-      <section class="section">
+        <section class="section">
         <h2 class="section-title" style="color:var(--spain-red);">🎫 西葡跨國交通、車票訂購連結與市區套票指南</h2>
         <div class="grid-2">
           <div class="tactical-box box-transit">
@@ -370,10 +422,12 @@
           </div>
         </div>
       </section>
+      </div>
 
-      <!-- Day by Day Spain with Full Tactical Spots -->
-      <section class="section">
-        <h2 class="section-title" style="color:var(--spain-red);">📅 西葡 15 天詳細行程・前往方式/耗時・必選/避雷/美食/伴手禮・訂票連結</h2>
+      <!-- 子分頁 3：15 天詳細行程全覽 -->
+      <div id="spain-sub-itinerary" class="spain-sub-content" style="display:none;">
+        <section class="section">
+        <h2 class="section-title" style="color:var(--spain-red);">📅 西葡 15 天詳細行程・前往方式/時間・避雷/必選/打卡位・訂票連結</h2>
 
         <!-- D1 -->
         <div class="day-card">
@@ -396,9 +450,7 @@
               <div class="item-title">蘭布拉大道 (La Rambla) ＆ 聖約瑟市場 (Mercat de la Boqueria)</div>
               <div class="item-transit">🚶‍♂️ 前往方式：從加泰隆尼亞廣場沿蘭布拉大道步行 8 分鐘即達聖約瑟市場大門。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>走進市集深處的老店（如 Bar Pinotxo 或 El Quim），點香煎小卷配白腰豆、現切 5J 橡子伊比利火腿。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>現煎大蝦 Tapas、香酥炸鱈魚球、鮮剖海膽。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>真空包裝伊比利黑豬生火腿切片</strong>（5J 或 Joselito 品牌，送禮首選）、Torrons Vicens 手工杏仁杜隆糖（Turrón，西班牙百年聖誕牛軋糖）、番紅花香料（Saffron）精緻小鐵盒。</div>
-              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>大門口水果盒不新鮮且昂貴；蘭布拉路邊露天座位多為冷凍微波海鮮飯，千萬別在路邊用餐！</div>
+              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>大門口水果盒不新鮮且昂貴；蘭布拉路邊露天座位皆為冷凍微波海鮮飯，千萬別在路邊用餐！</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>博蓋利亞彩色鍛鐵大門下、五彩冰沙攤位前、大道中段地面由米羅親手設計的抽象馬賽克地磚。</div>
             </div>
 
@@ -407,7 +459,7 @@
               <span class="time-slot slot-spain">19:00 - 21:00</span><span class="duration-badge">地中海晚宴</span>
               <div class="item-title">貝爾港 (Port Vell) ＆ 巴塞隆納塔海灘享用海鮮燉飯</div>
               <div class="item-transit">🚶‍♂️ 前往方式：由蘭布拉大道底哥倫布紀念碑往海邊步行 12 分鐘抵達貝爾港與海濱餐廳區。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>正宗黑色墨魚鐵鍋飯（Arroz Negro）佐大蒜美乃滋、現開生蠔、大壺水果香格里拉水果酒（Sangria）。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>造訪海濱歷史名店（如 7 Portes 或 Can Majó），點正宗黑色墨魚飯（Arroz Negro）或海鮮鐵鍋飯。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>貝爾港木造行人波浪步道（Rambla de Mar）、哥倫布紀念碑傍晚藍調時刻倒映港灣水面。</div>
             </div>
           </div>
@@ -426,7 +478,6 @@
               <div class="item-title">聖家堂 (Basílica de la Sagrada Família) 深度朝聖 ＆ 登塔</div>
               <div class="item-transit">🚇 前往方式：搭乘地鐵 L2（紫線）或 L5（藍線）直達 Sagrada Família 站，出站即是教堂正門（車程 8 分鐘）。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>加購「誕生立面（Nativity Façade）登塔」！沿石造蝸牛旋轉樓梯步行而下的俯瞰視角無可取代。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span>聖家堂官方紀念品店的<strong>彩繪玻璃金屬書籤</strong>、高第幾何星形立體紙雕燈罩、聖家堂微型石雕模型。</div>
               <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span><strong>現場無人工售票處</strong>！必須 60~90 天前在官網選定時段；安檢嚴格，禁止自拍棒、三腳架與大後背包。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>教堂正對面「高第公園（Plaça de Gaudí）」池塘水面倒影；上午 09:30~11:00 東側金黃陽光穿透彩繪玻璃的光束。</div>
               <div class="links-bar">
@@ -440,7 +491,7 @@
               <div class="item-title">奎爾公園 (Park Güell) 自然有機之美</div>
               <div class="item-transit">🚕 前往方式：聖家堂門口直接搭計程車/Uber（車資約 €8~€10，車程 12 分鐘直達山頂正門，免去地鐵站爬坡 20 分鐘之苦）。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>86 根多立克石柱構成的「百柱廳」，以及露天廣場世界最長人體工學波浪長椅。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>彩色馬賽克蜥蜴造型陶瓷磁鐵/小擺飾</strong>、高第碎瓷風格手繪杯墊。</div>
+              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>地鐵站（Lesseps 或 Vallcarca）出來需走長達 15~20 分鐘極陡的上坡階梯，<strong>3 人同行強烈建議在市區直接搭計程車/Uber</strong> 直達山頂正門口，節省體力！</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>正門階梯彩色變色龍噴泉（El Drac）、坐在長椅中央框住後方童話守衛室與地中海。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://parkguell.barcelona/en/buy-tickets" target="_blank">🔗 奎爾公園官方訂票</a>
@@ -474,7 +525,6 @@
               <div class="item-title">巴特婁之家 (Casa Batlló) 奇幻巡禮</div>
               <div class="item-transit">🚇 前往方式：地鐵 L3（綠線）Passeig de Gràcia 站出站即達。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>使用官方 AR 平板導覽，空間顯現海龜水母等海洋動態造景；頂樓龍脊彩鱗天台。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>高第人體工學木質縮小模型門把</strong>、巴特婁龍鱗骨骼造型金屬鑰匙圈。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>頂樓波浪龍脊天台、天井漸層深藍瓷磚牆、一樓客廳波浪骨骼窗景。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.casabatllo.es/en/online-tickets/" target="_blank">🔗 巴特婁之家官方訂票</a>
@@ -487,7 +537,7 @@
               <div class="item-title">米拉之家 (Casa Milà / La Pedrera) 騎士煙囪</div>
               <div class="item-transit">🚶‍♂️ 前往方式：沿格拉西亞大道向北步行 6 分鐘即達米拉之家。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>頂樓 270 個拋物線磚拱閣樓展廳、立體外星戰士頭盔煙囪群。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>米拉之家一樓咖啡館的加泰隆尼亞焦糖布丁（Crema Catalana）。</div>
+              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>屋頂天台高低階梯極多且無遮蔽，冬季午後風大，注意保暖防風且勿穿滑底鞋。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>從天台兩座石雕騎士通風塔的拱形孔隙中，完美框入遠方聖家堂的剪影。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.lapedrera.com/en/visits" target="_blank">🔗 米拉之家官方訂票</a>
@@ -500,7 +550,6 @@
               <div class="item-title">加泰隆尼亞音樂宮 (Palau de la Música Catalana) 深度導覽</div>
               <div class="item-transit">🚇 前往方式：從米拉之家搭地鐵 L3（Diagonal 站）至 Urquinaona 站，步行 4 分鐘即達（約 12 分鐘）。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>預約專人導覽進入主演奏廳，仰望數千塊彩色玻璃拼接成的「立體水滴狀採光天窗」。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span>音樂宮彩繪玻璃圖騰手帕、古典音樂會明信片珍藏套組。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>二樓露天柱廊花卉磁磚列柱、主音樂廳二樓中央看台。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.palaumusica.cat/en/guided-tours_536" target="_blank">🔗 音樂宮導覽官方訂票</a>
@@ -521,8 +570,8 @@
               <span class="time-slot slot-spain">09:30 - 12:30</span><span class="duration-badge">石巷古都</span>
               <div class="item-title">哥德區 (Barri Gòtic) 探索・主教橋與大教堂</div>
               <div class="item-transit">🚶‍♂️ 前往方式：從加泰隆尼亞廣場步行 8 分鐘進入哥德區核心。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>百年老店 Granja M. Viader 品嚐熱巧克力佐現炸吉拿棒（Churros con Chocolate）。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>主教街上方精美的新哥德式大理石主教拱橋（Pont del Bisbe）。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>參觀巴塞隆納主教座堂迴廊裡飼養的 13 隻白鵝（象徵殉道聖女 Eulàlia 的純潔），並在附近百年吉拿棒名店 Granja M. Viader 品嚐熱巧克力。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>主教街（Carrer del Bisbe）上方精美的新哥德式大理石拱橋（傳說走過時許願可得好運）。</div>
             </div>
 
             <div class="timeline-item">
@@ -542,9 +591,7 @@
           </div>
         </div>
       </section>
-
-      <!-- SECTION 2: MADRID -->
-      <section id="itinerary-d5-d8" class="section">
+<section id="itinerary-d5-d8" class="section">
         <h2 class="section-title" style="color:var(--spain-red);">👑 第二站：馬德里與近郊雙古城 (Day 5 - Day 8・12/23 - 12/26)</h2>
 
         <!-- D5 -->
@@ -572,7 +619,6 @@
               <div class="item-title">普拉多博物館 (Museo del Prado) 鎮館巡禮</div>
               <div class="item-transit">🚇 前往方式：從王宮門口搭公車 14 號或搭地鐵 2 號線至 Banco de España 站，步行 5 分鐘即達（約 15 分鐘）。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>委拉斯蓋茲《宮女》（12號展廳）、哥雅《1808年5月3日的槍殺》與波希《人間樂園》。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>普拉多博物館官方畫冊（繁體中文版）</strong>、《宮女》名畫絲巾與藝術帆布袋。</div>
               <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>展廳內<strong>嚴格禁止拍照</strong>；入場前拿取中文導覽摺頁直攻核心名作。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.museodelprado.es/en/visit-the-museum" target="_blank">🔗 普拉多博物館訂票</a>
@@ -602,7 +648,6 @@
               <div class="item-title">托雷多古城 (Toledo) 探索・大教堂與阿卡薩城堡</div>
               <div class="item-transit">🚅 前往方式：馬德里阿托查站（Atocha）搭乘 Avant 高速火車，33 分鐘直達托雷多站。出站搭 5 號/61 號公車（或搭計程車 €6）直達古城索科多佛廣場。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>「托雷多主教座堂」主祭壇、聖器室葛雷柯名畫《背叛基督》。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>大馬士革金銀鑲嵌工藝品（Damasquinado）</strong>：手環、胸針、裁信刀（以金銀線在黑鋼上錘打鑲嵌出的華麗阿拉伯花紋，托雷多世界聞名特產）；傳統修道院杏仁糖糕（Mazapán）。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.catedralprimada.es/" target="_blank">🔗 托雷多主教座堂門票</a>
               </div>
@@ -647,7 +692,6 @@
               <div class="item-title">聖誕午宴：Mesón de Cándido 百年烤乳豬</div>
               <div class="item-transit">🚶‍♂️ 前往方式：就在水道橋正下方廣場旁，步行 1 分鐘即達。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>招牌烤乳豬（Cochinillo Asado），老闆以白色瓷盤邊緣切開乳豬再摔盤祈福。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>卡斯提爾濃湯（Sopa Castellana，大蒜火腿麵包熱湯，冬日驅寒極品）、香煎蘑菇。</div>
               <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>聖誕節當日一位難求，<strong>務必提早於官網預約聖誕午餐時段</strong>。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.mesondecandido.es/en/" target="_blank">🔗 百年烤乳豬 Cándido 預約</a>
@@ -659,7 +703,7 @@
               <span class="time-slot slot-spain">15:00 - 17:30</span><span class="duration-badge">童話原型</span>
               <div class="item-title">塞哥維亞城堡 (Alcázar) ➔ 返回馬德里</div>
               <div class="item-transit">🚶‍♂️ 前往方式：從水道橋沿老城主街步行 18 分鐘穿越主廣場至城堡岬角。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>迪士尼《白雪公主》城堡原型，在城堡外側平原草坪拍攝最夢幻。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>這座宛如一艘石造巨艦停泊在懸崖峭壁上的城堡，正是迪士尼《白雪公主》城堡的原型，在城堡外側平原草坪拍攝最夢幻。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://entradas.alcazardesegovia.com/en/" target="_blank">🔗 塞哥維亞城堡官方訂票</a>
               </div>
@@ -690,7 +734,7 @@
               <span class="time-slot slot-spain">13:30 - 16:30</span><span class="duration-badge">浪漫冬景</span>
               <div class="item-title">麗池公園 (Parque del Retiro) ＆ 水晶宮 (Palacio de Cristal)</div>
               <div class="item-transit">🚶‍♂️ 前往方式：從索菲亞藝術中心沿普拉多林蔭向東步行 10 分鐘進入麗池公園。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>造訪 1887 年全由鑄鐵與清透玻璃拼合的水晶宮，午後陽光灑在湖面天鵝與林蔭間。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>造訪 1887 年全由鑄鐵與清透玻璃拼合的水晶宮，午後陽光灑在湖面天鵝與林蔭間，極致浪漫。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>隔著人工湖面拍攝水晶宮全景倒影與陽光穿透玻璃結構的幾何光斑。</div>
             </div>
 
@@ -698,16 +742,12 @@
               <div class="timeline-dot dot-spain"></div>
               <span class="time-slot slot-spain">17:30 - 20:00</span><span class="duration-badge">美食嘉年華</span>
               <div class="item-title">聖米格爾市場 (Mercado de San Miguel) 玻璃市集 Tapas</div>
-              <div class="item-transit">🚇 前往方式：從麗池公園搭地鐵 2 號線至 Sol 站，步行 4 分鐘抵達主廣場旁的聖米格爾市場。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>Gilda 醃漬鯷魚橄欖串、魚子醬蟹肉脆餅、現炸馬德里牛肚（Callos a la Madrileña）。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span>西班牙特級初榨橄欖油（EVOO，推薦 Picual 品種）、La Chinata 橄欖精華護膚品。</div>
+              <div class="item-desc">大啖各式魚子醬小脆餅、炸鱈魚球與現開法國生蠔，享受馬德里最後微醺之夜。</div>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- SECTION 3: PORTO -->
-      <section id="itinerary-d9-d11" class="section">
+<section id="itinerary-d9-d11" class="section">
         <h2 class="section-title" style="color:var(--portugal-teal);">🍷 第三站：波多 (Day 9 - Day 11・12/27 - 12/29)</h2>
 
         <!-- D9 -->
@@ -721,27 +761,23 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">09:30 - 11:30</span><span class="duration-badge">跨國直達</span>
               <div class="item-title">馬德里搭機直飛波多 (OPO，航程約 1 小時 15 分，時差 -1 小時)</div>
-              <div class="item-transit">🚇 前往方式：波多機場搭乘輕軌 Metro 紫線（Line E）28 分鐘直達市中心 Trindade 站，步行 5 分鐘進駐老城公寓。</div>
+              <div class="item-desc">出機場搭乘輕軌 Metro 直接滑入波多老城區雙臥室公寓酒店入住。</div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">13:30 - 15:30</span><span class="duration-badge">世界最美車站</span>
               <div class="item-title">聖本篤車站 (Estação de São Bento) 藍白瓷磚壁畫</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從市中心 Trindade 站沿自由廣場（Praça da Liberdade）緩坡步行 8 分鐘即達。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>大廳牆面鋪滿二萬片手繪阿茲勒赫磁磚（Azulejos），細緻呈現葡萄牙建國戰役與航海歷史。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>手繪藍白阿茲勒赫花磚隔熱墊</strong>、葡萄牙幸運公雞（Galo de Barcelos）陶瓷小擺飾。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>大廳正中央仰拍三面環繞巨幅藍白瓷磚畫、候車大廳拱門入口處光影。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>站在大廳正中央仰拍三面環繞的巨幅藍白瓷磚畫、以及候車大廳拱門入口處的光影對比。</div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">16:00 - 19:30</span><span class="duration-badge">落日微醺</span>
               <div class="item-title">路易一世大橋 (Ponte Dom Luís I) ＆ 利貝拉碼頭 (Cais da Ribeira)</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從聖本篤車站步行 6 分鐘直上路易一世大橋上層甲板。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>漫步鋼骨拱橋上層飽覽杜羅河兩岸紅瓦老屋；傍晚在碼頭看傳統運酒平底船（Rabelo）在夕陽餘暉下緩緩搖曳。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>葡式橄欖油烤章魚（Polvo à Lagareiro）、波多熱量炸彈「濕答答三明治（Francesinha）」淋上啤酒濃醬。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>路易一世大橋上層南岸修道院前（Serra do Pilar），俯瞰夕陽下的大橋與利貝拉彩色老屋全景。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>漫步雙層鋼骨拱橋上層，飽覽杜羅河兩岸紅瓦老屋；傍晚在碼頭看傳統運酒平底船（Rabelo）在夕陽餘暉下緩緩搖曳，晚餐享用道地葡式烤章魚（Polvo à Lagareiro）。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>黃昏時站在路易一世大橋上層南岸修道院前（Mosteiro da Serra do Pilar），俯瞰夕陽下的大橋與利貝拉彩色老屋全景。</div>
             </div>
           </div>
         </div>
@@ -757,10 +793,8 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">09:00 - 12:00</span><span class="duration-badge">魔法與地標</span>
               <div class="item-title">萊羅書店 (Livraria Lello) ＆ 教士塔 (Torre dos Clérigos)</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從聖本篤車站向西步行 6 分鐘即達教士塔與萊羅書店。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>萊羅書店的新哥德式紅色螺旋木梯（哈利波特靈感來源）；攀登 225 階教士塔頂端 360 度俯瞰老城。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span>萊羅書店限定版經典文學小精裝書（門票可折抵）、葡萄牙天然軟木塞皮夾／眼鏡盒（輕盈耐磨環保）。</div>
-              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>萊羅書店門票<strong>必須提前於官網預約時段</strong>；建議預約上午 09:00 第一批進場避開人潮。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>萊羅書店的新哥德式紅色螺旋木梯（哈利波特靈感來源）；攀登 225 階教士塔頂端，360 度俯瞰整座老城。</div>
+              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>萊羅書店門票<strong>必須提前於官網預約時段</strong>（門票可折抵購書）；現場排隊即使有預約票仍需排 15~30 分鐘，建議預約上午 09:00 第一批進場避開人潮。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>站在萊羅書店紅色旋轉樓梯底部仰角拍攝華麗木雕天花板。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.livrarialello.pt/en-us/ticket-voucher" target="_blank">🔗 萊羅書店官方訂票</a>
@@ -772,10 +806,8 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">14:00 - 16:30</span><span class="duration-badge">國寶佳釀</span>
               <div class="item-title">加亞新城 (Vila Nova de Gaia) 百年波特酒窖導覽品酒</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：走過路易一世大橋下層或上層搭纜車下至加亞新城河畔，步行 8 分鐘進酒莊區。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>預約參觀百年花崗岩酒窖（如 Graham's 或 Taylor's），深入木桶庫房品鑑紅寶石波特與陳年茶色波特酒。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>10 年或 20 年陳年茶色波特酒（Tawny Port）</strong>、杜羅河谷紅酒、酒莊黑巧克力禮盒。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>數百個巨大橡木桶長廊、品酒室窗外眺望杜羅河與波多舊城的景觀。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>預約參觀百年花崗岩酒窖（如 Graham's、Taylor's 或 Sandeman），深入昏暗低溫的木桶庫房，品鑑濃郁甘甜的紅寶石波特與陳年茶色波特酒。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>排列整齊的數百個巨大橡木桶長廊、品酒室窗外眺望杜羅河與波多舊城的景觀。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.grahams-port.com/visit-us" target="_blank">🔗 Graham's 酒莊預約</a>
                 <a class="link-pill" href="https://www.taylor.pt/en/visit-taylors/port-cellars" target="_blank">🔗 Taylor's 酒窖預約</a>
@@ -786,8 +818,7 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">17:00 - 18:30</span><span class="duration-badge">出海口落日</span>
               <div class="item-title">水晶宮花園 (Jardins do Palácio de Cristal) 眺望落日</div>
-              <div class="item-transit">🚕 前往方式：加亞新城門口直接叫 Bolt/Uber 約 8 分鐘（€5）直達水晶宮花園正門。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>孔雀在草坪漫步，站在懸崖樹蔭下眺望杜羅河一路向西蜿蜒流入大西洋的壯闊出海口落日。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>孔雀在草坪漫步，站在懸崖樹蔭下眺望杜羅河一路向西蜿蜒流入大西洋的壯闊出海口金黃落日。</div>
             </div>
           </div>
         </div>
@@ -803,7 +834,6 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">09:30 - 12:00</span><span class="duration-badge">青花震撼</span>
               <div class="item-title">卡爾莫教堂 (Igreja do Carmo) ＆ 波多主教座堂 (Sé do Porto)</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從萊羅書店旁步行 3 分鐘即達卡爾莫教堂。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>站在卡爾莫教堂側面的馬路對角，整面由成千上萬片手繪藍白磁磚構成的巨型外牆是波多最震撼的街頭攝影點。</div>
             </div>
 
@@ -811,7 +841,6 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">13:30 - 16:30</span><span class="duration-badge">南向移動</span>
               <div class="item-title">搭乘 CP Alfa 景觀快車 (約 3 小時) 直達里斯本</div>
-              <div class="item-transit">🚆 前往方式：波多坎帕尼揚車站（Campanhã）搭乘 CP AP 快車直達里斯本 Oriente 站（車程約 3 小時）。轉地鐵紅線換藍線直達自由大道/光復廣場公寓。</div>
               <div class="item-desc">沿途欣賞葡萄牙鄉村與海岸橄欖樹風光，抵達里斯本入住自由大道或下城區公寓。</div>
             </div>
 
@@ -819,15 +848,12 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">17:30 - 20:00</span><span class="duration-badge">臨河大廣場</span>
               <div class="item-title">商業廣場 (Praça do Comércio) 迎風漫步</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從下城區沿著奧古斯塔步行街穿過凱旋門直達商業廣場（步行 6 分鐘）。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>葡式馬介休炸鱈魚球（Pastéis de Bacalhau）、櫻桃甜酒（Ginjinha）用小巧克力杯盛裝喝完直接吃掉酒杯。</div>
+              <div class="item-desc">漫步特茹河畔開闊的黃色拱門大廣場，享用熱騰騰的葡式馬介休鱈魚球（Pastéis de Bacalhau）。</div>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- SECTION 4: LISBON & SINTRA -->
-      <section id="itinerary-d12-d15" class="section">
+<section id="itinerary-d12-d15" class="section">
         <h2 class="section-title" style="color:var(--portugal-teal);">⛵ 第四站：里斯本與辛特拉 (Day 12 - Day 15・12/30 - 1/2)</h2>
 
         <!-- D12 -->
@@ -841,7 +867,6 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">09:00 - 12:00</span><span class="duration-badge">世界遺產</span>
               <div class="item-title">熱羅尼莫斯修道院 (Mosteiro dos Jerónimos)</div>
-              <div class="item-transit">🚋 前往方式：Cais do Sodré 車站搭乘 15E 號現代路面電車（或叫 Uber €7），約 20 分鐘直達貝倫區修道院門口。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>曼努埃爾式建築極致代表，雕滿航海繩索、珊瑚與海怪的石柱迴廊，並瞻仰航海家達伽馬之墓。</div>
               <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>修道院排隊極長，務必提前線上預訂快速通關票；旁邊的聖瑪利亞教堂為免費開放，常有人排錯隊伍，請認明修道院迴廊入口。</div>
               <div class="links-bar">
@@ -853,9 +878,7 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">13:00 - 16:00</span><span class="duration-badge">水上要塞與名店</span>
               <div class="item-title">貝倫塔、發現者紀念碑 ＆ 百年蛋撻創始店 (Pastéis de Belém)</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從修道院步行 6 分鐘至蛋撻創始店；再沿地下道穿過鐵軌步行 10 分鐘到發現者紀念碑與貝倫塔。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>1837 年開業的「Pastéis de Belém」熱騰騰現烤出爐的酥脆蛋撻，內用有數百個座位，直接走進店內找座位點餐，比在門口排外帶快得多！</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>復古沙丁魚彩繪鐵罐頭</strong>（Conserveira de Lisboa 或 O Mundo Fantástico da Sardinha Portuguesa，包裝印有年份）、花磚圖騰刺繡茶巾。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>前往 1837 年開業的「Pastéis de Belém」品嚐熱騰騰現烤出爐的酥脆蛋撻，內用有數百個座位，直接走進店內找座位點餐，比在門口排外帶快得多！</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>退潮時從海灘仰拍佇立於特茹河中的貝倫塔、站在發現者紀念碑前廣場由世界地圖石板仰拍巨型石雕帆船。</div>
             </div>
 
@@ -863,7 +886,6 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">17:00 - 19:30</span><span class="duration-badge">高空夜景</span>
               <div class="item-title">聖胡斯塔鐵鑄升降機 (Elevador de Santa Justa) 登頂看夜景</div>
-              <div class="item-transit">🚋 前往方式：從貝倫區搭 15E 電車回市中心 Baixa/Chiado 站（約 20 分鐘）。</div>
               <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>地面排隊搭升降機常需等 1 小時以上；<strong>破解秘訣：</strong>直接從卡爾莫修道院旁的步道走天橋走到頂端觀景台，完全免排隊！</div>
             </div>
           </div>
@@ -880,10 +902,8 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">09:00 - 12:00</span><span class="duration-badge">童話之巔</span>
               <div class="item-title">辛特拉 (Sintra) 佩納宮 (Palácio Nacional da Pena) ＆ 摩爾人城堡</div>
-              <div class="item-transit">🚆 前往方式：里斯本羅西歐車站（Rossio）搭乘郊區火車直達辛特拉站（40分鐘）。出站直接叫 Uber（約 €7~€9）直達佩納宮售票口。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>矗立在山巔色彩鮮豔如積木糖果般的浪漫主義宮殿，遠眺長城般的摩爾人古城牆。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>辛特拉老店 Piriquita 的傳統肉桂杏仁枕頭酥（Travesseiro）與起司小塔（Queijadas de Sintra）。</div>
-              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span><strong>佩納宮實行嚴格實名制時段入場</strong>，遲到超過15分鐘直接作廢不准入場！務必提前預約上午 09:30 門票。</div>
+              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span><strong>佩納宮實行嚴格實名制時段入場</strong>，遲到超過15分鐘直接作廢不准入場！務必提前預約上午 09:30 門票，並在辛特拉火車站直接叫 Uber 上山（不要搭擠死人的 434 公車）。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>特里同海神雕像門廊（Triton Terrace）與鮮黃色外牆拱廊。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://bilheteira.parquesdesintra.pt/home/en" target="_blank">🔗 辛特拉佩納宮官方訂票</a>
@@ -894,10 +914,8 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">13:00 - 16:30</span><span class="duration-badge">神秘深井與天涯海角</span>
               <div class="item-title">雷加萊拉莊園 27米深井 ＆ 歐陸最西端羅卡角 (Cabo da Roca)</div>
-              <div class="item-transit">🚕 前往方式：從佩納宮門口叫 Uber 8 分鐘直達雷加萊拉莊園；參觀完後在莊園門口叫 Uber 20 分鐘直達羅卡角懸崖（€12~€15）。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>雷加萊拉莊園深入地下 27 公尺的「逆轉深井（Initiation Well）」；以及站在羅卡角大西洋懸崖十字碑前。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>羅卡角旅遊服務中心官方頒發的「歐洲最西端到達證書」</strong>（印有個人英文姓名與火漆印章，極具紀念意義）。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>在逆轉深井底端由下往上仰拍螺旋石梯；羅卡角懸崖十字碑刻著卡蒙斯名句「陸止於此，海始於斯」與巨浪落日合影。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>在逆轉深井底端由下往上仰拍螺旋石梯與井口綠意；羅卡角懸崖十字碑刻著卡蒙斯名句「陸止於此，海始於斯」與巨浪落日合影。</div>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.regaleira.pt/en/bilheteira-online" target="_blank">🔗 雷加萊拉莊園訂票</a>
               </div>
@@ -907,7 +925,6 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">19:30 - 00:30</span><span class="duration-badge">倒數狂歡</span>
               <div class="item-title">返回里斯本 ➔ 商業廣場特茹河畔跨年倒數煙火盛宴</div>
-              <div class="item-transit">🚆 前往方式：羅卡角搭計程車至 Cascais 車站（20分鐘），搭景觀海濱火車 35 分鐘返回里斯本 Cais do Sodré 站，步行至商業廣場。</div>
               <div class="item-desc">與來自全球的旅客在河畔倒數，欣賞震撼跨年煙火，迎接 2027 年！</div>
             </div>
           </div>
@@ -924,7 +941,6 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">10:00 - 12:30</span><span class="duration-badge">新年晨光</span>
               <div class="item-title">元旦悠閒早午餐 ➔ 聖露西亞觀景台 (Miradouro de Santa Luzia)</div>
-              <div class="item-transit">🚋 前往方式：從無水池廣場搭乘 28 號或 12 號電車至 Miradouro Santa Luzia 站。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>坐在九重葛花棚石柱邊，背景是白牆藍瓦的特茹河出海口與整片紅瓦屋頂。</div>
             </div>
 
@@ -932,7 +948,6 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">13:30 - 16:30</span><span class="duration-badge">木造老電車</span>
               <div class="item-title">搭乘經典 28 號黃色電車 ＆ 卡爾莫修道院遺址 (Convento do Carmo)</div>
-              <div class="item-transit">🚋 前往方式：搭乘 28 號電車返回 Chiado 區，步行 3 分鐘至卡爾莫修道院遺址。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>卡爾莫修道院遺址——1755 年大地震後保留下來的無頂露天哥德式骨架教堂，直面蒼天，極具歷史厚重感。</div>
               <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span><strong>28 號電車是全歐洲扒手密度最高的地方！</strong>搭乘時務必包包背胸前、雙手緊握吊環或手機，切勿分神欣賞窗外而忽略身邊擠壓。</div>
               <div class="links-bar">
@@ -944,7 +959,6 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">18:00 - 20:30</span><span class="duration-badge">靈魂民謠</span>
               <div class="item-title">法朵之夜 (Fado Night)：燭光小酒館聽傳統命運民謠，享用烤沙丁魚。</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：阿爾法瑪老城區巷弄內步行即可抵達法朵餐廳（如 Clube de Fado）。</div>
             </div>
           </div>
         </div>
@@ -965,15 +979,16 @@
               <div class="timeline-dot" style="background:var(--portugal-teal);"></div>
               <span class="time-slot" style="background:#ccfbf1; color:#0f766e;">13:00 - 16:00</span><span class="duration-badge">返程退稅</span>
               <div class="item-title">前往里斯本機場 (LIS) 辦理退稅手續，搭機啟程返回台灣與美國！</div>
-              <div class="item-transit">🚇 前往方式：搭乘地鐵紅線直達 Aeroporto 機場站（約 25 分鐘），或搭乘 Uber（約 €10~€15，20 分鐘直達第一航廈出發大廳）。</div>
             </div>
           </div>
         </div>
       </section>
+      </div>
 
-      <!-- Rules & Phrases Spain/Portugal with Real Audio TTS -->
-      <section class="section">
-        <h2 class="section-title" style="color:var(--spain-red);">🛡️ 西葡：避雷・必選・風俗民情・防扒守則 ＆ 真人發音實用會話</h2>
+      <!-- 子分頁 4：風土民情與會話 -->
+      <div id="spain-sub-customs-phrases" class="spain-sub-content" style="display:none;">
+        <section class="section">
+        <h2 class="section-title" style="color:var(--spain-red);">🛡️ 西葡：避雷・必選・風俗民情・防扒守則 ＆ 常用會話</h2>
         <div class="grid-2">
           <div class="tactical-box box-avoid">
             <strong style="font-size:1rem; display:block; margin-bottom:6px;">⚠️ 深度避雷指南 (Traps to Avoid)</strong>
@@ -1004,9 +1019,9 @@
           </div>
         </div>
 
-        <!-- Phrases Table SP/PT with TTS Audio -->
+        <!-- Phrases Table SP/PT -->
         <div style="margin-top:20px;">
-          <h4 style="color:#0f172a; font-size:1.1rem; margin-bottom:8px;">🗣️ 西班牙語 ＆ 葡萄牙語 常用旅行實用會話 (支援真人點擊語音朗讀)</h4>
+          <h4 style="color:#0f172a; font-size:1.1rem; margin-bottom:8px;">🗣️ 西班牙語 ＆ 葡萄牙語 常用旅行實用會話對照表</h4>
           <table class="phrase-table">
             <thead>
               <tr>
@@ -1133,12 +1148,73 @@
           </table>
         </div>
       </section>
+      </div>
     </div>
-
-    <!-- ==================== PLAN B: GREECE ==================== -->
+    
+    <!-- ==================== PLAN GREECE ==================== -->
     <div id="plan-greece" style="display:none;">
-      <!-- Visual Map -->
-      <section class="section">
+      <!-- 次標籤頁列 -->
+      <div class="sub-tabs-bar">
+        <button class="sub-tab-btn active-sub" onclick="switchSubTab('greece', 'flight-hotel', this)">✈️ 機票與住宿推薦</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('greece', 'map-transit', this)">🗺️ 路線地圖與套票</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('greece', 'itinerary', this)">📅 15 天詳細行程全覽</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('greece', 'customs-phrases', this)">🛡️ 風土民情與會話</button>
+      </div>
+
+      <!-- 子分頁 1：希臘機票與住宿 -->
+      <div id="greece-sub-flight-hotel" class="greece-sub-content">
+        <section class="section">
+          <h2 class="section-title" style="color:var(--greece-blue);">✈️ 希臘雙向出發機票配置方案 (12/19 去 - 1/2 返)</h2>
+          <div class="grid-2">
+            <div class="card-recommend">
+              <h4>🇹🇼 起點 A：台灣 (TPE) 出發航班配置</h4>
+              <p>
+                • <strong>去程 (12/19 六)：</strong>台北 (TPE) ➔ 雅典 (ATH)（土耳其航空經伊斯坦堡轉機時間最順，總耗時約 16.5 小時；或阿聯酋航空經杜拜）。<br>
+                • <strong>回程 (01/02 六)：</strong>雅典 (ATH) ➔ 台北 (TPE)（土航/阿聯酋）。<br>
+                • <strong>預估票價：</strong>約 NT$34,000 ~ NT$42,000／人。
+              </p>
+            </div>
+            <div class="card-recommend">
+              <h4>🇺🇸 起點 B：佛羅里達傑克遜維爾 (JAX) 出發航班配置</h4>
+              <p>
+                • <strong>去程 (12/19 六)：</strong>傑克遜維爾 (JAX) ➔ 紐約甘迺迪(JFK)/亞特蘭大 ➔ 雅典 (ATH)（達美航空跨大西洋直飛，約 13 小時）。<br>
+                • <strong>回程 (01/02 六)：</strong>雅典 (ATH) ➔ JFK ➔ JAX。<br>
+                • <strong>大會師時間：</strong>兩路航班皆於 12/19 下午 13:00~14:30 抵達雅典國際機場會師！
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title" style="color:var(--greece-blue);">🏨 希臘推薦住宿（憲法廣場公寓、雪山木屋、懸崖暖氣洞穴飯店）</h2>
+          <div class="grid-2">
+            <div class="card-recommend">
+              <h4>雅典 (D1-D3 ＆ D9・4晚)：Electra Metropolis 或 憲法廣場優質雙臥室廚房公寓</h4>
+              <p>• <strong>位置與特色：</strong>步行 3 分鐘至憲法廣場地鐵站，頂樓露台仰望帕德嫩神廟金色夜景，設有獨立廚房與暖氣，生活機能超強。</p>
+            </div>
+            <div class="card-recommend">
+              <h4>納夫普利翁 (D4・1晚)：Amphitryon Hotel (海灣第一排)</h4>
+              <p>• <strong>位置與特色：</strong>矗立於海灣峭壁之上，全景落地窗正對海中水上城堡布爾齊，老城威尼斯風格石巷漫步極為優雅。</p>
+            </div>
+            <div class="card-recommend">
+              <h4>阿拉霍瓦 (D6 平安夜・1晚)：Domotel Anemolia Mountain Resort</h4>
+              <p>• <strong>位置與特色：</strong>希臘滑雪山城傳統石木壁爐渡假村！平安夜在壁爐旁圍爐享用慢燉高山羊肉，溫暖如家。</p>
+            </div>
+            <div class="card-recommend">
+              <h4>卡蘭巴卡 (D7-D8 天空之城・2晚)：Divani Meteora Hotel</h4>
+              <p>• <strong>位置與特色：</strong>房間陽台直接正對數百公尺高的垂直砂岩巨石峰，清晨起床窗簾拉開即是雲海巨石奇景。</p>
+            </div>
+            <div class="card-recommend">
+              <h4>聖托里尼 (D10-D12・3晚)：Athina Luxury Suites (首府費拉) 或 特色暖氣洞穴屋</h4>
+              <p>• <strong>位置與特色：</strong>冬季聖島多數店家休息，<strong>住在首府費拉生活機能最完整！</strong>私人恆溫露台按摩浴缸，坐看火山口落日。</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 子分頁 2：路線地圖與套票 -->
+      <div id="greece-sub-map-transit" class="greece-sub-content" style="display:none;">
+        <section class="section">
         <h2 class="section-title" style="color:var(--greece-blue);">🗺️ 希臘雙向出發視覺路徑全圖 (雙起點匯流 ➔ 神話與愛琴海)</h2>
         <div class="map-container">
           <div class="map-header">
@@ -1195,39 +1271,28 @@
           </div>
         </div>
       </section>
-
-      <!-- Transportation & Pass Guide Greece with Booking Links -->
-      <section class="section">
-        <h2 class="section-title" style="color:var(--greece-blue);">🎫 希臘古蹟套票、國內機票預訂與租車指南</h2>
+        <section class="section">
+        <h2 class="section-title" style="color:var(--greece-blue);">🎫 希臘古蹟套票與冬季交通怎麼選？</h2>
         <div class="grid-2">
           <div class="tactical-box box-transit">
-            <span class="tactical-label">🏛️ 雅典 7 大古蹟套票 (Combined Ticket) 實戰：</span><br>
-            • <strong>購買【雅典 7 大古蹟套票 (Acropolis Multi-Site Combo Ticket)】：</strong>票價約 €30~€36（5天有效），含衛城、古代安哥拉、羅馬安哥拉、宙斯神廟等。單買衛城就需 €20~€30，看 2 個即回本！<br>
-            • <strong>時段預約規則：</strong>購買套票時必須**精準選定衛城入場日期與時段**。<br>
-            <div class="links-bar">
-              <a class="link-pill" href="https://hhticket.gr/" target="_blank">🔗 希臘文化部官方售票平台 (HHTicket)</a>
-              <a class="link-pill" href="https://www.theacropolismuseum.gr/en/plan-your-visit" target="_blank">🔗 衛城博物館官方購票</a>
-            </div>
+            <span class="tactical-label">🏛️ 雅典古蹟聯票 (Combined Ticket) 實戰：</span><br>
+            • <strong>購買【雅典 7 大古蹟套票 (Acropolis Multi-Site Combo Ticket)】：</strong>票價約 €30~€36（有效期限 5 天），包含衛城、古代安哥拉、羅馬安哥拉、宙斯神廟、凱拉米克斯、哈德良圖書館、亞里斯多德學校。單買衛城門票就要 €20~€30，只要看 2 個以上古蹟買套票就回本！<br>
+            • <strong>衛城時段預約制：</strong>套票中「衛城」必須在購買時精準選定參觀日期與時段，其餘 6 個古蹟在 5 天內憑 QR code 自由進出一次。
           </div>
           <div class="tactical-box box-transit">
-            <span class="tactical-label">✈️ 聖托里尼國內線機票 ＆ 本島租車連結：</span><br>
-            • <strong>聖島國內機票：</strong>冬季強風風暴頻繁，慢船極易停航，往返聖島<strong>務必搭乘愛琴海航空直飛（45分鐘）</strong>。<br>
-            <div class="links-bar">
-              <a class="link-pill" href="https://en.aegeanair.com/" target="_blank">🔗 愛琴海航空 Aegean Airlines 官網</a>
-              <a class="link-pill" href="https://www.olympicair.com/en/" target="_blank">🔗 奧林匹克航空 Olympic Air</a>
-            </div>
-            • <strong>本島自駕租車：</strong>雅典機場取車前往邁錫尼、德爾菲與天空之城，建議透過大型比價平台預訂全險休旅車。<br>
-            <div class="links-bar">
-              <a class="link-pill" href="https://www.rentalcars.com/" target="_blank">🔗 Rentalcars 國際租車比價</a>
-              <a class="link-pill" href="https://www.hertz.gr/en/" target="_blank">🔗 希臘赫茲租車 Hertz Greece</a>
-            </div>
+            <span class="tactical-label">✈️ 愛琴海渡輪 vs 國內飛機生死線：</span><br>
+            • <strong>絕對禁止冬季搭慢速渡輪去聖托里尼！</strong>12 月下旬愛琴海強風冬季風暴頻繁，慢船容易嚴重暈船或臨時取消滯留外島。<br>
+            • <strong>唯一正解：</strong>搭乘<strong>愛琴海航空（Aegean Airlines）或奧林匹克航空（Olympic Air）</strong>，雅典往返聖島航程僅 45 分鐘，提早 3 個月買單程僅 €35~€60。<br>
+            • <strong>本島自駕貼士：</strong>前往德爾菲與天空之城租車，建議租用緊湊型休旅車，取車時務必加購「全险（Full Protection）」與高速公路電子收費感應器（e-pass）。
           </div>
         </div>
       </section>
+      </div>
 
-      <!-- Day by Day Greece with Precise Transit & Links -->
-      <section class="section">
-        <h2 class="section-title" style="color:var(--greece-blue);">📅 希臘 15 天詳細行程・前往方式/耗時・必選/避雷/美食/伴手禮・訂票連結</h2>
+      <!-- 子分頁 3：15 天詳細行程全覽 -->
+      <div id="greece-sub-itinerary" class="greece-sub-content" style="display:none;">
+        <section class="section">
+        <h2 class="section-title" style="color:var(--greece-blue);">📅 希臘 15 天詳細行程・各景點推薦、必選、避雷與打卡位</h2>
 
         <!-- D1 -->
         <div class="day-card">
@@ -1240,23 +1305,19 @@
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">09:00 - 14:00</span><span class="duration-badge">跨洋會師</span>
               <div class="item-title">雅典國際機場 (ATH) 大會師 ➔ 入住憲法廣場公寓</div>
-              <div class="item-transit">🚇 前往方式：搭乘雅典地鐵藍線（Line 3），40 分鐘直達憲法廣場（Syntagma 站，單程票 €9）。出站步行 4 分鐘入住公寓。</div>
+              <div class="item-desc">台灣 (TPE) 與 傑克遜維爾 (JAX) 兩路航班抵達雅典，搭乘地鐵藍線（Line 3）40 分鐘直達憲法廣場，入住具備暖氣與廚房的公寓。</div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">15:30 - 18:30</span><span class="duration-badge">老城漫步</span>
               <div class="item-title">普拉卡老城區 (Plaka) ＆ 羅馬古市集</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從憲法廣場沿 Mitropoleos 大街步行 6 分鐘進入普拉卡老城。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>走訪風之塔（Tower of the Winds，人類歷史第一座八角氣象站）。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>現烤希臘旋轉烤肉捲餅（Gyros Pita，夾滿薯條與優格酸黃瓜醬 Tzatziki）、炸菲達起司裹蜂蜜。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>希臘純天然冷壓特級初榨橄欖油（Kalamata 產區）</strong>、天然海綿（希臘愛琴海小島特產，極致親膚柔軟）、純手工皮涼鞋。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>在無車步道悠閒漫步，走訪風之塔（Tower of the Winds，人類歷史上第一座氣象站），品嚐現烤熱騰騰的捲餅 Souvlaki。</div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">19:00 - 21:00</span><span class="duration-badge">衛城夜景</span>
               <div class="item-title">利卡維多斯山丘 (Mount Lycabettus) 登頂纜車夜景</div>
-              <div class="item-transit">🚕 前往方式：普拉卡叫計程車約 8 分鐘（€6）直達纜車站（Funicular），搭乘纜車 3 分鐘登頂。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>山頂白色小教堂看台俯瞰入夜後打上金色聚光燈的帕德嫩神廟全景。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>搭纜車登臨雅典最高峰，山頂白色小教堂看台俯瞰入夜後打上璀璨金色聚光燈的帕德嫩神廟全景。</div>
             </div>
           </div>
         </div>
@@ -1272,25 +1333,23 @@
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">08:30 - 12:00</span><span class="duration-badge">文明核心</span>
               <div class="item-title">雅典衛城 (Acropolis) ＆ 帕德嫩神廟 (Parthenon)</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從憲法廣場沿衛城步行街（Dionysiou Areopagitou）步行 12 分鐘至衛城南門入口（東南門通常比主西門人少）。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>多立克柱式最高傑作帕德嫩神廟、厄瑞克忒翁神廟的女像柱廊（Caryatids），冬季清晨 14°C 順光且無人頭遮擋！</div>
-              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>山頂大理石地磚被千萬人踩踏極度光滑，<strong>雨天或清晨露水極滑，千萬不可穿平底無紋鞋或皮鞋</strong>，必須穿深紋防滑抓地鞋！</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>普羅皮萊亞山門（Propylaea）回望雅典市景、厄瑞克忒翁神廟六尊優雅仕女柱側光照。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>多立克柱式最高傑作帕德嫩神廟、厄瑞克忒翁神廟的女像柱廊（Caryatids），以及阿提卡斯劇場。冬季上午氣溫 14°C 順光且無人頭遮擋！</div>
+              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>衛城山頂大理石地磚被千萬人踩踏極度光滑，<strong>下雨天或清晨露水極滑，千萬不可穿皮鞋或平底無紋帆布鞋</strong>，必須穿深紋防滑抓地登山鞋！</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>站在普羅皮萊亞山門（Propylaea）回望雅典市景、以及厄瑞克忒翁神廟六尊優雅仕女柱側光照。</div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">13:30 - 16:30</span><span class="duration-badge">現代展館</span>
               <div class="item-title">衛城博物館 (Acropolis Museum) 全景對照</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從衛城南側出口步行 3 分鐘即達衛城博物館正門。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>頂樓展廳將現存大理石橫飾帶依照原神廟方位 1:1 陳列，透過玻璃帷幕正對著山巔的神廟本體。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>頂樓帕德嫩神廟展廳，將現存大理石橫飾帶石雕依照原神廟方位 1:1 陳列，透過玻璃帷幕正對著山巔的神廟本體。</div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">17:30 - 20:30</span><span class="duration-badge">地中海風味</span>
               <div class="item-title">傳統小酒館晚餐：慕薩卡 (Moussaka) ＆ 茴香酒 (Ouzo)</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>焗烤茄子肉醬千層派 Moussaka、慢烤羊膝、清甜茴香酒 Ouzo 加冰水變乳白色之經典喝法。</div>
+              <div class="item-desc">在衛城腳下享用以千層茄子、牛絞肉與濃郁起司焗烤的希臘國菜 Moussaka，搭配清香甘冽的茴香酒。</div>
             </div>
           </div>
         </div>
@@ -1306,20 +1365,15 @@
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">09:00 - 12:30</span><span class="duration-badge">鎮國之寶</span>
               <div class="item-title">國立考古博物館 (National Archaeological Museum)</div>
-              <div class="item-transit">🚇 前往方式：搭乘地鐵綠線（Line 1）至 Victoria 站，步行 5 分鐘即達（約 15 分鐘）。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>邁錫尼黃金時代「阿伽門農黃金面具」、海底打撈青銅海神波賽頓雕像、古希臘精密天文計算器「安提基特拉機械」。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>阿伽門農黃金面具特寫展櫃、青銅阿特米西昂海神張臂投擲三叉戟威武姿態。</div>
-              <div class="links-bar">
-                <a class="link-pill" href="https://www.namuseum.gr/en/" target="_blank">🔗 希臘國立考古博物館</a>
-              </div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>特洛伊挖掘者施里曼發現的「阿伽門農黃金面具」、海底打撈的青銅海神波賽頓雕像、以及兩千年前古希臘精密天文計算器「安提基特拉機械」。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>阿伽門農黃金面具特寫展櫃、青銅阿特米西昂海神張臂投擲三叉戟的威武姿態。</div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">14:00 - 16:30</span><span class="duration-badge">哲學誕生地</span>
               <div class="item-title">古代安哥拉市集 (Ancient Agora) ＆ 赫菲斯托斯神廟</div>
-              <div class="item-transit">🚇 前往方式：搭乘地鐵綠線至 Thissio 站出站即達。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>蘇格拉底講學的阿塔羅斯柱廊，以及全希臘保存最完好、屋頂依然完整的赫菲斯托斯火神廟。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>蘇格拉底講學的阿塔羅斯柱廊（現為市集博物館），以及全希臘保存最完好、屋頂依然完整的赫菲斯托斯火神廟。</div>
             </div>
           </div>
         </div>
@@ -1335,18 +1389,15 @@
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D4 全日</span><span class="duration-badge">工程巨構與荷馬史詩</span>
               <div class="item-title">柯林斯運河 ➔ 邁錫尼古城遺址 (Mycenae) ➔ 納夫普利翁</div>
-              <div class="item-transit">🚗 前往方式：雅典出發走國道 A8 號高速，行車 1 小時抵達柯林斯運河（停留 30 分鐘）；續行 35 分鐘抵達邁錫尼古城；下午開車 30 分鐘進駐海濱納夫普利翁。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>柯林斯運河舊橋正中央俯拍 80 公尺筆直岩壁水道；邁錫尼古城入口穿越兩頭巨獅雕刻的「獅子門」。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>阿伽門農家族的「阿特柔斯寶庫（蜂窩狀圓頂墓）」，感受西元前 1250 年巨石拱頂的雄偉回音。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span>納夫普利翁傳統手工「解憂珠串（Komboloi，希臘男士手中把玩放鬆的琥珀石念珠）」、在地柑橘蜂蜜。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>站在柯林斯運河舊橋正中央俯拍深達 80 公尺筆直切開岩壁的水道；邁錫尼古城入口穿越兩頭巨獅雕刻的「獅子門（Lion Gate）」。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>走入阿伽門農家族的「阿特柔斯寶庫（蜂窩狀圓頂墓）」，感受西元前 1250 年巨石拱頂的雄偉回音。</div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D5 全日</span><span class="duration-badge">聲學奇蹟</span>
               <div class="item-title">埃皮達魯斯古劇院 (Epidaurus) 聲學奇蹟 ➔ 帕拉米蒂城堡俯瞰海灣</div>
-              <div class="item-transit">🚗 前往方式：納夫普利翁開車 30 分鐘直達埃皮達魯斯劇院；下午返回納夫普利翁開車直上帕拉米蒂城堡要塞。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>古劇院舞台正中心圓石上劃火柴或撕紙，同行家人坐在最頂層第 55 排驗證不可思議的清脆回音。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>在古劇院舞台正中心圓石上劃火柴或撕紙，讓同行家人坐在最頂層第 55 排驗證不可思議的清脆回音。</div>
             </div>
           </div>
         </div>
@@ -1362,18 +1413,15 @@
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D6 平安夜</span><span class="duration-badge">世界肚臍</span>
               <div class="item-title">德爾菲阿波羅聖所 (Delphi) ➔ 阿拉霍瓦 (Arachova) 山城壁爐平安夜</div>
-              <div class="item-transit">🚗 前往方式：跨越里翁-安提里翁跨海大橋，沿科林斯灣公路行車約 3 小時抵達德爾菲；參觀後開車 15 分鐘抵達阿拉霍瓦。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>德爾菲古代求神諭之地，參觀大理石肚臍石（Omphalos）與阿波羅神殿基座；傍晚在滑雪山城阿拉霍瓦圍繞石造壁爐享用慢燉羊肉平安夜。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>阿拉霍瓦著名的 Formaella 煙燻烤乳酪（表面金黃酥脆內餡拉絲）、高山紅酒。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>德爾菲雅典娜神廟三根孤立多立克圓柱背倚懸崖深谷的明信片經典角度。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>德爾菲古代求神諭之地，參觀大理石肚臍石（Omphalos）與阿波羅神殿基座；傍晚開車 15 分鐘進入滑雪山城阿拉霍瓦，圍繞傳統石造壁爐享用慢燉羊肉平安夜。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>德爾菲雅典娜神廟（Tholos of Delphi）三根孤立多立克圓柱背倚懸崖深谷的明信片經典角度。</div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D7 聖誕節</span><span class="duration-badge">雪山山城</span>
               <div class="item-title">聖誕山城漫步 ➔ 北上開往天空之城門戶卡蘭巴卡 (Kalambaka)</div>
-              <div class="item-transit">🚗 前往方式：從阿拉霍瓦北上穿越希臘中央色薩利平原，行車約 3 小時抵達巨石腳下的卡蘭巴卡。</div>
-              <div class="item-desc">欣賞雪山木屋群與手工編織市集，下午悠閒北上，傍晚抵達巨石群腳下的卡蘭巴卡入住。</div>
+              <div class="item-desc">欣賞雪山木屋群與手工編織市集，下午悠閒沿希臘中央平原北上，傍晚抵達巨石群腳下的卡蘭巴卡入住。</div>
             </div>
           </div>
         </div>
@@ -1389,18 +1437,16 @@
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D8 全日</span><span class="duration-badge">絕壁神蹟</span>
               <div class="item-title">大邁泰奧拉修道院 (Great Meteoron) ＆ 瓦爾拉姆修道院 (Varlaam)</div>
-              <div class="item-transit">🚗 前往方式：卡蘭巴卡開車沿環山景觀公路 10 分鐘直抵各大修道院停車場（全線柏油路平整好開）。</div>
-              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>登臨垂直聳立數百公尺砂岩巨石峰頂的修道院，清晨雲霧繚繞，參觀古代滑輪吊籃遺址與金色聖像畫。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>修士手工手繪東正教聖像畫（Icon）木板雕刻</strong>、修道院手工天然草本蜂蠟軟膏、純天然高山百里香蜂蜜。</div>
-              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>修道院著裝管制嚴格！<strong>女性嚴禁穿褲裝或短裙</strong>（門口有提供圍裙但建議自備長裙），男性嚴禁短褲無袖；每日輪流公休一所修道院。</div>
-              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>邁泰奧拉日落觀景點（Sunset Rock），傍晚看夕陽將黑色巨石與修道院染成金紅色的壯麗全景。</div>
+              <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>登臨垂直聳立數百公尺砂岩巨石峰頂的 14 世紀東正教修道院。冬日清晨雲霧繚繞，宛如懸浮於天際；參觀古代滑輪吊籃遺址、金色聖像畫與手抄經卷。</div>
+              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>修道院著裝管制極嚴！<strong>女性嚴禁穿褲裝或短裙</strong>（門口有提供圍裙但建議自備長裙），男性嚴禁穿短褲或無袖；每日輪流公休一所修道院，出發前核對開放日。</div>
+              <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>邁泰奧拉日落觀景點（Sunset Rock），傍晚看夕陽將黑色巨石與峰頂修道院染成金紅色的壯麗全景。</div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D9 全日</span><span class="duration-badge">修道院巡禮</span>
               <div class="item-title">聖史蒂芬女子修道院 ＆ 盧薩諾修道院 ➔ 返回雅典</div>
-              <div class="item-transit">🚗 前往方式：參觀完架在深谷木橋上的聖史蒂芬修道院後，走 A1 高速公路行車約 4 小時返回雅典機場周邊還車入住。</div>
+              <div class="item-desc">探訪架設在深谷木橋上的聖史蒂芬修道院，午後開車返回雅典機場周邊還車入住。</div>
             </div>
           </div>
         </div>
@@ -1416,11 +1462,8 @@
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D10-12 三日</span><span class="duration-badge">包島體驗</span>
               <div class="item-title">搭乘愛琴海航空直飛聖托里尼 (45分鐘) ➔ 伊亞 (Oia) 藍頂教堂與火山口落日</div>
-              <div class="item-transit">✈️ 前往方式：雅典機場搭愛琴海航空（45分鐘）直飛聖島機場（JTR）。機場預約接駁車 20 分鐘抵達費拉或伊亞洞穴飯店。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>冬季無人潮的聖島如同私人莊園！入住費拉懸崖暖氣洞穴飯店，品嚐火山土壤孕育的頂級 Assyrtiko 干白葡萄酒。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>番茄煎餅（Tomatokeftedes，聖島火山小番茄與香草炸餅）、鮮烤章魚腳、天然聖島甜酒 Vinsanto。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>聖托里尼火山岩小雕件</strong>、藍白圓頂小石屋迷你模型、防嫉妒藍眼睛（Evil Eye）玻璃吊飾。</div>
-              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span><strong>冬天伊亞鎮上 80% 泳池與特色餐廳歇業</strong>，生活機能集中在首府費拉（Fira）；外島天氣變化大，務必備妥保暖防風厚外套。</div>
+              <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span><strong>冬天伊亞鎮上 80% 泳池與特色餐廳歇業</strong>，生活機能集中在首府費拉（Fira）；外島天氣變化大，偶有陣風，務必備妥保暖防風厚外套。</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>伊亞經典三藍頂教堂（夏天需排隊1小時，冬天完全無人隨意拍）、伊亞拜占庭城堡廢墟看台獨享世界最美火山口日落。</div>
             </div>
           </div>
@@ -1437,7 +1480,6 @@
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D13 跨年夜</span><span class="duration-badge">衛城倒數</span>
               <div class="item-title">飛回雅典 ➔ 憲法廣場衛兵交接 ➔ 衛城跨年煙火盛宴</div>
-              <div class="item-transit">✈️ 前往方式：聖島搭機直飛雅典機場（45分鐘），地鐵 3 號線返回市中心憲法廣場。</div>
               <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>觀賞無名烈士墓前百褶短裙衛兵交接儀式；午夜在普拉卡露台餐廳仰望帕德嫩神廟背後綻放的跨年煙火！</div>
               <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>憲法廣場身穿厚重呢子大衣與大紅絨球皮鞋的希臘總統衛兵踢腿特寫。</div>
             </div>
@@ -1446,157 +1488,116 @@
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D14 元旦</span><span class="duration-badge">新年傳統</span>
               <div class="item-title">宙斯神廟 ＆ 元旦享用切錢幣吉祥蛋糕 (Vasilopita)</div>
-              <div class="item-transit">🚶‍♂️ 前往方式：從憲法廣場沿哈德良拱門向南步行 8 分鐘即達宙斯神廟遺址。</div>
-              <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span><strong>新年吉祥蛋糕 Vasilopita</strong>（切到藏有硬幣者象徵整年大吉）、傳統核桃肉桂千層酥 Baklava。</div>
-              <div class="item-desc">仰望奧林匹亞宙斯神廟 15 根巨大科林斯柱，體驗希臘新年切錢幣蛋糕傳統。</div>
+              <div class="item-desc">仰望奧林匹亞宙斯神廟 15 根巨大科林斯柱，體驗希臘新年切錢幣蛋糕傳統，切到藏有硬幣者象徵整年大吉。</div>
             </div>
 
             <div class="timeline-item">
               <div class="timeline-dot dot-greece"></div>
               <span class="time-slot slot-greece">D15 歸國</span><span class="duration-badge">平安賦歸</span>
               <div class="item-title">蒙納斯提拉奇採買橄欖油皂 ➔ 雅典機場搭機啟程返回台灣與美國！</div>
-              <div class="item-transit">🚇 前往方式：憲法廣場搭地鐵 3 號線（40分鐘直達）前往雅典國際機場辦理退稅搭機。</div>
-              <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span>天然純橄欖油手工皂（無添加防腐劑）、希臘野生百里香花蜜、茴香烈酒迷你禮盒。</div>
             </div>
           </div>
         </div>
       </section>
+      </div>
 
-      <!-- Rules & Phrases Greece with Real Audio TTS -->
-      <section class="section">
-        <h2 class="section-title" style="color:var(--greece-blue);">🛡️ 希臘：避雷・必選・風俗民情・安全守則 ＆ 真人發音實用會話</h2>
+      <!-- 子分頁 4：風土民情與會話 -->
+      <div id="greece-sub-customs-phrases" class="greece-sub-content" style="display:none;">
+        <section class="section">
+        <h2 class="section-title" style="color:var(--greece-blue);">🛡️ 希臘：避雷・必選・風俗民情・安全守則</h2>
         <div class="grid-2">
-          <div class="tactical-box box-avoid">
+          <div class="avoid-box">
             <strong style="font-size:1rem; display:block; margin-bottom:6px;">⚠️ 希臘冬季深度避雷指南</strong>
             • <strong>冬季千萬不要搭外島慢速渡輪：</strong>12 月愛琴海常有強勁冬季風暴，渡輪極易臨時取消或嚴重延誤，往返聖島<strong>務必搭乘愛琴海航空（Aegean）國內班機</strong>。<br>
             • <strong>聖島冬季多數餐廳歇業：</strong>12 月聖托里尼為絕對淡季，伊亞大部分泳池餐廳與紀念品店關門，訂房必須確認空調暖氣充足且周邊有營業餐館（住在首府費拉最方便）。<br>
             • <strong>古蹟冬天提早關門：</strong>希臘公立博物館與古蹟在冬季（11月~3月）多於 <strong>15:00 或 17:00 即打烊</strong>，必須比夏天提早 1~2 小時出門。
           </div>
 
-          <div class="tactical-box box-must">
+          <div class="highlight-box">
             <strong style="font-size:1rem; display:block; margin-bottom:6px;">🌟 希臘核心必選體驗</strong>
             • <strong>冬季登衛城的純淨包場感：</strong>夏天衛城氣溫破 40 度且人滿為患，冬天晴朗早晨氣溫 14 度，陽光溫和、無人潮，能拍出世紀大片。<br>
             • <strong>天空之城大邁泰奧拉修道院：</strong>冬日清晨當雲霧在砂岩巨石間穿梭時，那份神聖與脫俗震撼度遠勝任何歐洲大教堂。<br>
             • <strong>品嚐傳統慕薩卡與香濃茴香酒：</strong>在衛城腳下傳統小酒館，細品地中海香料料理。
           </div>
 
-          <div class="tactical-box box-custom">
+          <div class="custom-box">
             <strong style="font-size:1rem; display:block; margin-bottom:6px;">🏛️ 希臘風俗與民情 (Greek Customs)</strong>
             • <strong>元旦「切錢幣吉祥蛋糕 (Vasilopita)」：</strong>希臘人在 1/1 新年當天全家會切這款傳統蛋糕，蛋糕內藏有一枚金幣，切到藏有硬幣那塊蛋糕的人象徵新年整年大吉大利！<br>
             • <strong>不要隨便對人比「手掌張開向前（Mountza）」：</strong>在希臘，手掌五指張開朝向別人的臉被視為極嚴重的污辱動作，揮手打招呼手掌應朝向自己或輕輕點頭。<br>
             • <strong>修道院著裝嚴格限制：</strong>進入邁泰奧拉修道院，女性**不得穿著褲裝或短裙**（門口通常提供長圍裙包裹），男性不得穿著短褲或無袖背心。
           </div>
 
-          <div class="tactical-box box-safety">
+          <div class="safety-box">
             <strong style="font-size:1rem; display:block; margin-bottom:6px;">🛡️ 雅典治安與自駕安全守則</strong>
             • <strong>雅典治安黑區（Omonia 奧莫尼亞廣場以北）：</strong>入夜後避免在 Omonia 廣場、Metaxourgeio 周邊偏僻暗巷獨行（毒品與遊民較多）；盡量選擇住在 Syntagma 憲法廣場或 Plaka 普拉卡區。<br>
             • <strong>憲法廣場抗議集會：</strong>若遇當地政治團體遊行，保持距離繞道而行即可，切勿湊熱鬧圍觀。<br>
             • <strong>希臘內陸山路冬季駕駛：</strong>前往德爾菲與天空之城的山路彎曲，若遇強降雨或高山降雪，車輛務必減速慢行，避免夜間走無路燈之山區產業道路。
           </div>
         </div>
-
-        <!-- Phrases Table Greece with TTS Audio -->
-        <div style="margin-top:20px;">
-          <h4 style="color:#0f172a; font-size:1.1rem; margin-bottom:8px;">🗣️ 現代希臘語 常用旅行實用會話 (支援真人點擊語音朗讀)</h4>
-          <table class="phrase-table">
-            <thead>
-              <tr>
-                <th>中文意思</th>
-                <th>希臘語 (Greek) 🔊</th>
-                <th>英文字母拼音</th>
-                <th>發音提示 / 使用情境</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>你好 / 早安</td>
-                <td>
-                  Γειά σας 
-                  <button class="speak-btn" onclick="speakText('Γειά σας', 'el-GR')">🔊 朗讀</button><br>
-                  Καλημέρα 
-                  <button class="speak-btn" onclick="speakText('Καλημέρα', 'el-GR')">🔊 朗讀</button>
-                </td>
-                <td>Yia sas / Kalimera</td>
-                <td>亞薩斯 / 卡利美拉（最標準禮貌問候）</td>
-              </tr>
-              <tr>
-                <td>謝謝 / 非常感謝</td>
-                <td>
-                  Ευχαριστώ 
-                  <button class="speak-btn" onclick="speakText('Ευχαριστώ', 'el-GR')">🔊 朗讀</button><br>
-                  Ευχαριστώ πολύ 
-                  <button class="speak-btn" onclick="speakText('Ευχαριστώ πολύ', 'el-GR')">🔊 朗讀</button>
-                </td>
-                <td>Efcharisto / Efcharisto poli</td>
-                <td>艾夫哈里斯托 / 艾夫哈里斯托波利</td>
-              </tr>
-              <tr>
-                <td>請 / 不客氣</td>
-                <td>
-                  Παρακαλώ 
-                  <button class="speak-btn" onclick="speakText('Παρακαλώ', 'el-GR')">🔊 朗讀</button>
-                </td>
-                <td>Parakalo</td>
-                <td>帕拉卡洛（點菜、求助必備萬用詞）</td>
-              </tr>
-              <tr>
-                <td>買單 / 結帳</td>
-                <td>
-                  Το λογαριασμό, παρακαλώ 
-                  <button class="speak-btn" onclick="speakText('Το λογαριασμό, παρακαλώ', 'el-GR')">🔊 朗讀</button>
-                </td>
-                <td>To logariasmo, parakalo</td>
-                <td>托羅加利亞斯莫，帕拉卡洛</td>
-              </tr>
-              <tr>
-                <td>洗手間在哪裡？</td>
-                <td>
-                  Πού είναι η τουαλέτα; 
-                  <button class="speak-btn" onclick="speakText('Πού είναι η τουαλέτα;', 'el-GR')">🔊 朗讀</button>
-                </td>
-                <td>Pou ine i toualeta?</td>
-                <td>普伊內伊圖瓦萊塔？</td>
-              </tr>
-              <tr>
-                <td>這個多少錢？</td>
-                <td>
-                  Πόσο κοστίζει αυτό; 
-                  <button class="speak-btn" onclick="speakText('Πόσο κοστίζει αυτό;', 'el-GR')">🔊 朗讀</button>
-                </td>
-                <td>Poso kostizi afto?</td>
-                <td>波索科斯提齊阿夫托？</td>
-              </tr>
-              <tr>
-                <td>乾杯！</td>
-                <td>
-                  Στην υγειά μας! 
-                  <button class="speak-btn" onclick="speakText('Στην υγειά μας!', 'el-GR')">🔊 朗讀</button><br>
-                  Ώπα! 
-                  <button class="speak-btn" onclick="speakText('Ώπα!', 'el-GR')">🔊 朗讀</button>
-                </td>
-                <td>Stin ygeia mas! / Opa!</td>
-                <td>斯汀伊亞瑪斯！/ 歐帕！（喝茴香酒時祝酒）</td>
-              </tr>
-              <tr>
-                <td>救命！/ 請幫幫我！</td>
-                <td>
-                  Βοήθεια! 
-                  <button class="speak-btn" onclick="speakText('Βοήθεια!', 'el-GR')">🔊 朗讀</button>
-                </td>
-                <td>Voithia!</td>
-                <td>沃伊西亞！</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </section>
+      </div>
     </div>
-
-
-    <!-- ==================== PLAN C: ITALY ==================== -->
+    
+    <!-- ==================== PLAN ITALY ==================== -->
     <div id="plan-italy" style="display:none;">
-      <!-- Visual Map -->
-      <section class="section">
+      <!-- 次標籤頁列 -->
+      <div class="sub-tabs-bar">
+        <button class="sub-tab-btn active-sub" onclick="switchSubTab('italy', 'flight-hotel', this)">✈️ 機票與住宿推薦</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('italy', 'map-transit', this)">🗺️ 路線地圖與套票</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('italy', 'itinerary', this)">📅 15 天詳細行程全覽</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('italy', 'customs-phrases', this)">🛡️ 風土民情與會話</button>
+      </div>
+
+      <!-- 子分頁 1：義大利機票與住宿 -->
+      <div id="italy-sub-flight-hotel" class="italy-sub-content">
+        <section class="section">
+          <h2 class="section-title" style="color:var(--italy-green);">✈️ 義大利雙向出發機票配置方案 (12/19 羅馬進 - 1/2 米蘭出)</h2>
+          <div class="grid-2">
+            <div class="card-recommend">
+              <h4>🇹🇼 起點 A：台灣 (TPE) 出發航班配置</h4>
+              <p>
+                • <strong>去程 (12/19 六)：</strong>台北 (TPE) ➔ 羅馬 (FCO)（中華航空台北直飛羅馬 14 小時最省力，或長榮轉維也納/米蘭）。<br>
+                • <strong>回程 (01/02 六)：</strong>米蘭 (MXP) ➔ 台北 (TPE)（長榮航空米蘭直飛返回台灣！開口機票不走回頭路）。<br>
+                • <strong>預估票價：</strong>約 NT$38,000 ~ NT$46,000／人。
+              </p>
+            </div>
+            <div class="card-recommend">
+              <h4>🇺🇸 起點 B：佛羅里達傑克遜維爾 (JAX) 出發航班配置</h4>
+              <p>
+                • <strong>去程 (12/19 六)：</strong>傑克遜維爾 (JAX) ➔ 亞特蘭大/紐約 ➔ 羅馬 (FCO)（達美航空/美國航空，跨大西洋直飛，約 11 小時）。<br>
+                • <strong>回程 (01/02 六)：</strong>米蘭 (MXP) ➔ 紐約甘迺迪 ➔ JAX。<br>
+                • <strong>大會師時間：</strong>兩路航班皆於 12/19 上午或中午抵達羅馬 FCO 機場會師！
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title" style="color:var(--italy-green);">🏨 義大利推薦住宿（高鐵站旁雙臥室公寓、大教堂核心）</h2>
+          <div class="grid-2">
+            <div class="card-recommend">
+              <h4>羅馬 (D1-D3・3晚)：The Republic Apartments (特米尼 Termini 車站旁)</h4>
+              <p>• <strong>位置與特色：</strong>出中央火車站步行 4 分鐘即達！雙臥室附廚房，搭乘 Leonardo Express 機場快線或紅箭高鐵極為方便，免去在石板路上拖拉行李之苦。</p>
+            </div>
+            <div class="card-recommend">
+              <h4>佛羅倫斯 (D4-D7・4晚)：Palazzo Gamba Luxury Apartments</h4>
+              <p>• <strong>位置與特色：</strong>正對聖母百花大教堂！推開客廳窗戶即是壯觀的大理石紅磚穹頂。<strong>12/24 平安夜可在廚房香煎 1.2 公斤巨無霸托斯卡尼丁骨大牛排！</strong></p>
+            </div>
+            <div class="card-recommend">
+              <h4>威尼斯 (D8-D9・2晚)：Rialto Prestige Apartments (里亞托橋旁)</h4>
+              <p>• <strong>位置與特色：</strong>水上巴士站直達，避免扛行李爬拱橋階梯！窗外眺望小運河，走出巷口即是大運河畔，古典水都浪漫感十足。</p>
+            </div>
+            <div class="card-recommend">
+              <h4>米蘭 (D10-D14・5晚)：Duomo Cathedral Apartments (米蘭大教堂區)</h4>
+              <p>• <strong>位置與特色：</strong>步行至米蘭大教堂僅 3 分鐘，12/31 跨年音樂會煙火結束後步行即可回房溫暖入睡，周邊精品店與生活機能極佳。</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 子分頁 2：路線地圖與套票 -->
+      <div id="italy-sub-map-transit" class="italy-sub-content" style="display:none;">
+        <section class="section">
         <h2 class="section-title" style="color:var(--italy-green);">🗺️ 義大利雙向出發視覺路徑全圖 (雙起點匯流 ➔ 經典四城跨年)</h2>
         <div class="map-container">
           <div class="map-header">
@@ -1653,9 +1654,7 @@
           </div>
         </div>
       </section>
-
-      <!-- Transportation & Pass Guide Italy with Booking Links -->
-      <section class="section">
+        <section class="section">
         <h2 class="section-title" style="color:var(--italy-green);">🎫 義大利國鐵高鐵訂票、城市通票與交通怎麼選？</h2>
         <div class="grid-2">
           <div class="tactical-box box-transit">
@@ -1677,9 +1676,11 @@
           </div>
         </div>
       </section>
+      </div>
 
-      <!-- Day by Day Italy with Precise Transit & Links -->
-      <section class="section">
+      <!-- 子分頁 3：15 天詳細行程全覽 -->
+      <div id="italy-sub-itinerary" class="italy-sub-content" style="display:none;">
+        <section class="section">
         <h2 class="section-title" style="color:var(--italy-green);">📅 義大利 15 天詳細行程・前往方式/耗時・必選/避雷/美食/伴手禮・訂票連結</h2>
 
         <!-- D1 -->
@@ -2165,9 +2166,11 @@
           </div>
         </div>
       </section>
+      </div>
 
-      <!-- Rules & Phrases Italy with Real Audio TTS -->
-      <section class="section">
+      <!-- 子分頁 4：風土民情與會話 -->
+      <div id="italy-sub-customs-phrases" class="italy-sub-content" style="display:none;">
+        <section class="section">
         <h2 class="section-title" style="color:var(--italy-green);">🛡️ 義大利：避雷・必選・風俗民情・防扒守則 ＆ 真人發音實用會話</h2>
         <div class="grid-2">
           <div class="tactical-box box-avoid">
@@ -2254,7 +2257,7 @@
                 <td>洗手間在哪裡？</td>
                 <td>
                   Dov'è il bagno? 
-                  <button class="speak-btn" onclick="speakText(\"Dov'è il bagno?\", 'it-IT')">🔊 朗讀</button>
+                  <button class="speak-btn" onclick="speakText('Dov\'è il bagno?', 'it-IT')">🔊 朗讀</button>
                 </td>
                 <td>多韋伊爾巴紐？</td>
               </tr>
@@ -2286,16 +2289,18 @@
           </table>
         </div>
       </section>
+      </div>
     </div>
-
+    
     <footer>
-      <p>💡 此手冊已完整融合雙向出發、西葡全景、希臘古典與義大利文藝復興三大方案，點擊頂部按鈕即可即時無縫切換！</p>
+      <p>💡 此手冊已完整融合三大方案、雙向出發機票、推薦住宿公寓、行程地圖、15天早中晚詳細時程與語音日常會話，點擊頂部次標籤頁即可秒速直達！</p>
       <p style="margin-top:4px;">祝 2026/12/19 - 2027/1/2 跨年出國自由行圓滿順遂、平安凱旋 🌟</p>
     </footer>
   </div>
 
   <script>
-    function switchPlan(plan) {
+    // 1. 主方案切換邏輯 (西葡 vs 希臘 vs 義大利)
+    function switchMainPlan(plan) {
       const planSpain = document.getElementById('plan-spain');
       const planGreece = document.getElementById('plan-greece');
       const planItaly = document.getElementById('plan-italy');
@@ -2307,33 +2312,53 @@
       planGreece.style.display = 'none';
       planItaly.style.display = 'none';
 
-      btnSpain.className = 'mode-btn';
-      btnGreece.className = 'mode-btn';
-      btnItaly.className = 'mode-btn';
+      btnSpain.className = 'main-mode-btn';
+      btnGreece.className = 'main-mode-btn';
+      btnItaly.className = 'main-mode-btn';
 
       if (plan === 'spain') {
         planSpain.style.display = 'block';
-        btnSpain.className = 'mode-btn active-spain';
+        btnSpain.className = 'main-mode-btn active-spain';
       } else if (plan === 'greece') {
         planGreece.style.display = 'block';
-        btnGreece.className = 'mode-btn active-greece';
+        btnGreece.className = 'main-mode-btn active-greece';
       } else if (plan === 'italy') {
         planItaly.style.display = 'block';
-        btnItaly.className = 'mode-btn active-italy';
+        btnItaly.className = 'main-mode-btn active-italy';
       }
+      window.scrollTo({ top: 180, behavior: 'smooth' });
     }
 
-    // Native Web Speech API for Browser-based Real Audio Pronunciation
+    // 2. 次標籤頁切換邏輯 (機票住宿 vs 地圖交通 vs 行程全覽 vs 風土民情)
+    function switchSubTab(plan, subTab, btnElement) {
+      // 隱藏該方案底下的所有子區塊
+      const subContents = document.querySelectorAll('.' + plan + '-sub-content');
+      subContents.forEach(content => content.style.display = 'none');
+
+      // 移除該方案次標籤頁按鈕的 active 狀態
+      const parentBar = btnElement.parentElement;
+      const buttons = parentBar.querySelectorAll('.sub-tab-btn');
+      buttons.forEach(btn => btn.classList.remove('active-sub'));
+
+      // 顯示目標子區塊並標記按鈕
+      const target = document.getElementById(plan + '-sub-' + subTab);
+      if (target) {
+        target.style.display = 'block';
+      }
+      btnElement.classList.add('active-sub');
+    }
+
+    // 3. 原生 Web Speech API 真人語音朗讀
     function speakText(text, lang) {
       if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
+        window.speechSynthesis.cancel(); // 停止目前正在播放的語音
         const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = lang; // 'es-ES', 'pt-PT', 'el-GR', 'it-IT'
-        utterance.rate = 0.85;
+        utterance.lang = lang; // 支援 'es-ES', 'pt-PT', 'el-GR', 'it-IT'
+        utterance.rate = 0.85;  // 語速適中清晰
         utterance.pitch = 1.0;
         window.speechSynthesis.speak(utterance);
       } else {
-        alert('您的瀏覽器不支援 Web Speech API 語音發音功能，建議使用最新版 Safari, Chrome 或 Edge。');
+        alert('您的瀏覽器不支援 Web Speech API 語音發音功能，建議使用 Chrome, Safari 或 Edge。');
       }
     }
   </script>
