@@ -83,7 +83,7 @@
       color: white; border-color: #14532d; box-shadow: 0 8px 16px -2px rgba(21, 128, 61, 0.3);
     }
 
-    /* 次標籤頁列 (Sub Tabs Navigation) */
+    /* 次標籤頁列 */
     .sub-tabs-bar {
       display: flex; justify-content: center; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;
       background: white; padding: 10px; border-radius: 12px; border: 1px solid var(--border);
@@ -1171,28 +1171,28 @@
         <section class="section">
           <h2 class="section-title" style="color:var(--greece-blue);">🛡️ 希臘：避雷・必選・風俗民情・安全守則</h2>
           <div class="grid-2">
-            <div class="tactical-box box-avoid">
+            <div class="avoid-box">
               <strong style="font-size:1rem; display:block; margin-bottom:6px;">⚠️ 希臘冬季深度避雷指南</strong>
               • <strong>冬季千萬不要搭外島慢速渡輪：</strong>12 月愛琴海常有強勁冬季風暴，渡輪極易臨時取消或嚴重延誤，往返聖島<strong>務必搭乘愛琴海航空（Aegean）國內班機</strong>。<br>
               • <strong>聖島冬季多數餐廳歇業：</strong>12 月聖托里尼為絕對淡季，伊亞大部分泳池餐廳與紀念品店關門，訂房必須確認空調暖氣充足且周邊有營業餐館（住在首府費拉最方便）。<br>
               • <strong>古蹟冬天提早關門：</strong>希臘公立博物館與古蹟在冬季（11月~3月）多於 <strong>15:00 或 17:00 即打烊</strong>，必須比夏天提早 1~2 小時出門。
             </div>
 
-            <div class="tactical-box box-must">
+            <div class="highlight-box">
               <strong style="font-size:1rem; display:block; margin-bottom:6px;">🌟 希臘核心必選體驗</strong>
               • <strong>冬季登衛城的純淨包場感：</strong>夏天衛城氣溫破 40 度且人滿為患，冬天晴朗早晨氣溫 14 度，陽光溫和、無人潮，能拍出世紀大片。<br>
               • <strong>天空之城大邁泰奧拉修道院：</strong>冬日清晨當雲霧在砂岩巨石間穿梭時，那份神聖與脫俗震撼度遠勝任何歐洲大教堂。<br>
               • <strong>品嚐傳統慕薩卡與香濃茴香酒：</strong>在衛城腳下傳統小酒館，細品地中海香料料理。
             </div>
 
-            <div class="tactical-box box-custom">
+            <div class="custom-box">
               <strong style="font-size:1rem; display:block; margin-bottom:6px;">🏛️ 希臘風俗與民情 (Greek Customs)</strong>
               • <strong>元旦「切錢幣吉祥蛋糕 (Vasilopita)」：</strong>希臘人在 1/1 新年當天全家會切這款傳統蛋糕，蛋糕內藏有一枚金幣，切到藏有硬幣那塊蛋糕的人象徵新年整年大吉大利！<br>
               • <strong>不要隨便對人比「手掌張開向前（Mountza）」：</strong>在希臘，手掌五指張開朝向別人的臉被視為極嚴重的污辱動作，揮手打招呼手掌應朝向自己或輕輕點頭。<br>
               • <strong>修道院著裝嚴格限制：</strong>進入邁泰奧拉修道院，女性**不得穿著褲裝或短裙**（門口通常提供長圍裙包裹），男性不得穿著短褲或無袖背心。
             </div>
 
-            <div class="tactical-box box-safety">
+            <div class="safety-box">
               <strong style="font-size:1rem; display:block; margin-bottom:6px;">🛡️ 雅典治安與自駕安全守則</strong>
               • <strong>雅典治安黑區（Omonia 奧莫尼亞廣場以北）：</strong>入夜後避免在 Omonia 廣場、Metaxourgeio 周邊偏僻暗巷獨行（毒品與遊民較多）；盡量選擇住在 Syntagma 憲法廣場或 Plaka 普拉卡區。<br>
               • <strong>憲法廣場抗議集會：</strong>若遇當地政治團體遊行，保持距離繞道而行即可，切勿湊熱鬧圍觀。<br>
@@ -1203,23 +1203,24 @@
       </div>
     </div>
     
-    <!-- ==================== PLAN ITALY ==================== -->
+    <!-- ==================== PLAN ITALY (土航豪經艙精準對接版) ==================== -->
     <div id="plan-italy" style="display:none;">
+      
       <!-- 次標籤頁列 -->
       <div class="sub-tabs-bar">
-        <button class="sub-tab-btn active-sub" onclick="switchSubTab('italy', 'flight-hotel', this)">✈️ 機票與住宿推薦</button>
-        <button class="sub-tab-btn" onclick="switchSubTab('italy', 'map-transit', this)">🗺️ 路線地圖與套票</button>
-        <button class="sub-tab-btn" onclick="switchSubTab('italy', 'itinerary', this)">📅 15 天詳細行程全覽</button>
+        <button class="sub-tab-btn active-sub" onclick="switchSubTab('italy', 'flight-hotel', this)">✈️ 土航航班・匯率與住宿推薦</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('italy', 'map-transit', this)">🗺️ 路線地圖與高鐵套票</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('italy', 'itinerary', this)">📅 12/20-1/3 詳細行程全覽</button>
         <button class="sub-tab-btn" onclick="switchSubTab('italy', 'customs-phrases', this)">🛡️ 風土民情與會話</button>
       </div>
-
-      <!-- 子分頁 1：義大利機票與住宿 -->
+    
+      <!-- 子分頁 1：土航航班、匯率與住宿 -->
       <div id="italy-sub-flight-hotel" class="italy-sub-content">
         <div class="tactical-box box-custom" style="margin-bottom:20px;">
-          <h3 style="color:var(--italy-green); font-size:1.15rem; margin-bottom:8px;">📐 方案三【義大利文藝復興】行程規劃與幾何設計特色：</h3>
-          • <strong>義大利靴型經典「紅箭高鐵一線貫穿」：</strong>羅馬 (FCO) 匯流入境 ➔ 佛羅倫斯 ➔ 威尼斯 ➔ 米蘭 (MXP) 出境。全段由時速 300 公里 Frecciarossa / Italo 高鐵無縫直達，完全不需拉大巴或中轉，行李隨高鐵直送市中心！<br>
-          • <strong>文藝復興與帝國核心全滿貫：</strong>羅馬競技場（地下層解鎖）、梵蒂岡西斯汀禮拜堂《創世紀》、聖母百花大教堂、烏菲茲波提切利、米開朗基羅大衛像、威尼斯聖馬可與貢多拉、米蘭大教堂 135 尖塔森林、達文西《最後的晚餐》真蹟！<br>
-          • <strong>節奏舒緩的阿爾卑斯湖光跨年：</strong>12/24 平安夜在佛羅倫斯公寓自煎 1.2 公斤巨無霸丁骨牛排；12/31 跨年日間前往阿爾卑斯雪山環抱的科莫湖，夜晚返回米蘭大教堂廣場參加萬人跨年音樂會！<br>
+          <h3 style="color:var(--italy-green); font-size:1.15rem; margin-bottom:8px;">📐 方案三【義大利文藝復興】土航 1 轉精準行程設計特色：</h3>
+          • <strong>TK 混艙黃金航線（長程豪經＋短程經濟）：</strong>台灣 (TPE) 12/20 週日晚間 21:30 出發，直飛伊斯坦堡長程段享受 2-3-2 豪經艙寬敞平躺舒適睡眠，12/21 週一上午 10:30 直抵羅馬市區放行李立即展開行程，完全不浪費白天時間！<br>
+          • <strong>回程高效率收尾：</strong>1/2 週六傍晚 18:20 羅馬 FCO 起飛，在伊斯坦堡 3 小時剛好進貴賓室淋浴洗澡，轉乘 TK24 豪經艙睡一覺，1/3 週日下午 17:40 返抵台灣，1/4 週一從容上班！<br>
+          • <strong>歐元匯率與刷卡省錢攻略：</strong>今日歐元匯率處於相對低點（<strong>1 EUR ≈ NT$36.13 - 36.50</strong>，比先前高點 37.6 划算許多）。強烈建議：<strong>機票在土航官網以台幣結帳避開海外交易手續費；義大利境內高鐵票、公寓住宿與日常消費則以歐元信用卡結帳</strong>，換算最划算！<br>
           • <strong>🎬 歐美知名旅行網紅/達人私房推薦：</strong><br>
             - <strong>Kacie Rose (旅義百萬美籍網紅)：</strong>走訪羅馬「特雷維許願池」務必於清晨 07:00 前抵達，獨享無人空景與晨光灑落噴泉水面；萬神殿旁必喝「金杯咖啡 (Tazza d'Oro)」咖啡碎冰沙佐鮮奶油。<br>
             - <strong>The Tour Guy (義大利文化導覽團隊)：</strong>參觀梵蒂岡博物館「雙螺旋樓梯」是離場必拍視角；烏菲茲美術館記得走到二樓西翼走廊窗邊，能拍出「阿諾河老橋」最完美的文藝復興幾何對稱視角。<br>
@@ -1227,22 +1228,32 @@
         </div>
 
         <section class="section">
-          <h2 class="section-title" style="color:var(--italy-green);">✈️ 義大利雙向出發機票配置方案 (12/19 羅馬進 - 1/2 米蘭出)</h2>
+          <h2 class="section-title" style="color:var(--italy-green);">✈️ 土耳其航空 (TK) 實際航班號與雙向出發配置</h2>
           <div class="grid-2">
             <div class="card-recommend">
-              <h4>🇹🇼 起點 A：台灣 (TPE) 出發航班配置</h4>
+              <h4>🇹🇼 起點 A：台灣 (TPE) ➔ 羅馬 (FCO) 土航 1 轉（總飛行約 16 小時）</h4>
               <p>
-                • <strong>去程 (12/19 六)：</strong>台北 (TPE) ➔ 羅馬 (FCO)（中華航空台北直飛羅馬 14 小時最省力，或長榮轉維也納/米蘭）。<br>
-                • <strong>回程 (01/02 六)：</strong>米蘭 (MXP) ➔ 台北 (TPE)（長榮航空米蘭直飛返回台灣！開口機票不走回頭路）。<br>
-                • <strong>預估票價：</strong>約 NT$38,000 ~ NT$46,000／人。
+                • <strong>去程第 1 段 (長程豪經)：TK25 台北 ➔ 伊斯坦堡</strong><br>
+                &nbsp;&nbsp;- 12/20 (日) 21:30 TPE 起飛 ➔ 12/21 (一) 05:30 IST 抵達（飛行約 11 小時，時差 +5 小時，B777-300ER 豪經艙 2-3-2 配置舒適好眠）。<br>
+                • <strong>轉機 IST：</strong>2 小時 10 分（國際轉機區免出境，時間充裕順暢）。<br>
+                • <strong>去程第 2 段 (短程經濟)：TK1861 伊斯坦堡 ➔ 羅馬</strong><br>
+                &nbsp;&nbsp;- 12/21 (一) 07:40 IST 起飛 ➔ 12/21 09:20 FCO 抵達（飛行約 2 小時 40 分，<strong>10:30 前直奔羅馬市中心放行李展開旅程！</strong>）<br><br>
+                • <strong>回程第 1 段 (短程經濟)：TK1866 羅馬 ➔ 伊斯坦堡</strong><br>
+                &nbsp;&nbsp;- 01/02 (六) 18:20 FCO 起飛 ➔ 22:30 IST 抵達（飛行約 2 小時 45 分）。<br>
+                • <strong>轉機 IST：</strong>3 小時（剛好前往貴賓室淋浴洗漱、舒適候機）。<br>
+                • <strong>回程第 2 段 (長程豪經)：TK24 伊斯坦堡 ➔ 台北</strong><br>
+                &nbsp;&nbsp;- 01/03 (日) 01:30 IST 起飛 ➔ 01/03 17:40 TPE 抵達（飛行約 10 小時 25 分，睡一覺傍晚平安抵台，1/4 上班無縫銜接）。
               </p>
             </div>
             <div class="card-recommend">
-              <h4>🇺🇸 起點 B：佛羅里達傑克遜維爾 (JAX) 出發航班配置</h4>
+              <h4>🇺🇸 起點 B：佛州 (JAX) ➔ 羅馬 (FCO) 雙向會師配置</h4>
               <p>
-                • <strong>去程 (12/19 六)：</strong>傑克遜維爾 (JAX) ➔ 亞特蘭大/紐約 ➔ 羅馬 (FCO)（達美航空/美國航空，跨大西洋直飛，約 11 小時）。<br>
-                • <strong>回程 (01/02 六)：</strong>米蘭 (MXP) ➔ 紐約甘迺迪 ➔ JAX。<br>
-                • <strong>大會師時間：</strong>兩路航班皆於 12/19 上午或中午抵達羅馬 FCO 機場會師！
+                • <strong>去程 (12/20 日)：</strong>傑克遜維爾 (JAX) ➔ 亞特蘭大/紐約 ➔ 羅馬 (FCO)（達美/美航，跨大西洋直飛，約 11 小時）。<br>
+                • <strong>會師點：</strong>12/21 (一) 上午 10:00~10:30 兩路人馬於羅馬菲烏米奇諾 (FCO) 機場入境大廳準時大會師！<br>
+                • <strong>回程 (01/02 六)：</strong>羅馬 (FCO) ➔ 紐約/波士頓 ➔ JAX。<br><br>
+                <strong>💳 今日匯率與結帳建議：</strong><br>
+                • <strong>1 EUR ≈ NT$36.13 - 36.50</strong>（歐元處於相對低點，比今年高點 37.6 划算許多）。<br>
+                • 機票用台幣結帳（土航台灣官網，免海外交易手續費）；歐洲高鐵與住宿用歐元信用卡結帳最優。
               </p>
             </div>
           </div>
@@ -1252,19 +1263,19 @@
           <h2 class="section-title" style="color:var(--italy-green);">🏨 義大利推薦住宿（高鐵站旁雙臥室公寓、大教堂核心）</h2>
           <div class="grid-2">
             <div class="card-recommend">
-              <h4>羅馬 (D1-D3・3晚)：The Republic Apartments (特米尼 Termini 車站旁)</h4>
+              <h4>羅馬 (D1-D3 ＆ D12・4晚)：The Republic Apartments (特米尼 Termini 車站旁)</h4>
               <p>• <strong>位置與特色：</strong>出中央火車站步行 4 分鐘即達！雙臥室附廚房，搭乘 Leonardo Express 機場快線或紅箭高鐵極為方便，免去在石板路上拖拉行李之苦。</p>
             </div>
             <div class="card-recommend">
-              <h4>佛羅倫斯 (D4-D7・4晚)：Palazzo Gamba Luxury Apartments</h4>
+              <h4>佛羅倫斯 (D4-D6・3晚)：Palazzo Gamba Luxury Apartments</h4>
               <p>• <strong>位置與特色：</strong>正對聖母百花大教堂！推開客廳窗戶即是壯觀的大理石紅磚穹頂。<strong>12/24 平安夜可在廚房香煎 1.2 公斤巨無霸托斯卡尼丁骨大牛排！</strong></p>
             </div>
             <div class="card-recommend">
-              <h4>威尼斯 (D8-D9・2晚)：Rialto Prestige Apartments (里亞托橋旁)</h4>
+              <h4>威尼斯 (D7-D8・2晚)：Rialto Prestige Apartments (里亞托橋旁)</h4>
               <p>• <strong>位置與特色：</strong>水上巴士站直達，避免扛行李爬拱橋階梯！窗外眺望小運河，走出巷口即是大運河畔，古典水都浪漫感十足。</p>
             </div>
             <div class="card-recommend">
-              <h4>米蘭 (D10-D14・5晚)：Duomo Cathedral Apartments (米蘭大教堂區)</h4>
+              <h4>米蘭 (D9-D11・3晚)：Duomo Cathedral Apartments (米蘭大教堂區)</h4>
               <p>• <strong>位置與特色：</strong>步行至米蘭大教堂僅 3 分鐘，12/31 跨年音樂會煙火結束後步行即可回房溫暖入睡，周邊精品店與生活機能極佳。</p>
             </div>
           </div>
@@ -1274,18 +1285,18 @@
       <!-- 子分頁 2：路線地圖與套票 -->
       <div id="italy-sub-map-transit" class="italy-sub-content" style="display:none;">
         <section class="section">
-          <h2 class="section-title" style="color:var(--italy-green);">🗺️ 義大利雙向出發視覺路徑全圖 (雙起點匯流 ➔ 經典四城跨年)</h2>
+          <h2 class="section-title" style="color:var(--italy-green);">🗺️ 義大利雙向出發視覺路徑全圖 (土航精準對接・紅箭高鐵一線貫穿)</h2>
           <div class="map-container">
             <div class="map-header">
-              <h3>📍 2026/12/19 ~ 2027/1/2 義大利帝國與文藝復興高鐵全景縱走</h3>
-              <span style="font-size:0.8rem; background:rgba(255,255,255,0.15); padding:3px 10px; border-radius:20px;">跨洋航班 ➔ Frecciarossa紅箭高鐵 ➔ 水上巴士 ➔ 科莫湖景觀鐵道</span>
+              <h3>📍 2026/12/20 ~ 2027/1/3 義大利帝國與文藝復興高鐵全景縱走</h3>
+              <span style="font-size:0.8rem; background:rgba(255,255,255,0.15); padding:3px 10px; border-radius:20px;">TK土航豪經 ➔ Frecciarossa紅箭高鐵 ➔ 水上巴士 ➔ 科莫湖景觀鐵道</span>
             </div>
 
             <div class="map-flow flow-italy">
               <div class="map-node">
                 <div class="node-badge" style="background:#3b82f6;">起點A</div>
                 <div class="node-title">台灣桃園 (TPE)</div>
-                <div class="node-sub">12/19 出發<br>直飛/轉機抵達羅馬</div>
+                <div class="node-sub">12/20 21:30 出發<br>TK25 豪經艙直飛IST</div>
               </div>
 
               <div class="transit-label">✈️ 兩路匯流 FCO</div>
@@ -1293,39 +1304,47 @@
               <div class="map-node">
                 <div class="node-badge" style="background:#3b82f6;">起點B</div>
                 <div class="node-title">傑克遜維爾 (JAX)</div>
-                <div class="node-sub">12/19 佛州出發<br>跨大西洋飛抵羅馬</div>
+                <div class="node-sub">12/20 佛州出發<br>跨大西洋飛抵羅馬</div>
               </div>
 
-              <div class="transit-label">🤝 12/19 大會師</div>
+              <div class="transit-label">🤝 12/21 10:30會師</div>
 
               <div class="map-node">
-                <div class="node-badge" style="background:#b91c1c;">D1-4</div>
+                <div class="node-badge" style="background:#b91c1c;">D1-3</div>
                 <div class="node-title">永恆之城羅馬</div>
-                <div class="node-sub">競技場・梵蒂岡<br>萬神殿・許願池</div>
+                <div class="node-sub">競技場・梵蒂岡<br>萬神殿・金杯咖啡</div>
               </div>
 
               <div class="transit-label">🚅 高鐵 1.5h</div>
 
               <div class="map-node">
-                <div class="node-badge" style="background:#b45309;">D5-7</div>
-                <div class="node-title">佛羅倫斯與托斯卡尼</div>
-                <div class="node-sub">聖母百花・烏菲茲<br>比薩斜塔・聖誕平安夜</div>
+                <div class="node-badge" style="background:#b45309;">D4-6</div>
+                <div class="node-title">佛羅倫斯・托斯卡尼</div>
+                <div class="node-sub">百花大教堂・比薩斜塔<br>平安夜自煎大牛排</div>
               </div>
 
               <div class="transit-label">🚅 高鐵 2h</div>
 
               <div class="map-node">
-                <div class="node-badge" style="background:#0284c7;">D8-10</div>
+                <div class="node-badge" style="background:#0284c7;">D7-8</div>
                 <div class="node-title">水上都市威尼斯</div>
-                <div class="node-sub">聖馬可・貢多拉<br>彩色島・大運河</div>
+                <div class="node-sub">聖馬可・貢多拉<br>彩色島・玻璃島</div>
               </div>
 
               <div class="transit-label">🚅 高鐵 2.5h</div>
 
               <div class="map-node">
-                <div class="node-badge" style="background:#15803d;">D11-15</div>
+                <div class="node-badge" style="background:#15803d;">D9-11</div>
                 <div class="node-title">時尚米蘭與科莫湖</div>
-                <div class="node-sub">米蘭大教堂・最後的晚餐<br>科莫湖・跨年倒數歸國</div>
+                <div class="node-sub">米蘭大教堂・最後的晚餐<br>科莫湖・跨年倒數煙火</div>
+              </div>
+
+              <div class="transit-label">🚅 高鐵返羅馬 3.5h</div>
+
+              <div class="map-node">
+                <div class="node-badge" style="background:#b91c1c;">D12-13 賦歸</div>
+                <div class="node-title">羅馬 FCO ➔ TPE</div>
+                <div class="node-sub">1/2 18:20 起飛<br>1/3 17:40 抵台</div>
               </div>
             </div>
           </div>
@@ -1336,7 +1355,7 @@
           <div class="grid-2">
             <div class="tactical-box box-transit">
               <span class="tactical-label">🚅 義大利高鐵 (Frecciarossa vs Italo) 購票攻略：</span><br>
-              • <strong>羅馬 ➔ 佛羅倫斯 ➔ 威尼斯 ➔ 米蘭：</strong>全線皆為高速鐵路，車程僅 1.5~2.5 小時。義大利國鐵 <strong>Trenitalia（紅箭 Frecciarossa）</strong>與民營 <strong>Italo 法拉利高鐵</strong>競爭激烈，出發前 60~90 天至官網購買「Super Economy」早鳥票，單程僅需 €14.90~€29.90！<br>
+              • <strong>全線高鐵直達（羅馬 ➔ 佛羅倫斯 ➔ 威尼斯 ➔ 米蘭 ➔ 羅馬）：</strong>全線車程僅 1.5~3.5 小時。義大利國鐵 <strong>Trenitalia（紅箭 Frecciarossa）</strong>與民營 <strong>Italo 法拉利高鐵</strong>競爭激烈，出發前 60~90 天至官網購買「Super Economy」早鳥票，單程僅需 €14.90~€29.90！<br>
               <div class="links-bar">
                 <a class="link-pill" href="https://www.trenitalia.com/en.html" target="_blank">🔗 義大利國鐵 Trenitalia 官網</a>
                 <a class="link-pill" href="https://www.italotreno.com/en" target="_blank">🔗 Italo 法拉利高鐵官網</a>
@@ -1355,28 +1374,28 @@
         </section>
       </div>
 
-      <!-- 子分頁 3：15 天詳細行程全覽 -->
+      <!-- 子分頁 3：詳細行程全覽 (12/20 - 1/3) -->
       <div id="italy-sub-itinerary" class="italy-sub-content" style="display:none;">
         <section class="section">
-          <h2 class="section-title" style="color:var(--italy-green);">📅 義大利 15 天詳細行程・前往方式/耗時・必選/避雷/美食/伴手禮・訂票連結</h2>
+          <h2 class="section-title" style="color:var(--italy-green);">📅 義大利 13 天在歐詳細行程 (12/20 出發 - 1/3 抵台)・前往方式/耗時・必選/避雷/美食/伴手禮・訂票連結</h2>
 
-          <!-- D1 -->
+          <!-- D0 & D1 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/19 (六) Day 1：雙向出發會師羅馬 ➔ 特雷維許願池 ＆ 萬神殿 ＆ 金杯咖啡</div>
-              <span class="day-tag tag-italy">羅馬會師</span>
+              <div class="day-date" style="color:var(--italy-green);">12/20(日)-12/21(一) Day 1：土航豪經艙飛抵羅馬 (10:30到) ➔ 特雷維許願池 ＆ 萬神殿 ＆ 金杯咖啡</div>
+              <span class="day-tag tag-italy">大會師初探</span>
             </div>
             <div class="day-body">
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">08:30 - 14:00</span><span class="duration-badge">跨洋會師</span>
-                <div class="item-title">羅馬菲烏米奇諾機場 (FCO) 大會師 ➔ 入住特米尼車站周邊公寓酒店</div>
-                <div class="item-transit">🚆 前往方式：機場火車站搭乘 Leonardo Express 機場直達快線（每 15 分鐘一班，32 分鐘直達羅馬特米尼中央車站 Roma Termini，票價 €14），出站步行 5 分鐘抵達雙臥室公寓。</div>
+                <span class="time-slot slot-italy">12/20 21:30 - 12/21 10:30</span><span class="duration-badge">土航1轉極速抵達</span>
+                <div class="item-title">TK25 (台北 21:30 ➔ 伊斯坦堡 05:30 豪經艙) ➔ TK1861 (07:40 ➔ 09:20 抵達羅馬 FCO)</div>
+                <div class="item-transit">🚆 前往方式：09:20 降落 FCO，與佛州 JAX 抵達之親友在入境大廳大會師！搭乘 Leonardo Express 機場直達快線（32 分鐘直達羅馬 Termini 中央車站，票價 €14），上午 10:30 前直達雙臥室公寓放行李，梳洗更衣立即出發！</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">15:00 - 18:30</span><span class="duration-badge">古城慢步</span>
+                <span class="time-slot slot-italy">12/21 13:30 - 17:30</span><span class="duration-badge">古城慢步</span>
                 <div class="item-title">特雷維許願池 (Fontana di Trevi) ＆ 萬神殿 (Pantheon) 奇蹟天窗</div>
                 <div class="item-transit">🚇 前往方式：從特米尼站搭地鐵 A 線至 Barberini 站，步行 6 分鐘直達許願池；續向西步行 8 分鐘達萬神殿。</div>
                 <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>背對許願池右手越過左肩拋擲硬幣（一枚代表重返羅馬）；走入萬神殿仰望西元前建造、直徑達 43 米且中央露天無遮蔽的穹頂圓形採光眼（Oculus），欣賞拉斐爾長眠之墓。</div>
@@ -1391,7 +1410,7 @@
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">19:00 - 21:00</span><span class="duration-badge">義式經典晚餐</span>
+                <span class="time-slot slot-italy">12/21 18:30 - 21:00</span><span class="duration-badge">義式經典晚餐</span>
                 <div class="item-title">納沃納廣場 (Piazza Navona) 四河噴泉 ＆ 羅馬正宗義大利麵</div>
                 <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>羅馬四大家族義大利麵：培根蛋黃麵（Carbonara）與乾酪黑胡椒麵（Cacio e Pepe），搭配炸羅馬朝鮮薊（Carciofi alla Romana）。</div>
               </div>
@@ -1401,7 +1420,7 @@
           <!-- D2 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/20 (日) Day 2：帝國核心・羅馬競技場地下室與頂層 ＆ 古羅馬廣場廢墟</div>
+              <div class="day-date" style="color:var(--italy-green);">12/22 (二) Day 2：帝國核心・羅馬競技場地下室與頂層 ＆ 古羅馬廣場廢墟</div>
               <span class="day-tag tag-italy">千年帝國</span>
             </div>
             <div class="day-body">
@@ -1432,7 +1451,7 @@
           <!-- D3 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/21 (一) Day 3：國中之國天主教聖殿・梵蒂岡博物館《創世紀》＆ 聖伯多祿大殿登頂</div>
+              <div class="day-date" style="color:var(--italy-green);">12/23 (三) Day 3：國中之國天主教聖殿・梵蒂岡博物館《創世紀》＆ 聖伯多祿大殿登頂</div>
               <span class="day-tag tag-italy">天主教聖座</span>
             </div>
             <div class="day-body">
@@ -1470,13 +1489,13 @@
           <!-- D4 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/22 (二) Day 4：羅馬西班牙階梯 ➔ 搭乘紅箭高鐵直奔翡冷翠佛羅倫斯</div>
-              <span class="day-tag tag-italy">文藝復興之城</span>
+              <div class="day-date" style="color:var(--italy-green);">12/24 (四 平安夜) Day 4：西班牙階梯 ➔ 紅箭高鐵 1.5h 直奔佛羅倫斯 ➔ 公寓 1.2kg 丁骨牛排平安夜大餐</div>
+              <span class="day-tag tag-italy">翡冷翠平安夜</span>
             </div>
             <div class="day-body">
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">09:30 - 12:30</span><span class="duration-badge">羅馬假期</span>
+                <span class="time-slot slot-italy">09:00 - 11:30</span><span class="duration-badge">羅馬假期</span>
                 <div class="item-title">西班牙階梯 (Scalinata di Trinità dei Monti) ＆ 破船噴泉</div>
                 <div class="item-transit">🚇 前往方式：地鐵 A 線 Spagna 站出站即達。</div>
                 <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>羅馬市府規定<strong>嚴禁在西班牙階梯上坐下停留或飲食</strong>，階梯旁有警察隨時吹哨驅趕甚至開出 €250~€400 罰單！站立拍照完全合法。</div>
@@ -1484,16 +1503,23 @@
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">14:00 - 15:40</span><span class="duration-badge">高鐵飛馳</span>
+                <span class="time-slot slot-italy">12:30 - 14:15</span><span class="duration-badge">高鐵飛馳</span>
                 <div class="item-title">搭乘 Frecciarossa 紅箭高鐵前往佛羅倫斯 SMN 車站</div>
-                <div class="item-transit">🚅 前往方式：特米尼站搭乘紅箭高鐵直達佛羅倫斯 Santa Maria Novella (SMN) 車站（車程僅 1 小時 36 分）。出站步行 6 分鐘進駐老城雙臥室公寓。</div>
+                <div class="item-transit">🚅 前往方式：特米尼站搭乘紅箭高鐵直達佛羅倫斯 Santa Maria Novella (SMN) 車站（車程僅 1 小時 36 分）。出站步行 6 分鐘進駐正對百花大教堂之雙臥室公寓！</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">17:00 - 20:30</span><span class="duration-badge">翡冷翠初見</span>
-                <div class="item-title">領主廣場 (Piazza della Signoria) ＆ 共和廣場旋轉木馬</div>
-                <div class="item-desc">漫步在露天雕塑美術館般的領主廣場，欣賞海神噴泉與大衛像複製品；在共和廣場百年咖啡館 Caffè Gilli 品嚐提拉米蘇與熱卡布奇諾。</div>
+                <span class="time-slot slot-italy">15:00 - 17:00</span><span class="duration-badge">關鍵任務</span>
+                <div class="item-title">中央市場 (Mercato Centrale) 採買平安夜丁骨牛排 ＆ Nerbone 燉牛肚包</div>
+                <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>中央市場一樓老店 Nerbone 招牌燉牛肚包（Panino con Lampredotto），肉質軟爛沾特調辣綠醬極致美味！買好今晚烹煮用 1.2kg 厚切生鮮丁骨大牛排（Bistecca alla Fiorentina）與奇揚地紅酒。</div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-italy"></div>
+                <span class="time-slot slot-italy">18:00 - 21:30</span><span class="duration-badge">平安夜大餐</span>
+                <div class="item-title">平安夜（全城餐館 18:00 關門）➔ 公寓烹飪經典義式丁骨牛排大餐</div>
+                <div class="item-desc">3 人在公寓廚房大展身手：以橄欖油、海鹽高溫香煎 1.2 公斤巨無霸托斯卡尼丁骨牛排（外焦脆內鮮紅五分熟），佐迷迭香烤馬鈴薯、奇揚地經典 Chianti Classico 黑公雞紅酒，享受無拘無束的溫暖聖誕夜！</div>
               </div>
             </div>
           </div>
@@ -1501,17 +1527,16 @@
           <!-- D5 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/23 (三) Day 5：聖母百花大教堂穹頂神蹟 ＆ 烏菲茲美術館美第奇寶藏</div>
-              <span class="day-tag tag-italy">文藝復興心臟</span>
+              <div class="day-date" style="color:var(--italy-green);">12/25 (五 聖誕節) Day 5：聖母百花大教堂穹頂神蹟 ＆ 大衛像真品 ＆ 米開朗基羅廣場夕照</div>
+              <span class="day-tag tag-italy">文藝復興大師</span>
             </div>
             <div class="day-body">
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">09:00 - 12:30</span><span class="duration-badge">穹頂奇蹟</span>
+                <span class="time-slot slot-italy">09:30 - 12:30</span><span class="duration-badge">穹頂奇蹟</span>
                 <div class="item-title">聖母百花大教堂 (Duomo) ＆ 喬托鐘樓 (Campanile di Giotto) 登頂</div>
-                <div class="item-transit">🚶‍♂️ 前往方式：從 SMN 火車站步行 7 分鐘即達大教堂廣場。</div>
+                <div class="item-transit">🚶‍♂️ 前往方式：公寓下樓即是大教堂廣場。</div>
                 <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>布魯內萊斯基建造的無鷹架紅色八角巨大穹頂；購買 Brunelleschi Pass 攀登 414 階喬托鐘樓，近距離平視大穹頂與俯瞰佛羅倫斯全景。</div>
-                <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>洗禮堂東門吉貝爾蒂黃金鑄造「天堂之門（Gates of Paradise）」；喬托鐘樓頂層拍攝聖母百花大教堂紅磚穹頂全貌。</div>
                 <div class="links-bar">
                   <a class="link-pill" href="https://duomo.firenze.it/en/home" target="_blank">🔗 聖母百花大教堂聯票官網</a>
                 </div>
@@ -1519,69 +1544,7 @@
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">13:30 - 16:30</span><span class="duration-badge">美第奇家族典藏</span>
-                <div class="item-title">烏菲茲美術館 (Galleria degli Uffizi)</div>
-                <div class="item-transit">🚶‍♂️ 前往方式：從大教堂沿 Calzaiuoli 商業街步行 6 分鐘直達阿諾河畔的烏菲茲美術館。</div>
-                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>波提切利兩大鎮館神作《維納斯的誕生》（The Birth of Venus）與《春》（Primavera）、達文西《受胎告知》、米開朗基羅《多尼圓幅》。</div>
-                <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>佛羅倫斯手工大理石染花紙筆記本（Ebru 傳統漂染紙）</strong>、聖母百花大教堂模型陶瓷香氛石。</div>
-                <div class="links-bar">
-                  <a class="link-pill" href="https://www.uffizi.it/en/tickets" target="_blank">🔗 烏菲茲美術館官方訂票</a>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">17:00 - 19:00</span><span class="duration-badge">食材採買</span>
-                <div class="item-title">中央市場 (Mercato Centrale) 採買平安夜丁骨牛排</div>
-                <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>中央市場一樓老店 Nerbone 招牌燉牛肚包（Panino con Lampredotto），肉質軟爛沾特調辣綠醬極致美味！買好 12/24 烹煮用厚切生鮮丁骨牛排（Bistecca alla Fiorentina）。</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- D6 -->
-          <div class="day-card">
-            <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/24 (四 平安夜) Day 6：比薩斜塔奇蹟 ➔ 返回佛羅倫斯公寓丁骨牛排平安夜盛宴</div>
-              <span class="day-tag tag-italy">托斯卡尼</span>
-            </div>
-            <div class="day-body">
-              <div class="timeline-item">
-                <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">09:00 - 13:00</span><span class="duration-badge">奇蹟廣場</span>
-                <div class="item-title">比薩斜塔 (Torre di Pisa) ＆ 比薩大教堂</div>
-                <div class="item-transit">🚆 前往方式：佛羅倫斯 SMN 車站搭乘區間火車（Regionale）直達 Pisa Centrale 站（車程 50 分鐘），出站步行 15 分鐘（或搭 LAM Rossa 公車 5 分鐘）直達奇蹟廣場。</div>
-                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>登上 294 階傾斜大理石旋轉階梯到達斜塔頂端，體驗伽利略自由落體實驗之地與向外傾斜的奇特平衡感。</div>
-                <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>奇蹟廣場草坪上經典的「雙手借位推斜塔」或「背靠斜塔」趣味合影。</div>
-                <div class="links-bar">
-                  <a class="link-pill" href="https://www.opapisa.it/en/tickets/prices/" target="_blank">🔗 比薩斜塔官方訂票</a>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">14:00 - 16:00</span><span class="duration-badge">返回佛羅倫斯</span>
-                <div class="item-title">搭火車返回佛羅倫斯老城公寓</div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">17:30 - 21:00</span><span class="duration-badge">平安夜大餐</span>
-                <div class="item-title">平安夜（全城餐館 18:00 關門）➔ 公寓烹飪經典義式丁骨牛排大餐</div>
-                <div class="item-desc">3 人在公寓廚房大展身手：以橄欖油、海鹽高溫香煎 1.2 公斤巨無霸托斯卡尼丁骨牛排（外焦脆內鮮紅五分熟），佐迷迭香烤馬鈴薯、奇揚地經典 Chianti Classico 黑公雞紅酒，享受無拘無束的溫暖聖誕夜！</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- D7 -->
-          <div class="day-card">
-            <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/25 (五 聖誕節) Day 7：大衛雕像力與美 ＆ 老橋珠寶 ＆ 米開朗基羅廣場金黃日落</div>
-              <span class="day-tag tag-italy">文藝復興大師</span>
-            </div>
-            <div class="day-body">
-              <div class="timeline-item">
-                <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">09:30 - 12:00</span><span class="duration-badge">人體雕塑之巔</span>
+                <span class="time-slot slot-italy">13:30 - 15:30</span><span class="duration-badge">人體雕塑之巔</span>
                 <div class="item-title">學院美術館 (Galleria dell'Accademia) 大衛像真品</div>
                 <div class="item-transit">🚶‍♂️ 前往方式：從聖母百花大教堂向北步行 6 分鐘即達學院美術館。</div>
                 <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>親見米開朗基羅 26 歲用整塊瑕疵白色卡拉拉大理石雕刻出的 5.17 米《大衛》（David）真品，青筋凸起的手部、凝視巨人的銳利眼神無懈可擊。</div>
@@ -1592,26 +1555,49 @@
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">13:00 - 15:30</span><span class="duration-badge">老橋金匠</span>
-                <div class="item-title">老橋 (Ponte Vecchio) ＆ 阿諾河畔漫步</div>
-                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>佛羅倫斯最古老的石造圓拱橋，橋上兩側開滿百年金銀珠寶工藝老店。</div>
-                <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>佛羅倫斯真皮小皮件（皮衣/手工皮夾/零錢包）</strong>、Santa Maria Novella (SMN) 百年修道院藥妝店之玫瑰保濕水與石榴香皂。</div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot dot-italy"></div>
                 <span class="time-slot slot-italy">16:00 - 18:00</span><span class="duration-badge">落日聖地</span>
-                <div class="item-title">米開朗基羅廣場 (Piazzale Michelangelo) 俯瞰翡冷翠夕照</div>
-                <div class="item-transit">🚌 前往方式：從老橋搭乘 12 號或 13 號市區公車（約 15 分鐘）直達山頂廣場。</div>
+                <div class="item-title">米開朗基羅廣場 (Piazzale Michelangelo) 俯瞰翡冷翠夕照 ＆ 老橋</div>
+                <div class="item-transit">🚌 前往方式：搭乘 12 號或 13 號市區公車（約 15 分鐘）直達山頂廣場。</div>
                 <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>廣場露台長椅上，夕陽金光灑在聖母百花大教堂紅磚穹頂、喬托鐘樓與老橋橫跨阿諾河的絕美明信片全景。</div>
               </div>
             </div>
           </div>
 
-          <!-- D8 -->
+          <!-- D6 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/26 (六) Day 8：紅箭高鐵奔向水上威尼斯 ➔ 聖馬可廣場 ＆ 貢多拉黑夜穿梭</div>
+              <div class="day-date" style="color:var(--italy-green);">12/26 (六) Day 6：比薩斜塔奇蹟廣場登頂 ＆ 烏菲茲美術館波提切利名畫</div>
+              <span class="day-tag tag-italy">文藝復興寶庫</span>
+            </div>
+            <div class="day-body">
+              <div class="timeline-item">
+                <div class="timeline-dot dot-italy"></div>
+                <span class="time-slot slot-italy">09:00 - 13:00</span><span class="duration-badge">奇蹟廣場</span>
+                <div class="item-title">比薩斜塔 (Torre di Pisa) ＆ 比薩大教堂</div>
+                <div class="item-transit">🚆 前往方式：佛羅倫斯 SMN 車站搭乘區間火車（Regionale）直達 Pisa Centrale 站（車程 50 分鐘），出站步行 15 分鐘直達奇蹟廣場。</div>
+                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>登上 294 階傾斜大理石旋轉階梯到達斜塔頂端，體驗伽利略自由落體實驗之地與向外傾斜的奇特平衡感。</div>
+                <div class="links-bar">
+                  <a class="link-pill" href="https://www.opapisa.it/en/tickets/prices/" target="_blank">🔗 比薩斜塔官方訂票</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-italy"></div>
+                <span class="time-slot slot-italy">14:30 - 17:30</span><span class="duration-badge">美第奇家族典藏</span>
+                <div class="item-title">烏菲茲美術館 (Galleria degli Uffizi)</div>
+                <div class="item-transit">🚶‍♂️ 前往方式：返回佛羅倫斯後沿 Calzaiuoli 商業街步行直達阿諾河畔的烏菲茲美術館。</div>
+                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>波提切利兩大鎮館神作《維納斯的誕生》（The Birth of Venus）與《春》（Primavera）、達文西《受胎告知》、米開朗基羅《多尼圓幅》。</div>
+                <div class="links-bar">
+                  <a class="link-pill" href="https://www.uffizi.it/en/tickets" target="_blank">🔗 烏菲茲美術館官方訂票</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- D7 -->
+          <div class="day-card">
+            <div class="day-header">
+              <div class="day-date" style="color:var(--italy-green);">12/27 (日) Day 7：紅箭高鐵奔向水上威尼斯 ➔ 聖馬可大教堂 ＆ 貢多拉黑夜穿梭</div>
               <span class="day-tag tag-italy">水上都市</span>
             </div>
             <div class="day-body">
@@ -1619,32 +1605,29 @@
                 <div class="timeline-dot dot-italy"></div>
                 <span class="time-slot slot-italy">09:00 - 11:15</span><span class="duration-badge">高鐵奔馳</span>
                 <div class="item-title">搭乘 Frecciarossa 紅箭高鐵直達威尼斯聖露西亞車站 (Santa Lucia)</div>
-                <div class="item-transit">🚅 前往方式：佛羅倫斯 SMN 車站搭高鐵 2 小時 5 分鐘直達威尼斯島上終點站 Venezia S.Lucia。一出站階梯下即是大運河水上巴士碼頭！</div>
-                <div class="item-desc">購買 ACTV 水上巴士通票，搭船直達聖馬可區公寓酒店。</div>
+                <div class="item-transit">🚅 前往方式：佛羅倫斯 SMN 車站搭高鐵 2 小時 5 分鐘直達威尼斯島上終點站 Venezia S.Lucia。一出站階梯下即是大運河水上巴士碼頭！搭船直達聖馬可區公寓酒店。</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
                 <span class="time-slot slot-italy">13:30 - 16:30</span><span class="duration-badge">歐洲最美客廳</span>
                 <div class="item-title">聖馬可廣場 (Piazza San Marco) ＆ 聖馬可大教堂金箔穹頂</div>
-                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>拜占庭式建築巔峰之作聖馬可大教堂，仰望整座內部鑲滿四千平方公尺真金箔的馬賽克天頂壁畫；參觀拿破崙讚譽為「歐洲最優雅客廳」的廣場迴廊。</div>
-                <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>1720 年開業的全球最古老咖啡館<strong>「花神咖啡 (Caffè Florian)」</strong>露天樂隊演奏下品嚐熱可可。</div>
+                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>拜占庭式建築巔峰之作聖馬可大教堂，仰望整座內部鑲滿四千平方公尺真金箔的馬賽克天頂壁畫；花神咖啡館（Caffè Florian）品嚐熱可可。</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
                 <span class="time-slot slot-italy">17:00 - 18:30</span><span class="duration-badge">水上穿梭</span>
                 <div class="item-title">浪漫貢多拉 (Gondola) 運河小巷夜遊</div>
-                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>包乘一艘黑漆貢多拉（公定價日間 €90/艘、夜間 €110/艘，可坐 4~5 人），船夫撐篙穿梭於狹窄靜謐的水道石橋下。</div>
-                <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>坐在貢多拉船頭拍攝船身穿過里亞托橋（Ponte di Rialto）水面波光的視角。</div>
+                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>包乘一艘黑漆貢多拉（公定價夜間 €110/艘），船夫撐篙穿梭於狹窄靜謐的水道石橋下。</div>
               </div>
             </div>
           </div>
 
-          <!-- D9 -->
+          <!-- D8 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/27 (日) Day 9：水都外島夢幻漫遊：彩色島 (Burano) 蕾絲 ＆ 玻璃島 (Murano)</div>
+              <div class="day-date" style="color:var(--italy-green);">12/28 (一) Day 8：水都外島夢幻漫遊：彩色島 (Burano) 蕾絲 ＆ 玻璃島 (Murano)</div>
               <span class="day-tag tag-italy">潟湖群島</span>
             </div>
             <div class="day-body">
@@ -1652,33 +1635,29 @@
                 <div class="timeline-dot dot-italy"></div>
                 <span class="time-slot slot-italy">09:00 - 13:00</span><span class="duration-badge">童話彩虹</span>
                 <div class="item-title">彩色島 / 布拉諾島 (Burano) 繽紛水巷漫步</div>
-                <div class="item-transit">🚤 前往方式：Fondamente Nove (F.te Nove) 碼頭搭乘 ACTV 12 號水上巴士，航程 40 分鐘直達彩色島。</div>
-                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>昔日漁夫為了在濃霧中認出自家房屋而塗漆成五彩繽紛的明亮小房，參觀數百年傳統刺繡手工蕾絲。</div>
-                <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>Bussolà 傳統 S 型黃金檸檬奶油餅乾；島上小館享用鮮甜炸海鮮拼盤（Fritto Misto）。</div>
-                <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>小運河木橋正中央，兩側倒映在水面上的桃紅、亮黃、海藍兩層彩色小屋。</div>
+                <div class="item-transit">🚤 前往方式：Fondamente Nove 碼頭搭乘 ACTV 12 號水上巴士，航程 40 分鐘直達彩色島。</div>
+                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>五彩繽紛的明亮小房、數百年傳統刺繡手工蕾絲、品嚐 Bussolà 檸檬奶油餅乾。</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
                 <span class="time-slot slot-italy">13:30 - 15:30</span><span class="duration-badge">水晶玻璃工藝</span>
                 <div class="item-title">玻璃島 / 穆拉諾島 (Murano) 吹玻璃工藝展示</div>
-                <div class="item-transit">🚤 前往方式：彩色島搭 12 號水上巴士回程中途停靠玻璃島（約 25 分鐘）。</div>
-                <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>穆拉諾手工千花玻璃（Millefiori）項鍊墜飾、小玻璃糖果擺飾</strong>、精緻手工面具。</div>
+                <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>穆拉諾手工千花玻璃（Millefiori）項鍊墜飾、小玻璃糖果擺飾</strong>。</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
                 <span class="time-slot slot-italy">16:30 - 18:30</span><span class="duration-badge">歎息橋歷史</span>
                 <div class="item-title">總督宮 (Palazzo Ducale) ＆ 歎息橋 (Ponte dei Sospiri)</div>
-                <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>從麥桿橋（Ponte della Paglia）拍攝巴洛克純白大理石覆蓋的封閉式歎息橋橫跨小運河。</div>
               </div>
             </div>
           </div>
 
-          <!-- D10 -->
+          <!-- D9 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/28 (一) Day 10：里亞托橋大運河黃昏 ➔ 高鐵直達時尚之都米蘭</div>
+              <div class="day-date" style="color:var(--italy-green);">12/29 (二) Day 9：里亞托橋大運河漫遊 ➔ 紅箭高鐵 2.5h 直達米蘭大教堂</div>
               <span class="day-tag tag-italy">時尚之都</span>
             </div>
             <div class="day-body">
@@ -1701,16 +1680,15 @@
                 <span class="time-slot slot-italy">17:00 - 20:30</span><span class="duration-badge">艾曼紐二世迴廊</span>
                 <div class="item-title">艾曼紐二世迴廊 (Galleria Vittorio Emanuele II) 奢華聖誕樹</div>
                 <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>十字玻璃採光圓頂下，在地面大理石公牛馬賽克圖騰上用右腳跟踩住公牛重要部位旋轉三圈（義大利傳統招財祈福儀式）。</div>
-                <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>施華洛世奇巨型璀璨水晶聖誕樹與挑高四層樓玻璃鑄鐵圓頂。</div>
               </div>
             </div>
           </div>
 
-          <!-- D11 -->
+          <!-- D10 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/29 (二) Day 11：哥德式建築極致・米蘭大教堂大理石尖塔森林登頂</div>
-              <span class="day-tag tag-italy">白色奇蹟</span>
+              <div class="day-date" style="color:var(--italy-green);">12/30 (三) Day 10：哥德式極致・米蘭大教堂 135 尖塔天台 ＆ 達文西《最後的晚餐》</div>
+              <span class="day-tag tag-italy">達文西神作</span>
             </div>
             <div class="day-body">
               <div class="timeline-item">
@@ -1718,9 +1696,7 @@
                 <span class="time-slot slot-italy">09:00 - 12:30</span><span class="duration-badge">大理石刺繡</span>
                 <div class="item-title">米蘭大教堂 (Duomo di Milano) 內部 ＆ 天台登頂 (Rooftop)</div>
                 <div class="item-transit">🚇 前往方式：地鐵 1 號或 3 號線直達 Duomo 站出站即是大教堂廣場。</div>
-                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>耗時五個多世紀建造、由卡杜利亞粉白大理石砌成。加購升降機登上天台，漫步在由 135 座石雕尖塔與 3,400 尊精緻雕像組成的「大理石森林」之中，仰望最高點鍍金聖母像（Madonnina）。</div>
-                <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span>大教堂廣場上有許多黑人強行往遊客手上套「幸運手繩（彩線）」或硬塞鴿子飼料，只要一碰便會被圍住強索 €10~€20！<strong>雙手插外套口袋，堅決不看、不拿、說 No 並走開</strong>。</div>
-                <div class="tactical-box box-photo"><span class="tactical-label">📸 打卡推薦：</span>天台飛扶壁與尖塔交織間隙遠眺米蘭天際線；廣場正前方仰拍大教堂宏偉正立面。</div>
+                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>加購升降機登上天台，漫步在由 135 座石雕尖塔與 3,400 尊精緻雕像組成的「大理石森林」之中，仰望最高點鍍金聖母像（Madonnina）。</div>
                 <div class="links-bar">
                   <a class="link-pill" href="https://www.duomomilano.it/en/buy-tickets/" target="_blank">🔗 米蘭大教堂官方訂票系統</a>
                 </div>
@@ -1728,28 +1704,10 @@
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">14:00 - 17:00</span><span class="duration-badge">文藝古堡</span>
-                <div class="item-title">斯福爾扎城堡 (Castello Sforzesco) ＆ 森皮奧內公園</div>
-                <div class="item-transit">🚶‍♂️ 前往方式：從大教堂沿但丁街步行 12 分鐘即達城堡正門塔樓。</div>
-                <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>米蘭公爵文藝復興軍事紅磚城堡，參觀米開朗基羅未完成的最後遺作《倫達尼尼聖殤》（Pietà Rondanini）。</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- D12 -->
-          <div class="day-card">
-            <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/30 (三) Day 12：達文西世紀壁畫《最後的晚餐》朝聖 ＆ 運河區微醺</div>
-              <span class="day-tag tag-italy">達文西神作</span>
-            </div>
-            <div class="day-body">
-              <div class="timeline-item">
-                <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">09:30 - 12:00</span><span class="duration-badge">千古神作</span>
+                <span class="time-slot slot-italy">14:00 - 16:30</span><span class="duration-badge">千古神作</span>
                 <div class="item-title">感恩聖母堂 (Santa Maria delle Grazie) 達文西《最後的晚餐》</div>
                 <div class="item-transit">🚇 前往方式：搭乘地鐵 1 號線至 Conciliazione 站，步行 5 分鐘即達修道院。</div>
                 <div class="tactical-box box-must"><span class="tactical-label">🌟 必選：</span>走入修士食堂，親眼目睹李奧納多・達文西 1495 年繪製、描繪耶穌說出「你們之中有一人出賣了我」瞬間十二門徒神態的絕世壁畫。</div>
-                <div class="tactical-box box-avoid"><span class="tactical-label">⚠️ 避雷：</span><strong>全歐洲最難搶門票第一名！</strong>每 15 分鐘僅限 35 人入場，必須於<strong>出發前三個月搶票</strong>；若官網售罄可購買含導覽之聯票。</div>
                 <div class="links-bar">
                   <a class="link-pill" href="https://cenacolovinciano.vivaticket.it/en" target="_blank">🔗 最後的晚餐官方訂票</a>
                 </div>
@@ -1757,24 +1715,16 @@
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">14:00 - 17:30</span><span class="duration-badge">古典歌劇院</span>
-                <div class="item-title">斯卡拉大劇院 (Teatro alla Scala) 博物館 ＆ 蒙特拿破崙精品街</div>
-                <div class="item-desc">參觀世界歌劇殿堂斯卡拉劇院，包廂俯瞰金碧輝煌的水晶吊燈與紅色絲絨座椅；午後漫步黃金四角精品街。</div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">18:30 - 21:00</span><span class="duration-badge">運河開胃酒</span>
+                <span class="time-slot slot-italy">18:00 - 20:30</span><span class="duration-badge">運河開胃酒</span>
                 <div class="item-title">納維利運河區 (Navigli) 享受 Aperitivo 開胃酒文化</div>
-                <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>點一杯 Aperol Spritz 橘色氣泡開胃酒，享用吧台免費供應的豐富自助冷肉 Tapas。</div>
               </div>
             </div>
           </div>
 
-          <!-- D13 -->
+          <!-- D11 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">12/31 (四 跨年夜) Day 13：阿爾卑斯絕美科莫湖 (Lake Como) ➔ 米蘭大教堂跨年倒數煙火</div>
+              <div class="day-date" style="color:var(--italy-green);">12/31 (四 跨年夜) Day 11：阿爾卑斯絕美科莫湖 (Lake Como) ➔ 米蘭大教堂跨年倒數煙火</div>
               <span class="day-tag tag-italy">跨年狂歡</span>
             </div>
             <div class="day-body">
@@ -1796,49 +1746,55 @@
             </div>
           </div>
 
-          <!-- D14 -->
+          <!-- D12 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">1/1 (五 元旦) Day 14：布雷拉藝術街區慢活 ＆ 經典米蘭炸牛排/藏紅花燉飯午宴</div>
+              <div class="day-date" style="color:var(--italy-green);">1/1 (五 元旦) Day 12：元旦米蘭炸牛排午宴 ➔ 紅箭高鐵 3.5h 直達羅馬 Termini</div>
               <span class="day-tag tag-italy">元旦慢活</span>
             </div>
             <div class="day-body">
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">10:00 - 13:00</span><span class="duration-badge">新年晨光</span>
-                <div class="item-title">布雷拉藝術街區 (Brera) 文青漫步 ＆ 畫廊巡禮</div>
-                <div class="item-transit">🚶‍♂️ 前往方式：從大教堂向北步行 10 分鐘進入鋪滿鵝卵石的布雷拉石巷。</div>
-                <div class="item-desc">漫步於米蘭最具藝術氣息的文青巷弄，參觀布雷拉繪畫館（Pinacoteca di Brera）欣賞海耶茲名畫《吻》（The Kiss）。</div>
+                <span class="time-slot slot-italy">10:30 - 13:30</span><span class="duration-badge">新年盛宴</span>
+                <div class="item-title">布雷拉街區漫步 ＆ 元旦米蘭炸牛排 (Cotoletta) ＆ 金黃番紅花燉飯</div>
+                <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>帶骨巨幅澄清奶油煎至金黃酥脆的米蘭炸牛排、以及加入牛骨髓與番紅花慢熬的金黃米蘭燉飯。</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">13:30 - 16:30</span><span class="duration-badge">新年盛宴</span>
-                <div class="item-title">元旦經典午宴：米蘭炸牛排 (Cotoletta) ＆ 金黃番紅花燉飯</div>
-                <div class="tactical-box box-food"><span class="tactical-label">🍴 必吃美食：</span>帶骨巨幅裹麵包屑用澄清奶油煎至金黃酥脆的米蘭炸牛排（Cotoletta alla Milanese）、以及加入牛骨髓與番紅花慢熬的金黃米蘭燉飯（Risotto alla Milanese）。</div>
+                <span class="time-slot slot-italy">14:30 - 18:00</span><span class="duration-badge">高鐵南下</span>
+                <div class="item-title">搭乘 Frecciarossa 紅箭高鐵直達羅馬 Termini 車站</div>
+                <div class="item-transit">🚅 前往方式：米蘭中央車站搭乘紅箭高鐵直達羅馬 Termini（車程 3 小時 20 分），出站步行 4 分鐘入住特米尼公寓，晚間享受羅馬夜景與義式冰淇淋。</div>
               </div>
             </div>
           </div>
 
-          <!-- D15 -->
+          <!-- D13 -->
           <div class="day-card">
             <div class="day-header">
-              <div class="day-date" style="color:var(--italy-green);">1/2 (六) Day 15：米蘭最後採買 ➔ 馬爾彭薩機場搭機平安賦歸</div>
+              <div class="day-date" style="color:var(--italy-green);">1/2(六)-1/3(日) Day 13：羅馬採買 ➔ FCO 機場搭乘土航 TK1866 (18:20起飛) ➔ 1/3 17:40 抵台</div>
               <span class="day-tag tag-italy">平安賦歸</span>
             </div>
             <div class="day-body">
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">09:30 - 12:00</span><span class="duration-badge">最後採買</span>
-                <div class="item-title">文藝復興百貨 (Rinascente) ＆ 伴手禮最後衝刺</div>
-                <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>義大利頂級 Amedei 頂級巧克力（世界第一黑巧克力）</strong>、帕馬森乾酪（Parmigiano Reggiano 真空塊）、檸檬酒（Limoncello）、頂級初榨橄欖油。</div>
+                <span class="time-slot slot-italy">09:30 - 14:00</span><span class="duration-badge">最後採買</span>
+                <div class="item-title">羅馬老城區最後巡禮 ＆ 伴手禮最後衝刺</div>
+                <div class="tactical-box box-gift"><span class="tactical-label">🎁 必買伴手禮/紀念小物：</span><strong>金杯女王咖啡豆、義大利 Amedei 頂級巧克力、帕馬森乾酪（Parmigiano Reggiano 真空塊）、檸檬酒（Limoncello）</strong>。</div>
               </div>
 
               <div class="timeline-item">
                 <div class="timeline-dot dot-italy"></div>
-                <span class="time-slot slot-italy">13:00 - 16:00</span><span class="duration-badge">返程退稅</span>
-                <div class="item-title">米蘭中央車站搭 Malpensa Express 機場快線直達機場退稅搭機</div>
-                <div class="item-transit">🚆 前往方式：米蘭中央車站搭乘 Malpensa Express 機場特快車，52 分鐘直達米蘭馬爾彭薩機場 (MXP) 第一航廈辦理退稅搭機，圓滿平安返台與返美！</div>
+                <span class="time-slot slot-italy">14:30 - 18:20</span><span class="duration-badge">直達機場退稅</span>
+                <div class="item-title">特米尼搭 Leonardo Express 快線 ➔ 羅馬 FCO 機場辦理退稅登機</div>
+                <div class="item-transit">🚆 前往方式：特米尼站搭乘 Leonardo Express 機場直達快線（32 分鐘直達 FCO 機場），提前 3.5 小時抵達辦理退稅、行李托運與安檢。</div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot dot-italy"></div>
+                <span class="time-slot slot-italy">1/2 18:20 - 1/3 17:40</span><span class="duration-badge">土航高效率返台</span>
+                <div class="item-title">TK1866 (18:20 FCO ➔ 22:30 IST) ➔ 轉機 3h 貴賓室淋浴 ➔ TK24 豪經艙 (01:30 IST ➔ 1/3 17:40 TPE)</div>
+                <div class="item-desc">長程段 TK24 豪經艙享受平躺睡眠，1/3 週日傍晚 17:40 平安返抵台灣，1/4 週一從容上班！</div>
               </div>
             </div>
           </div>
