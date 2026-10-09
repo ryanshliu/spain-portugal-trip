@@ -9,20 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* 吉卜力自然水彩治癒系調色盤 */
-      --ghibli-bg: #f9f6ee;             /* 溫潤手揉羊皮水彩底色 */
-      --ghibli-card: #ffffff;           /* 純淨手帳紙張白 */
-      --ghibli-border: #383026;         /* 溫暖深墨線條 (宮崎駿手稿墨水) */
-      --ghibli-forest: #3d6a49;         /* 龍貓森林苔綠 */
-      --ghibli-forest-light: #e6f0e9;   /* 森林清晨霧光淺綠 */
-      --ghibli-sky: #46799c;            /* 天空之城雲海天青藍 */
-      --ghibli-sky-light: #e7f1f7;      /* 浮島晨曦淺藍 */
-      --ghibli-calcifer: #db5a3a;       /* 卡西法暖橘篝火珊瑚紅 */
-      --ghibli-calcifer-light: #fbeee8; /* 柴火微光暖杏色 */
-      --ghibli-hay: #d4952c;            /* 魔女宅急便麵包麥穗金黃 */
-      --ghibli-hay-light: #fcf4e4;      /* 晨光麥田奶黃色 */
-      --ghibli-text: #2c251e;           /* 炭墨溫潤深色字體 */
-      --ghibli-muted: #796f63;          /* 鉛筆線稿柔和灰褐 */
+      --ghibli-bg: #f9f6ee;
+      --ghibli-card: #ffffff;
+      --ghibli-border: #383026;
+      --ghibli-forest: #3d6a49;
+      --ghibli-forest-light: #e6f0e9;
+      --ghibli-sky: #46799c;
+      --ghibli-sky-light: #e7f1f7;
+      --ghibli-calcifer: #db5a3a;
+      --ghibli-calcifer-light: #fbeee8;
+      --ghibli-hay: #d4952c;
+      --ghibli-hay-light: #fcf4e4;
+      --ghibli-text: #2c251e;
+      --ghibli-muted: #796f63;
       --radius-sm: 12px;
       --radius-md: 20px;
       --radius-lg: 26px;
@@ -51,7 +50,6 @@
       background: transparent;
     }
 
-    /* 頂部吉卜力繪本童話標題 */
     .top-meta {
       text-align: center;
       margin-bottom: 16px;
@@ -70,12 +68,11 @@
       gap: 6px;
     }
 
-    /* 頂部導航膠囊列 */
     .nav-bar {
       display: flex;
       justify-content: center;
       gap: 8px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       background: #ffffff;
       padding: 8px;
       border-radius: 999px;
@@ -85,8 +82,8 @@
     .nav-pill {
       flex: 1;
       text-align: center;
-      padding: 10px 14px;
-      font-size: 0.94rem;
+      padding: 10px 12px;
+      font-size: 0.92rem;
       font-weight: 900;
       color: var(--ghibli-muted);
       border-radius: 999px;
@@ -103,14 +100,13 @@
       box-shadow: 2px 2px 0px var(--ghibli-border);
     }
 
-    /* 日期小火車鐵軌選擇軸 */
     .rail-timeline {
       background: #ffffff;
       border: 2.5px solid var(--ghibli-border);
       border-radius: var(--radius-lg);
-      padding: 20px 14px 16px;
+      padding: 18px 14px 14px;
       box-shadow: var(--shadow-ghibli);
-      margin-bottom: 26px;
+      margin-bottom: 18px;
       overflow-x: auto;
     }
     .rail-timeline::-webkit-scrollbar { height: 6px; }
@@ -121,7 +117,7 @@
       align-items: center;
       min-width: 680px;
       position: relative;
-      padding: 12px 0;
+      padding: 10px 0;
     }
     .track-line {
       position: absolute;
@@ -181,14 +177,47 @@
       border: 1.5px solid var(--ghibli-border);
     }
 
-    /* 單日手帳 Header 橫幅 */
+    .day-stepper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      background: #fdfaf4;
+      padding: 8px 14px;
+      border-radius: 16px;
+      border: 2px solid var(--ghibli-border);
+      box-shadow: 2px 2px 0px var(--ghibli-border);
+    }
+    .stepper-btn {
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.86rem;
+      font-weight: 900;
+      cursor: pointer;
+      border: 1.5px solid var(--ghibli-border);
+      background: #ffffff;
+      color: var(--ghibli-text);
+      box-shadow: 1px 1px 0px var(--ghibli-border);
+      transition: all 0.15s;
+    }
+    .stepper-btn:hover { background: var(--ghibli-hay-light); transform: translate(-1px, -1px); }
+    .stepper-label {
+      font-weight: 900;
+      font-size: 0.95rem;
+      color: var(--ghibli-forest);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     .day-banner {
       background: var(--ghibli-forest-light);
       border: 2.5px solid var(--ghibli-border);
       border-radius: var(--radius-lg);
       padding: 18px 22px;
       box-shadow: var(--shadow-ghibli);
-      margin-bottom: 26px;
+      margin-bottom: 22px;
       display: flex;
       align-items: center;
       gap: 18px;
@@ -215,7 +244,7 @@
       margin-bottom: 2px;
     }
     .day-title-wrap h2 {
-      font-size: 1.32rem;
+      font-size: 1.3rem;
       font-weight: 900;
       color: var(--ghibli-text);
       line-height: 1.35;
@@ -227,7 +256,38 @@
       margin-top: 3px;
     }
 
-    /* 垂直時間軌道 */
+    .day-strategy-card {
+      background: #ffffff;
+      border: 2px solid var(--ghibli-border);
+      border-radius: 16px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-ghibli);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .strategy-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+    .strategy-badge {
+      font-size: 0.76rem;
+      font-weight: 900;
+      padding: 2px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      border: 1.5px solid var(--ghibli-border);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .badge-summary { background: #eaf3ec; color: #1c4826; }
+    .badge-luggage { background: #fbf3e2; color: #78480d; }
+    .badge-nextday { background: #fbeee8; color: #9c3319; }
+
     .timeline-container {
       position: relative;
       padding-left: 20px;
@@ -269,7 +329,6 @@
       z-index: 2;
     }
 
-    /* 雙出發視窗切換按鈕 */
     .flight-mode-switch {
       display: flex;
       gap: 8px;
@@ -293,7 +352,6 @@
       color: #ffffff;
     }
 
-    /* 景點間抵達方式箭頭指示膠囊 */
     .transit-connector {
       display: flex;
       align-items: center;
@@ -320,7 +378,6 @@
       font-size: 1rem;
     }
 
-    /* Schedule Content Box (手帳主卡片) */
     .schedule-box {
       flex: 1;
       background: #ffffff;
@@ -367,7 +424,6 @@
       margin-top: 6px;
     }
 
-    /* 戰術標籤 */
     .tactical-list {
       display: flex;
       flex-direction: column;
@@ -419,7 +475,6 @@
       border-color: #a81c1c;
     }
 
-    /* 專用獨立卡片 */
     .notion-card {
       background: #ffffff;
       border: 2.5px solid var(--ghibli-border);
@@ -474,7 +529,6 @@
 <body>
 
   <div class="planner-frame">
-    <!-- 頂部手帳繪本標記 -->
     <div class="top-meta">
       <span>🌿 義大利 14 天文藝聖誕與米蘭跨年手帳 ｜ 2026.12.22 - 2027.01.05</span>
     </div>
@@ -482,15 +536,186 @@
     <!-- 頂部膠囊導航列 -->
     <div class="nav-bar">
       <button class="nav-pill" onclick="switchMainSection('flights', this)">✈️ 航班</button>
+      <button class="nav-pill" onclick="switchMainSection('overview', this)">🗺️ 總覽</button>
       <button class="nav-pill active" onclick="switchMainSection('schedule', this)">📅 行程</button>
       <button class="nav-pill" onclick="switchMainSection('trains', this)">🚅 高鐵</button>
       <button class="nav-pill" onclick="switchMainSection('hotels', this)">🏨 住宿</button>
       <button class="nav-pill" onclick="switchMainSection('tips', this)">💡 準備</button>
     </div>
 
+    <!-- ==================== MAIN SECTION: OVERVIEW (總覽與天氣) ==================== -->
+    <div id="sec-overview" class="main-sec" style="display:none;">
+      <div class="notion-card" style="border-left: 6px solid var(--ghibli-forest);">
+        <h3>🌿 義大利 14 天總行程計畫架構 ＆ 核心戰略</h3>
+        <p>
+          • <strong>雙向會師・零回頭路：</strong>台灣 (華航 TPE 直飛) 與美國佛州 (達美 JAX 經 ATL) 於 12/23 早晨在羅馬 FCO 航廈<strong>僅相差 1 小時會師</strong>！回程 01/04 於米蘭 MXP 同步起飛，<strong>全線搭乘高鐵一路向北推進，省下 600 公里倒退拉車</strong>！<br>
+          • <strong>雙重世紀節慶無縫同享：</strong>12/24～12/25 停留羅馬梵蒂岡感受全世界天主教核心的<strong>教宗聖誕祝福 (Urbi et Orbi) ＆ 平安夜巨型聖誕樹點燈</strong>；12/31 剛好推進至米蘭，在米蘭大教堂廣場萬人歡呼倒數與煙火中迎接 2027 年！<br>
+          • <strong>黃金四城文藝串聯：</strong>羅馬 (帝國遺跡 3晚) ➔ 佛羅倫斯 (文藝復興之巔 3晚) ➔ 威尼斯 (浪漫水都 2晚) ➔ 米蘭 ＆ 阿爾卑斯科莫湖 (時尚跨年 4晚連住不換房)。
+        </p>
+      </div>
+
+      <!-- 14 天完整行程摘要快查一覽表 (Summary Matrix) -->
+      <div class="notion-card">
+        <h3>📋 14 天每日摘要快查矩陣表 (Day-by-Day Summary)</h3>
+        <div style="overflow-x:auto;">
+          <table class="phrase-table" style="min-width:620px;">
+            <thead>
+              <tr style="background:var(--ghibli-bg);">
+                <th style="width:75px;">天數/日期</th>
+                <th style="width:75px;">城市/段落</th>
+                <th>當日核心遊程摘要</th>
+                <th style="width:110px;">城際高鐵/交通</th>
+                <th style="width:130px;">當晚住宿</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>D0</strong> 12/22 (二)</td>
+                <td>跨洋啟航</td>
+                <td>TPE 23:25 華航直飛起飛 / JAX 13:39 達美跨大西洋起飛</td>
+                <td>✈️ 跨洋長途班機</td>
+                <td>夜宿機上</td>
+              </tr>
+              <tr>
+                <td><strong>D1</strong> 12/23 (三)</td>
+                <td>🇮🇹 羅馬</td>
+                <td>08:30 FCO會師 ➔ 萬神殿天窗 ➔ 許願池拋硬幣 ➔ 金杯咖啡</td>
+                <td>🚆 Leonardo 32m</td>
+                <td>特米尼旁 Republic 公寓</td>
+              </tr>
+              <tr>
+                <td><strong>D2</strong> 12/24 (四)</td>
+                <td>🇮🇹 羅馬</td>
+                <td>羅馬競技場地下層 ➔ 古羅馬廣場 ➔ 聖伯多祿廣場點燈 ➔ 自炊平安夜</td>
+                <td>🚶‍♂️ 步行 / 滑板車</td>
+                <td>特米尼旁 Republic 公寓</td>
+              </tr>
+              <tr>
+                <td><strong>D3</strong> 12/25 (五)</td>
+                <td>🇮🇹 梵蒂岡</td>
+                <td>聖伯多祿大殿教宗聖誕祝禱 (Urbi et Orbi) ➔ 聖天使堡台伯河夕陽</td>
+                <td>🚶‍♂️ 步行 / Uber</td>
+                <td>特米尼旁 Republic 公寓</td>
+              </tr>
+              <tr>
+                <td><strong>D4</strong> 12/26 (六)</td>
+                <td>🇮🇹 佛羅倫斯</td>
+                <td>西班牙階梯 ➔ Italo 高鐵直奔佛羅倫斯 ➔ 領主廣場 ➔ Gilli 提拉米蘇</td>
+                <td>🚅 Italo 高鐵 1.5h</td>
+                <td>百花教堂正對面 Gamba 公寓</td>
+              </tr>
+              <tr>
+                <td><strong>D5</strong> 12/27 (日)</td>
+                <td>🇮🇹 佛羅倫斯</td>
+                <td>聖母百花大教堂 (喬托鐘樓 414階登頂) ➔ 烏菲茲名畫 ➔ 慢燉牛肚包</td>
+                <td>🚶‍♂️ 古城漫步</td>
+                <td>百花教堂正對面 Gamba 公寓</td>
+              </tr>
+              <tr>
+                <td><strong>D6</strong> 12/28 (一)</td>
+                <td>🇮🇹 比薩/托斯卡尼</td>
+                <td>比薩斜塔趣味推塔 ➔ 學院美術館《大衛像》 ➔ Il Latini 1.2kg 丁骨牛排</td>
+                <td>🚆 區間火車 50m</td>
+                <td>百花教堂正對面 Gamba 公寓</td>
+              </tr>
+              <tr>
+                <td><strong>D7</strong> 12/29 (二)</td>
+                <td>🇮🇹 威尼斯</td>
+                <td>Italo 高鐵直達水都 ➔ 聖馬可金箔大教堂 ➔ 花神咖啡 ➔ 貢多拉夜遊</td>
+                <td>🚅 Italo 高鐵 2h</td>
+                <td>里亞托橋旁 Prestige 公寓</td>
+              </tr>
+              <tr>
+                <td><strong>D8</strong> 12/30 (三)</td>
+                <td>🇮🇹 威尼斯</td>
+                <td>水上巴士探訪彩色島 (Burano) ➔ 炸海鮮 ➔ 總督宮 ＆ 歎息橋</td>
+                <td>🚤 ACTV 水上巴士</td>
+                <td>里亞托橋旁 Prestige 公寓</td>
+              </tr>
+              <tr>
+                <td><strong>D9</strong> 12/31 (四)</td>
+                <td>🇮🇹 米蘭</td>
+                <td>高鐵直奔米蘭 ➔ 艾曼紐二世迴廊公牛踩轉 ➔ 大教堂廣場萬人跨年煙火</td>
+                <td>🚅 Italo 高鐵 2.5h</td>
+                <td>大教堂旁 Duomo 公寓 (連住4晚)</td>
+              </tr>
+              <tr>
+                <td><strong>D10</strong> 01/01 (五)</td>
+                <td>🇮🇹 米蘭</td>
+                <td>哥德奇蹟・米蘭大教堂 135 尖塔天台 ➔ Trattoria 金黃米蘭炸牛排</td>
+                <td>🚶‍♂️ 步行 / 地鐵</td>
+                <td>大教堂旁 Duomo 公寓 (連住4晚)</td>
+              </tr>
+              <tr>
+                <td><strong>D11</strong> 01/02 (六)</td>
+                <td>🇮🇹 科莫湖</td>
+                <td>阿爾卑斯湖光一日遊：瓦倫納 ＆ 貝拉焦渡輪漫遊 ➔ 傍晚返回米蘭</td>
+                <td>🚆 火車 1h ＋ 渡輪</td>
+                <td>大教堂旁 Duomo 公寓 (連住4晚)</td>
+              </tr>
+              <tr>
+                <td><strong>D12</strong> 01/03 (日)</td>
+                <td>🇮🇹 米蘭</td>
+                <td>感恩聖母堂朝聖達文西《最後的晚餐》 ➔ 蒙特拿破崙最後採買退稅整理</td>
+                <td>🚇 地鐵 / 步行</td>
+                <td>大教堂旁 Duomo 公寓 (連住4晚)</td>
+              </tr>
+              <tr>
+                <td><strong>D13</strong> 01/04 (一)</td>
+                <td>🇮🇹 返航日</td>
+                <td>提早 3.5h 抵達 MXP 機場避開安檢長龍 ➔ 長榮 BR 96 (11:00) 直飛返台</td>
+                <td>🚆 機場快線 52m</td>
+                <td>夜宿機上 / JAX返家</td>
+              </tr>
+              <tr>
+                <td><strong>D14</strong> 01/05 (二)</td>
+                <td>🇹🇼 抵台</td>
+                <td>清晨 06:10 長榮班機順暢降落台北桃園機場 (TPE)，圓滿凱旋！</td>
+                <td>-</td>
+                <td>溫暖的家</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 冬季平均溫 ＆ 天氣與穿著警報 (Weather & Packing Guide) -->
+      <div class="notion-card" style="border-left: 6px solid var(--ghibli-sky);">
+        <h3>⛅ 義大利各城市冬日氣溫快查 ＆ 穿搭保暖指南 (12月~1月)</h3>
+        <p style="margin-bottom:14px;">義大利冬季由南向北氣溫逐漸遞減，加上沿海海風與室內暖氣強勁，<strong>「洋蔥式多層次穿搭」</strong>是絕對法則！</p>
+        
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:14px;">
+          <div class="tip-capsule tip-photo">
+            <strong>🏛️ 羅馬 (Roma) ｜ 平均溫 4°C ~ 14°C</strong><br>
+            • <strong>氣候特性：</strong>地中海氣候，白天出太陽時高溫可達 14°C，體感涼爽舒適；入夜太陽下山後急降至 4°C~6°C，日夜溫差逾 10 度。<br>
+            • <strong>穿著建議：</strong>長袖上衣＋防風風衣或輕中度羊毛大衣，早晚備保暖圍巾即可應對。
+          </div>
+          <div class="tip-capsule tip-food">
+            <strong>⚜️ 佛羅倫斯 (Firenze) ｜ 平均溫 2°C ~ 11°C</strong><br>
+            • <strong>氣候特性：</strong>托斯卡尼內陸盆地，早晚有晨霧與濕氣，氣溫比羅馬顯著降低約 3~4 度。登上鐘樓或米開朗基羅廣場迎風處體感較凍。<br>
+            • <strong>穿著建議：</strong>保暖毛衣＋厚大衣或輕羽絨，登頂鐘樓必須備毛帽手套。
+          </div>
+          <div class="tip-capsule tip-must">
+            <strong>🛶 威尼斯 (Venezia) ｜ 平均溫 1°C ~ 8°C (體感濕冷 0°C)</strong><br>
+            • <strong>氣候特性：</strong>潟湖水都四周環水，<strong>海風夾帶水氣「體感溫度極度凍骨」</strong>！偶有冬季海潮漲水（Acqua Alta），搭水上巴士航行迎風刺骨。<br>
+            • <strong>穿著建議：</strong>發熱衣必穿！<strong>防風防水保暖連帽外套</strong>＋圍巾＋手套，鞋子選防滑防水好走鞋。
+          </div>
+          <div class="tip-capsule tip-avoid">
+            <strong>❄️ 米蘭 ＆ 科莫湖 ｜ 平均溫 -1°C ~ 7°C (近冰點)</strong><br>
+            • <strong>氣候特性：</strong>義大利最北端、背倚阿爾卑斯山脈，常有冬霧（Nebbia）且氣溫接近零度。<strong>12/31 跨年夜在廣場站立 2~3 小時極度寒冷</strong>。<br>
+            • <strong>穿著建議：</strong>發熱衣褲＋羽絨長大衣＋<strong>身上貼暖暖包（足底暖暖包超好用）</strong>！科莫湖搭船務必戴保暖耳罩或厚毛帽。
+          </div>
+        </div>
+
+        <div class="tip-capsule tip-booking" style="margin-top:14px;">
+          🧥 <strong>室內室外切換大避雷：</strong>義大利室內、餐廳、高鐵車廂與博物館<strong>暖氣均開至 22°C~25°C 極為溫熱</strong>！裡層請穿好穿脫的打底毛衣，切勿穿「單件無法脫掉的極厚重高領」，以免室內滿身大汗、室外吹風感冒！
+        </div>
+      </div>
+    </div>
+
     <!-- ==================== MAIN SECTION: SCHEDULE (行程) ==================== -->
     <div id="sec-schedule" class="main-sec">
-      <!-- 日期小火車時間軸 -->
+      <!-- 醒目的日期小火車鐵軌切換軸 (永遠置頂) -->
       <div class="rail-timeline">
         <div class="track-wrapper">
           <div class="track-line"></div>
@@ -582,16 +807,39 @@
         </div>
       </div>
 
+      <!-- 雙向快捷跳日切換條 (支援點擊上一天/下一天) -->
+      <div class="day-stepper">
+        <button class="stepper-btn" onclick="stepDay(-1)">⬅️ 前一天</button>
+        <div class="stepper-label" id="current-day-label">📍 Day 1 ｜ 12/23 (週三) 羅馬大會師</div>
+        <button class="stepper-btn" onclick="stepDay(1)">後一天 ➡️</button>
+      </div>
+
       <!-- DAY 0: 12/22 (啟航日) - 雙出發視窗 -->
       <div id="day-view-0" class="day-view" style="display:none;">
         <div class="day-banner" style="background:var(--ghibli-sky-light);">
           <div class="day-icon-box">🛫</div>
           <div class="day-title-wrap">
-            <h3 style="color:var(--ghibli-sky);">Day 0 ｜ 12/22 (週二)</h3>
+            <h3 style="color:var(--ghibli-sky);">Day 0 ｜ 12/22 (週二) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-sky); margin-left:6px;">✈️ 長程機艙防乾燥保溫</span></h3>
             <h2>雙向跨洋啟程・台北 ＆ 佛州飛往羅馬</h2>
             <p>機上過夜 ｜ 華航直飛 ＆ 達美轉亞特蘭大跨大西洋</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>台灣組深夜由桃園直飛羅馬；佛州組午後由傑克遜維爾經亞特蘭大轉機跨大西洋，夜宿機上調時差。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div>大行李隨機託運（直掛羅馬 FCO），隨身小包備齊護照原件、保濕品、降噪耳機、頸枕與歐洲網卡 eSIM。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div>明日一早 08:30 兩路人馬於羅馬 FCO 航廈大廳碰頭！下機後持台灣晶片護照<strong>走 E-Gates 自動通關（30秒極速出關）</strong>！</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -642,9 +890,24 @@
         <div class="day-banner">
           <div class="day-icon-box">🏛️</div>
           <div class="day-title-wrap">
-            <h3>Day 1 ｜ 12/23 (週三)</h3>
+            <h3>Day 1 ｜ 12/23 (週三) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-forest); margin-left:6px;">⛅ 羅馬 5°C ~ 14°C (涼爽微寒)</span></h3>
             <h2>羅馬大會師 ＆ 萬神殿天窗 ＆ 許願池漫步</h2>
             <p>住 The Republic Apartments (特米尼中央火車站旁)</p>
+          </div>
+        </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>機場快線直達市區！下午慢遊特雷維許願池、萬神殿天窗，品嚐金杯咖啡碎冰沙，傍晚逛納沃納廣場聖誕市集。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>抵達後直奔公寓放行李，絕不拖上街！</strong>Leonardo Express 下車後，步行 4 分鐘即可進特米尼公寓辦理 Check-in / 寄存大行李。市區行程<strong>全程輕裝出發（隨身小斜背包）</strong>，省力又防扒！</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日是平安夜 (12/24)！</strong>全羅馬超市與餐廳 18:00 前提早關門！<strong>下午逛完古城請順路在特米尼站 Conad 超市買齊平安夜晚餐牛排食材與水果麵包</strong>！</div>
           </div>
         </div>
 
@@ -656,17 +919,17 @@
             <div class="time-tag-col">08:30</div>
             <div class="time-node"></div>
             <div class="schedule-box">
-              <div class="box-header"><span class="badge-kind train">🚆 接駁會師</span><div class="box-title">羅馬 FCO 機場大會師 ➔ Leonardo 快線直達公寓</div></div>
+              <div class="box-header"><span class="badge-kind train">🚆 接駁會師</span><div class="box-title">羅馬 FCO 機場大會師 ➔ Leonardo 快線直達公寓安置行李</div></div>
               <div class="box-desc">華航（07:05抵達）與達美（08:15抵達）順利碰頭！持台灣晶片護照直接走 <strong>E-Gates 電子自動通關閘門</strong>（掃描護照看鏡頭，30秒極速出關）。出關後步行至機場火車站搭乘 Leonardo Express 機場直達快線（32 分鐘直達 Roma Termini，每 15 分一班，票價 €14），出站步行 4 分鐘入住公寓卸下行李休整！</div>
               <div class="tactical-list">
-                <div class="tip-capsule tip-must">🌟 <strong>零長途趕車壓力：</strong>機場快線不限車次隨到隨上，抵達首日直接進市區公寓洗漱休息，喝杯咖啡驅散飛行疲憊！</div>
+                <div class="tip-capsule tip-must">🌟 <strong>零長途趕車壓力：</strong>機場快線不限車次隨到隨上，抵達首日直接進市區公寓洗漱休息，喝杯咖啡驅散飛行疲憊！大行李安置在房間內，輕鬆出門。</div>
               </div>
             </div>
           </div>
 
           <!-- Transit Connector 1 -> 2 -->
           <div class="transit-connector">
-            <div class="transit-pill"><span class="arrow">⬇️</span> 🚶‍♂️ 步行 18 分鐘 / 🛴 共享滑板車 8 分鐘 (沿民族街 Via Nazionale 直達)</div>
+            <div class="transit-pill"><span class="arrow">⬇️</span> 🚶‍♂️ 步行 18 分鐘 / 🛴 共享滑板車 8 分鐘 (輕裝沿民族街直達)</div>
           </div>
 
           <!-- Item 2 -->
@@ -751,11 +1014,27 @@
         <div class="day-banner" style="background:var(--ghibli-calcifer-light);">
           <div class="day-icon-box">🎄</div>
           <div class="day-title-wrap">
-            <h3 style="color:var(--ghibli-calcifer);">Day 2 ｜ 12/24 (週四 平安夜)</h3>
+            <h3 style="color:var(--ghibli-calcifer);">Day 2 ｜ 12/24 (週四 平安夜) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-calcifer); margin-left:6px;">⛅ 羅馬 4°C ~ 13°C (平安夜戶外轉涼)</span></h3>
             <h2>競技場地下層 ＆ 聖伯多祿廣場聖誕樹點燈</h2>
             <p>住 The Republic Apartments (特米尼站旁)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>深入競技場地下層神鬼戰士機關通道，午後訪古羅馬帝國心臟，黃昏至梵蒂岡看巨型聖誕樹點燈，回公寓過平安夜。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>行李安穩留在羅馬公寓內！</strong>今日景點嚴禁大件行李（競技場禁止隨身大背包），只攜帶隨身小包、護照正本與相機出發。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日是聖誕節 (12/25)！</strong>中午 12:00 教宗祝禱人潮洶湧，<strong>上午 10:00 前必須抵達梵蒂岡聖伯多祿廣場排隊過安檢卡位</strong>！</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -818,11 +1097,27 @@
         <div class="day-banner" style="background:var(--ghibli-sky-light);">
           <div class="day-icon-box">🕊️</div>
           <div class="day-title-wrap">
-            <h3 style="color:var(--ghibli-sky);">Day 3 ｜ 12/25 (週五 聖誕節)</h3>
+            <h3 style="color:var(--ghibli-sky);">Day 3 ｜ 12/25 (週五 聖誕節) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-sky); margin-left:6px;">⛅ 羅馬 4°C ~ 13°C (廣場久站需圍巾)</span></h3>
             <h2>教宗聖誕祝福 Urbi et Orbi ＆ 聖天使堡夕陽</h2>
             <p>住 The Republic Apartments (特米尼站旁)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>一生一次在聖伯多祿廣場聆聽教宗聖誕祝禱，下午漫步聖天使堡與聖天使橋，欣賞台伯河金色落日。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>行李全日留置羅馬公寓內！</strong>聖伯多祿廣場有嚴格反恐安檢，禁止大型包包、保溫瓶金屬罐與折疊傘尖物，輕裝出門最快通關。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日 (12/26) 搭 Italo 高鐵轉移至佛羅倫斯！</strong>上午打包行李退房，<strong>高鐵票提前在 App 存入 Apple Wallet</strong>，出發前 30 分鐘抵達特米尼月台看螢幕大字。</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -866,11 +1161,30 @@
         <div class="day-banner">
           <div class="day-icon-box">🚅</div>
           <div class="day-title-wrap">
-            <h3>Day 4 ｜ 12/26 (週六)</h3>
+            <h3>Day 4 ｜ 12/26 (週六) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-forest); margin-left:6px;">🍂 佛羅倫斯 3°C ~ 11°C (內陸早晚偏冷)</span></h3>
             <h2>西班牙階梯 ➔ Italo 法拉利高鐵直奔佛羅倫斯</h2>
             <p>住 Palazzo Gamba (聖母百花大教堂正對面)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>早晨漫步西班牙階梯，中午搭法拉利高鐵 1.5h 直達佛羅倫斯，下午入住百花大教堂景觀公寓，漫步領主廣場。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>行李移動關鍵日！</strong><br>
+            1. 早晨退房後大行李寄放在特米尼公寓前台，輕裝去西班牙階梯。<br>
+            2. 12:00 回公寓拿行李步行 4 分鐘進特米尼車站上高鐵。<br>
+            3. 14:15 抵達佛羅倫斯 SMN 車站，出站拉行李步行 7 分鐘<strong>直奔百花教堂旁 Palazzo Gamba 公寓 Check-in 放行李</strong>，放好後全身輕鬆漫步古城！</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日登頂聖母百花大教堂鐘樓！</strong>Brunelleschi Pass 請提前確認登頂預約時間，需攀爬 414 階窄階梯，穿最舒適好走的球鞋！</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -889,7 +1203,7 @@
 
           <!-- Transit Connector 1 -> 2 -->
           <div class="transit-connector">
-            <div class="transit-pill"><span class="arrow">⬇️</span> 🚶‍♂️ 步行回特米尼中央車站 ➔ 登上 Italo 高鐵 1h 36m 飛馳至佛羅倫斯 SMN</div>
+            <div class="transit-pill"><span class="arrow">⬇️</span> 🚶‍♂️ 回公寓取行李 ➔ 步行 4 分鐘進特米尼站 ➔ 搭 Italo 高鐵 1h 36m 飛馳至佛羅倫斯</div>
           </div>
 
           <!-- Item 2 -->
@@ -930,11 +1244,27 @@
         <div class="day-banner">
           <div class="day-icon-box">🎨</div>
           <div class="day-title-wrap">
-            <h3>Day 5 ｜ 12/27 (週日)</h3>
+            <h3>Day 5 ｜ 12/27 (週日) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-forest); margin-left:6px;">🍂 佛羅倫斯 2°C ~ 11°C (登頂迎風備手套)</span></h3>
             <h2>百花大教堂穹頂神蹟 ＆ 烏菲茲美術館美第奇寶藏</h2>
             <p>住 Palazzo Gamba (聖母百花大教堂正對面)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>登頂喬托鐘樓俯瞰翡冷翠紅磚圓頂，午餐大啖中央市場慢燉牛肚包，下午沉浸烏菲茲美術館美第奇寶藏。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>行李留置百花教堂 Gamba 公寓內！</strong>全日步行範圍都在 500～800 公尺之內，累了隨時能回房間放戰利品或喝水休息。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日 (12/28) 比薩斜塔一日遊＋大牛排晚宴！</strong>早上搭區間車去比薩，<strong>大行李安穩留在佛羅倫斯，輕裝搭車即可</strong>！晚上 Il Latini 記得準時赴約。</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -986,11 +1316,27 @@
         <div class="day-banner">
           <div class="day-icon-box">🥩</div>
           <div class="day-title-wrap">
-            <h3>Day 6 ｜ 12/28 (週一)</h3>
+            <h3>Day 6 ｜ 12/28 (週一) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-forest); margin-left:6px;">🍂 佛羅倫斯/比薩 3°C ~ 11°C (草坪開闊防風)</span></h3>
             <h2>比薩斜塔趣味拍照 ＆ 大衛像 ＆ 1.2kg 丁骨牛排</h2>
             <p>住 Palazzo Gamba (聖母百花大教堂正對面)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>火車 50m 往返比薩拍攝創意推塔照，下午參觀學院美術館《大衛像》真品，傍晚米開朗基羅廣場看夕陽，晚宴享用 Il Latini 巨無霸牛排。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>往返比薩絕不帶行李！</strong>今日為單日短途往返，大行李安穩存放在佛羅倫斯公寓房間內。只帶斜背包（裝手機、護照、水壺）搭火車，進出比薩火車站極其俐落。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日 (12/29) 前往水都威尼斯！</strong>水上都市拱橋多，<strong>抵達威尼斯請搭乘 ACTV 水上巴士直達里亞托橋（下船步行 2 分鐘進公寓免爬橋）</strong>！</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -1057,11 +1403,28 @@
         <div class="day-banner">
           <div class="day-icon-box">🛶</div>
           <div class="day-title-wrap">
-            <h3>Day 7 ｜ 12/29 (週二)</h3>
+            <h3>Day 7 ｜ 12/29 (週二) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-sky); margin-left:6px;">🌊 威尼斯 1°C ~ 8°C (海風濕冷體感0°C)</span></h3>
             <h2>高鐵直奔威尼斯 ＆ 聖馬可金箔大教堂 ＆ 貢多拉</h2>
             <p>住 Rialto Prestige Apartments (里亞托橋旁免爬階)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>Italo 高鐵 2h 跨過海上長堤抵達威尼斯，搭水上巴士入住里亞托橋公寓，下午參觀聖馬可金碧輝煌大教堂，傍晚體驗貢多拉水巷夜遊。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>威尼斯免扛行李密技！</strong><br>
+            威尼斯島上石橋極多、拉輪子大箱過橋是惡夢！抵達 Santa Lucia 站後，<strong>在站前碼頭直接買 ACTV 水上巴士票搭船到「Rialto 站」下船，步行 2 分鐘直達公寓（全程免跨河大拱橋）</strong>安置大行李！</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日 (12/30) 彩色島 (Burano) 搭船海風強烈！</strong>航程約 40 分鐘，必須穿戴毛帽、防風連帽大衣，防海風吹頭受寒。</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -1108,11 +1471,27 @@
         <div class="day-banner">
           <div class="day-icon-box">🌈</div>
           <div class="day-title-wrap">
-            <h3>Day 8 ｜ 12/30 (週三)</h3>
+            <h3>Day 8 ｜ 12/30 (週三) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-sky); margin-left:6px;">🌊 彩色島 1°C ~ 8°C (搭船航行防風帽)</span></h3>
             <h2>童話彩色島 (Burano) ＆ 總督宮歎息橋 ＆ 玻璃工藝</h2>
             <p>住 Rialto Prestige Apartments (里亞托橋旁)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>探訪如七彩調色盤的彩色島 (Burano)，品嚐外酥內嫩炸海鮮拼盤，午後參觀威尼斯總督宮與歷史歎息橋。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>行李留置里亞托公寓內！</strong>去彩色島只需帶相機與保暖小包搭水上巴士，島上純步行拍照，無任何行李負擔。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日 (12/31) 前往米蘭跨年！</strong>高鐵直奔米蘭中央站，<strong>入住米蘭大教堂旁公寓連住 4 晚（之後都不用再搬家搬行李了）</strong>！跨年夜戶外寒冷，暖暖包提前準備。</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -1152,11 +1531,28 @@
         <div class="day-banner" style="background:var(--ghibli-calcifer-light);">
           <div class="day-icon-box">🎆</div>
           <div class="day-title-wrap">
-            <h3 style="color:var(--ghibli-calcifer);">Day 9 ｜ 12/31 (週四 跨年夜)</h3>
+            <h3 style="color:var(--ghibli-calcifer);">Day 9 ｜ 12/31 (週四 跨年夜) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-calcifer); margin-left:6px;">❄️ 米蘭 0°C ~ 7°C (跨年夜近冰點・貼暖暖包)</span></h3>
             <h2>高鐵直奔米蘭 ＆ 大教堂廣場萬人跨年盛典</h2>
             <p>住 Duomo Cathedral Apartments (米蘭大教堂旁連住4晚)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>Italo 高鐵 2.5h 抵達米蘭，午後踩艾曼紐二世迴廊公牛求好運，夜晚在大教堂廣場萬人音樂會與璀璨煙火中倒數迎接 2027 年！</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>抵達米蘭後連住 4 晚，行李全面解鎖！</strong><br>
+            威尼斯退房搭水上巴士至車站上高鐵。抵達米蘭中央站後搭地鐵 3 號線直達 Duomo 站，<strong>入住米蘭大教堂旁公寓連住 4 晚，行李箱一次性攤開不用再打包</strong>！跨年夜散場步行 3 分鐘直接回房！</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日是元旦 (01/01)！</strong>米蘭大教堂預約上午電梯登頂天台，大理石刺繡天台迎風刺骨，羽絨大衣、圍巾穿戴暖和。</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -1192,11 +1588,27 @@
         <div class="day-banner">
           <div class="day-icon-box">👑</div>
           <div class="day-title-wrap">
-            <h3>Day 10 ｜ 01/01 (週五 元旦)</h3>
+            <h3>Day 10 ｜ 01/01 (週五 元旦) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-forest); margin-left:6px;">❄️ 米蘭 -1°C ~ 7°C (大理石天台寒凍)</span></h3>
             <h2>米蘭大教堂 135 座大理石尖塔天台 ＆ 元旦午宴</h2>
             <p>住 Duomo Cathedral Apartments (米蘭大教堂旁)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>新年的第一天登上米蘭大教堂 135 座尖塔大理石森林，午餐在 Trattoria Milanese 享用金黃炸牛排與番紅花燉飯歡慶 2027。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>行李留置米蘭大教堂公寓內！</strong>連住期間無需整理行李，登天台不能攜帶大型包包與金屬利器，輕裝搭乘電梯登頂。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日 (01/02) 前往阿爾卑斯科莫湖一日遊！</strong>早晨 08:30 從米蘭中央車站搭火車 1h 直達瓦倫納，<strong>只帶隨身保暖裝備，大行李安心留公寓</strong>。</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -1240,11 +1652,27 @@
         <div class="day-banner" style="background:var(--ghibli-sky-light);">
           <div class="day-icon-box">🏔️</div>
           <div class="day-title-wrap">
-            <h3 style="color:var(--ghibli-sky);">Day 11 ｜ 01/02 (週六)</h3>
+            <h3>Day 11 ｜ 01/02 (週六) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-sky); margin-left:6px;">🏔️ 科莫湖 -1°C ~ 6°C (雪山湖風・羽絨厚大衣)</span></h3>
             <h2>阿爾卑斯絕美科莫湖 (Lake Como) 湖光山色一日遊</h2>
             <p>住 Duomo Cathedral Apartments (米蘭大教堂旁)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>火車 1h 前往阿爾卑斯雪山環抱的科莫湖，搭渡輪穿梭瓦倫納與貝拉焦彩色山城，遠離喧囂漫步石板小巷。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>科莫湖一日遊絕不帶大行李！</strong>大行李留置米蘭大教堂公寓內。科莫湖為山城鵝卵石階梯多，攜帶保暖隨身小包搭火車即可，輕盈遊湖！</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>明日 (01/03) 朝聖達文西《最後的晚餐》！</strong>入場核對嚴格實名制，<strong>必須攜帶護照原件查驗姓名</strong>，並提前 20 分鐘抵達感恩聖母堂櫃檯取票。</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -1268,11 +1696,27 @@
         <div class="day-banner">
           <div class="day-icon-box">🎨</div>
           <div class="day-title-wrap">
-            <h3>Day 12 ｜ 01/03 (週日)</h3>
+            <h3>Day 12 ｜ 01/03 (週日) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-forest); margin-left:6px;">❄️ 米蘭 0°C ~ 7°C (洋蔥式穿搭・進店脫外衣)</span></h3>
             <h2>達文西《最後的晚餐》朝聖 ＆ 蒙特拿破崙最後採買</h2>
             <p>住 Duomo Cathedral Apartments (米蘭大教堂旁)</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>朝聖文藝復興千古真跡《最後的晚餐》，午後於蒙特拿破崙大道與文藝復興百貨最後衝刺採買精品與頂級名產。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>行李留置公寓＋晚間打包關鍵！</strong>採買的精品、Amedei 巧克力、起司松露等，晚間在公寓裝箱。<strong>所有液體伴手禮必須託運，不可手提</strong>！並將免稅退稅單據統一集中歸類。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div><strong>🚨 明日 (01/04) 返航日・米蘭機場大塞車警報！</strong>米蘭 MXP 出境安檢海關曾塞車達 3 小時！<strong>明早 06:45 準時出發搭機場快線，07:30~07:45 務必抵達 MXP 機場</strong>！</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -1318,11 +1762,27 @@
         <div class="day-banner" style="background:var(--ghibli-calcifer-light);">
           <div class="day-icon-box">✈️</div>
           <div class="day-title-wrap">
-            <h3 style="color:var(--ghibli-calcifer);">Day 13 ｜ 01/04 (週一)</h3>
+            <h3 style="color:var(--ghibli-calcifer);">Day 13 ｜ 01/04 (週一) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-calcifer); margin-left:6px;">❄️ 米蘭 0°C ~ 6°C (清晨出發保暖防凍)</span></h3>
             <h2>提早 3.5h 抵達 MXP 機場避開安檢海關大排長龍 ➔ 直飛返程</h2>
             <p>平安賦歸航程 ｜ 台灣長榮直飛 ＆ 佛州達美航空</p>
           </div>
         </div>
+
+        <div class="day-strategy-card">
+          <div class="strategy-row">
+            <span class="strategy-badge badge-summary">📝 今日摘要</span>
+            <div>早晨搭 Malpensa 快線直奔機場，辦理 Global Blue / Planet 退稅與大行李托運，雙向啟程飛返台灣與美國。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
+            <div><strong>大行李直接託運直掛返國！</strong>06:45 帶齊所有行李退房搭地鐵轉機場快線。抵達 MXP T1 後，先海關蓋章/電子驗證退稅單，再到長榮/達美櫃檯託運大行李！隨身只留重要證件與貴重精品。</div>
+          </div>
+          <div class="strategy-row">
+            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
+            <div>台灣組長榮 BR 96 於 01/05 清晨 06:10 抵達台北桃園 (TPE)；佛州組達美班機於 01/04 晚間 21:38 抵達傑克遜維爾 (JAX)！</div>
+          </div>
+        </div>
+
         <div class="timeline-container">
           <div class="v-line"></div>
 
@@ -1400,7 +1860,7 @@
         <div class="day-banner">
           <div class="day-icon-box">🏡</div>
           <div class="day-title-wrap">
-            <h3>Day 14 ｜ 01/05 (週二)</h3>
+            <h3>Day 14 ｜ 01/05 (週二) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-forest); margin-left:6px;">🏡 台北 16°C ~ 20°C (平安抵台)</span></h3>
             <h2>清晨 06:10 順利抵達台北桃園 (TPE)・圓滿凱旋</h2>
             <p>平安回到溫暖的家</p>
           </div>
@@ -1421,13 +1881,11 @@
 
     <!-- ==================== MAIN SECTION: FLIGHTS (雙向航班視窗) ==================== -->
     <div id="sec-flights" class="main-sec" style="display:none;">
-      <!-- 雙出發視窗切換按鈕 -->
       <div class="flight-mode-switch">
         <button id="btn-fl-tpe" class="flight-mode-btn active" onclick="switchFlightWindow('tpe')">🇹🇼 台灣出發視窗 (TPE)</button>
         <button id="btn-fl-jax" class="flight-mode-btn" onclick="switchFlightWindow('jax')">🇺🇸 佛州 Jacksonville 視窗 (JAX)</button>
       </div>
 
-      <!-- 台灣視窗內容 -->
       <div id="win-fl-tpe">
         <div class="notion-card" style="border-left: 6px solid var(--ghibli-calcifer);">
           <h3>🇹🇼 台灣組航班配置 (台北 TPE 華航直飛去・長榮直飛回)</h3>
@@ -1445,7 +1903,6 @@
         </div>
       </div>
 
-      <!-- Jacksonville 視窗內容 -->
       <div id="win-fl-jax" style="display:none;">
         <div class="notion-card" style="border-left: 6px solid var(--ghibli-sky);">
           <h3>🇺🇸 Jacksonville 組航班配置 (達美航空 Delta 經亞特蘭大 ATL)</h3>
@@ -1464,7 +1921,6 @@
         </div>
       </div>
 
-      <!-- 通用出入境提醒 -->
       <div class="notion-card">
         <h3>🛃 關鍵提醒：羅馬 30 秒自動通關 ＆ 米蘭提前 3.5h 抵達</h3>
         <p>
@@ -1552,6 +2008,26 @@
   </div>
 
   <script>
+    let currentDayIndex = 1; // 預設展示 Day 1
+
+    const dayTitles = [
+      "📍 Day 0 ｜ 12/22 (週二) 雙向跨洋啟航",
+      "📍 Day 1 ｜ 12/23 (週三) 羅馬大會師 ＆ 許願池",
+      "📍 Day 2 ｜ 12/24 (週四) 羅馬競技場 ＆ 平安夜",
+      "📍 Day 3 ｜ 12/25 (週五) 梵蒂岡聖誕祝禱 ＆ 聖天使堡",
+      "📍 Day 4 ｜ 12/26 (週六) 高鐵飛馳佛羅倫斯",
+      "📍 Day 5 ｜ 12/27 (週日) 百花大教堂 ＆ 烏菲茲",
+      "📍 Day 6 ｜ 12/28 (週一) 比薩斜塔 ＆ 丁骨牛排",
+      "📍 Day 7 ｜ 12/29 (週二) 高鐵奔威尼斯 ＆ 貢多拉",
+      "📍 Day 8 ｜ 12/30 (週三) 童話彩色島 ＆ 歎息橋",
+      "📍 Day 9 ｜ 12/31 (週四) 高鐵奔米蘭 ＆ 大教堂跨年",
+      "📍 Day 10 ｜ 01/01 (週五) 米蘭大教堂天台 ＆ 元旦",
+      "📍 Day 11 ｜ 01/02 (週六) 阿爾卑斯科莫湖一日遊",
+      "📍 Day 12 ｜ 01/03 (週日) 最後的晚餐 ＆ 最後採買",
+      "📍 Day 13 ｜ 01/04 (週一) 提早3.5h抵機場返航",
+      "📍 Day 14 ｜ 01/05 (週二) 抵達台北圓滿凱旋"
+    ];
+
     function switchMainSection(secId, btn) {
       document.querySelectorAll('.main-sec').forEach(s => s.style.display = 'none');
       document.querySelectorAll('.nav-pill').forEach(b => b.classList.remove('active'));
@@ -1564,13 +2040,39 @@
     }
 
     function selectDay(dayNum, stopElem) {
+      currentDayIndex = dayNum;
       document.querySelectorAll('.date-stop').forEach(s => s.classList.remove('active'));
-      stopElem.classList.add('active');
+      if (stopElem) {
+        stopElem.classList.add('active');
+      } else {
+        const stops = document.querySelectorAll('.date-stop');
+        if (stops[dayNum]) stops[dayNum].classList.add('active');
+      }
 
       document.querySelectorAll('.day-view').forEach(v => v.style.display = 'none');
       const targetView = document.getElementById('day-view-' + dayNum);
       if (targetView) {
         targetView.style.display = 'block';
+      }
+
+      // 更新下方快捷切日導航標籤文字
+      const label = document.getElementById('current-day-label');
+      if (label && dayTitles[dayNum]) {
+        label.innerText = dayTitles[dayNum];
+      }
+    }
+
+    // 快捷上一天 / 下一天跳轉
+    function stepDay(offset) {
+      let nextIndex = currentDayIndex + offset;
+      if (nextIndex < 0) nextIndex = 0;
+      if (nextIndex > 14) nextIndex = 14;
+      selectDay(nextIndex, null);
+
+      // 自動讓頂部軌道平滑滾動到對應節點
+      const stops = document.querySelectorAll('.date-stop');
+      if (stops[nextIndex]) {
+        stops[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       }
     }
 
