@@ -3,1493 +3,988 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>義大利 14 天文藝聖誕與米蘭跨年手帳 (吉卜力水彩童話版)</title>
+  <title>義大利 14 天文藝聖誕與威尼斯米蘭跨年手帳 (吉卜力水彩童話版)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ghibli-bg: #f9f6ee;
-      --ghibli-card: #ffffff;
-      --ghibli-border: #383026;
-      --ghibli-forest: #3d6a49;
-      --ghibli-forest-light: #e6f0e9;
-      --ghibli-sky: #46799c;
-      --ghibli-sky-light: #e7f1f7;
-      --ghibli-calcifer: #db5a3a;
-      --ghibli-calcifer-light: #fbeee8;
-      --ghibli-hay: #d4952c;
-      --ghibli-hay-light: #fcf4e4;
-      --ghibli-text: #2c251e;
-      --ghibli-muted: #796f63;
-      --radius-sm: 12px;
-      --radius-md: 18px;
-      --radius-lg: 24px;
-      --shadow-ghibli: 3px 3px 0px var(--ghibli-border);
-      --shadow-hover: 4.5px 4.5px 0px var(--ghibli-border);
+      --bg: #f9f6ee; --card: #ffffff; --border: #383026;
+      --forest: #3d6a49; --forest-bg: #e6f0e9;
+      --sky: #46799c; --sky-bg: #e7f1f7;
+      --calcifer: #db5a3a; --calcifer-bg: #fbeee8;
+      --hay: #d4952c; --hay-bg: #fcf4e4;
+      --text: #2c251e; --muted: #796f63;
+      --shadow: 3px 3px 0px var(--border);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
-      background-color: var(--ghibli-bg);
-      background-image: radial-gradient(#e8dfcf 1px, transparent 1px), radial-gradient(#f0e9dc 1px, var(--ghibli-bg) 1px);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
-      color: var(--ghibli-text);
-      line-height: 1.7;
-      padding: 24px 14px 90px;
+      background: var(--bg);
+      background-image: radial-gradient(#e8dfcf 1px, transparent 1px);
+      background-size: 20px 20px;
+      color: var(--text); line-height: 1.65; padding: 20px 12px 80px;
     }
-    .planner-frame { max-width: 760px; margin: 0 auto; }
-    .top-meta { text-align: center; margin-bottom: 16px; }
-    .top-meta span {
-      background: #f1ebd9;
-      padding: 6px 18px;
-      border-radius: 999px;
-      border: 2px solid var(--ghibli-border);
-      font-size: 0.88rem;
-      font-weight: 800;
-      box-shadow: 2px 2px 0px var(--ghibli-border);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    .wrap { max-width: 760px; margin: 0 auto; }
+    .top-badge { text-align: center; margin-bottom: 14px; }
+    .top-badge span {
+      background: #f1ebd9; padding: 6px 18px; border-radius: 999px;
+      border: 2px solid var(--border); font-size: 0.88rem; font-weight: 800;
+      box-shadow: 2px 2px 0px var(--border); display: inline-flex; align-items: center; gap: 6px;
     }
-    .nav-bar {
-      display: flex;
-      justify-content: center;
-      gap: 6px;
-      margin-bottom: 20px;
-      background: #ffffff;
-      padding: 8px;
-      border-radius: 999px;
-      border: 2.5px solid var(--ghibli-border);
-      box-shadow: var(--shadow-ghibli);
-      flex-wrap: wrap;
+    .nav {
+      display: flex; justify-content: center; gap: 5px; margin-bottom: 18px;
+      background: #ffffff; padding: 6px; border-radius: 999px;
+      border: 2.5px solid var(--border); box-shadow: var(--shadow); flex-wrap: wrap;
     }
-    .nav-pill {
-      padding: 8px 12px;
-      font-size: 0.86rem;
-      font-weight: 900;
-      color: var(--ghibli-muted);
-      border-radius: 999px;
-      border: 1.5px solid transparent;
-      cursor: pointer;
-      background: transparent;
-      transition: all 0.2s;
+    .nav-btn {
+      padding: 7px 12px; font-size: 0.85rem; font-weight: 800; color: var(--muted);
+      border-radius: 999px; border: none; cursor: pointer; background: transparent; transition: 0.15s;
     }
-    .nav-pill:hover { color: var(--ghibli-text); background: rgba(0,0,0,0.04); }
-    .nav-pill.active {
-      background: var(--ghibli-calcifer);
-      color: #ffffff;
-      border-color: var(--ghibli-border);
-      box-shadow: 2px 2px 0px var(--ghibli-border);
+    .nav-btn:hover { background: rgba(0,0,0,0.04); color: var(--text); }
+    .nav-btn.active { background: var(--calcifer); color: #fff; box-shadow: 1.5px 1.5px 0px var(--border); }
+    .card {
+      background: #fff; border: 2.5px solid var(--border); border-radius: 20px;
+      padding: 20px; box-shadow: var(--shadow); margin-bottom: 18px;
     }
+    .card h3 { font-size: 1.2rem; font-weight: 900; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .card p { font-size: 0.9rem; color: #403b35; line-height: 1.7; }
+    .tip-box { padding: 9px 12px; border-radius: 10px; font-size: 0.84rem; line-height: 1.6; border: 1.5px solid var(--border); margin-top: 8px; }
+    .tip-red { background: #faeae6; color: #8f2314; border-color: #8f2314; }
+    .tip-green { background: #eaf3ec; color: #1c4826; }
+    .tip-blue { background: #e9f2f8; color: #1e4562; }
+    .tip-gold { background: #fbf3e2; color: #724c08; }
     .rail-timeline {
-      background: #ffffff;
-      border: 2.5px solid var(--ghibli-border);
-      border-radius: var(--radius-lg);
-      padding: 18px 14px 14px;
-      box-shadow: var(--shadow-ghibli);
-      margin-bottom: 18px;
-      overflow-x: auto;
+      background: #fff; border: 2.5px solid var(--border); border-radius: 20px;
+      padding: 16px 12px 12px; box-shadow: var(--shadow); margin-bottom: 16px; overflow-x: auto;
     }
-    .rail-timeline::-webkit-scrollbar { height: 6px; }
-    .rail-timeline::-webkit-scrollbar-thumb { background: #d0c2b2; border-radius: 10px; }
-    .track-wrapper {
-      display: flex;
-      align-items: center;
-      min-width: 680px;
-      position: relative;
-      padding: 10px 0;
+    .track { display: flex; align-items: center; min-width: 680px; position: relative; padding: 10px 0; }
+    .track-line { position: absolute; top: 25px; left: 16px; right: 16px; height: 4px; background: var(--border); z-index: 1; }
+    .stop { flex: 1; text-align: center; position: relative; z-index: 2; cursor: pointer; }
+    .dot { width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--border); margin: 18px auto 6px; }
+    .stop.active .dot { background: var(--calcifer); box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--border); }
+    .loco { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--hay-bg); border: 2px solid var(--border); border-radius: 10px; padding: 2px 7px; font-size: 0.8rem; font-weight: 800; display: none; }
+    .stop.active .loco { display: block; }
+    .s-date { font-size: 0.82rem; font-weight: 800; }
+    .s-day { font-size: 0.72rem; color: var(--muted); font-weight: 700; }
+    .stop.active .s-date { background: var(--calcifer); color: #fff; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border); }
+    .stepper {
+      display: flex; justify-content: space-between; align-items: center; gap: 8px;
+      background: #fdfaf4; padding: 8px 12px; border-radius: 14px; border: 2px solid var(--border);
+      box-shadow: 2px 2px 0px var(--border); margin-bottom: 18px;
     }
-    .track-line {
-      position: absolute;
-      top: 26px; left: 20px; right: 20px;
-      height: 4px;
-      background: var(--ghibli-border);
-      z-index: 1;
-      border-radius: 2px;
+    .btn-step {
+      padding: 6px 12px; border-radius: 8px; font-size: 0.84rem; font-weight: 800;
+      border: 1.5px solid var(--border); background: #fff; cursor: pointer; box-shadow: 1px 1px 0px var(--border);
     }
-    .date-stop { flex: 1; text-align: center; position: relative; z-index: 2; cursor: pointer; }
-    .stop-dot {
-      width: 15px; height: 15px; border-radius: 50%;
-      background: #ffffff; border: 3px solid var(--ghibli-border);
-      margin: 18px auto 6px; transition: all 0.2s ease;
+    .banner {
+      background: var(--forest-bg); border: 2.5px solid var(--border); border-radius: 20px;
+      padding: 16px; box-shadow: var(--shadow); margin-bottom: 18px; display: flex; align-items: center; gap: 14px;
     }
-    .date-stop:hover .stop-dot { transform: scale(1.3); background: var(--ghibli-hay); }
-    .date-stop.active .stop-dot {
-      background: var(--ghibli-calcifer);
-      box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px var(--ghibli-border);
-    }
-    .loco-badge {
-      position: absolute; top: -10px; left: 50%;
-      transform: translateX(-50%);
-      background: var(--ghibli-hay-light);
-      border: 2px solid var(--ghibli-border);
-      border-radius: 12px;
-      padding: 3px 8px; font-size: 0.85rem; line-height: 1;
-      display: none; box-shadow: 1.5px 1.5px 0px var(--ghibli-border);
-    }
-    .date-stop.active .loco-badge { display: block; }
-    .stop-date { font-size: 0.84rem; font-weight: 800; color: var(--ghibli-text); }
-    .stop-day { font-size: 0.74rem; color: var(--ghibli-muted); font-weight: 700; }
-    .date-stop.active .stop-date {
-      color: #ffffff; background: var(--ghibli-calcifer);
-      padding: 2px 7px; border-radius: 8px; border: 1.5px solid var(--ghibli-border);
-    }
-    .day-stepper {
-      display: flex; justify-content: space-between; align-items: center; gap: 10px;
-      margin-bottom: 20px; background: #fdfaf4; padding: 8px 14px;
-      border-radius: 16px; border: 2px solid var(--ghibli-border);
-      box-shadow: 2px 2px 0px var(--ghibli-border);
-    }
-    .stepper-btn {
-      padding: 6px 14px; border-radius: 10px; font-size: 0.86rem; font-weight: 900;
-      cursor: pointer; border: 1.5px solid var(--ghibli-border); background: #ffffff;
-      color: var(--ghibli-text); box-shadow: 1px 1px 0px var(--ghibli-border);
-      transition: all 0.15s;
-    }
-    .stepper-btn:hover { background: var(--ghibli-hay-light); transform: translate(-1px, -1px); }
-    .stepper-label {
-      font-weight: 900; font-size: 0.95rem; color: var(--ghibli-forest);
-      display: flex; align-items: center; gap: 6px;
-    }
-    .day-banner {
-      background: var(--ghibli-forest-light);
-      border: 2.5px solid var(--ghibli-border);
-      border-radius: var(--radius-lg);
-      padding: 18px 22px;
-      box-shadow: var(--shadow-ghibli);
-      margin-bottom: 20px;
-      display: flex; align-items: center; gap: 18px;
-    }
-    .day-icon-box {
-      width: 62px; height: 62px; border-radius: 20px;
-      background: #ffffff; border: 2.5px solid var(--ghibli-border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2rem; flex-shrink: 0; box-shadow: 2px 2px 0px var(--ghibli-border);
-    }
-    .day-title-wrap h3 {
-      font-size: 0.86rem; font-weight: 900; color: var(--ghibli-forest);
-      letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 2px;
-    }
-    .day-title-wrap h2 { font-size: 1.3rem; font-weight: 900; color: var(--ghibli-text); line-height: 1.35; }
-    .day-title-wrap p { font-size: 0.86rem; color: var(--ghibli-muted); font-weight: 700; margin-top: 3px; }
-    .day-strategy-card {
-      background: #ffffff;
-      border: 2px solid var(--ghibli-border);
-      border-radius: 16px;
-      padding: 14px 18px;
-      margin-bottom: 22px;
-      box-shadow: var(--shadow-ghibli);
-      display: flex; flex-direction: column; gap: 10px;
-    }
-    .strategy-row { display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; line-height: 1.6; }
-    .strategy-badge {
-      font-size: 0.76rem; font-weight: 900; padding: 2px 8px; border-radius: 6px;
-      white-space: nowrap; border: 1.5px solid var(--ghibli-border); flex-shrink: 0; margin-top: 2px;
-    }
-    .badge-summary { background: #eaf3ec; color: #1c4826; }
-    .badge-luggage { background: #fbf3e2; color: #78480d; }
-    .badge-nextday { background: #fbeee8; color: #9c3319; }
-    .timeline-container { position: relative; padding-left: 20px; }
-    .v-line {
-      position: absolute left: 64px; top: 16px; bottom: 28px; width: 3px;
-      border-left: 3.5px dashed var(--ghibli-border);
-    }
-    .time-entry { position: relative; display: flex; gap: 20px; margin-bottom: 14px; align-items: flex-start; }
-    .time-tag-col { width: 50px; flex-shrink: 0; font-size: 0.86rem; font-weight: 900; color: var(--ghibli-muted); padding-top: 14px; text-align: right; }
-    .time-node { position: absolute; left: 60px; top: 18px; width: 13px; height: 13px; border-radius: 50%; background: #ffffff; border: 3px solid var(--ghibli-border); z-index: 2; }
-    .transit-connector { display: flex; align-items: center; margin: 4px 0 16px 70px; position: relative; z-index: 2; }
-    .transit-pill {
-      background: #fdfaf4; border: 2px solid var(--ghibli-border); border-radius: 999px;
-      padding: 6px 15px; font-size: 0.83rem; font-weight: 800; color: var(--ghibli-text);
-      box-shadow: 1.5px 1.5px 0px var(--ghibli-border); display: inline-flex; align-items: center; gap: 6px;
-    }
-    .transit-pill span.arrow { color: var(--ghibli-calcifer); font-weight: 900; font-size: 1rem; }
-    .schedule-box {
-      flex: 1; background: #ffffff; border: 2.5px solid var(--ghibli-border);
-      border-radius: var(--radius-md); padding: 16px 18px; box-shadow: var(--shadow-ghibli);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .schedule-box:hover { box-shadow: var(--shadow-hover); transform: translate(-1.5px, -1.5px); }
-    .box-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
-    .badge-kind { font-size: 0.74rem; font-weight: 900; padding: 3px 10px; border-radius: 999px; border: 1.5px solid var(--ghibli-border); }
-    .badge-kind.train { background: var(--ghibli-calcifer-light); color: #9c3319; }
-    .badge-kind.spot { background: var(--ghibli-forest-light); color: #235232; }
-    .badge-kind.food { background: var(--ghibli-hay-light); color: #875c12; }
-    .badge-kind.flight { background: var(--ghibli-sky-light); color: #225170; }
-    .box-title { font-size: 1.1rem; font-weight: 900; color: var(--ghibli-text); line-height: 1.35; }
-    .box-desc { font-size: 0.91rem; color: #3e3831; line-height: 1.7; margin-top: 6px; }
-    .tactical-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
-    .tip-capsule { padding: 9px 13px; border-radius: var(--radius-sm); font-size: 0.84rem; line-height: 1.6; border: 1.5px solid var(--ghibli-border); }
-    .tip-must { background: #eaf3ec; color: #1c4826; }
-    .tip-photo { background: #e9f2f8; color: #1e4562; }
-    .tip-food { background: #fbf3e2; color: #724c08; }
-    .tip-gift { background: #fcf1f6; color: #7c244e; }
-    .tip-avoid { background: #faeae6; color: #8f2314; }
-    .tip-booking { background: #fcf5e6; color: #78480d; border-left: 5px solid var(--ghibli-hay); }
-    .link-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-    .link-btn {
-      display: inline-flex; align-items: center; gap: 5px; padding: 6px 13px;
-      border-radius: 9px; font-size: 0.81rem; font-weight: 800; text-decoration: none;
-      color: var(--ghibli-text); background: #f1ebd9; border: 1.5px solid var(--ghibli-border);
-      box-shadow: 1.5px 1.5px 0px var(--ghibli-border); transition: all 0.15s;
-    }
-    .link-btn:hover { background: #ffffff; transform: translate(-1px, -1px); }
-    .link-btn.kkday { background: #fce8e6; color: #a81c1c; border-color: #a81c1c; }
-    .notion-card {
-      background: #ffffff; border: 2.5px solid var(--ghibli-border); border-radius: var(--radius-lg);
-      padding: 22px; box-shadow: var(--shadow-ghibli); margin-bottom: 22px;
-    }
-    .notion-card h3 { font-size: 1.22rem; font-weight: 900; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-    .notion-card p { font-size: 0.93rem; line-height: 1.7; color: #403b35; }
-    .audio-btn {
-      padding: 4px 10px; border-radius: 8px; border: 1.5px solid var(--ghibli-border);
-      background: #ffffff; cursor: pointer; font-weight: 800; font-size: 0.78rem;
-      box-shadow: 1px 1px 0px var(--ghibli-border);
-    }
-    .audio-btn:hover { background: var(--ghibli-hay-light); }
-    .phrase-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    .phrase-table th, .phrase-table td { border: 1.5px solid var(--ghibli-border); padding: 10px 14px; font-size: 0.88rem; }
-    .phrase-table th { background: #ede6da; font-weight: 900; }
-    footer { text-align: center; font-size: 0.88rem; font-weight: 800; color: var(--ghibli-muted); margin-top: 45px; }
-
-    /* 語句卡樣式 */
-    .flashcard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-    .flashcard-title { font-size: 1.35rem; font-weight: 900; color: var(--ghibli-text); }
-    .flashcard-badge { background: #f1ebd9; border: 1.5px solid var(--ghibli-border); border-radius: 8px; padding: 3px 10px; font-size: 0.8rem; font-weight: 800; color: var(--ghibli-text); }
-    .flashcard-sub { font-size: 0.86rem; color: var(--ghibli-muted); margin-bottom: 16px; }
-    .card-filter-row { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 18px; }
-    .card-filter-btn {
-      padding: 6px 14px; border-radius: 999px; font-size: 0.84rem; font-weight: 800;
-      border: 1.5px solid var(--ghibli-border); background: #ffffff; color: var(--ghibli-text);
-      cursor: pointer; white-space: nowrap; transition: all 0.15s;
-    }
-    .card-filter-btn.active { background: var(--ghibli-border); color: #ffffff; }
-    .phrase-card-list { display: flex; flex-direction: column; gap: 12px; }
-    .phrase-bubble-card {
-      background: #ffffff; border: 2px solid var(--ghibli-border); border-radius: 16px;
-      padding: 14px 18px; box-shadow: 2px 2px 0px var(--ghibli-border); cursor: pointer;
-      transition: all 0.15s ease; position: relative;
-    }
-    .phrase-bubble-card:hover { transform: translate(-1px, -1px); box-shadow: 3.5px 3.5px 0px var(--ghibli-border); background: #fdfcf9; }
-    .phrase-cn-label { font-size: 0.82rem; color: #796f63; margin-bottom: 4px; font-weight: 700; }
-    .phrase-it-text { font-size: 1.25rem; font-weight: 900; color: var(--ghibli-text); }
-    .phrase-zoom-hint {
-      position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
-      font-size: 0.75rem; font-weight: 800; color: var(--ghibli-muted); background: #f5eedf;
-      padding: 3px 8px; border-radius: 8px; border: 1px solid var(--ghibli-border);
-    }
-    .bigcard-overlay {
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(44, 37, 30, 0.88); backdrop-filter: blur(8px);
-      z-index: 9999; display: none; align-items: center; justify-content: center; padding: 20px;
-    }
-    .bigcard-box {
-      background: #fdfaf3; border: 4px solid var(--ghibli-border); border-radius: 28px;
-      padding: 40px 24px; max-width: 540px; width: 100%; text-align: center;
-      box-shadow: 6px 6px 0px #000000;
-    }
-    .bigcard-it { font-size: 2.2rem; font-weight: 900; color: var(--ghibli-text); line-height: 1.35; margin-bottom: 12px; }
-    .bigcard-cn { font-size: 1.25rem; color: var(--ghibli-calcifer); font-weight: 800; margin-bottom: 8px; }
-    .bigcard-pronun { font-size: 0.95rem; color: var(--ghibli-muted); margin-bottom: 24px; }
-    .bigcard-actions { display: flex; justify-content: center; gap: 12px; }
-    .bigcard-btn {
-      padding: 10px 22px; border-radius: 14px; font-size: 0.95rem; font-weight: 900;
-      cursor: pointer; border: 2px solid var(--ghibli-border); box-shadow: 2px 2px 0px var(--ghibli-border);
-    }
-    .btn-audio { background: var(--ghibli-hay); color: #ffffff; }
-    .btn-close { background: #ffffff; color: var(--ghibli-text); }
-
-    /* 菜單與匯率計算機樣式 */
-    .calc-card {
-      background: #ffffff; border: 2.5px solid var(--ghibli-border); border-radius: var(--radius-lg);
-      padding: 20px; box-shadow: var(--shadow-ghibli); margin-bottom: 20px;
-    }
-    .currency-input-row { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
-    .input-ghibli {
-      flex: 1; padding: 12px 16px; border-radius: 14px; border: 2px solid var(--ghibli-border);
-      font-size: 1.15rem; font-weight: 900; background: #fcf9f2; color: var(--ghibli-text); outline: none;
-    }
-    .input-ghibli:focus { border-color: var(--ghibli-calcifer); background: #ffffff; }
-    .exchange-result-box {
-      margin-top: 14px; padding: 14px 18px; border-radius: 14px; background: var(--ghibli-hay-light);
-      border: 2px solid var(--ghibli-border); display: flex; justify-content: space-between; align-items: center;
-    }
-    .exchange-twd-val { font-size: 1.55rem; font-weight: 900; color: var(--ghibli-calcifer); }
-    .photo-upload-zone {
-      border: 2.5px dashed var(--ghibli-border); border-radius: 18px; padding: 24px 16px;
-      text-align: center; background: #fdfaf4; cursor: pointer; transition: all 0.2s;
-    }
-    .photo-upload-zone:hover { background: #ffffff; border-color: var(--ghibli-calcifer); }
-    .menu-item-row {
-      display: flex; justify-content: space-between; align-items: center; padding: 10px 12px;
-      border-bottom: 1.5px dashed #e8dfcf; cursor: pointer; transition: background 0.15s;
-    }
-    .menu-item-row:hover { background: #fcf9f2; }
-    .menu-item-row:last-child { border-bottom: none; }
-    .flight-mode-switch { display: flex; gap: 8px; margin-bottom: 14px; }
-    .flight-mode-btn {
-      flex: 1; padding: 8px 12px; border-radius: 12px; font-size: 0.86rem; font-weight: 800;
-      cursor: pointer; border: 2px solid var(--ghibli-border); background: #fdfaf4;
-      color: var(--ghibli-text); box-shadow: 1.5px 1.5px 0px var(--ghibli-border);
-    }
-    .flight-mode-btn.active { background: var(--ghibli-sky); color: #ffffff; }
+    .b-icon { width: 56px; height: 56px; border-radius: 16px; background: #fff; border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0; box-shadow: 2px 2px 0px var(--border); }
+    .b-title h3 { font-size: 0.82rem; font-weight: 900; color: var(--forest); }
+    .b-title h2 { font-size: 1.25rem; font-weight: 900; color: var(--text); line-height: 1.3; }
+    .b-title p { font-size: 0.82rem; color: var(--muted); font-weight: 700; }
+    .strat-card { background: #fff; border: 2px solid var(--border); border-radius: 14px; padding: 12px 14px; margin-bottom: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 8px; }
+    .strat-row { display: flex; align-items: flex-start; gap: 8px; font-size: 0.86rem; }
+    .strat-badge { font-size: 0.74rem; font-weight: 900; padding: 2px 6px; border-radius: 5px; border: 1px solid var(--border); white-space: nowrap; flex-shrink: 0; }
+    .v-timeline { position: relative; padding-left: 18px; }
+    .v-line { position: absolute; left: 56px; top: 12px; bottom: 20px; width: 3px; border-left: 3px dashed var(--border); }
+    .t-entry { position: relative; display: flex; gap: 16px; margin-bottom: 12px; align-items: flex-start; }
+    .t-time { width: 44px; flex-shrink: 0; font-size: 0.84rem; font-weight: 900; color: var(--muted); padding-top: 10px; text-align: right; }
+    .t-node { position: absolute; left: 52px; top: 14px; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2.5px solid var(--border); z-index: 2; }
+    .s-box { flex: 1; background: #fff; border: 2px solid var(--border); border-radius: 16px; padding: 14px; box-shadow: var(--shadow); }
+    .s-header { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; flex-wrap: wrap; }
+    .badge-k { font-size: 0.72rem; font-weight: 900; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); }
+    .badge-k.train { background: var(--calcifer-bg); color: #9c3319; }
+    .badge-k.spot { background: var(--forest-bg); color: #235232; }
+    .badge-k.food { background: var(--hay-bg); color: #875c12; }
+    .badge-k.flight { background: var(--sky-bg); color: #225170; }
+    .s-title { font-size: 1.02rem; font-weight: 900; }
+    .s-desc { font-size: 0.88rem; color: #3e3831; line-height: 1.65; margin-top: 4px; }
+    .transit-bar { margin: 2px 0 12px 60px; }
+    .transit-pill { background: #fdfaf4; border: 1.5px solid var(--border); border-radius: 999px; padding: 4px 12px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 5px; box-shadow: 1px 1px 0px var(--border); }
+    .link-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .link-btn { display: inline-flex; align-items: center; gap: 4px; padding: 5px 11px; border-radius: 8px; font-size: 0.78rem; font-weight: 800; text-decoration: none; color: var(--text); background: #f1ebd9; border: 1.5px solid var(--border); box-shadow: 1px 1px 0px var(--border); }
+    .link-btn:hover { background: #fff; }
+    .tbl { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .tbl th, .tbl td { border: 1.5px solid var(--border); padding: 8px 10px; font-size: 0.84rem; }
+    .tbl th { background: #ede6da; font-weight: 900; }
+    .filter-row { display: flex; gap: 5px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 14px; }
+    .f-btn { padding: 5px 12px; border-radius: 999px; font-size: 0.82rem; font-weight: 800; border: 1.5px solid var(--border); background: #fff; cursor: pointer; }
+    .f-btn.active { background: var(--border); color: #fff; }
+    .p-list { display: flex; flex-direction: column; gap: 10px; }
+    .p-card { background: #fff; border: 2px solid var(--border); border-radius: 14px; padding: 12px 14px; box-shadow: 2px 2px 0px var(--border); cursor: pointer; position: relative; }
+    .p-card:hover { transform: translate(-1px,-1px); }
+    .p-cn { font-size: 0.78rem; color: #796f63; font-weight: 700; }
+    .p-it { font-size: 1.15rem; font-weight: 900; }
+    .p-zoom { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-size: 0.72rem; font-weight: 800; background: #f5eedf; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border); }
+    .modal { position: fixed; inset: 0; background: rgba(44,37,30,0.88); backdrop-filter: blur(6px); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 16px; }
+    .m-box { background: #fdfaf3; border: 3.5px solid var(--border); border-radius: 24px; padding: 32px 20px; max-width: 500px; width: 100%; text-align: center; box-shadow: 5px 5px 0px #000; }
+    .m-it { font-size: 2rem; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
+    .m-cn { font-size: 1.2rem; color: var(--calcifer); font-weight: 800; margin-bottom: 6px; }
+    .m-pronun { font-size: 0.9rem; color: var(--muted); margin-bottom: 20px; }
+    .m-actions { display: flex; justify-content: center; gap: 10px; }
+    .m-btn { padding: 9px 18px; border-radius: 12px; font-size: 0.9rem; font-weight: 900; cursor: pointer; border: 2px solid var(--border); box-shadow: 2px 2px 0px var(--border); }
+    .input-box { width: 100%; padding: 10px 14px; border-radius: 12px; border: 2px solid var(--border); font-size: 1.1rem; font-weight: 900; background: #fcf9f2; outline: none; }
+    .m-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; border-bottom: 1.5px dashed #e8dfcf; cursor: pointer; }
+    .m-item:hover { background: #fcf9f2; }
+    .audio-btn { padding: 3px 8px; border-radius: 6px; border: 1px solid var(--border); background: #fff; cursor: pointer; font-size: 0.75rem; font-weight: 800; }
   </style>
 </head>
 <body>
+<div class="wrap">
+  <div class="top-badge">
+    <span>🌿 義大利 14 天文藝聖誕與威尼斯米蘭跨年手帳 ｜ 2026.12.22 - 2027.01.05</span>
+  </div>
 
-  <div class="planner-frame">
-    <div class="top-meta">
-      <span>🌿 義大利 14 天文藝聖誕與米蘭跨年手帳 ｜ 2026.12.22 - 2027.01.05</span>
+  <div class="nav">
+    <button class="nav-btn" onclick="showSec('flights', this)">✈️ 航班</button>
+    <button class="nav-btn active" onclick="showSec('overview', this)">🗺️ 總覽</button>
+    <button class="nav-btn" onclick="showSec('schedule', this)">📅 行程</button>
+    <button class="nav-btn" onclick="showSec('menu', this)">🍽️ 菜單匯率</button>
+    <button class="nav-btn" onclick="showSec('cards', this)">🗣️ 語句卡</button>
+    <button class="nav-btn" onclick="showSec('trains', this)">🚅 高鐵</button>
+    <button class="nav-btn" onclick="showSec('hotels', this)">🏨 住宿</button>
+    <button class="nav-btn" onclick="showSec('tips', this)">💡 準備</button>
+  </div>
+
+  <!-- 1. 航班 -->
+  <div id="sec-flights" class="main-sec" style="display:none;">
+    <div style="display:flex; gap:8px; margin-bottom:12px;">
+      <button id="btn-fl-tpe" class="btn-step" style="flex:1; background:var(--sky); color:#fff;" onclick="toggleFlight('tpe')">🇹🇼 台灣出發 (TPE)</button>
+      <button id="btn-fl-jax" class="btn-step" style="flex:1;" onclick="toggleFlight('jax')">🇺🇸 佛州出發 (JAX)</button>
     </div>
-
-    <!-- 頂部膠囊導航列 (切換8大核心模組) -->
-    <div class="nav-bar">
-      <button class="nav-pill" onclick="switchMainSection('flights', this)">✈️ 航班</button>
-      <button class="nav-pill" onclick="switchMainSection('overview', this)">🗺️ 總覽</button>
-      <button class="nav-pill active" onclick="switchMainSection('schedule', this)">📅 行程</button>
-      <button class="nav-pill" onclick="switchMainSection('menu', this)">🍽️ 菜單匯率</button>
-      <button class="nav-pill" onclick="switchMainSection('cards', this)">🗣️ 語句卡</button>
-      <button class="nav-pill" onclick="switchMainSection('trains', this)">🚅 高鐵</button>
-      <button class="nav-pill" onclick="switchMainSection('hotels', this)">🏨 住宿</button>
-      <button class="nav-pill" onclick="switchMainSection('tips', this)">💡 準備</button>
+    <div id="box-fl-tpe" class="card" style="border-left: 6px solid var(--calcifer);">
+      <h3>🇹🇼 台灣組航班配置 (台北 TPE 華航直飛去・長榮直飛回)</h3>
+      <p>
+        • <strong>去程【華航 CI 75 直飛】：</strong>12/22 (二) 23:25 台北 ➔ 12/23 (三) 07:05 羅馬 FCO（豪華經濟艙直飛，航程 14h 40m）<br>
+        • <strong>回程【長榮 BR 96 直飛】：</strong>01/04 (一) 11:00 米蘭 MXP ➔ 01/05 (二) 06:10 台北 TPE（波音 777-300ER 直飛，航程 12h 10m）
+      </p>
+      <div class="tip-box tip-green">🌟 <strong>黃金開口機票：</strong>羅馬進、米蘭出，一路向北推進，省下 600 公里倒退拉車！</div>
     </div>
-
-    <!-- 1. 航班模組 (sec-flights) -->
-    <div id="sec-flights" class="main-sec" style="display:none;">
-      <div class="flight-mode-switch">
-        <button id="btn-fl-tpe" class="flight-mode-btn active" onclick="switchFlightWindow('tpe')">🇹🇼 台灣出發視窗 (TPE)</button>
-        <button id="btn-fl-jax" class="flight-mode-btn" onclick="switchFlightWindow('jax')">🇺🇸 佛州 Jacksonville 視窗 (JAX)</button>
-      </div>
-      <div id="win-fl-tpe">
-        <div class="notion-card" style="border-left: 6px solid var(--ghibli-calcifer);">
-          <h3>🇹🇼 台灣組航班配置 (台北 TPE 華航直飛去・長榮直飛回)</h3>
-          <p>
-            • <strong>去程【華航 CI 75 直飛】：</strong>12/22 (二) 23:25 台北 (TPE) ➔ 12/23 (三) 07:05 羅馬 (FCO)（豪華經濟艙直飛，航程 14h 40m，直飛免轉機）<br><br>
-            • <strong>回程【長榮 BR 96 直飛】：</strong>01/04 (一) 11:00 米蘭 (MXP) ➔ 01/05 (二) 06:10 台北 (TPE)（波音 777 直飛，航程 12h 10m，直飛免轉機）
-          </p>
-          <div class="tip-capsule tip-must" style="margin-top:10px;">🌟 <strong>黃金開口機票：</strong>羅馬進、米蘭出，省下倒退回羅馬的 600 公里拉車，零回頭路！</div>
-        </div>
-      </div>
-      <div id="win-fl-jax" style="display:none;">
-        <div class="notion-card" style="border-left: 6px solid var(--ghibli-sky);">
-          <h3>🇺🇸 Jacksonville 組航班配置 (達美航空 Delta 經亞特蘭大 ATL)</h3>
-          <p>
-            • <strong>去程【Flight 1 (Delta)】：</strong>12/22 (二) 13:39 傑克遜維爾 (JAX) ➔ 12/23 (三) 08:15 羅馬 (FCO)（亞特蘭大 ATL 轉機 2h 03m，航程 12h 36m，08:30 FCO 會師）<br><br>
-            • <strong>回程【Flight 2 (Delta)】：</strong>01/04 (一) 12:00 米蘭 (MXP) ➔ 01/04 (一) 21:38 傑克遜維爾 (JAX)（亞特蘭大 ATL 轉機 3h，航程 15h 38m，同日晚間到家）
-          </p>
-          <div class="tip-capsule tip-photo" style="margin-top:10px;">🤝 <strong>同點會師・同日返國：</strong>兩路航班時間無縫對接，歐洲旅行天數完全一致！</div>
-        </div>
-      </div>
-      <div class="notion-card">
-        <h3>🛃 關鍵提醒：羅馬 30 秒自動通關 ＆ 米蘭提前 3.5h 抵達</h3>
-        <p>
-          • <strong>羅馬 FCO 入境 E-Gates：</strong>持台灣晶片護照直接走快速通道，掃護照看鏡頭，30 秒極速出關！<br>
-          • <strong>米蘭 MXP 出境安檢塞車：</strong>近期安檢常排隊 1 小時以上、海關更曾塞車達 3 小時，1/4 請務必於 <strong>07:30 前搭機場快線抵達 MXP 機場</strong>！
-        </p>
-      </div>
+    <div id="box-fl-jax" class="card" style="border-left: 6px solid var(--sky); display:none;">
+      <h3>🇺🇸 Jacksonville 組航班配置 (達美航空 Delta 經亞特蘭大 ATL)</h3>
+      <p>
+        • <strong>去程【Flight 1 (Delta)】：</strong>12/22 (二) 13:39 JAX ➔ 12/23 (三) 08:15 羅馬 FCO（亞特蘭大轉機 2h 03m，航程 12h 36m，08:30 FCO 碰頭）<br>
+        • <strong>回程【Flight 2 (Delta)】：</strong>01/04 (一) 12:00 米蘭 MXP ➔ 01/04 (一) 21:38 JAX（亞特蘭大轉機 3h，航程 15h 38m）
+      </p>
+      <div class="tip-box tip-blue">🤝 <strong>同點會師・同日返國：</strong>兩路航班時間無縫對接，歐洲旅行天數完全一致！</div>
     </div>
+    <div class="card">
+      <h3>🛃 關鍵提醒：羅馬 30 秒自動通關 ＆ 米蘭提前 3.5h 抵達</h3>
+      <p>
+        • <strong>羅馬 FCO 入境 E-Gates：</strong>持台灣晶片護照直接走快速通道，掃護照看鏡頭，30 秒極速出關！<br>
+        • <strong>米蘭 MXP 出境安檢塞車：</strong>近期安檢與海關常塞車達 3 小時，01/04 請務必於 <strong>07:30 前抵達 MXP 機場</strong>！
+      </p>
+    </div>
+  </div>
 
-    <!-- 2. 總覽與天氣模組 (sec-overview) -->
-    <div id="sec-overview" class="main-sec" style="display:none;">
-      
-      <!-- 義大利 14 天黃金北上全景高鐵動線地圖 (Route Map) -->
-      <div class="notion-card" style="border-left: 6px solid var(--ghibli-sky);">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-          <h3 style="font-size:1.28rem; font-weight:900; margin-bottom:0;">🗺️ 義大利 14 天黃金高鐵北上全景動線地圖</h3>
-          <span style="font-size:0.8rem; font-weight:800; background:#f1ebd9; padding:3px 10px; border-radius:8px; border:1.5px solid var(--ghibli-border);">一路向北・省 600km 倒退路</span>
-        </div>
-        <p style="font-size:0.88rem; color:var(--ghibli-muted); margin:8px 0 16px;">
-          全線搭乘頂級 <strong>Italo 法拉利高鐵</strong> 飛馳串聯，各大城市均住核心地標旁，省去所有不必要的搬家與折返：
-        </p>
-
-        <!-- 視覺化路線鏈 (Visual Route Chain) -->
-        <div style="background:#fdfaf4; border:2px solid var(--ghibli-border); border-radius:18px; padding:18px; box-shadow:2px 2px 0px var(--ghibli-border);">
-          
-          <!-- 站點 1: 羅馬 -->
-          <div style="display:flex; align-items:flex-start; gap:14px;">
-            <div style="background:#ffffff; border:2px solid var(--ghibli-border); border-radius:12px; width:44px; height:44px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; box-shadow:1.5px 1.5px 0px var(--ghibli-border);">🏛️</div>
-            <div style="flex:1;">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong style="font-size:1.05rem; color:var(--ghibli-text);">1. 羅馬帝國 ＆ 梵蒂岡 (Roma)</strong>
-                <span style="font-size:0.78rem; font-weight:800; background:var(--ghibli-forest-light); color:var(--ghibli-forest); padding:2px 8px; border-radius:6px; border:1px solid var(--ghibli-border);">12/23 - 12/26 ｜ 住 3 晚</span>
-              </div>
-              <div style="font-size:0.85rem; color:var(--ghibli-muted); margin-top:2px;">
-                雙向會師 ➔ 萬神殿天窗 ➔ 許願池拋幣 ➔ 競技場地下層 ➔ 教宗聖誕祝福 Urbi et Orbi
-              </div>
-            </div>
-          </div>
-
-          <!-- 連接段 1 -> 2 -->
-          <div style="margin:8px 0 8px 21px; padding-left:22px; border-left:3px dashed var(--ghibli-border); font-size:0.82rem; font-weight:800; color:var(--ghibli-calcifer);">
-            🚅 Italo 法拉利高鐵 1 小時 36 分鐘 (羅馬 Termini ➔ 佛羅倫斯 SMN)
-          </div>
-
-          <!-- 站點 2: 佛羅倫斯 & 比薩 -->
-          <div style="display:flex; align-items:flex-start; gap:14px;">
-            <div style="background:#ffffff; border:2px solid var(--ghibli-border); border-radius:12px; width:44px; height:44px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; box-shadow:1.5px 1.5px 0px var(--ghibli-border);">⚜️</div>
-            <div style="flex:1;">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong style="font-size:1.05rem; color:var(--ghibli-text);">2. 翡冷翠文藝復興 ＆ 比薩 (Firenze / Pisa)</strong>
-                <span style="font-size:0.78rem; font-weight:800; background:var(--ghibli-forest-light); color:var(--ghibli-forest); padding:2px 8px; border-radius:6px; border:1px solid var(--ghibli-border);">12/26 - 12/29 ｜ 住 3 晚</span>
-              </div>
-              <div style="font-size:0.85rem; color:var(--ghibli-muted); margin-top:2px;">
-                聖母百花大教堂登頂 ➔ 烏菲茲美術館 ➔ <strong>區間火車 50m 當天輕裝往返比薩斜塔</strong> ➔ Il Latini 1.2kg 丁骨大牛排
-              </div>
-            </div>
-          </div>
-
-          <!-- 連接段 2 -> 3 -->
-          <div style="margin:8px 0 8px 21px; padding-left:22px; border-left:3px dashed var(--ghibli-border); font-size:0.82rem; font-weight:800; color:var(--ghibli-calcifer);">
-            🚅 Italo 法拉利高鐵 2 小時 05 分鐘 (佛羅倫斯 SMN ➔ 威尼斯 Santa Lucia)
-          </div>
-
-          <!-- 站點 3: 威尼斯 -->
-          <div style="display:flex; align-items:flex-start; gap:14px;">
-            <div style="background:#ffffff; border:2px solid var(--ghibli-border); border-radius:12px; width:44px; height:44px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; box-shadow:1.5px 1.5px 0px var(--ghibli-border);">🛶</div>
-            <div style="flex:1;">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong style="font-size:1.05rem; color:var(--ghibli-text);">3. 浪漫水都 ＆ 彩色島 (Venezia / Burano)</strong>
-                <span style="font-size:0.78rem; font-weight:800; background:var(--ghibli-forest-light); color:var(--ghibli-forest); padding:2px 8px; border-radius:6px; border:1px solid var(--ghibli-border);">12/29 - 12/31 ｜ 住 2 晚</span>
-              </div>
-              <div style="font-size:0.85rem; color:var(--ghibli-muted); margin-top:2px;">
-                聖馬可金箔大教堂 ➔ 貢多拉黑夜水巷 ➔ 花神咖啡 ➔ <strong>水上巴士 40m 探訪童話彩色島</strong> ➔ 總督宮歎息橋
-              </div>
-            </div>
-          </div>
-
-          <!-- 連接段 3 -> 4 -->
-          <div style="margin:8px 0 8px 21px; padding-left:22px; border-left:3px dashed var(--ghibli-border); font-size:0.82rem; font-weight:800; color:var(--ghibli-calcifer);">
-            🚅 Italo 法拉利高鐵 2 小時 27 分鐘 (威尼斯 Santa Lucia ➔ 米蘭 Centrale)
-          </div>
-
-          <!-- 站點 4: 米蘭 & 科莫湖 -->
-          <div style="display:flex; align-items:flex-start; gap:14px;">
-            <div style="background:#ffffff; border:2px solid var(--ghibli-border); border-radius:12px; width:44px; height:44px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; box-shadow:1.5px 1.5px 0px var(--ghibli-border);">👑</div>
-            <div style="flex:1;">
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong style="font-size:1.05rem; color:var(--ghibli-text);">4. 時尚米蘭跨年 ＆ 科莫湖 (Milano / Lake Como)</strong>
-                <span style="font-size:0.78rem; font-weight:800; background:var(--ghibli-calcifer-light); color:var(--ghibli-calcifer); padding:2px 8px; border-radius:6px; border:1px solid var(--ghibli-border);">12/31 - 01/04 ｜ 連住 4 晚不換房！</span>
-              </div>
-              <div style="font-size:0.85rem; color:var(--ghibli-muted); margin-top:2px;">
-                大教堂廣場萬人倒數煙火 ➔ 大理石尖塔天台 ➔ <strong>火車 1h 當天輕裝探訪阿爾卑斯科莫湖</strong> ➔ 達文西《最後的晚餐》 ➔ 蒙特拿破崙採買
-              </div>
-            </div>
-          </div>
-
-          <!-- 連接段 4 -> 返航 -->
-          <div style="margin:8px 0 8px 21px; padding-left:22px; border-left:3px dashed var(--ghibli-border); font-size:0.82rem; font-weight:800; color:var(--ghibli-calcifer);">
-            🚆 Malpensa Express 機場快線 52 分鐘 (米蘭 Centrale ➔ 馬爾彭薩機場 T1)
-          </div>
-
-          <!-- 終點: 返航 -->
-          <div style="display:flex; align-items:center; gap:14px;">
-            <div style="background:#ffffff; border:2px solid var(--ghibli-border); border-radius:12px; width:44px; height:44px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; box-shadow:1.5px 1.5px 0px var(--ghibli-border);">🛫</div>
-            <div>
-              <strong style="font-size:1.02rem; color:var(--ghibli-text);">01/04 清晨提早 3.5h 抵達 MXP 機場 ➔ 長榮 / 達美凱旋直飛返台！</strong>
-            </div>
-          </div>
-        </div>
+  <!-- 2. 總覽 -->
+  <div id="sec-overview" class="main-sec">
+    <!-- 視覺化高鐵動線地圖 -->
+    <div class="card" style="border-left: 6px solid var(--sky);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+        <h3 style="margin-bottom:0;">🗺️ 義大利 14 天黃金高鐵北上動線全景地圖</h3>
+        <span style="font-size:0.78rem; font-weight:800; background:#f1ebd9; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">一路向北・省 600km 倒退路</span>
       </div>
+      <p style="margin:8px 0 14px; font-size:0.86rem; color:var(--muted);">
+        參考 7 次達人動線經驗，全線搭乘 <strong>Italo 法拉利高鐵</strong> 飛馳串聯，各大城市均住核心地標旁，省去所有不必要的搬家與折返：
+      </p>
 
-      <div class="notion-card" style="border-left: 6px solid var(--ghibli-forest);">
-        <h3>🌿 義大利 14 天總行程計畫架構 ＆ 核心戰略</h3>
-        <p>
-          • <strong>雙向會師・零回頭路：</strong>台灣直飛與佛州出發於 12/23 早晨在羅馬 FCO 僅差 1 小時會師！全線搭乘高鐵一路向北推進，省下 600 公里拉車。<br>
-          • <strong>雙重世紀節慶無縫同享：</strong>12/24～12/25 停留羅馬梵蒂岡感受全世界天主教核心的<strong>教宗聖誕祝福 (Urbi et Orbi) ＆ 平安夜巨型聖誕樹點燈</strong>；12/31 推進至米蘭大教堂廣場萬人歡呼倒數迎接 2027！<br>
-          • <strong>黃金四城文藝串聯：</strong>羅馬 (3晚) ➔ 佛羅倫斯 (3晚) ➔ 威尼斯 (2晚) ➔ 米蘭與科莫湖 (4晚連住不換房)。
-        </p>
-      </div>
-
-      <!-- 義大利行前重要注意事項 ＆ 避雷防騙全攻略大警報 -->
-      <div class="notion-card" style="border-left: 6px solid #b3261e; background:#fffcfb;">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-          <h3 style="font-size:1.28rem; font-weight:900; color:#b3261e; margin-bottom:0;">🚨 義大利行前注意事項 ＆ 避雷防騙血淚警報</h3>
-          <span style="font-size:0.8rem; font-weight:800; background:#faeae6; color:#b3261e; padding:3px 10px; border-radius:8px; border:1.5px solid #b3261e;">必讀守則！</span>
-        </div>
-        <p style="font-size:0.88rem; color:var(--ghibli-muted); margin:8px 0 14px;">
-          義大利風景美如畫，但觀光熱點騙術與黑店層出不窮！請務必牢記以下避坑心法，保障荷包與旅行好心情：
-        </p>
-
-        <!-- 1. 佛羅倫斯全城最爛超級黑店冰淇淋警戒 (來自受害者血淚回報) -->
-        <div style="background:#ffffff; border:2px solid #b3261e; border-radius:16px; padding:16px; margin-bottom:14px; box-shadow:2px 2px 0px #b3261e;">
-          <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-            <span style="background:#b3261e; color:#ffffff; font-size:0.78rem; font-weight:900; padding:2px 8px; border-radius:6px;">特大警報</span>
-            <strong style="font-size:1.05rem; color:#b3261e;">⚠️ 佛羅倫斯全城評價最爛黑店冰淇淋 (Tripadvisor 僅 1.1 分)</strong>
-          </div>
-          <div style="font-size:0.86rem; line-height:1.65; color:#3e3831;">
-            • <strong>店家位置特徵：</strong>位於百花大教堂通往領主廣場的主幹道 <strong>Via Dei Calzaiuoli 79 號</strong>（牆上門牌為紅底 79 號，招牌上方寫著 <code>GELATERIA YOGURTERIA SORBETTI VEGANI</code>）。<br>
-            • <strong>黑店惡劣騙術：</strong><br>
-            &nbsp;&nbsp;1. <strong>故意不取正式店名：</strong>招牌通篇只寫「GELATERIA（義大利文『冰淇淋店』通稱）」，讓被騙的觀光客上網搜尋只能跑出幾百家店，找不到特定地標留負評！<br>
-            &nbsp;&nbsp;2. <strong>哄騙喊價結帳暴漲：</strong>店員在點餐前口頭隨意喊「2 歐、5 歐」，等挖完冰淇淋結帳時<strong>直接變臉強索 €10 到 €15 歐元</strong>！<br>
-            &nbsp;&nbsp;3. <strong>不給明細收據：</strong>拒開正式發票，並利用外國人聽不懂義大利文當眾嘲笑！<br>
-            • <strong>避雷法則：</strong>走在 Calzaiuoli 大道絕對繞開這家！吃冰淇淋請指名歷史信譽名店（如 <strong>Gilli、Venchi、Perché no!...、Grom</strong>），正派店家價目表皆公開透明標示於櫃檯！
+      <div style="background:#fdfaf4; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:2px 2px 0px var(--border);">
+        <!-- 1: 羅馬 -->
+        <div style="display:flex; align-items:flex-start; gap:12px;">
+          <div style="background:#fff; border:2px solid var(--border); border-radius:10px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">🏛️</div>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+              <strong>1. 羅馬帝國 ＆ 梵蒂岡 ＆ 拿坡里龐貝 (Roma / Napoli)</strong>
+              <span style="font-size:0.75rem; font-weight:800; background:var(--forest-bg); color:var(--forest); padding:2px 6px; border-radius:5px; border:1px solid var(--border);">12/23 - 12/28 ｜ 住 5 晚 (Roma CentrArte)</span>
+            </div>
+            <div style="font-size:0.82rem; color:var(--muted); margin-top:2px;">
+              萬神殿 ➔ 許願池 ➔ 競技場地下層 ➔ 教宗祝禱 ➔ <strong>高鐵 1h10m 往返拿坡里龐貝吃薄披薩</strong> ➔ 博爾蓋塞美術館
+            </div>
           </div>
         </div>
-
-        <!-- 2. 四大名城防扒防騙必備守則 -->
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px;">
-          <!-- 羅馬防騙 -->
-          <div class="tip-capsule tip-avoid">
-            <strong>🏛️ 羅馬：假羅馬戰士 ＆ 許願池扒手</strong><br>
-            • 競技場外穿盔甲手持劍盾的假戰士主動搭訕合照，拍完強索 €10~€20！雙手插口袋堅決說 No！<br>
-            • 許願池、特米尼地鐵與公車站扒手極多（常有吉普賽婦女抱小孩或拿硬紙板遮擋行竊），背包永遠放胸前，手機務必裝斜背掛繩。
-          </div>
-          <!-- 佛羅倫斯防騙 -->
-          <div class="tip-capsule tip-food">
-            <strong>⚜️ 佛羅倫斯：地上鋪畫詐騙 ＆ 牛排秤重陷阱</strong><br>
-            • 烏菲茲或百花大教堂附近常有人將廉價印刷畫「平鋪在石板地上」，故意引誘遊客踩到後索賠 €50~€100！走路眼睛往前看地面。<br>
-            • 點丁骨大牛排（Bistecca）菜單是以「百克（all'etto, /100g）」計價，點餐前務必確認整塊牛排的總重量與預估總價！
-          </div>
-          <!-- 威尼斯防騙 -->
-          <div class="tip-capsule tip-photo">
-            <strong>🛶 威尼斯：貢多拉公定價 ＆ 海鷗搶食</strong><br>
-            • 貢多拉遊船有市府公定價（白天 €90 / 夜間 19:00 後 €110），上船前務必與船夫確認好價格與時間（通常 30 分鐘），避免被加收額外費用。<br>
-            • 聖馬可廣場露天就座務必留意海鷗突襲搶走手中的麵包冰淇淋！
-          </div>
-          <!-- 米蘭防騙 -->
-          <div class="tip-capsule tip-must">
-            <strong>👑 米蘭：幸運手繩黑人 ＆ 強塞鴿子飼料</strong><br>
-            • 大教堂廣場與斯福爾札城堡外，會有黑人非常熱情地打招呼並強行將「編織幸運手繩」套在遊客手腕上，一旦套上立刻索要 €10~€20！雙手插外套口袋完全不給他碰！<br>
-            • 黑人往你手中塞玉米粒餵鴿子拍照，拍完同樣強索暴利，堅決不接任何物品。
-          </div>
+        <div style="margin:6px 0 6px 19px; padding-left:18px; border-left:3px dashed var(--border); font-size:0.8rem; font-weight:800; color:var(--calcifer);">
+          🚅 Italo 高鐵 1h 36m (羅馬 Termini ➔ 佛羅倫斯 SMN)
         </div>
 
-        <!-- 3. 餐廳用餐與法規警報 -->
-        <div style="margin-top:12px; background:#fdfaf4; border:1.5px solid var(--ghibli-border); border-radius:12px; padding:12px 16px; font-size:0.86rem; line-height:1.65;">
-          • <strong>桌巾麵包費 (Coperto)：</strong>義大利餐廳入座每人收 €2～€3 桌巾費屬於當地合法傳統（含餐具與籃裝麵包），但<strong>結帳務必索取正式發票 (Scontrino Fiscale)</strong>！<br>
-          • <strong>歷史階梯禁坐令：</strong>羅馬西班牙階梯嚴禁坐下停留或飲食，否則警方直接吹哨開罰 €250；威尼斯各大石橋亦禁止隨地席地而坐阻礙通道！
+        <!-- 2: 佛羅倫斯 -->
+        <div style="display:flex; align-items:flex-start; gap:12px;">
+          <div style="background:#fff; border:2px solid var(--border); border-radius:10px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">⚜️</div>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+              <strong>2. 翡冷翠文藝復興 ＆ 比薩 (Firenze / Pisa)</strong>
+              <span style="font-size:0.75rem; font-weight:800; background:var(--forest-bg); color:var(--forest); padding:2px 6px; border-radius:5px; border:1px solid var(--border);">12/28 - 12/30 ｜ 住 2 晚 (Palazzo Gamba)</span>
+            </div>
+            <div style="font-size:0.82rem; color:var(--muted); margin-top:2px;">
+              聖母百花大教堂登頂 ➔ 烏菲茲美術館 ➔ <strong>火車 50m 往返比薩斜塔</strong> ➔ 學院大衛像 ➔ Il Latini 1.2kg 丁骨大牛排
+            </div>
+          </div>
         </div>
-      </div>
+        <div style="margin:6px 0 6px 19px; padding-left:18px; border-left:3px dashed var(--border); font-size:0.8rem; font-weight:800; color:var(--calcifer);">
+          🚅 Italo 高鐵 2h 05m (佛羅倫斯 SMN ➔ 威尼斯 Santa Lucia)
+        </div>
 
-      <!-- 14 天完整行程摘要快查一覽表 (Summary Matrix) -->
-      <div class="notion-card">
-        <h3>📋 14 天每日摘要快查矩陣表 (Day-by-Day Summary)</h3>
-        <div style="overflow-x:auto;">
-          <table class="phrase-table" style="min-width:620px;">
-            <thead>
-              <tr style="background:var(--ghibli-bg);">
-                <th style="width:75px;">天數/日期</th>
-                <th style="width:75px;">城市/段落</th>
-                <th>當日核心遊程摘要</th>
-                <th style="width:110px;">交通移動</th>
-                <th style="width:130px;">當晚住宿</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>D0</strong> 12/22 (二)</td><td>跨洋啟航</td><td>TPE 23:25 華航直飛 / JAX 13:39 達美跨大西洋起飛</td><td>✈️ 長程客機</td><td>夜宿機上</td></tr>
-              <tr><td><strong>D1</strong> 12/23 (三)</td><td>🇮🇹 羅馬</td><td>08:30 FCO會師 ➔ 萬神殿天窗 ➔ 許願池拋硬幣 ➔ 金杯咖啡</td><td>🚆 機場快線 32m</td><td>特米尼旁 Republic 公寓</td></tr>
-              <tr><td><strong>D2</strong> 12/24 (四)</td><td>🇮🇹 羅馬</td><td>羅馬競技場地下層 ➔ 古羅馬廣場 ➔ 聖伯多祿廣場點燈 ➔ 自炊平安夜</td><td>🚶‍♂️ 步行 / 滑板車</td><td>特米尼旁 Republic 公寓</td></tr>
-              <tr><td><strong>D3</strong> 12/25 (五)</td><td>🇮🇹 梵蒂岡</td><td>聖伯多祿大殿教宗聖誕祝禱 (Urbi et Orbi) ➔ 聖天使堡夕陽</td><td>🚶‍♂️ 步行 / Uber</td><td>特米尼旁 Republic 公寓</td></tr>
-              <tr><td><strong>D4</strong> 12/26 (六)</td><td>🇮🇹 佛羅倫斯</td><td>西班牙階梯 ➔ Italo 高鐵直奔佛羅倫斯 ➔ 領主廣場 ➔ Gilli 提拉米蘇</td><td>🚅 Italo 高鐵 1.5h</td><td>百花教堂正對面 Gamba 公寓</td></tr>
-              <tr><td><strong>D5</strong> 12/27 (日)</td><td>🇮🇹 佛羅倫斯</td><td>聖母百花大教堂 (喬托鐘樓登頂) ➔ 烏菲茲名畫 ➔ 慢燉牛肚包</td><td>🚶‍♂️ 古城漫步</td><td>百花教堂正對面 Gamba 公寓</td></tr>
-              <tr><td><strong>D6</strong> 12/28 (一)</td><td>🇮🇹 比薩/托斯卡尼</td><td>比薩斜塔趣味推塔 ➔ 學院美術館《大衛像》 ➔ Il Latini 丁骨牛排</td><td>🚆 區間火車 50m</td><td>百花教堂正對面 Gamba 公寓</td></tr>
-              <tr><td><strong>D7</strong> 12/29 (二)</td><td>🇮🇹 威尼斯</td><td>Italo 高鐵直達水都 ➔ 聖馬可金箔大教堂 ➔ 花神咖啡 ➔ 貢多拉夜遊</td><td>🚅 Italo 高鐵 2h</td><td>里亞托橋旁 Prestige 公寓</td></tr>
-              <tr><td><strong>D8</strong> 12/30 (三)</td><td>🇮🇹 威尼斯</td><td>水上巴士探訪彩色島 (Burano) ➔ 炸海鮮 ➔ 總督宮 ＆ 歎息橋</td><td>🚤 水上巴士</td><td>里亞托橋旁 Prestige 公寓</td></tr>
-              <tr><td><strong>D9</strong> 12/31 (四)</td><td>🇮🇹 米蘭</td><td>高鐵直奔米蘭 ➔ 艾曼紐二世迴廊公牛踩轉 ➔ 大教堂廣場萬人跨年煙火</td><td>🚅 Italo 高鐵 2.5h</td><td>大教堂旁 Duomo 公寓 (連住4晚)</td></tr>
-              <tr><td><strong>D10</strong> 01/01 (五)</td><td>🇮🇹 米蘭</td><td>哥德奇蹟・米蘭大教堂 135 尖塔天台 ➔ Trattoria 金黃米蘭炸牛排</td><td>🚶‍♂️ 步行 / 地鐵</td><td>大教堂旁 Duomo 公寓 (連住4晚)</td></tr>
-              <tr><td><strong>D11</strong> 01/02 (六)</td><td>🇮🇹 科莫湖</td><td>阿爾卑斯湖光一日遊：瓦倫納 ＆ 貝拉焦渡輪漫遊 ➔ 傍晚回米蘭</td><td>🚆 火車 1h ＋ 渡輪</td><td>大教堂旁 Duomo 公寓 (連住4晚)</td></tr>
-              <tr><td><strong>D12</strong> 01/03 (日)</td><td>🇮🇹 米蘭</td><td>感恩聖母堂朝聖達文西《最後的晚餐》 ➔ 蒙特拿破崙最後採買退稅整理</td><td>🚇 地鐵 / 步行</td><td>大教堂旁 Duomo 公寓 (連住4晚)</td></tr>
-              <tr><td><strong>D13</strong> 01/04 (一)</td><td>🇮🇹 返航日</td><td>提早 3.5h 抵達 MXP 機場避開安檢長龍 ➔ 長榮 BR 96 直飛返台</td><td>🚆 機場快線 52m</td><td>夜宿機上 / JAX返家</td></tr>
-              <tr><td><strong>D14</strong> 01/05 (二)</td><td>🇹🇼 抵台</td><td>清晨 06:10 長榮班機順暢降落台北桃園機場 (TPE)，圓滿凱旋！</td><td>-</td><td>溫暖的家</td></tr>
-            </tbody>
-          </table>
+        <!-- 3: 威尼斯 -->
+        <div style="display:flex; align-items:flex-start; gap:12px;">
+          <div style="background:#fff; border:2px solid var(--border); border-radius:10px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">🛶</div>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+              <strong>3. 浪漫水都 ＆ 跨年煙火 ＆ 彩色島 (Venezia)</strong>
+              <span style="font-size:0.75rem; font-weight:800; background:var(--calcifer-bg); color:var(--calcifer); padding:2px 6px; border-radius:5px; border:1px solid var(--border);">12/30 - 01/02 ｜ 住 3 晚 (Rialto Prestige) 跨年！</span>
+            </div>
+            <div style="font-size:0.82rem; color:var(--muted); margin-top:2px;">
+              聖馬可金箔大教堂 ➔ 貢多拉黑夜水巷 ➔ <strong>12/31 聖馬可廣場水上跨年煙火</strong> ➔ 童話彩色島 (Burano) ➔ 總督宮歎息橋
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="notion-card" style="border-left: 6px solid var(--ghibli-sky);">
-        <h3>⛅ 義大利各城市冬日氣溫快查 ＆ 穿搭保暖指南 (12月~1月)</h3>
-        <p style="margin-bottom:14px;">義大利冬季由南向北氣溫逐漸遞減，加上沿海海風與室內暖氣強勁，<strong>「洋蔥式多層次穿搭」</strong>是絕對法則！</p>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:12px;">
-          <div class="tip-capsule tip-photo"><strong>🏛️ 羅馬 ｜ 4°C ~ 14°C：</strong>日夜溫差逾 10 度，白天涼爽晴朗，入夜急降需毛料大衣與圍巾。</div>
-          <div class="tip-capsule tip-food"><strong>⚜️ 佛羅倫斯 ｜ 2°C ~ 11°C：</strong>內陸盆地早晚有晨霧濕冷，鐘樓登頂迎風處體感凍，備毛帽手套。</div>
-          <div class="tip-capsule tip-must"><strong>🛶 威尼斯 ｜ 1°C ~ 8°C (體感 0°C)：</strong>海風夾帶水氣刺骨，搭船航行必須穿防風防水長大衣＋發熱衣。</div>
-          <div class="tip-capsule tip-avoid"><strong>❄️ 米蘭/科莫湖 ｜ -1°C ~ 7°C：</strong>接近冰點！12/31 跨年夜戶外站立務必全身貼暖暖包（足底暖暖包必備）！</div>
+        <div style="margin:6px 0 6px 19px; padding-left:18px; border-left:3px dashed var(--border); font-size:0.8rem; font-weight:800; color:var(--calcifer);">
+          🚅 Italo 高鐵 2h 27m (威尼斯 Santa Lucia ➔ 米蘭 Centrale)
         </div>
-        <div class="tip-capsule tip-booking" style="margin-top:14px;">🧥 <strong>室內暖氣避雷：</strong>義大利室內暖氣均開至 22°C~25°C 極為溫熱！裡層請穿好穿脫的開襟毛衣，切勿穿單件極厚高領！</div>
+
+        <!-- 4: 米蘭 -->
+        <div style="display:flex; align-items:flex-start; gap:12px;">
+          <div style="background:#fff; border:2px solid var(--border); border-radius:10px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">👑</div>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+              <strong>4. 時尚米蘭 ＆ 達文西 ＆ 返航 (Milano)</strong>
+              <span style="font-size:0.75rem; font-weight:800; background:var(--hay-bg); color:var(--hay); padding:2px 6px; border-radius:5px; border:1px solid var(--border);">01/02 - 01/04 ｜ 精緻住 2 晚 (Duomo Cathedral)</span>
+            </div>
+            <div style="font-size:0.82rem; color:var(--muted); margin-top:2px;">
+              米蘭大教堂 135 尖塔天台 ➔ 艾曼紐二世迴廊踩公牛 ➔ 達文西《最後的晚餐》 ➔ 蒙特拿破崙退稅採買
+            </div>
+          </div>
+        </div>
+        <div style="margin:6px 0 6px 19px; padding-left:18px; border-left:3px dashed var(--border); font-size:0.8rem; font-weight:800; color:var(--calcifer);">
+          🚆 Malpensa Express 52m (米蘭 Centrale ➔ 馬爾彭薩機場 T1)
+        </div>
+
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="background:#fff; border:2px solid var(--border); border-radius:10px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;">🛫</div>
+          <div><strong>01/04 清晨提早 3.5h 抵達 MXP 機場 ➔ 長榮 / 達美凱旋直飛返台！</strong></div>
+        </div>
       </div>
     </div>
 
-    <!-- 3. 行程手帳模組 (sec-schedule) -->
-    <div id="sec-schedule" class="main-sec">
-      <!-- 醒目的日期小火車鐵軌切換軸 -->
-      <div class="rail-timeline">
-        <div class="track-wrapper">
-          <div class="track-line"></div>
-          <div class="date-stop" onclick="selectDay(0, this)"><div class="loco-badge">🚂 啟航</div><div class="stop-dot"></div><div class="stop-date">12/22</div><div class="stop-day">週二</div></div>
-          <div class="date-stop active" onclick="selectDay(1, this)"><div class="loco-badge">🚂 羅馬</div><div class="stop-dot"></div><div class="stop-date">12/23</div><div class="stop-day">週三</div></div>
-          <div class="date-stop" onclick="selectDay(2, this)"><div class="loco-badge">🚂 聖誕</div><div class="stop-dot"></div><div class="stop-date">12/24</div><div class="stop-day">週四</div></div>
-          <div class="date-stop" onclick="selectDay(3, this)"><div class="loco-badge">🚂 梵蒂岡</div><div class="stop-dot"></div><div class="stop-date">12/25</div><div class="stop-day">週五</div></div>
-          <div class="date-stop" onclick="selectDay(4, this)"><div class="loco-badge">🚂 翡冷翠</div><div class="stop-dot"></div><div class="stop-date">12/26</div><div class="stop-day">週六</div></div>
-          <div class="date-stop" onclick="selectDay(5, this)"><div class="loco-badge">🚂 百花宮</div><div class="stop-dot"></div><div class="stop-date">12/27</div><div class="stop-day">週日</div></div>
-          <div class="date-stop" onclick="selectDay(6, this)"><div class="loco-badge">🚂 比薩</div><div class="stop-dot"></div><div class="stop-date">12/28</div><div class="stop-day">週一</div></div>
-          <div class="date-stop" onclick="selectDay(7, this)"><div class="loco-badge">🚂 威尼斯</div><div class="stop-dot"></div><div class="stop-date">12/29</div><div class="stop-day">週二</div></div>
-          <div class="date-stop" onclick="selectDay(8, this)"><div class="loco-badge">🚂 彩色島</div><div class="stop-dot"></div><div class="stop-date">12/30</div><div class="stop-day">週三</div></div>
-          <div class="date-stop" onclick="selectDay(9, this)"><div class="loco-badge">🚂 米蘭跨年</div><div class="stop-dot"></div><div class="stop-date">12/31</div><div class="stop-day">週四</div></div>
-          <div class="date-stop" onclick="selectDay(10, this)"><div class="loco-badge">🚂 元旦</div><div class="stop-dot"></div><div class="stop-date">01/01</div><div class="stop-day">週五</div></div>
-          <div class="date-stop" onclick="selectDay(11, this)"><div class="loco-badge">🚂 科莫湖</div><div class="stop-dot"></div><div class="stop-date">01/02</div><div class="stop-day">週六</div></div>
-          <div class="date-stop" onclick="selectDay(12, this)"><div class="loco-badge">🚂 晚餐採買</div><div class="stop-dot"></div><div class="stop-date">01/03</div><div class="stop-day">週日</div></div>
-          <div class="date-stop" onclick="selectDay(13, this)"><div class="loco-badge">🚂 賦歸</div><div class="stop-dot"></div><div class="stop-date">01/04</div><div class="stop-day">週一</div></div>
+    <!-- 避雷防騙大警報 (含佛羅倫斯黑店冰淇淋) -->
+    <div class="card" style="border-left: 6px solid #b3261e; background:#fffcfb;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+        <h3 style="color:#b3261e; margin-bottom:0;">🚨 義大利行前注意事項 ＆ 避雷防騙血淚警報</h3>
+        <span style="font-size:0.78rem; font-weight:800; background:#faeae6; color:#b3261e; padding:2px 8px; border-radius:6px; border:1.5px solid #b3261e;">必讀守則！</span>
+      </div>
+      <p style="margin:6px 0 12px; font-size:0.86rem; color:var(--muted);">
+        義大利風景美如畫，但觀光熱點黑店與騙術層出不窮！請牢記以下避坑心法：
+      </p>
+
+      <div style="background:#fff; border:2px solid #b3261e; border-radius:14px; padding:14px; margin-bottom:12px;">
+        <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+          <span style="background:#b3261e; color:#fff; font-size:0.74rem; font-weight:900; padding:1px 6px; border-radius:4px;">特大警報</span>
+          <strong style="color:#b3261e; font-size:0.95rem;">⚠️ 佛羅倫斯全城評價最爛黑店冰淇淋 (Tripadvisor 僅 1.1 分)</strong>
+        </div>
+        <div style="font-size:0.84rem; line-height:1.6; color:#3e3831;">
+          • <strong>店家位置特徵：</strong>百花大教堂通往領主廣場主幹道 <strong>Via Dei Calzaiuoli 79 號</strong>（牆上門牌為紅底 79 號，招牌上方寫著 <code>GELATERIA YOGURTERIA SORBETTI VEGANI</code>）。<br>
+          • <strong>黑店惡劣騙術：</strong><br>
+          &nbsp;&nbsp;1. <strong>故意不取店名：</strong>招牌通篇只寫「GELATERIA（冰淇淋店通稱）」，讓被坑的遊客事後在 Google 地圖上搜尋不到特定地標留負評！<br>
+          &nbsp;&nbsp;2. <strong>哄騙喊價結帳暴漲：</strong>店員在點餐前口頭隨意喊「2 歐、5 歐」，等挖完冰淇淋結帳時<strong>直接變臉強索 €10 到 €15 歐元</strong>！<br>
+          &nbsp;&nbsp;3. <strong>不給明細收據：</strong>拒開正式發票，並利用外國人聽不懂義大利文當眾嘲笑！<br>
+          • <strong>避雷法則：</strong>走在 Calzaiuoli 大道絕對繞開這家！吃冰淇淋請指名歷史信譽名店（如 <strong>Gilli、Venchi、Perché no!...、Grom</strong>），正派店家價目表皆公開透明標示於櫃檯！
         </div>
       </div>
 
-      <!-- 快捷雙向切日導航條 -->
-      <div class="day-stepper">
-        <button class="stepper-btn" onclick="stepDay(-1)">⬅️ 前一天</button>
-        <div class="stepper-label" id="current-day-label">📍 Day 1 ｜ 12/23 (週三) 羅馬大會師</div>
-        <button class="stepper-btn" onclick="stepDay(1)">後一天 ➡️</button>
-      </div>
-
-      <!-- 動態日行程容器 (直接靜態預載入 Day 1，雙重保險絕不空白！) -->
-      <div id="day-content-container"><div class="day-banner">
-          <div class="day-icon-box">🏛️</div>
-          <div class="day-title-wrap">
-            <h3>Day 1 ｜ 12/23 (週三) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-forest); margin-left:6px;">⛅ 羅馬 5°C ~ 14°C (涼爽微寒)</span></h3>
-            <h2>羅馬大會師 ＆ 萬神殿天窗 ＆ 許願池漫步</h2>
-            <p>住 The Republic Apartments (特米尼中央火車站旁)</p>
-          </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:10px;">
+        <div class="tip-box tip-red">
+          <strong>🏛️ 羅馬：假羅馬戰士 ＆ 許願池扒手</strong><br>
+          • 競技場外穿盔甲手持劍盾的假戰士主動搭訕合照，拍完強索 €10~€20！雙手插口袋堅決說 No！<br>
+          • 許願池與地鐵扒手多，背包永遠背胸前，手機務必裝斜背掛繩。
         </div>
-
-        <div class="day-strategy-card">
-          <div class="strategy-row">
-            <span class="strategy-badge badge-summary">📝 今日摘要</span>
-            <div>機場快線直達市區！下午慢遊特雷維許願池、萬神殿天窗，品嚐金杯咖啡碎冰沙，傍晚逛納沃納廣場聖誕市集。</div>
-          </div>
-          <div class="strategy-row">
-            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
-            <div>抵達後直奔公寓放行李，絕不拖上街！Leonardo 快線出站步行 4 分鐘進特米尼公寓寄放大行李。市區全程輕裝出發！</div>
-          </div>
-          <div class="strategy-row">
-            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
-            <div>明日是平安夜 (12/24)！全羅馬超市與餐廳 18:00 前提早關門！下午逛完古城請順路在特米尼站 Conad 超市買齊平安夜晚餐牛排食材！</div>
-          </div>
+        <div class="tip-box tip-gold">
+          <strong>⚜️ 佛羅倫斯：地上鋪畫詐騙 ＆ 牛排秤重陷阱</strong><br>
+          • 烏菲茲附近常有人將廉價印刷畫平鋪在地上引誘遊客踩到索賠 €50~€100！走路眼睛往前看地面。<br>
+          • 丁骨大牛排（Bistecca）菜單是以「百克（all'etto, /100g）」計價，點餐前務必確認整塊牛排的總重量與預估總價！
         </div>
-
-        <div class="timeline-container">
-          <div class="v-line"></div>
-          
-            <div class="time-entry">
-              <div class="time-tag-col">08:30</div>
-              <div class="time-node"></div>
-              <div class="schedule-box">
-                <div class="box-header">
-                  <span class="badge-kind train">🚆 接駁會師</span>
-                  <div class="box-title">羅馬 FCO 機場大會師 ➔ Leonardo 快線直達公寓安置行李</div>
-                </div>
-                <div class="box-desc">持台灣晶片護照直接走 E-Gates 電子閘門（30秒極速出關）。搭 Leonardo Express 機場直達快線（32 分鐘直達 Termini），出站步行 4 分鐘入住公寓卸下行李！</div>
-                <div class="tactical-list"><div class="tip-capsule tip-must">🌟 零長途趕車壓力：機場快線不限車次隨到隨上，抵達首日直接進市區公寓休整調時差！</div></div>
-              </div>
-            </div>
-            <div class="transit-connector">
-              <div class="transit-pill"><span class="arrow">⬇️</span> 🚶‍♂️ 步行 18 分鐘 / 🛴 共享滑板車 8 分鐘 (輕裝沿民族街直達)</div>
-            </div>
-            <div class="time-entry">
-              <div class="time-tag-col">11:30</div>
-              <div class="time-node"></div>
-              <div class="schedule-box">
-                <div class="box-header">
-                  <span class="badge-kind spot">🏛️ 經典</span>
-                  <div class="box-title">特雷維許願池 (Fontana di Trevi) 巴洛克巨作</div>
-                </div>
-                <div class="link-row" style="margin:4px 0 8px;"><a class="link-btn" href="https://www.google.com/maps/search/?api=1&query=Trevi+Fountain+Rome" target="_blank">📍 Google Maps 導航</a></div>
-                <div class="box-desc">巴洛克雕刻巔峰之作！中央為海神尼普頓乘駕貝殼飛馬戰車，激盪水流自人造岩石奔湧而出，磅礡震撼。</div>
-                <div class="tactical-list"><div class="tip-capsule tip-must">🌟 必體驗儀式：背對許願池，右手越過左肩拋擲硬幣（一枚代表重返羅馬，二枚代表找到真愛）。</div><div class="tip-capsule tip-photo">📸 最佳打卡機位：站在水池右側石階以低角度仰拍，將海神駿馬、飛濺水花與巴洛克宮殿浮雕完整收錄！</div><div class="tip-capsule tip-avoid">⚠️ 防扒警報：許願池周邊人潮密集，為扒手第一重災區！背包背胸前，手機務必裝斜背掛繩。</div></div>
-              </div>
-            </div>
-            <div class="transit-connector">
-              <div class="transit-pill"><span class="arrow">⬇️</span> 🚶‍♂️ 穿過古老石板小巷步行 8 分鐘 (約 650 公尺) 抵達萬神殿廣場</div>
-            </div>
-            <div class="time-entry">
-              <div class="time-tag-col">13:30</div>
-              <div class="time-node"></div>
-              <div class="schedule-box">
-                <div class="box-header">
-                  <span class="badge-kind spot">🏛️ 奇蹟</span>
-                  <div class="box-title">萬神殿 (Pantheon) 兩千年無樑柱混凝土天窗神蹟</div>
-                </div>
-                <div class="link-row" style="margin:4px 0 8px;"><a class="link-btn" href="https://www.google.com/maps/search/?api=1&query=Pantheon+Rome" target="_blank">📍 Google Maps 導航</a></div>
-                <div class="box-desc">羅馬帝國保留最完美的奇蹟古蹟！西元 125 年哈德良重建，直徑 43.3 米純混凝土無樑柱圓頂，中央 9 米露天採光圓眼象徵連結天地。拉斐爾長眠於此。</div>
-                <div class="tactical-list"><div class="tip-capsule tip-booking">⏰ 預約提醒：萬神殿全面實施預約購票制 (€5)，現場排隊動輒 1 小時，務必提早 2 週預約免排隊時段！</div><div class="tip-capsule tip-photo">📸 最佳打卡機位：正午陽光從 9 米圓頂天窗如探照燈般直瀉而下，站在圓眼正下方仰拍神聖天光。</div></div>
-              </div>
-            </div>
-            <div class="transit-connector">
-              <div class="transit-pill"><span class="arrow">⬇️</span> 🚶‍♂️ 萬神殿旁小巷步行 2 分鐘 (約 120 公尺) 即達金杯咖啡</div>
-            </div>
-            <div class="time-entry">
-              <div class="time-tag-col">15:00</div>
-              <div class="time-node"></div>
-              <div class="schedule-box">
-                <div class="box-header">
-                  <span class="badge-kind food">☕ 老饕</span>
-                  <div class="box-title">金杯咖啡 (Tazza d'Oro) ＆ Giolitti 百年冰淇淋</div>
-                </div>
-                <div class="link-row" style="margin:4px 0 8px;"><a class="link-btn" href="https://www.google.com/maps/search/?api=1&query=La+Casa+del+Caffe+al+Pantheon" target="_blank">📍 Google Maps 導航</a></div>
-                <div class="box-desc">電影《天使與魔鬼》指定名店！站在吧台喝 Espresso，點招牌 Granita 咖啡碎冰沙佐厚層香滑鮮奶油。接著步行 3 分鐘至教宗最愛的 Giolitti 冰淇淋。</div>
-                <div class="tactical-list"><div class="tip-capsule tip-food">🍴 必吃推薦：金杯咖啡碎冰沙 (€3.5)；Giolitti 必選開心果與黑無花果，店員問 Panna 回答 Sì 免費擠滿鮮奶油！</div><div class="tip-capsule tip-gift">🎁 必買伴手禮：金杯咖啡女王咖啡豆金字黑袋、經典六角摩卡壺、咖啡豆巧克力豆。</div></div>
-              </div>
-            </div>
-            <div class="transit-connector">
-              <div class="transit-pill"><span class="arrow">⬇️</span> 🚶‍♂️ 穿過古城向西步行 6 分鐘 (約 450 公尺) 抵達納沃納廣場</div>
-            </div>
-            <div class="time-entry">
-              <div class="time-tag-col">17:00</div>
-              <div class="time-node"></div>
-              <div class="schedule-box">
-                <div class="box-header">
-                  <span class="badge-kind spot">🎪 市集</span>
-                  <div class="box-title">納沃納廣場 (Piazza Navona) 聖誕市集 ＆ 老字號晚宴</div>
-                </div>
-                <div class="link-row" style="margin:4px 0 8px;"><a class="link-btn" href="https://www.google.com/maps/search/?api=1&query=Piazza+Navona+Rome" target="_blank">📍 Google Maps 導航</a></div>
-                <div class="box-desc">巴洛克橢圓形廣場，貝尼尼四河噴泉聳立中央。聖誕節期間聚集了旋轉木馬、傳統木雕馬槽與熱紅酒香料攤位！</div>
-                <div class="tactical-list"><div class="tip-capsule tip-food">🍴 老饕晚餐名店：預約 Trattoria Vecchia Roma！必吃在巨大羊乳酪輪中炒製的火焰羊乳酪番茄培根麵！</div></div>
-              </div>
-            </div>
-        </div></div>
-    </div>
-
-    <!-- 4. 菜單拍照翻譯與匯率換算 (sec-menu) -->
-    <div id="sec-menu" class="main-sec" style="display:none;">
-      <!-- 歐元轉台幣計算機 -->
-      <div class="calc-card" style="border-left: 6px solid var(--ghibli-calcifer);">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
-          <h3 style="font-size:1.25rem; font-weight:900;">💶 菜單金額即時換算新台幣 (TWD) 計算機</h3>
-          <span style="font-size:0.82rem; font-weight:800; background:#f1ebd9; padding:3px 10px; border-radius:8px; border:1.5px solid var(--ghibli-border);">匯率 1 EUR ≈ 35.5 TWD</span>
+        <div class="tip-box tip-blue">
+          <strong>🛶 威尼斯：貢多拉公定價 ＆ 海鷗搶食</strong><br>
+          • 貢多拉遊船有市府公定價（白天 €90 / 19:00 後 €110），上船前確認好價格；聖馬可廣場露天留意海鷗突襲搶食。
         </div>
-        <p style="font-size:0.88rem; color:var(--ghibli-muted); margin-top:6px;">看到菜單上的歐元價格，輸入金額即刻換算台幣，還能自動加計義大利常見的「桌巾麵包費 (Coperto)」：</p>
-        
-        <div class="currency-input-row" style="margin-top:14px;">
-          <input type="number" id="eur-amount" class="input-ghibli" placeholder="輸入菜單歐元價格 (例如: 18)" oninput="calcTWD()" />
-          <span style="font-size:1.3rem; font-weight:900;">€ EUR</span>
-        </div>
-
-        <div style="margin-top:12px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; background:#fdfaf4; padding:10px 14px; border-radius:12px; border:1.5px solid var(--ghibli-border);">
-          <label style="font-size:0.86rem; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:6px;">
-            <input type="checkbox" id="add-coperto" onchange="calcTWD()" style="width:18px; height:18px;" checked /> 加算桌巾費 (Coperto €2.5/人)
-          </label>
-          <div style="display:flex; align-items:center; gap:6px; font-size:0.86rem; font-weight:800;">
-            <span>用餐人數：</span>
-            <select id="diners-count" onchange="calcTWD()" style="padding:4px 8px; border-radius:8px; border:1.5px solid var(--ghibli-border); font-weight:800;">
-              <option value="1">1 人</option>
-              <option value="2">2 人</option>
-              <option value="3">3 人</option>
-              <option value="4" selected>4 人</option>
-              <option value="5">5 人</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="exchange-result-box" style="margin-top:16px;">
-          <div>
-            <div style="font-size:0.82rem; font-weight:800; color:var(--ghibli-muted);">總計折合新台幣</div>
-            <div style="font-size:0.78rem; color:#8c7e6e;" id="calc-breakdown">菜單價格 (4人用餐)</div>
-          </div>
-          <div style="text-align:right;">
-            <div class="exchange-twd-val" id="twd-result">NT$ 0</div>
-            <div style="font-size:0.8rem; font-weight:800; color:var(--ghibli-forest);" id="twd-per-person">每人約 NT$ 0</div>
-          </div>
+        <div class="tip-box tip-green">
+          <strong>👑 米蘭：幸運手繩黑人 ＆ 強塞鴿子飼料</strong><br>
+          • 大教堂廣場黑人強行套「編織幸運手繩」或塞玉米粒餵鴿子，套上立刻強索 €10~€20！雙手插外套口袋完全不給他碰！
         </div>
       </div>
 
-      <!-- 拍照中譯教學與上傳工具 -->
-      <div class="calc-card" style="border-left: 6px solid var(--ghibli-forest);">
-        <h3 style="font-size:1.25rem; font-weight:900;">📷 菜單拍照怎麼即時翻成繁體中文？</h3>
-        <p style="font-size:0.88rem; color:var(--ghibli-muted); margin-top:4px;">在義大利餐館現場，推薦兩種<strong>最快、最精準的拍照中譯神技</strong>：</p>
-        
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:12px; margin-top:14px;">
-          <div class="tip-capsule tip-photo">
-            <strong>🍎 iPhone 內建相機【原況文字】直翻：</strong><br>
-            打開 iPhone 相機對準實體菜單 ➔ 畫面右下角出現【原況文字 (三條線圖示)】點擊 ➔ 點選畫面下方【翻譯】➔ <strong>所有義大利文菜色瞬間覆蓋為繁體中文</strong>！
-          </div>
-          <div class="tip-capsule tip-must">
-            <strong>🤖 Google 智慧鏡頭 / Gemini 拍照翻譯：</strong><br>
-            打開 Google App 或 Gemini ➔ 點相機圖示 ➔ 選擇「翻譯」對準菜單拍一張 ➔ <strong>即刻顯示全頁繁體中文對照</strong>，還能詢問菜色內容！
-          </div>
-        </div>
-
-        <label for="camera-input" class="photo-upload-zone" style="display:block; margin-top:16px;">
-          <div style="font-size:2.4rem; margin-bottom:6px;">📸</div>
-          <strong style="font-size:1.05rem; color:var(--ghibli-text); display:block;">點此啟動相機拍照 或是 選擇菜單相片</strong>
-          <span style="font-size:0.82rem; color:var(--ghibli-muted);">拍下菜單後留存於手機畫面，並配合下方字典查詢</span>
-          <input type="file" id="camera-input" accept="image/*" capture="environment" style="display:none;" onchange="handleMenuPhoto(event)" />
-        </label>
-
-        <div id="photo-preview-wrap" style="display:none; margin-top:14px; text-align:center;">
-          <img id="photo-preview" style="max-width:100%; max-height:280px; border-radius:14px; border:2.5px solid var(--ghibli-border); box-shadow:3px 3px 0px var(--ghibli-border);" />
-          <div style="margin-top:10px;"><button class="stepper-btn" onclick="clearPhoto()">🗑️ 清除重拍</button></div>
-        </div>
-      </div>
-
-      <!-- 菜單單字即時中譯查詢機 -->
-      <div class="calc-card" style="border-left: 6px solid var(--ghibli-sky);">
-        <h3 style="font-size:1.25rem; font-weight:900;">🔍 菜單單字即時中譯查詢機</h3>
-        <p style="font-size:0.88rem; color:var(--ghibli-muted); margin-top:4px;">看不懂菜單上的字？直接在下方輸入關鍵字（例如：Pollo, Carne, Tartufo, Pesce）：</p>
-        <div style="margin-top:12px; display:flex; gap:10px;">
-          <input type="text" id="menu-search-input" class="input-ghibli" placeholder="輸入義大利文菜單單字..." oninput="searchMenuDict()" />
-          <button class="stepper-btn" onclick="searchMenuDict()" style="white-space:nowrap; padding:0 20px;">查詢 🔎</button>
-        </div>
-        <div id="search-result-box" style="margin-top:10px; font-size:0.92rem; font-weight:800; color:var(--ghibli-calcifer);"></div>
-      </div>
-
-      <!-- 老饕義大利菜單經典圖鑑 -->
-      <div class="calc-card">
-        <h3 style="font-size:1.25rem; font-weight:900;">🍝 義大利餐廳經典菜單圖鑑對照庫 (點擊自動換算台幣)</h3>
-        <p style="font-size:0.88rem; color:var(--ghibli-muted); margin-top:4px;">點選以下任意菜色，金額自動帶入上方計算機換算成台幣，並能點擊喇叭發音：</p>
-        <div id="menu-preset-container" style="margin-top:16px;"></div>
+      <div class="tip-box tip-gold" style="margin-top:10px;">
+        🍽️ <strong>發票防騙守則：</strong>義大利餐廳入座每人收 €2～€3 桌巾麵包費（Coperto）屬於當地合法傳統，但<strong>結帳務必確認拿到正式收銀發票 (Scontrino Fiscale)</strong>，而非手寫便條紙，避免被亂灌水！羅馬西班牙階梯嚴禁坐下飲食（罰款 €250）。
       </div>
     </div>
 
-    <!-- 5. 語句卡模組 (sec-cards) -->
-    <div id="sec-cards" class="main-sec" style="display:none;">
-      <div class="notion-card">
-        <div class="flashcard-header">
-          <div class="flashcard-title">義大利語句卡</div>
-          <div class="flashcard-badge">Italiano</div>
-        </div>
-        <div class="flashcard-sub">點一下會放大成全螢幕，直接把手機拿給店員、司機或路人看。</div>
-        <div class="card-filter-row">
-          <button class="card-filter-btn active" onclick="filterCards('all', this)">全部</button>
-          <button class="card-filter-btn" onclick="filterCards('dining', this)">點餐</button>
-          <button class="card-filter-btn" onclick="filterCards('bill', this)">結帳</button>
-          <button class="card-filter-btn" onclick="filterCards('transit', this)">交通</button>
-          <button class="card-filter-btn" onclick="filterCards('shop', this)">購物</button>
-          <button class="card-filter-btn" onclick="filterCards('help', this)">求助</button>
-        </div>
-        <div class="phrase-card-list" id="phrase-card-list-container"></div>
-      </div>
-    </div>
-
-    <!-- 6. 高鐵模組 (sec-trains) -->
-    <div id="sec-trains" class="main-sec" style="display:none;">
-      <div class="notion-card" style="border-left: 6px solid var(--ghibli-calcifer);">
-        <h3>🏎️ Italo 法拉利高鐵 (NTV) —— 大家狂推首選！</h3>
-        <p>由法拉利跑車前總裁創辦，跑車深紅色車身、全車頂級皮革座椅、寬敞舒適乾淨、免費 Wi-Fi 訊號強。<br>
-        <strong>官方 App：</strong>【Italo Treno】（提前官網買常有折扣碼 Promo Code！）。</p>
-        <div class="link-row"><a class="link-btn" href="https://www.italotreno.it/en" target="_blank">🔗 Italo 官方訂票網站</a></div>
-      </div>
-      <div class="notion-card" style="border-left: 6px solid var(--ghibli-forest);">
-        <h3>🚅 Trenitalia (義大利國鐵) —— 班次最密</h3>
-        <p>Frecciarossa 紅箭高鐵，羅馬機場 Leonardo Express 快線及比薩區間車必搭。<br>
-        <strong>官方 App：</strong>【Trenitalia】。</p>
-        <div class="link-row"><a class="link-btn" href="https://www.trenitalia.com/en.html" target="_blank">🔗 Trenitalia 官方網站</a></div>
-      </div>
-      <div class="tip-capsule tip-must">💡 <strong>車站提醒：</strong>Italo 與國鐵在各主要大城市<strong>共用同一個火車站</strong>！進站看大螢幕月台號碼即可。請一律在官方 App/官網購票，切勿跟第三方平台買！</div>
-    </div>
-
-    <!-- 7. 住宿模組 (sec-hotels) -->
-    <div id="sec-hotels" class="main-sec" style="display:none;">
-      <div class="notion-card">
-        <h3>🏨 全程推薦住宿地點</h3>
-        <p>
-          • <strong>羅馬 (12/23-12/26・3晚)：</strong>The Republic Apartments（特米尼站旁，附全套廚房自炊牛排）<br>
-          • <strong>佛羅倫斯 (12/26-12/29・3晚)：</strong>Palazzo Gamba Luxury Apartments（百花大教堂正對面景觀客廳）<br>
-          • <strong>威尼斯 (12/29-12/31・2晚)：</strong>Rialto Prestige Apartments（里亞托水上巴士站旁免爬橋；或住梅斯特 Mestre 站旁火車 1 站直達）<br>
-          • <strong>米蘭 (12/31-01/04・4晚)：</strong>Duomo Cathedral Apartments（大教堂旁步行 3 分鐘，跨年無縫回房）
-        </p>
-      </div>
-      <div class="notion-card">
-        <h3>🍴 必吃老饕名店清單</h3>
-        <p>
-          • <strong>羅馬：</strong>Trattoria Vecchia Roma（火焰起司培根麵）、金杯咖啡碎冰沙、Giolitti 冰淇淋<br>
-          • <strong>佛羅倫斯：</strong>Il Latini（1.2kg 巨無霸炭烤丁骨大牛排）、Da Nerbone（慢燉牛肚包）<br>
-          • <strong>威尼斯：</strong>Osteria da Fiore（道地墨魚麵、炸海鮮拼盤）、花神咖啡熱可可<br>
-          • <strong>米蘭：</strong>Trattoria Milanese（米蘭帶骨炸牛排、番紅花燉飯）、Luini（爆漿起司烤餡餅）
-        </p>
-      </div>
-    </div>
-
-    <!-- 8. 準備模組 (sec-tips) -->
-    <div id="sec-tips" class="main-sec" style="display:none;">
-      <div class="notion-card">
-        <h3>🛡️ 義大利防騙與避雷守則</h3>
-        <p>
-          • <strong>羅馬市區千萬不要坐地鐵：</strong>站點少且出站走很遠，改騎共享滑板車或步行、Uber 最方便！<br>
-          • <strong>大教堂廣場防騙：</strong>黑人強塞鴿子飼料或套紅繩，雙手插口袋堅決說 No 走開。<br>
-          • <strong>語言不通求助：</strong>遇到菜單、飯店停車細節，直接語音或拍照問 <strong>Google Gemini</strong>！
-        </p>
-      </div>
-      <div class="notion-card">
-        <h3>🗣️ 常用義大利語真人語音發音</h3>
-        <table class="phrase-table">
-          <tr><td><strong>你好 / 再見</strong></td><td>Ciao! <button class="audio-btn" onclick="speakText('Ciao!', 'it-IT')">🔊 朗讀</button></td></tr>
-          <tr><td><strong>謝謝</strong></td><td>Grazie mille <button class="audio-btn" onclick="speakText('Grazie mille', 'it-IT')">🔊 朗讀</button></td></tr>
-          <tr><td><strong>買單 / 結帳</strong></td><td>Il conto, per favore <button class="audio-btn" onclick="speakText('Il conto, per favore', 'it-IT')">🔊 朗讀</button></td></tr>
-          <tr><td><strong>洗手間在哪裡？</strong></td><td>Dov'è il bagno? <button class="audio-btn" onclick="speakText('Dov\'è il bagno?', 'it-IT')">🔊 朗讀</button></td></tr>
+    <!-- 14天摘要矩陣表 -->
+    <div class="card">
+      <h3>📋 14 天每日摘要快查矩陣表 (Day-by-Day Summary)</h3>
+      <div style="overflow-x:auto;">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th style="width:70px;">天數/日期</th>
+              <th style="width:70px;">城市</th>
+              <th>遊程摘要</th>
+              <th style="width:100px;">交通</th>
+              <th style="width:130px;">住宿</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>D0</strong> 12/22 (二)</td><td>跨洋啟航</td><td>TPE 23:25 華航直飛 / JAX 13:39 達美跨大西洋起飛</td><td>✈️ 長程客機</td><td>夜宿機上</td></tr>
+            <tr><td><strong>D1</strong> 12/23 (三)</td><td>🇮🇹 羅馬</td><td>08:30 FCO會師 ➔ 萬神殿天窗 ➔ 許願池拋硬幣 ➔ 金杯咖啡</td><td>🚆 機場快線 32m</td><td>Roma CentrArte (連住5晚)</td></tr>
+            <tr><td><strong>D2</strong> 12/24 (四)</td><td>🇮🇹 羅馬</td><td>羅馬競技場地下層 ➔ 古羅馬廣場 ➔ 聖伯多祿廣場點燈 ➔ 平安夜自炊</td><td>🚶‍♂️ 步行 / 滑板車</td><td>Roma CentrArte (連住5晚)</td></tr>
+            <tr><td><strong>D3</strong> 12/25 (五)</td><td>🇮🇹 梵蒂岡</td><td>聖伯多祿大殿教宗聖誕祝禱 (Urbi et Orbi) ➔ 聖天使堡夕陽</td><td>🚶‍♂️ 步行 / Uber</td><td>Roma CentrArte (連住5晚)</td></tr>
+            <tr><td><strong>D4</strong> 12/26 (六)</td><td>🇮🇹 拿坡里龐貝</td><td>高鐵 1h10m 直達拿坡里 ➔ 龐貝千年遺址 ➔ 正宗瑪格麗特披薩 ➔ 蛋堡夕陽</td><td>🚅 高鐵當天往返</td><td>Roma CentrArte (連住5晚)</td></tr>
+            <tr><td><strong>D5</strong> 12/27 (日)</td><td>🇮🇹 羅馬深遊</td><td>博爾蓋塞美術館神雕 ➔ 西班牙階梯 ➔ 人民廣場 ➔ 萬神殿夜景</td><td>🚶‍♂️ 輕裝漫步</td><td>Roma CentrArte (連住5晚)</td></tr>
+            <tr><td><strong>D6</strong> 12/28 (一)</td><td>🇮🇹 佛羅倫斯</td><td>Italo 高鐵 1.5h 直奔佛羅倫斯 ➔ 聖母百花大教堂 ➔ 烏菲茲美術館名畫</td><td>🚅 Italo 高鐵 1.5h</td><td>Palazzo Gamba (住2晚)</td></tr>
+            <tr><td><strong>D7</strong> 12/29 (二)</td><td>🇮🇹 比薩</td><td>比薩斜塔趣味推塔 ➔ 學院美術館《大衛像》 ➔ Il Latini 1.2kg 丁骨牛排</td><td>🚆 區間火車 50m</td><td>Palazzo Gamba (住2晚)</td></tr>
+            <tr><td><strong>D8</strong> 12/30 (三)</td><td>🇮🇹 威尼斯</td><td>Italo 高鐵直達水都 ➔ 聖馬可金箔大教堂 ➔ 花神咖啡 ➔ 貢多拉夜遊</td><td>🚅 Italo 高鐵 2h</td><td>Rialto Prestige (住3晚)</td></tr>
+            <tr><td><strong>D9</strong> 12/31 (四)</td><td>🇮🇹 水都跨年</td><td>童話彩色島 (Burano) ➔ 炸海鮮 ➔ 總督宮歎息橋 ➔ 聖馬可廣場跨年煙火！</td><td>🚤 水上巴士</td><td>Rialto Prestige (住3晚)</td></tr>
+            <tr><td><strong>D10</strong> 01/01 (五)</td><td>🇮🇹 威尼斯元旦</td><td>大運河水上巴士晨遊 ➔ 威尼斯道地黑墨魚麵 ➔ 玻璃工藝漫步</td><td>🚤 水上漫遊</td><td>Rialto Prestige (住3晚)</td></tr>
+            <tr><td><strong>D11</strong> 01/02 (六)</td><td>🇮🇹 米蘭</td><td>Italo 高鐵直奔米蘭 ➔ 米蘭大教堂 135 尖塔天台 ➔ 艾曼紐迴廊踩公牛</td><td>🚅 Italo 高鐵 2.5h</td><td>Duomo Cathedral (住2晚)</td></tr>
+            <tr><td><strong>D12</strong> 01/03 (日)</td><td>🇮🇹 米蘭</td><td>感恩聖母堂朝聖達文西《最後的晚餐》 ➔ 蒙特拿破崙最後採買退稅整理</td><td>🚇 地鐵 / 步行</td><td>Duomo Cathedral (住2晚)</td></tr>
+            <tr><td><strong>D13</strong> 01/04 (一)</td><td>🇮🇹 返航日</td><td>提早 3.5h 抵達 MXP 機場避開安檢長龍 ➔ 長榮 BR 96 (11:00) 直飛返台</td><td>🚆 機場快線 52m</td><td>夜宿機上 / JAX返家</td></tr>
+            <tr><td><strong>D14</strong> 01/05 (二)</td><td>🇹🇼 抵台</td><td>清晨 06:10 長榮班機順暢降落台北桃園機場 (TPE)，圓滿凱旋！</td><td>-</td><td>溫暖的家</td></tr>
+          </tbody>
         </table>
       </div>
     </div>
+  </div>
 
-    <!-- 全螢幕大字卡展示彈窗 -->
-    <div id="bigcard-modal" class="bigcard-overlay" onclick="closeBigCard()">
-      <div class="bigcard-box" onclick="event.stopPropagation()">
-        <div style="font-size:0.88rem; font-weight:800; color:var(--ghibli-muted); margin-bottom:14px;" id="modal-cat-tag">🗣️ 義大利語句卡</div>
-        <div class="bigcard-it" id="modal-it-text">Questo, per favore.</div>
-        <div class="bigcard-cn" id="modal-cn-text">這個請給我。</div>
-        <div class="bigcard-pronun" id="modal-pronun-text">發音提示：奎斯托，佩爾法沃雷</div>
-        <div class="bigcard-actions">
-          <button class="bigcard-btn btn-audio" onclick="speakCurrentModal()">🔊 語音朗讀</button>
-          <button class="bigcard-btn btn-close" onclick="closeBigCard()">關閉 ✕</button>
+  <!-- 3. 行程 -->
+  <div id="sec-schedule" class="main-sec" style="display:none;">
+    <div class="rail-timeline">
+      <div class="track">
+        <div class="track-line"></div>
+        <div class="stop" onclick="goDay(0)"><div class="loco">🚂 啟航</div><div class="dot"></div><div class="s-date">12/22</div><div class="s-day">週二</div></div>
+        <div class="stop active" onclick="goDay(1)"><div class="loco">🚂 羅馬</div><div class="dot"></div><div class="s-date">12/23</div><div class="s-day">週三</div></div>
+        <div class="stop" onclick="goDay(2)"><div class="loco">🚂 聖誕</div><div class="dot"></div><div class="s-date">12/24</div><div class="s-day">週四</div></div>
+        <div class="stop" onclick="goDay(3)"><div class="loco">🚂 梵蒂岡</div><div class="dot"></div><div class="s-date">12/25</div><div class="s-day">週五</div></div>
+        <div class="stop" onclick="goDay(4)"><div class="loco">🚂 拿坡里</div><div class="dot"></div><div class="s-date">12/26</div><div class="s-day">週六</div></div>
+        <div class="stop" onclick="goDay(5)"><div class="loco">🚂 羅馬深遊</div><div class="dot"></div><div class="s-date">12/27</div><div class="s-day">週日</div></div>
+        <div class="stop" onclick="goDay(6)"><div class="loco">🚂 翡冷翠</div><div class="dot"></div><div class="s-date">12/28</div><div class="s-day">週一</div></div>
+        <div class="stop" onclick="goDay(7)"><div class="loco">🚂 比薩</div><div class="dot"></div><div class="s-date">12/29</div><div class="s-day">週二</div></div>
+        <div class="stop" onclick="goDay(8)"><div class="loco">🚂 威尼斯</div><div class="dot"></div><div class="s-date">12/30</div><div class="s-day">週三</div></div>
+        <div class="stop" onclick="goDay(9)"><div class="loco">🚂 水都跨年</div><div class="dot"></div><div class="s-date">12/31</div><div class="s-day">週四</div></div>
+        <div class="stop" onclick="goDay(10)"><div class="loco">🚂 元旦</div><div class="dot"></div><div class="s-date">01/01</div><div class="s-day">週五</div></div>
+        <div class="stop" onclick="goDay(11)"><div class="loco">🚂 米蘭</div><div class="dot"></div><div class="s-date">01/02</div><div class="s-day">週六</div></div>
+        <div class="stop" onclick="goDay(12)"><div class="loco">🚂 最後晚餐</div><div class="dot"></div><div class="s-date">01/03</div><div class="s-day">週日</div></div>
+        <div class="stop" onclick="goDay(13)"><div class="loco">🚂 賦歸</div><div class="dot"></div><div class="s-date">01/04</div><div class="s-day">週一</div></div>
+      </div>
+    </div>
+
+    <div class="stepper">
+      <button class="btn-step" onclick="step(-1)">⬅️ 前一天</button>
+      <div id="day-lbl" style="font-weight:900; font-size:0.92rem; color:var(--forest);">📍 Day 1 ｜ 12/23 (週三) 羅馬大會師</div>
+      <button class="btn-step" onclick="step(1)">後一天 ➡️</button>
+    </div>
+
+    <div id="day-box"></div>
+  </div>
+
+  <!-- 4. 菜單匯率 -->
+  <div id="sec-menu" class="main-sec" style="display:none;">
+    <div class="card" style="border-left: 6px solid var(--calcifer);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+        <h3 style="margin-bottom:0;">💶 菜單金額即時換算新台幣 (TWD) 計算機</h3>
+        <span style="font-size:0.78rem; font-weight:800; background:#f1ebd9; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">匯率 1 EUR ≈ 35.5 TWD</span>
+      </div>
+      <p style="margin:6px 0 10px; font-size:0.86rem; color:var(--muted);">輸入菜單歐元價格，立刻自動換算台幣，可加計義大利常見的桌巾麵包費 (Coperto)：</p>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <input type="number" id="eur-in" class="input-box" placeholder="輸入歐元金額 (例: 18)" oninput="calc()" />
+        <span style="font-size:1.1rem; font-weight:900;">€ EUR</span>
+      </div>
+      <div style="margin-top:10px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+        <label style="font-size:0.84rem; font-weight:800; cursor:pointer; display:flex; align-items:center; gap:4px;">
+          <input type="checkbox" id="chk-coperto" onchange="calc()" checked /> 加桌巾費 (€2.5/人)
+        </label>
+        <div style="display:flex; align-items:center; gap:4px; font-size:0.84rem; font-weight:800;">
+          <span>人數：</span>
+          <select id="sel-diners" onchange="calc()" style="padding:2px 6px; border-radius:6px; border:1.5px solid var(--border); font-weight:800;">
+            <option value="1">1 人</option><option value="2">2 人</option><option value="3">3 人</option><option value="4" selected>4 人</option><option value="5">5 人</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-top:12px; padding:12px; background:var(--hay-bg); border:2px solid var(--border); border-radius:12px; display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <div style="font-size:0.78rem; font-weight:800; color:var(--muted);">總計折合新台幣</div>
+          <div style="font-size:0.75rem; color:#8c7e6e;" id="calc-note">菜單價格 (4人用餐)</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:1.4rem; font-weight:900; color:var(--calcifer);" id="twd-out">NT$ 0</div>
+          <div style="font-size:0.78rem; font-weight:800; color:var(--forest);" id="twd-pp">每人約 NT$ 0</div>
         </div>
       </div>
     </div>
 
-    <footer>
-      <p>🌿 Ghibli Inspired Planner ｜ 2026-2027 義大利雙向出發文藝聖誕跨年自由行手帳 💫</p>
-    </footer>
+    <div class="card" style="border-left: 6px solid var(--forest);">
+      <h3>📷 菜單拍照怎麼即時翻成繁體中文？</h3>
+      <p style="font-size:0.86rem; color:var(--muted); margin-bottom:10px;">在義大利餐館現場，推薦兩種最快、最精準的拍照中譯神技：</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:10px;">
+        <div class="tip-box tip-blue">
+          <strong>🍎 iPhone 內建相機【原況文字】直翻：</strong><br>
+          打開 iPhone 相機對準實體菜單 ➔ 右下角出現【原況文字圖示】點擊 ➔ 點下方【翻譯】➔ <strong>全頁菜單瞬間覆蓋為繁體中文</strong>！
+        </div>
+        <div class="tip-box tip-green">
+          <strong>🤖 Google 智慧鏡頭 / Gemini 拍照翻譯：</strong><br>
+          打開 Google App 或 Gemini ➔ 點相機圖示 ➔ 選擇「翻譯」對準菜單拍一張 ➔ <strong>即刻顯示全頁繁體中文對照</strong>！
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🍝 義大利餐廳經典菜單圖鑑對照庫 (點擊自動換算台幣)</h3>
+      <div id="menu-items"></div>
+    </div>
   </div>
 
-  <script>
-    // 14 天完整行程資料庫
-    const DAYS_DATA = [
-      {
-        day: 0, date: "12/22", weekday: "週二", icon: "🛫",
-        title: "雙向跨洋啟程・台北 ＆ 佛州飛往羅馬",
-        weather: "✈️ 長程機艙防乾燥保溫",
-        hotel: "機上過夜 ｜ 華航直飛 ＆ 達美轉亞特蘭大跨大西洋",
-        summary: "台灣組深夜由桃園直飛羅馬；佛州組午後由傑克遜維爾經亞特蘭大轉機跨大西洋，夜宿機上調時差。",
-        luggage: "大行李隨機託運（直掛羅馬 FCO），隨身小包備齊護照原件、保濕品、降噪耳機、頸枕與歐洲網卡 eSIM。",
-        nextday: "明日一早 08:30 兩路人馬於羅馬 FCO 航廈大廳碰頭！下機後持台灣晶片護照走 E-Gates 自動通關（30秒極速出關）！",
-        events: [
-          { time: "23:25", kind: "flight", kindText: "🇹🇼 台灣出發", title: "台北桃園 TPE ➔ 羅馬 FCO (中華航空 CI 75)", desc: "• 華航直飛豪華經濟艙（飛行時間 14h 40m）。直飛免轉機，登機後安心充分補眠。", tipMust: "🌟 登機準備：帶保濕面膜、降噪耳機與充氣頸枕，機上充分睡眠以零時差狀態迎接羅馬清晨！" },
-          { time: "13:39", kind: "flight", kindText: "🇺🇸 佛州出發", title: "傑克遜維爾 JAX ➔ 羅馬 FCO (達美 Flight 1 經 ATL)", desc: "• 達美航空經亞特蘭大 ATL 跨大西洋直飛（轉機 2h 03m，航程 12h 36m），與台灣班機相差 1 小時碰頭！", tipMust: "🤝 會師預備：抵達羅馬後走快速通道提取行李，08:30 在 FCO 第三航廈入境大廳溫馨會師！" }
-        ]
-      },
-      {
-        day: 1, date: "12/23", weekday: "週三", icon: "🏛️",
-        title: "羅馬大會師 ＆ 萬神殿天窗 ＆ 許願池漫步",
-        weather: "⛅ 羅馬 5°C ~ 14°C (涼爽微寒)",
-        hotel: "住 The Republic Apartments (特米尼中央火車站旁)",
-        summary: "機場快線直達市區！下午慢遊特雷維許願池、萬神殿天窗，品嚐金杯咖啡碎冰沙，傍晚逛納沃納廣場聖誕市集。",
-        luggage: "抵達後直奔公寓放行李，絕不拖上街！Leonardo 快線出站步行 4 分鐘進特米尼公寓寄放大行李。市區全程輕裝出發！",
-        nextday: "明日是平安夜 (12/24)！全羅馬超市與餐廳 18:00 前提早關門！下午逛完古城請順路在特米尼站 Conad 超市買齊平安夜晚餐牛排食材！",
-        events: [
-          { time: "08:30", kind: "train", kindText: "🚆 接駁會師", title: "羅馬 FCO 機場大會師 ➔ Leonardo 快線直達公寓安置行李", desc: "持台灣晶片護照直接走 E-Gates 電子閘門（30秒極速出關）。搭 Leonardo Express 機場直達快線（32 分鐘直達 Termini），出站步行 4 分鐘入住公寓卸下行李！", tipMust: "🌟 零長途趕車壓力：機場快線不限車次隨到隨上，抵達首日直接進市區公寓休整調時差！" },
-          { transit: "🚶‍♂️ 步行 18 分鐘 / 🛴 共享滑板車 8 分鐘 (輕裝沿民族街直達)" },
-          { time: "11:30", kind: "spot", kindText: "🏛️ 經典", title: "特雷維許願池 (Fontana di Trevi) 巴洛克巨作", mapQuery: "Trevi+Fountain+Rome", desc: "巴洛克雕刻巔峰之作！中央為海神尼普頓乘駕貝殼飛馬戰車，激盪水流自人造岩石奔湧而出，磅礡震撼。", tipMust: "🌟 必體驗儀式：背對許願池，右手越過左肩拋擲硬幣（一枚代表重返羅馬，二枚代表找到真愛）。", tipPhoto: "📸 最佳打卡機位：站在水池右側石階以低角度仰拍，將海神駿馬、飛濺水花與巴洛克宮殿浮雕完整收錄！", tipAvoid: "⚠️ 防扒警報：許願池周邊人潮密集，為扒手第一重災區！背包背胸前，手機務必裝斜背掛繩。" },
-          { transit: "🚶‍♂️ 穿過古老石板小巷步行 8 分鐘 (約 650 公尺) 抵達萬神殿廣場" },
-          { time: "13:30", kind: "spot", kindText: "🏛️ 奇蹟", title: "萬神殿 (Pantheon) 兩千年無樑柱混凝土天窗神蹟", mapQuery: "Pantheon+Rome", desc: "羅馬帝國保留最完美的奇蹟古蹟！西元 125 年哈德良重建，直徑 43.3 米純混凝土無樑柱圓頂，中央 9 米露天採光圓眼象徵連結天地。拉斐爾長眠於此。", tipBooking: "⏰ 預約提醒：萬神殿全面實施預約購票制 (€5)，現場排隊動輒 1 小時，務必提早 2 週預約免排隊時段！", tipPhoto: "📸 最佳打卡機位：正午陽光從 9 米圓頂天窗如探照燈般直瀉而下，站在圓眼正下方仰拍神聖天光。" },
-          { transit: "🚶‍♂️ 萬神殿旁小巷步行 2 分鐘 (約 120 公尺) 即達金杯咖啡" },
-          { time: "15:00", kind: "food", kindText: "☕ 老饕", title: "金杯咖啡 (Tazza d'Oro) ＆ Giolitti 百年冰淇淋", mapQuery: "La+Casa+del+Caffe+al+Pantheon", desc: "電影《天使與魔鬼》指定名店！站在吧台喝 Espresso，點招牌 Granita 咖啡碎冰沙佐厚層香滑鮮奶油。接著步行 3 分鐘至教宗最愛的 Giolitti 冰淇淋。", tipFood: "🍴 必吃推薦：金杯咖啡碎冰沙 (€3.5)；Giolitti 必選開心果與黑無花果，店員問 Panna 回答 Sì 免費擠滿鮮奶油！", tipGift: "🎁 必買伴手禮：金杯咖啡女王咖啡豆金字黑袋、經典六角摩卡壺、咖啡豆巧克力豆。" },
-          { transit: "🚶‍♂️ 穿過古城向西步行 6 分鐘 (約 450 公尺) 抵達納沃納廣場" },
-          { time: "17:00", kind: "spot", kindText: "🎪 市集", title: "納沃納廣場 (Piazza Navona) 聖誕市集 ＆ 老字號晚宴", mapQuery: "Piazza+Navona+Rome", desc: "巴洛克橢圓形廣場，貝尼尼四河噴泉聳立中央。聖誕節期間聚集了旋轉木馬、傳統木雕馬槽與熱紅酒香料攤位！", tipFood: "🍴 老饕晚餐名店：預約 Trattoria Vecchia Roma！必吃在巨大羊乳酪輪中炒製的火焰羊乳酪番茄培根麵！" }
-        ]
-      },
-      {
-        day: 2, date: "12/24", weekday: "週四", icon: "🎄",
-        title: "競技場地下層 ＆ 聖伯多祿廣場聖誕樹點燈",
-        weather: "⛅ 羅馬 4°C ~ 13°C (平安夜戶外轉涼)",
-        hotel: "住 The Republic Apartments (特米尼站旁)",
-        summary: "深入競技場地下層神鬼戰士機關通道，午後訪古羅馬帝國心臟，黃昏至梵蒂岡看巨型聖誕樹點燈，回公寓過平安夜。",
-        luggage: "行李安穩留在羅馬公寓內！今日景點嚴禁大件行李（競技場禁止隨身大背包），只攜帶隨身小包出發。",
-        nextday: "明日是聖誕節 (12/25)！中午 12:00 教宗祝禱人潮洶湧，上午 10:00 前必須抵達梵蒂岡聖伯多祿廣場排隊過安檢卡位！",
-        events: [
-          { time: "09:00", kind: "spot", kindText: "⚔️ 震撼", title: "羅馬競技場 (Colosseo) 地下層 Full Experience 深度導覽", mapQuery: "Colosseum+Rome", desc: "容納逾 5 萬觀眾！深入地下層（Hypogeum），走在當年關押奴隸角鬥士與升降猛獸的幽暗通道，站在木造競技舞台感受 360 度環形看台的壓倒性震撼。", tipBooking: "⏰ 搶票倒數警報：競技場門票嚴格實名制，必須提前 30 天（義大利時間 08:30 / 台灣時間 14:30）準時上官網搶購地下層票！", tipAvoid: "⚠️ 場外大騙局：外頭穿著羅馬古戰士盔甲拉客合照男子，拍完會強索 €10~€20！堅決不合照。入場必須攜帶護照正本查驗姓名。" },
-          { transit: "🚶‍♂️ 憑競技場聯票步行 3 分鐘穿過君士坦丁凱旋門進入遺址區" },
-          { time: "13:30", kind: "spot", kindText: "🏛️ 遺址", title: "古羅馬廣場 (Foro Romano) ＆ 帕拉蒂尼山 (Palatino)", mapQuery: "Roman+Forum+Rome", desc: "古羅馬帝國的政治、宗教與法律核心！漫步在凱撒神廟、元老院、灶神貞女之家等千年斷垣殘壁間；登上帕拉蒂尼山俯瞰大競技場遺跡。" },
-          { transit: "🚗 搭 Uber 15 分鐘 / 🛴 沿台伯河畔騎行 20 分鐘直達梵蒂岡協和大道" },
-          { time: "17:00", kind: "spot", kindText: "✨ 聖誕", title: "梵蒂岡聖伯多祿廣場聖誕樹點燈 ➔ 公寓平安夜自炊溫馨大餐", mapQuery: "St+Peters+Square+Vatican", desc: "聖伯多祿大殿前豎立著來自阿爾卑斯山的數十公尺巨型聖誕樹與真人大小傳統木雕馬槽璀璨點燈，鐘聲迴盪，節慶氣氛莊嚴溫馨。", tipAvoid: "🚨 平安夜生存關鍵：全羅馬餐廳 18:00 前提早關門，切勿在街頭挨餓！提前在特米尼站 Conad 超市買齊丁骨牛排與紅酒，回公寓廚房自炊！" }
-        ]
-      },
-      {
-        day: 3, date: "12/25", weekday: "週五", icon: "🕊️",
-        title: "教宗聖誕祝福 Urbi et Orbi ＆ 聖天使堡夕陽",
-        weather: "⛅ 羅馬 4°C ~ 13°C (廣場久站需圍巾)",
-        hotel: "住 The Republic Apartments (特米尼站旁)",
-        summary: "一生一次在聖伯多祿廣場聆聽教宗聖誕祝禱，下午漫步聖天使堡與聖天使橋，欣賞台伯河金色落日。",
-        luggage: "行李全日留置羅馬公寓內！聖伯多祿廣場有嚴格反恐安檢，禁止大型包包、保溫瓶金屬罐，輕裝出門最快通關。",
-        nextday: "明日 (12/26) 搭 Italo 高鐵轉移至佛羅倫斯！上午打包行李退房，高鐵票提前在 App 存入 Apple Wallet！",
-        events: [
-          { time: "10:30", kind: "spot", kindText: "🕊️ 神聖", title: "聖伯多祿大殿廣場：見證教宗聖誕祝禱「全城與全球」 (Urbi et Orbi)", mapQuery: "St+Peters+Square+Vatican", desc: "每年全世界僅聖誕節與復活節兩次！現任教宗親臨聖伯多祿大殿正中央陽台，發表祝福，免除罪尤，各國信眾揮舞國旗齊聲歡呼。", tipMust: "🌟 必體驗：無需門票即可免費進入廣場，但必須提早於 10:30 前通過安檢卡位，中午 12:00 準時見證教宗以數十種語言祝福！" },
-          { transit: "🚶‍♂️ 沿協和大道直行步行 10 分鐘即抵聖天使堡" },
-          { time: "14:30", kind: "spot", kindText: "🏰 古堡", title: "聖天使堡 (Castel Sant'Angelo) ＆ 聖天使橋台伯河夕陽", mapQuery: "Castel+Sant+Angelo+Rome", desc: "原為哈德良皇帝陵墓，中世紀教宗避難城堡要塞。站在聖天使橋上，十二尊由貝尼尼親手雕刻的天使石雕護衛兩側，夕陽金光灑在台伯河上波光粼粼。", tipGift: "🎁 必買小物：梵蒂岡郵局寄出貼有教宗專屬郵票與紀念郵戳的明信片、聖天使米迦勒銀幣吊墜。" }
-        ]
-      },
-      {
-        day: 4, date: "12/26", weekday: "週六", icon: "🚅",
-        title: "西班牙階梯 ➔ Italo 法拉利高鐵直奔佛羅倫斯",
-        weather: "🍂 佛羅倫斯 3°C ~ 11°C (內陸早晚偏冷)",
-        hotel: "住 Palazzo Gamba (聖母百花大教堂正對面)",
-        summary: "早晨漫步西班牙階梯，中午搭法拉利高鐵 1.5h 直達佛羅倫斯，下午入住百花大教堂景觀公寓，漫步領主廣場。",
-        luggage: "行李移動日：退房後大行李寄放羅馬公寓前台，輕裝去西班牙階梯；12:00 取行李搭高鐵，抵達佛羅倫斯 SMN 車站出站 7 分鐘直奔 Gamba 公寓放行李！",
-        nextday: "明日登頂聖母百花大教堂鐘樓！Brunelleschi Pass 請提前確認登頂預約時間，需攀爬 414 階窄階梯，穿最舒適好走的球鞋！",
-        events: [
-          { time: "09:00", kind: "spot", kindText: "🏛️ 經典", title: "西班牙階梯 (Scalinata) ＆ 破船噴泉 (Barcaccia)", mapQuery: "Spanish+Steps+Rome", desc: "《羅馬假期》奧黛麗赫本吃冰淇淋的經典場景！135 階大理石階梯通往聖三一教堂，山下為半沉沒破船噴泉。", tipAvoid: "⚠️ 嚴格禁令：羅馬市府規定嚴禁在階梯上坐下停留或飲食（開罰 €250！），站立拍照完全合法！" },
-          { transit: "🚶‍♂️ 回公寓取行李 ➔ 步行 4 分鐘進特米尼站 ➔ 搭 Italo 高鐵 1h 36m 飛馳至佛羅倫斯" },
-          { time: "12:30", kind: "train", kindText: "🚅 高鐵", title: "搭乘 Italo 法拉利高鐵直達佛羅倫斯 SMN 車站", mapQuery: "Firenze+Santa+Maria+Novella", desc: "搭乘 Italo 深紅色高鐵，享受頂級皮革座椅與穩定免費 Wi-Fi，1 小時 36 分鐘穿行托斯卡尼丘陵。出站步行 7 分鐘入住百花大教堂旁 Palazzo Gamba 公寓。", tipBooking: "⏰ 購票倒數提醒：出發前 60 天在【Italo Treno】App 搶早鳥折扣碼 Promo 票（單程僅需 €14.9~€24.9）！" },
-          { transit: "🚶‍♂️ 公寓下樓步行 3 分鐘穿過大理石石板街達領主廣場" },
-          { time: "15:30", kind: "spot", kindText: "🏛️ 露天", title: "領主廣場 (Piazza della Signoria) ＆ 傭兵涼廊雕塑群", mapQuery: "Piazza+della+Signoria+Florence", desc: "舊宮前矗立著《大衛像》複製品與海神噴泉；傭兵涼廊陳列切利尼青銅巨作《珀耳修斯高舉美杜莎首級》。", tipFood: "🍴 百年老店下午茶：共和廣場 1733 年名店 Caffè Gilli 品嚐全義大利最絲滑的正宗提拉米蘇與熱卡布奇諾！", tipAvoid: "🚨 佛羅倫斯黑店冰淇淋避雷：百花教堂往領主廣場途中的 Via Dei Calzaiuoli 79 號（紅底79號門牌，招牌大寫 GELATERIA），口頭喊價 2歐5歐，結帳強索 10~15 歐！Tripadvisor 僅 1.1 分！絕對避開！吃冰請選 Gilli 或 Venchi！" }
-        ]
-      },
-      {
-        day: 5, date: "12/27", weekday: "週日", icon: "🎨",
-        title: "百花大教堂穹頂神蹟 ＆ 烏菲茲美術館美第奇寶藏",
-        weather: "🍂 佛羅倫斯 2°C ~ 11°C (登頂迎風備手套)",
-        hotel: "住 Palazzo Gamba (聖母百花大教堂正對面)",
-        summary: "登頂喬托鐘樓俯瞰翡冷翠紅磚圓頂，午餐大啖中央市場慢燉牛肚包，下午沉浸烏菲茲美術館美第奇寶藏。",
-        luggage: "行李留置百花教堂 Gamba 公寓內！全日步行範圍都在 500～800 公尺之內，累了隨時能回房間放戰利品或喝水休息。",
-        nextday: "明日 (12/28) 比薩斜塔一日遊＋大牛排晚宴！早上搭區間車去比薩，大行李安穩留在佛羅倫斯，輕裝搭車即可！晚上 Il Latini 記得準時赴約。",
-        events: [
-          { time: "09:00", kind: "spot", kindText: "🏛️ 穹頂", title: "聖母百花大教堂 (Duomo) ＆ 喬托鐘樓 (Campanile) 登頂", mapQuery: "Cathedral+of+Santa+Maria+del+Fiore+Florence", desc: "建築天才布魯內萊斯基耗時 16 年不用鷹架建造的八角形紅磚大圓頂。攀登 414 階喬托鐘樓，近距離平視紅色大圓頂並 360 度俯瞰整座翡冷翠城！", tipBooking: "⏰ 套票預訂提醒：購買 Brunelleschi Pass 聯票，必須提前 30~45 天上官網搶先預約登頂時段！", tipFood: "🍴 必吃平民美食：中午步行至中央市場一樓百年攤位 Da Nerbone，大口咬下慢燉牛肚包（€5），淋上秘製青醬與辣醬絕頂美味！" },
-          { transit: "🚶‍♂️ 沿卡爾查依歐利大道步行 8 分鐘抵達阿諾河畔烏菲茲美術館" },
-          { time: "14:00", kind: "spot", kindText: "🎨 巔峰", title: "烏菲茲美術館 (Galleria degli Uffizi) 文藝復興大師朝聖", mapQuery: "Uffizi+Gallery+Florence", desc: "美第奇家族歷代收藏之最高殿堂！直攻波提切利《維納斯的誕生》與《春》；達文西《天使報喜》；米開朗基羅《多尼圓幅》；拉斐爾《金翅雀的聖母》。", tipGift: "🎁 必買紀念：佛羅倫斯傳統手工大理石染花紙筆記本 (Ebru 漂染紙)、波提切利維納斯誕生絲巾。" }
-        ]
-      },
-      {
-        day: 6, date: "12/28", weekday: "週一", icon: "🥩",
-        title: "比薩斜塔趣味拍照 ＆ 大衛像 ＆ 1.2kg 丁骨牛排",
-        weather: "🍂 佛羅倫斯/比薩 3°C ~ 11°C (草坪開闊防風)",
-        hotel: "住 Palazzo Gamba (聖母百花大教堂正對面)",
-        summary: "火車 50m 往返比薩拍攝創意推塔照，下午參觀學院美術館《大衛像》真品，傍晚米開朗基羅廣場看夕陽，晚宴享用 Il Latini 巨無霸牛排。",
-        luggage: "往返比薩絕不帶行李！今日為單日短途往返，大行李安穩存放在佛羅倫斯公寓房間內。只帶隨身小包搭火車，進出比薩火車站極其俐落。",
-        nextday: "明日 (12/29) 前往水都威尼斯！水上都市拱橋多，抵達威尼斯請搭乘 ACTV 水上巴士直達里亞托橋（下船步行 2 分鐘進公寓免爬橋）！",
-        events: [
-          { time: "09:00", kind: "spot", kindText: "📐 奇蹟", title: "比薩斜塔 (Torre di Pisa) ＆ 奇蹟廣場草坪趣味拍照", mapQuery: "Leaning+Tower+of+Pisa", desc: "佛羅倫斯 SMN 車站搭區間火車（50分鐘）直達比薩！在奇蹟廣場大草坪借位合影；登上 294 階傾斜大理石旋轉階梯到達頂端，親身體驗伽利略自由落體實驗之地！", tipPhoto: "📸 最佳打卡機位：草坪上借位「雙手推斜塔」、「後背靠斜塔」或「雙腳踢斜塔」趣味拍法！", tipBooking: "⏰ 登頂提醒：登頂每次限額管制，提早 20 天線上預約時段，禁止攜帶隨身包包（現場需免費寄物）。" },
-          { transit: "🚆 火車 50 分鐘返回佛羅倫斯 SMN ➔ 步行 10 分鐘至學院美術館" },
-          { time: "15:00", kind: "spot", kindText: "🗿 神雕", title: "學院美術館 (Galleria dell'Accademia) 米開朗基羅《大衛像》真跡", mapQuery: "Galleria+dell+Accademia+Florence", desc: "米開朗基羅 26 歲以整塊卡拉拉大理石耗時 3 年雕刻出的 5.17 米巨作《大衛》真品！暴起的手背青筋、凝視巨人的銳利眼神無懈可擊。" },
-          { transit: "🚌 搭 12/13 號公車 15 分鐘上米開朗基羅廣場看夕陽 ➔ 步行回老城享用晚餐" },
-          { time: "19:30", kind: "food", kindText: "🥩 霸王", title: "百年老店 Il Latini 享用 1.2kg 炭烤丁骨大牛排盛宴", mapQuery: "Ristorante+Il+Latini+Florence", desc: "佛羅倫斯歷史最悠久的牛排殿堂！在天花板掛滿風乾火腿的百年地窖，享用炭火烤架烤至外焦酥脆、內部鮮紅柔嫩多汁的巨無霸托斯卡尼大牛排，灑粗海鹽配 Chianti 紅酒！", tipGift: "🎁 必買藥妝：Santa Maria Novella (SMN) 百年修道院藥妝玫瑰保濕水與石榴香皂。" }
-        ]
-      },
-      {
-        day: 7, date: "12/29", weekday: "週二", icon: "🛶",
-        title: "高鐵直奔威尼斯 ＆ 聖馬可金箔大教堂 ＆ 貢多拉",
-        weather: "🌊 威尼斯 1°C ~ 8°C (海風濕冷體感0°C)",
-        hotel: "住 Rialto Prestige Apartments (里亞托橋旁免爬階)",
-        summary: "Italo 高鐵 2h 跨過海上長堤抵達威尼斯，搭水上巴士入住里亞托橋公寓，下午參觀聖馬可金碧輝煌大教堂，傍晚體驗貢多拉水巷夜遊。",
-        luggage: "威尼斯免扛行李密技！抵達 Santa Lucia 站後，站前碼頭直接搭 ACTV 水上巴士到「Rialto 站」下船，步行 2 分鐘直達公寓（全程免跨河大拱橋）放行李！",
-        nextday: "明日 (12/30) 彩色島 (Burano) 搭船海風強烈！航程約 40 分鐘，必須穿戴毛帽、防風連帽大衣，防海風吹頭受寒。",
-        events: [
-          { time: "11:30", kind: "train", kindText: "🚅 水都", title: "Italo 高鐵 2h 抵達威尼斯聖露西亞站 ➔ 水上巴士進駐", mapQuery: "Venezia+Santa+Lucia", desc: "高鐵直抵威尼斯本島終點站，走出車站大理石階梯下即是大運河！購買 ACTV 水上巴士交通卡，搭乘 1 號或 2 號船直達里亞托橋（Rialto），步行 2 分鐘進公寓免扛大行李爬階梯！" },
-          { transit: "🚤 搭水上巴士或步行 12 分鐘穿過繁華精品巷直達聖馬可廣場" },
-          { time: "14:00", kind: "spot", kindText: "🛶 拜占庭", title: "聖馬可大教堂金箔天頂 ＆ 花神咖啡 ＆ 貢多拉黑夜穿梭", mapQuery: "St+Marks+Basilica+Venice", desc: "拿破崙譽為「歐洲最優雅客廳」！走入大教堂仰望 4000 平米真金箔馬賽克壁畫；在 1720 年花神咖啡戶外樂隊演奏下品嚐熱可可；傍晚包乘黑漆貢多拉穿梭在昏黃路燈映照的狹窄水道。", tipFood: "🍴 必吃海鮮：晚餐在 Osteria da Fiore 品嚐純黑墨魚麵與炸海鮮拼盤！", tipGift: "🎁 必買紀念：威尼斯傳統狂歡節手工羽毛彩繪面具。" }
-        ]
-      },
-      {
-        day: 8, date: "12/30", weekday: "週三", icon: "🌈",
-        title: "童話彩色島 (Burano) ＆ 總督宮歎息橋 ＆ 玻璃工藝",
-        weather: "🌊 彩色島 1°C ~ 8°C (搭船航行防風帽)",
-        hotel: "住 Rialto Prestige Apartments (里亞托橋旁)",
-        summary: "探訪如七彩調色盤的彩色島 (Burano)，品嚐外酥內嫩炸海鮮拼盤，午後參觀威尼斯總督宮與歷史歎息橋。",
-        luggage: "行李留置里亞托公寓內！去彩色島只需帶相機與保暖小包搭水上巴士，島上純步行拍照，無任何行李負擔。",
-        nextday: "明日 (12/31) 前往米蘭跨年！高鐵直奔米蘭中央站，入住米蘭大教堂旁公寓連住 4 晚（之後都不用再搬家搬行李了）！跨年夜戶外寒冷，暖暖包提前準備。",
-        events: [
-          { time: "09:00", kind: "spot", kindText: "🌈 調色盤", title: "童話彩色島 / 布拉諾島 (Burano) 漫步 ＆ 炸海鮮", mapQuery: "Burano+Venice", desc: "Fondamente Nove 碼頭搭 12 號水上巴士（40分鐘）直達！昔日漁夫漆成七彩的小屋如童話繪本般繽紛。在木橋上欣賞水面倒影，品嚐傳統檸檬奶油餅乾與炸海鮮拼盤。", tipPhoto: "📸 最佳打卡機位：站在中央小運河木橋上，以兩側粉紅、鮮黃、海藍小屋與晾曬衣物為背景倒映在平靜水中。", tipGift: "🎁 必買小物：穆拉諾手工千花玻璃項鍊墜飾、布拉諾手工蕾絲手帕。" },
-          { transit: "🚤 搭乘水上巴士 45 分鐘返回聖馬可碼頭" },
-          { time: "15:00", kind: "spot", kindText: "🏛️ 歷史", title: "總督宮 (Palazzo Ducale) ＆ 歎息橋 (Ponte dei Sospiri)", mapQuery: "Doge+Palace+Venice", desc: "威尼斯共和國權力中心！參觀黃金階梯與巨大十人議會廳；走過囚犯走入死牢前最後一眼望向自由世界的「歎息橋」。在麥桿橋上捕捉歎息橋橫跨水道的巴洛克白色大理石弧線。" }
-        ]
-      },
-      {
-        day: 9, date: "12/31", weekday: "週四", icon: "🎆",
-        title: "高鐵直奔米蘭 ＆ 大教堂廣場萬人跨年盛典",
-        weather: "❄️ 米蘭 0°C ~ 7°C (跨年夜近冰點・貼暖暖包)",
-        hotel: "住 Duomo Cathedral Apartments (米蘭大教堂旁連住4晚)",
-        summary: "Italo 高鐵 2.5h 抵達米蘭，午後踩艾曼紐二世迴廊公牛求好運，夜晚在大教堂廣場萬人音樂會與璀璨煙火中倒數迎接 2027 年！",
-        luggage: "抵達米蘭後連住 4 晚，行李全面解鎖！威尼斯退房搭水上巴士上高鐵。抵達米蘭中央站轉地鐵 3 號線直達 Duomo 站入住公寓連住 4 晚，行李箱一次性攤開不用再打包！",
-        nextday: "明日是元旦 (01/01)！米蘭大教堂預約上午電梯登頂天台，大理石刺繡天台迎風刺骨，羽絨大衣、圍巾穿戴暖和。",
-        events: [
-          { time: "12:00", kind: "train", kindText: "🚅 高鐵", title: "Italo 高鐵 2.5h 直達米蘭中央站 ➔ 入住大教堂旁公寓", mapQuery: "Milano+Centrale", desc: "抵達米蘭中央車站，搭地鐵 3 號線直達 Duomo 站入住大教堂旁景觀公寓！午後散步至艾曼紐二世迴廊，在十字圓頂下公牛馬賽克地磚上用右腳跟踩住公牛轉三圈求好運！吃 Luini 爆漿莫札瑞拉起司烤餡餅。" },
-          { transit: "🚶‍♂️ 公寓下樓步行 3 分鐘直接進入大教堂廣場" },
-          { time: "21:30", kind: "spot", kindText: "🎆 盛典", title: "米蘭大教堂廣場萬人跨年音樂會 ＆ 午夜煙火盛典", mapQuery: "Piazza+del+Duomo+Milan", desc: "與來自世界各地的旅客在潔白壯麗的哥德式大教堂前倒數，在璀璨煙火與歡呼歌聲中迎接 2027 年！散場無需擠爆地鐵，步行 3 分鐘即刻回房溫暖入睡！" }
-        ]
-      },
-      {
-        day: 10, date: "01/01", weekday: "週五", icon: "👑",
-        title: "米蘭大教堂 135 座大理石尖塔天台 ＆ 元旦午宴",
-        weather: "❄️ 米蘭 -1°C ~ 7°C (大理石天台寒凍)",
-        hotel: "住 Duomo Cathedral Apartments (米蘭大教堂旁)",
-        summary: "新年的第一天登上米蘭大教堂 135 座尖塔大理石森林，午餐在 Trattoria Milanese 享用金黃炸牛排與番紅花燉飯歡慶 2027。",
-        luggage: "行李留置米蘭大教堂公寓內！連住期間無需整理行李，登天台不能攜帶大型包包與金屬利器，輕裝搭乘電梯登頂。",
-        nextday: "明日 (01/02) 前往阿爾卑斯科莫湖一日遊！早晨 08:30 從米蘭中央車站搭火車 1h 直達瓦倫納，只帶隨身保暖裝備，大行李安心留公寓。",
-        events: [
-          { time: "10:00", kind: "spot", kindText: "👑 刺繡", title: "米蘭大教堂 (Duomo di Milano) 登頂天台 (Rooftop)", mapQuery: "Duomo+di+Milano", desc: "耗時五個多世紀建造的白色奇蹟！搭升降機登上天台，漫步在 135 座石雕尖塔與 3,400 尊精緻雕像組成的「大理石森林」間，仰望最高點鍍金聖母像，遠眺阿爾卑斯雪山天際線。", tipBooking: "⏰ 套票提醒：建議購買 Duomo Pass Lift（含電梯登頂天台與教堂內部），免爬數百階樓梯。", tipAvoid: "⚠️ 廣場避雷：廣場黑人強行往遊客手腕套幸運紅繩或塞鴿子飼料強索 €20，雙手插外套口袋堅決說 No 走開。" },
-          { transit: "🚶‍♂️ 步行 6 分鐘至老城餐館" },
-          { time: "13:30", kind: "food", kindText: "🍽️ 元旦", title: "Trattoria Milanese 享用金黃米蘭帶骨炸牛排午宴", mapQuery: "Trattoria+Milanese+Milan", desc: "百年傳統米蘭餐館！品嚐用澄清奶油煎至金黃酥脆的米蘭帶骨炸牛排（Cotoletta）與金黃香濃的番紅花骨髓燉飯（Risotto），佐 Prosecco 氣泡酒歡慶新年。" }
-        ]
-      },
-      {
-        day: 11, date: "01/02", weekday: "週六", icon: "🏔️",
-        title: "阿爾卑斯絕美科莫湖 (Lake Como) 湖光山色一日遊",
-        weather: "🏔️ 科莫湖 -1°C ~ 6°C (雪山湖風・羽絨厚大衣)",
-        hotel: "住 Duomo Cathedral Apartments (米蘭大教堂旁)",
-        summary: "火車 1h 前往阿爾卑斯雪山環抱的科莫湖，搭渡輪穿梭瓦倫納與貝拉焦彩色山城，遠離喧囂漫步石板小巷。",
-        luggage: "科莫湖一日遊絕不帶大行李！大行李留置米蘭大教堂公寓內。科莫湖為山城鵝卵石階梯多，攜帶保暖隨身小包搭火車即可，輕盈遊湖！",
-        nextday: "明日 (01/03) 朝聖達文西《最後的晚餐》！入場核對嚴格實名制，必須攜帶護照原件查驗姓名，並提前 20 分鐘抵達感恩聖母堂櫃檯取票。",
-        events: [
-          { time: "08:30", kind: "train", kindText: "🚆 仙境", title: "米蘭火車 1h 直達科莫湖：瓦倫納 (Varenna) ＆ 貝拉焦 (Bellagio)", mapQuery: "Varenna+Lake+Como", desc: "米蘭中央火車站搭區間火車直達 Varenna-Esino 站（車程 1 小時，單程 €7.4），轉乘湖區渡輪 15 分鐘穿梭於貝拉焦與瓦倫納彩色小鎮。", tipPhoto: "📸 最佳打卡機位：渡輪甲板回拍彩色山城倒映在平靜如鏡的碧藍湖水，背後襯托著白雪皚皚的阿爾卑斯山峰！", tipMust: "🌟 冬日漫遊：冬季遠離酷暑遊客潮，鵝卵石階梯與依山傍水的貴族別墅格外恬靜浪漫。" }
-        ]
-      },
-      {
-        day: 12, date: "01/03", weekday: "週日", icon: "🎨",
-        title: "達文西《最後的晚餐》朝聖 ＆ 蒙特拿破崙最後採買",
-        weather: "❄️ 米蘭 0°C ~ 7°C (洋蔥式穿搭・進店脫外衣)",
-        hotel: "住 Duomo Cathedral Apartments (米蘭大教堂旁)",
-        summary: "朝聖文藝復興千古真跡《最後的晚餐》，午後於蒙特拿破崙大道與文藝復興百貨最後衝刺採買精品與頂級名產。",
-        luggage: "行李留置公寓＋晚間打包關鍵！採買的精品、Amedei 巧克力、起司松露等，晚間在公寓裝箱。所有液體伴手禮必須託運，不可手提！並將免稅退稅單據統一集中歸類。",
-        nextday: "🚨 明日 (01/04) 返航日・米蘭機場大塞車警報！米蘭 MXP 出境安檢海關曾塞車達 3 小時！明早 06:45 準時出發搭機場快線，07:30~07:45 務必抵達 MXP 機場！",
-        events: [
-          { time: "09:30", kind: "spot", kindText: "🖼️ 神作", title: "感恩聖母堂 (Santa Maria delle Grazie) 達文西《最後的晚餐》", mapQuery: "Santa+Maria+delle+Grazie+Milan", desc: "達文西 1495 年繪製於修士食堂牆面，描繪耶穌說出「你們之中有一人出賣了我」瞬間十二門徒震驚神態，文藝復興透視法巔峰神作！每 15 分鐘僅限 35 人入場。", tipBooking: "⏰ 全歐最難搶門票：必須提前 3 個月（90天）於官方 Vivaticket 搶票！若官網售罄，立即購買 KKday 免排隊英語/中文導覽套票救援！" },
-          { transit: "🚶‍♂️ 步行至蒙特拿破崙精品大道與文藝復興百貨" },
-          { time: "14:00", kind: "gift", kindText: "🛍️ 採買", title: "布雷拉藝術街區 ＆ 蒙特拿破崙精品街 ＆ 整理退稅單", mapQuery: "Via+Monte+Napoleone+Milan", desc: "最後採買衝刺！採買頂級義大利名產與時尚精品，傍晚回到公寓將液體伴手禮裝箱打包，並核對所有退稅單據（Global Blue / Planet）。", tipGift: "🎁 必買伴手禮清單：義大利頂級 Amedei 9號黑巧克力、真空包帕馬森乾酪、黑松露醬、巴薩米克香醋、義大利手工皮件。" }
-        ]
-      },
-      {
-        day: 13, date: "01/04", weekday: "週一", icon: "✈️",
-        title: "提早 3.5h 抵達 MXP 機場避開安檢海關大排長龍 ➔ 直飛返程",
-        weather: "❄️ 米蘭 0°C ~ 6°C (清晨出發保暖防凍)",
-        hotel: "平安賦歸航程 ｜ 台灣長榮直飛 ＆ 佛州達美航空",
-        summary: "早晨搭 Malpensa 快線直奔機場，辦理 Global Blue / Planet 退稅與大行李托運，雙向啟程飛返台灣與美國。",
-        luggage: "大行李直接託運直掛返國！06:45 帶齊所有行李退房搭地鐵轉機場快線。抵達 MXP T1 後，先海關蓋章/電子驗證退稅單，再到長榮/達美櫃檯託運大行李！",
-        nextday: "台灣組長榮 BR 96 於 01/05 清晨 06:10 抵達台北桃園 (TPE)；佛州組達美班機於 01/04 晚間 21:38 抵達傑克遜維爾 (JAX)！",
-        events: [
-          { time: "06:45", kind: "train", kindText: "🚆 機場快線", title: "米蘭中央車站搭乘 Malpensa Express 直達 MXP 第一航廈", mapQuery: "Milano+Centrale", desc: "從公寓搭地鐵 3 號線 5 分鐘抵達米蘭中央車站，搭乘 Malpensa Express 機場快線（52 分鐘直達馬爾彭薩機場 T1，票價 €13），免受公路大塞車困擾！" },
-          { transit: "🚶‍♂️ 抵達 MXP 機場辦理退稅手續與託運行李" },
-          { time: "07:40", kind: "flight", kindText: "🚨 警報", title: "MXP 第一航廈辦理退稅、托運、安檢與海關蓋章", mapQuery: "Milan+Malpensa+Airport+T1", desc: "米蘭 MXP 出境安檢與海關大排長龍，強烈提醒務必在 07:30~07:45 前抵達機場，保留充裕時間辦理退稅與安檢，從容登機。", tipAvoid: "🚨 血淚經驗提醒：社團旅客回報米蘭機場出境安檢常排隊 1 小時以上、海關更曾塞車達 3 小時！提早 3.5 小時到達最安心！" },
-          { transit: "✈️ 雙向班機起飛返航" },
-          { time: "11:00", kind: "flight", kindText: "🇹🇼 台灣返航", title: "米蘭 MXP ➔ 台北桃園 TPE (長榮航空 BR 96)", desc: "• 長榮航空 BR 96 直飛（波音 777-300ER 豪華直飛）。01/04 11:00 MXP 起飛 ➔ 01/05 06:10 抵達台北 (TPE)。航程 12 小時 10 分鐘，直飛免中轉，舒適返抵國門！" },
-          { time: "12:00", kind: "flight", kindText: "🇺🇸 佛州返航", title: "米蘭 MXP ➔ 傑克遜維爾 JAX (達美 Flight 2 經 ATL)", desc: "• 達美航空 Flight 2 (經亞特蘭大 ATL 跨大西洋直飛)。01/04 12:00 MXP 起飛 ➔ 01/04 21:38 抵達傑克遜維爾 (JAX)。航程 15 小時 38 分鐘，同日晚間平安到家！" }
-        ]
-      },
-      {
-        day: 14, date: "01/05", weekday: "週二", icon: "🏡",
-        title: "清晨 06:10 順利抵達台北桃園 (TPE)・圓滿凱旋",
-        weather: "🏡 台北 16°C ~ 20°C (平安抵台)",
-        hotel: "平安回到溫暖的家",
-        summary: "長榮班機順利降落台北桃園機場，為 14 天義大利文藝聖誕與米蘭跨年之旅劃下完美句點！",
-        luggage: "提取行李後搭乘機場捷運或返家專車，將義大利名產與戰利品帶回溫暖的家。",
-        nextday: "旅程圓滿凱旋，好好休息調時差，回味美好的義大利回憶！",
-        events: [
-          { time: "06:10", kind: "spot", kindText: "🇹🇼 抵台", title: "長榮 BR 96 平安降落台北桃園機場", mapQuery: "Taiwan+Taoyuan+International+Airport", desc: "帶著滿滿的義大利文藝聖誕與米蘭跨年回憶、頂級巧克力與名牌精品，平安返抵國門！" }
-        ]
-      }
-    ];
+  <!-- 5. 語句卡 -->
+  <div id="sec-cards" class="main-sec" style="display:none;">
+    <div class="card">
+      <div class="flashcard-header">
+        <div class="flashcard-title">義大利語句卡</div>
+        <div class="flashcard-badge">Italiano</div>
+      </div>
+      <div class="flashcard-sub">點一下會放大成全螢幕，直接把手機拿給店員、司機或路人看。</div>
+      <div class="filter-row">
+        <button class="f-btn active" onclick="filterP('all', this)">全部</button>
+        <button class="f-btn" onclick="filterP('dining', this)">點餐</button>
+        <button class="f-btn" onclick="filterP('bill', this)">結帳</button>
+        <button class="f-btn" onclick="filterP('transit', this)">交通</button>
+        <button class="f-btn" onclick="filterP('shop', this)">購物</button>
+        <button class="f-btn" onclick="filterP('help', this)">求助</button>
+      </div>
+      <div class="p-list" id="card-list"></div>
+    </div>
+  </div>
 
-    // 常用語句卡資料庫
-    const PHRASES_DATA = [
-      { cat: "dining", cn: "這個請給我。", it: "Questo, per favore.", pronun: "奎斯托，佩爾法沃雷" },
-      { cat: "dining", cn: "請給我菜單。", it: "Il menu, per favore.", pronun: "伊爾 梅紐，佩爾法沃雷" },
-      { cat: "dining", cn: "有英文菜單嗎？", it: "Avete un menu in inglese?", pronun: "阿維特 溫 梅紐 因 英格萊賽？" },
-      { cat: "dining", cn: "請給我兩人份。", it: "Per due persone, per favore.", pronun: "佩爾 杜耶 佩爾索內，佩爾法沃雷" },
-      { cat: "dining", cn: "請不要加肉 / 請做蔬食。", it: "Senza carne, per favore. (Vegetariano)", pronun: "森札 卡爾內，佩爾法沃雷" },
-      { cat: "dining", cn: "請不要太鹹 / 少放鹽。", it: "Poco sale, per favore.", pronun: "波科 薩萊，佩爾法沃雷" },
-      { cat: "dining", cn: "請給我瓶裝天然水 / 氣泡水。", it: "Acqua naturale / frizzante, per favore.", pronun: "阿誇 納圖拉萊 / 弗利贊特" },
-      { cat: "bill", cn: "買單 / 請給我帳單。", it: "Il conto, per favore.", pronun: "伊爾 孔托，佩爾法沃雷" },
-      { cat: "bill", cn: "可以刷信用卡嗎？", it: "Posso pagare con la carta?", pronun: "波索 帕加雷 控 拉 卡爾塔？" },
-      { cat: "bill", cn: "我們可以分開結帳嗎？", it: "Possiamo pagare separatamente?", pronun: "波西亞莫 帕加雷 塞帕拉塔門特？" },
-      { cat: "transit", cn: "請問火車站在哪裡？", it: "Dov'è la stazione ferroviaria?", pronun: "多韋 拉 斯塔齊奧內 費羅維亞利亞？" },
-      { cat: "transit", cn: "請問月台在哪裡？", it: "Dov'è il binario?", pronun: "多韋 伊爾 比納利歐？" },
-      { cat: "transit", cn: "請幫我叫一輛計程車。", it: "Mi può chiamare un taxi, per favore?", pronun: "米 波 恰馬雷 溫 特克西，佩爾法沃雷？" },
-      { cat: "shop", cn: "請問這個多少錢？", it: "Quanto costa questo?", pronun: "關托 考斯塔 奎斯托？" },
-      { cat: "shop", cn: "可以辦理免稅/退稅嗎？", it: "Posso avere il Tax Free?", pronun: "波索 阿維雷 伊爾 泰克斯 弗利？" },
-      { cat: "help", cn: "請問洗手間在哪裡？", it: "Dov'è il bagno?", pronun: "多韋 伊爾 巴紐？" },
-      { cat: "help", cn: "請幫幫我。", it: "Mi può aiutare, per favore?", pronun: "米 波 阿尤塔雷，佩爾法沃雷？" }
-    ];
+  <!-- 6. 高鐵 -->
+  <div id="sec-trains" class="main-sec" style="display:none;">
+    <div class="card" style="border-left: 6px solid var(--calcifer);">
+      <h3>🏎️ Italo 法拉利高鐵 (NTV) —— 大家狂推首選！</h3>
+      <p>由法拉利跑車前總裁創辦，跑車深紅色車身、全車頂級皮革座椅、寬敞舒適乾淨、免費 Wi-Fi 訊號強。<br><strong>官方 App：</strong>【Italo Treno】（提前官網買常有折扣碼 Promo Code！）。</p>
+      <div class="link-row"><a class="link-btn" href="https://www.italotreno.it/en" target="_blank">🔗 Italo 官方訂票網站</a></div>
+    </div>
+    <div class="card" style="border-left: 6px solid var(--forest);">
+      <h3>🚅 Trenitalia (義大利國鐵) —— 班次最密</h3>
+      <p>Frecciarossa 紅箭高鐵，羅馬機場 Leonardo Express 快線、比薩區間車及拿坡里快車必搭。<br><strong>官方 App：</strong>【Trenitalia】。</p>
+      <div class="link-row"><a class="link-btn" href="https://www.trenitalia.com/en.html" target="_blank">🔗 Trenitalia 官方網站</a></div>
+    </div>
+    <div class="tip-box tip-gold">💡 <strong>車站提醒：</strong>Italo 與國鐵在各大城市<strong>共用同一個火車站</strong>！進站看大螢幕月台號碼即可。請一律在官方 App 購票！</div>
+  </div>
 
-    // 菜單預設清單
-    const MENU_PRESETS = [
-      { catName: "🥗 Antipasti 前菜類", items: [
-        { it: "Bruschetta", cn: "番茄羅勒香蒜烤麵包", price: 8 },
-        { it: "Insalata Caprese", cn: "水牛莫札瑞拉起司番茄沙拉", price: 12 },
-        { it: "Prosciutto e Melone", cn: "帕瑪生火腿哈密瓜", price: 15 }
-      ]},
-      { catName: "🍝 Primi Piatti 第一道 (麵/飯類)", items: [
-        { it: "Carbonara", cn: "正統羅馬培根蛋黃麵", price: 14 },
-        { it: "Spaghetti al Nero di Seppia", cn: "威尼斯道地黑墨魚麵", price: 18 },
-        { it: "Risotto alla Milanese", cn: "米蘭金黃番紅花燉飯", price: 16 }
-      ]},
-      { catName: "🥩 Secondi Piatti 第二道 (肉類/主菜)", items: [
-        { it: "Bistecca alla Fiorentina", cn: "佛羅倫斯丁骨大牛排 (1kg)", price: 60 },
-        { it: "Cotoletta alla Milanese", cn: "米蘭香煎帶骨大炸牛排", price: 26 },
-        { it: "Fritto Misto di Mare", cn: "威尼斯酥炸綜合海鮮", price: 22 }
-      ]},
-      { catName: "🍰 Dolci 甜點與飲品", items: [
-        { it: "Tiramisù", cn: "正宗馬斯卡彭咖啡提拉米蘇", price: 7 },
-        { it: "Aperol Spritz", cn: "國民開胃橘雞尾酒", price: 6 },
-        { it: "Acqua Naturale", cn: "瓶裝常溫無氣泡礦泉水", price: 3 }
-      ]}
-    ];
+  <!-- 7. 住宿 -->
+  <div id="sec-hotels" class="main-sec" style="display:none;">
+    <div class="card">
+      <h3>🏨 全程推薦住宿地點 (黃金連住配置)</h3>
+      <p>
+        • <strong>羅馬 (12/23-12/28・連住 5 晚！)：</strong>Roma CentrArte（Via Modena 32，共和廣場安全區，步行至特米尼站僅 8 分鐘，往返拿坡里龐貝超輕鬆！）<br>
+        • <strong>佛羅倫斯 (12/28-12/30・住 2 晚)：</strong>Palazzo Gamba Luxury Apartments（聖母百花大教堂正對面景觀客廳）<br>
+        • <strong>威尼斯 (12/30-01/02・住 3 晚 跨年！)：</strong>Rialto Prestige Apartments（里亞托水上巴士站旁免扛大行李爬跨河拱橋，跨年夜看水上煙火）<br>
+        • <strong>米蘭 (01/02-01/04・精緻住 2 晚)：</strong>Duomo Cathedral Apartments（大教堂旁步行 3 分鐘，最後採買，01/04 清晨直奔 MXP 機場）
+      </p>
+    </div>
+    <div class="card">
+      <h3>🍴 必吃老饕名店清單</h3>
+      <p>
+        • <strong>羅馬：</strong>Trattoria Vecchia Roma（火焰起司培根麵）、金杯咖啡碎冰沙、Giolitti 冰淇淋<br>
+        • <strong>拿坡里：</strong>L'Antica Pizzeria da Michele（世界第一名瑪格麗特披薩）、Gino Sorbillo<br>
+        • <strong>佛羅倫斯：</strong>Il Latini（1.2kg 巨無霸炭烤丁骨大牛排）、Da Nerbone（慢燉牛肚包）<br>
+        • <strong>威尼斯：</strong>Osteria da Fiore（道地墨魚麵、炸海鮮拼盤）、花神咖啡熱可可<br>
+        • <strong>米蘭：</strong>Trattoria Milanese（米蘭帶骨炸牛排、番紅花燉飯）、Luini（爆漿起司烤餡餅）
+      </p>
+    </div>
+  </div>
 
-    let currentDayIndex = 1;
+  <!-- 8. 準備 -->
+  <div id="sec-tips" class="main-sec" style="display:none;">
+    <div class="card">
+      <h3>🛡️ 義大利防騙與避雷守則</h3>
+      <p>
+        • <strong>佛羅倫斯黑店冰淇淋警戒：</strong>Via Dei Calzaiuoli 79 號（紅底79號門牌，招牌大寫 GELATERIA），口頭喊價 2歐5歐，結帳強索 10~15 歐！絕對避開！<br>
+        • <strong>羅馬市區千萬不要坐地鐵：</strong>站點少且出站走很遠，改騎共享滑板車或步行、Uber 最方便！<br>
+        • <strong>大教堂廣場防騙：</strong>黑人強塞鴿子飼料或套紅繩，雙手插口袋堅決說 No 走開。<br>
+        • <strong>語言不通求助：</strong>遇到菜單、飯店細節，直接語音或拍照問 <strong>Google Gemini</strong>！
+      </p>
+    </div>
+  </div>
+</div>
 
-    // 渲染指定天數的行程卡片
-    function renderDayView(dIdx) {
-      const d = DAYS_DATA[dIdx];
-      if (!d) return;
+<!-- 全螢幕大字卡彈窗 -->
+<div id="modal" class="modal" onclick="closeM()">
+  <div class="m-box" onclick="event.stopPropagation()">
+    <div style="font-size:0.82rem; font-weight:800; color:var(--muted); margin-bottom:10px;">🗣️ 義大利語句卡</div>
+    <div class="m-it" id="m-it">Questo, per favore.</div>
+    <div class="m-cn" id="m-cn">這個請給我。</div>
+    <div class="m-pronun" id="m-pro">發音提示：奎斯托，佩爾法沃雷</div>
+    <div class="m-actions">
+      <button class="m-btn" style="background:var(--hay); color:#fff;" onclick="speakM()">🔊 語音朗讀</button>
+      <button class="m-btn" style="background:#fff;" onclick="closeM()">關閉 ✕</button>
+    </div>
+  </div>
+</div>
 
-      let eventsHtml = '';
-      d.events.forEach(ev => {
-        if (ev.transit) {
-          eventsHtml += `
-            <div class="transit-connector">
-              <div class="transit-pill"><span class="arrow">⬇️</span> ${ev.transit}</div>
-            </div>`;
-        } else {
-          let tipsHtml = '';
-          if (ev.tipMust) tipsHtml += `<div class="tip-capsule tip-must">${ev.tipMust}</div>`;
-          if (ev.tipPhoto) tipsHtml += `<div class="tip-capsule tip-photo">${ev.tipPhoto}</div>`;
-          if (ev.tipFood) tipsHtml += `<div class="tip-capsule tip-food">${ev.tipFood}</div>`;
-          if (ev.tipGift) tipsHtml += `<div class="tip-capsule tip-gift">${ev.tipGift}</div>`;
-          if (ev.tipBooking) tipsHtml += `<div class="tip-capsule tip-booking">${ev.tipBooking}</div>`;
-          if (ev.tipAvoid) tipsHtml += `<div class="tip-capsule tip-avoid">${ev.tipAvoid}</div>`;
+<script>
+  const DAYS = [
+    {
+      d: 0, dt: "12/22", w: "週二", icon: "🛫",
+      t: "雙向跨洋啟程・台北 ＆ 佛州飛往羅馬",
+      wt: "✈️ 長程機艙防乾燥保溫", h: "機上過夜 ｜ 華航直飛 ＆ 達美轉亞特蘭大",
+      s: "台灣組深夜由桃園直飛羅馬；佛州組午後由傑克遜維爾經亞特蘭大轉機跨大西洋，夜宿機上調時差。",
+      l: "大行李隨機託運（直掛羅馬 FCO），隨身小包備齊護照原件、保濕品、降噪耳機與歐洲 eSIM。",
+      n: "明日一早 08:30 兩路人馬於羅馬 FCO 航廈大廳碰頭！走 E-Gates 自動通關（30秒極速出關）！",
+      evs: [
+        { tm: "23:25", k: "flight", kt: "🇹🇼 台灣出發", ti: "台北桃園 TPE ➔ 羅馬 FCO (中華航空 CI 75 直飛)", de: "華航豪華經濟艙直飛（航程 14h 40m）。直飛免轉機，登機後安心充分補眠。" },
+        { tm: "13:39", k: "flight", kt: "🇺🇸 佛州出發", ti: "傑克遜維爾 JAX ➔ 羅馬 FCO (達美 Flight 1 經 ATL)", de: "達美航空經亞特蘭大 ATL 跨大西洋直飛（轉機 2h 03m，航程 12h 36m，08:30 FCO 碰頭）。" }
+      ]
+    },
+    {
+      d: 1, dt: "12/23", w: "週三", icon: "🏛️",
+      t: "羅馬大會師 ＆ 萬神殿天窗 ＆ 許願池漫步",
+      wt: "⛅ 羅馬 5°C ~ 14°C (涼爽微寒)", h: "住 Roma CentrArte (Via Modena 32，連住 5 晚免搬家！)",
+      s: "機場快線直達市區！下午慢遊特雷維許願池、萬神殿天窗，品嚐金杯咖啡碎冰沙，傍晚逛納沃納廣場聖誕市集。",
+      l: "抵達後直奔公寓放行李，絕不拖上街！Leonardo 快線出站步行 8 分鐘進 Via Modena 32 寓所。市區全程輕裝出發！",
+      n: "明日是平安夜 (12/24)！全羅馬超市與餐廳 18:00 前提早關門！下午請順路在特米尼站 Conad 超市買齊平安夜晚餐牛排食材！",
+      evs: [
+        { tm: "08:30", k: "train", kt: "🚆 接駁會師", ti: "羅馬 FCO 機場大會師 ➔ Leonardo 快線直達公寓安置行李", map: "Roma+CentrArte+Via+Modena+32+Rome", de: "持台灣晶片護照直接走 E-Gates 電子閘門（30秒極速出關）。搭 Leonardo 快線（32 分鐘直達 Termini），步行 8 分鐘入住 Roma CentrArte 卸下行李休整！" },
+        { tr: "🚶‍♂️ 步行 15 分鐘 (輕裝沿國家大道直達古城中心)" },
+        { tm: "11:30", k: "spot", kt: "🏛️ 經典", ti: "特雷維許願池 (Fontana di Trevi) 巴洛克巨作", map: "Trevi+Fountain+Rome", de: "巴洛克雕刻巔峰！右手越過左肩拋擲硬幣（一枚重返羅馬，二枚找到真愛）。水池右側低角度仰拍駿馬與宮殿雕刻最壯觀！" },
+        { tr: "🚶‍♂️ 穿過古老石板小巷步行 8 分鐘抵達萬神殿廣場" },
+        { tm: "13:30", k: "spot", kt: "🏛️ 奇蹟", ti: "萬神殿 (Pantheon) 兩千年無樑柱混凝土天窗神蹟", map: "Pantheon+Rome", de: "直徑 43.3 米純混凝土無樑柱圓頂，中央 9 米天窗採光神聖震撼。拉斐爾長眠於此。全面預約購票制 (€5)，提早線上預約！" },
+        { tr: "🚶‍♂️ 萬神殿旁小巷步行 2 分鐘即達金杯咖啡" },
+        { tm: "15:00", k: "food", kt: "☕ 老饕", ti: "金杯咖啡 (Tazza d'Oro) ＆ Giolitti 百年冰淇淋", map: "La+Casa+del+Caffe+al+Pantheon", de: "站在吧台喝 Espresso，點招牌 Granita 咖啡碎冰沙佐鮮奶油。接著步行 3 分鐘至 Giolitti 吃開心果與黑無花果冰淇淋！" },
+        { tr: "🚶‍♂️ 向西步行 6 分鐘抵達納沃納廣場" },
+        { tm: "17:00", k: "spot", kt: "🎪 市集", ti: "納沃納廣場 (Piazza Navona) 聖誕市集 ＆ 老字號晚宴", map: "Piazza+Navona+Rome", de: "四河噴泉聳立中央，旋轉木馬與熱紅酒香料攤位洋溢節慶溫馨。晚餐預約 Trattoria Vecchia Roma 品嚐火焰羊乳酪培根麵！" }
+      ]
+    },
+    {
+      d: 2, dt: "12/24", w: "週四", icon: "🎄",
+      t: "競技場地下層 ＆ 聖伯多祿廣場聖誕樹點燈",
+      wt: "⛅ 羅馬 4°C ~ 13°C (平安夜戶外轉涼)", h: "住 Roma CentrArte (Via Modena 32，連住 5 晚免搬家！)",
+      s: "深入競技場地下層神鬼戰士機關通道，午後訪古羅馬帝國心臟，黃昏至梵蒂岡看巨型聖誕樹點燈，回公寓過平安夜。",
+      l: "行李安穩留在羅馬公寓內！今日景點嚴禁大背包，只攜帶隨身小包出發。",
+      n: "明日是聖誕節 (12/25)！中午 12:00 教宗祝禱人潮洶湧，上午 10:00 前必須抵達梵蒂岡聖伯多祿廣場排隊過安檢卡位！",
+      evs: [
+        { tm: "09:00", k: "spot", kt: "⚔️ 震撼", ti: "羅馬競技場 (Colosseo) 地下層 Full Experience 深度導覽", map: "Colosseum+Rome", de: "深入地下層通道（Hypogeum），感受關押角鬥士與猛獸的機關構造。提前 30 天搶票！場外假戰士合照強索 €20，堅決不合照。" },
+        { tr: "🚶‍♂️ 步行 3 分鐘穿過君士坦丁凱旋門進入遺址區" },
+        { tm: "13:30", k: "spot", kt: "🏛️ 遺址", ti: "古羅馬廣場 (Foro Romano) ＆ 帕拉蒂尼山 (Palatino)", map: "Roman+Forum+Rome", de: "漫步在凱撒神廟、元老院等千年斷垣殘壁間；登上帕拉蒂尼山俯瞰大競技場遺跡。" },
+        { tr: "🚗 搭 Uber 15 分鐘直達梵蒂岡協和大道" },
+        { tm: "17:00", k: "spot", kt: "✨ 聖誕", ti: "梵蒂岡聖伯多祿廣場聖誕樹點燈 ➔ 公寓平安夜自炊牛排大餐", map: "St+Peters+Square+Vatican", de: "聖伯多祿大殿前數十公尺巨型聖誕樹與木雕馬槽璀璨點燈。全羅馬餐廳 18:00 前打烊，回公寓廚房享用自炊托斯卡尼牛排平安夜盛宴！" }
+      ]
+    },
+    {
+      d: 3, dt: "12/25", w: "週五", icon: "🕊️",
+      t: "教宗聖誕祝福 Urbi et Orbi ＆ 聖天使堡夕陽",
+      wt: "⛅ 羅馬 4°C ~ 13°C (廣場久站需圍巾)", h: "住 Roma CentrArte (Via Modena 32，連住 5 晚免搬家！)",
+      s: "一生一次在聖伯多祿廣場聆聽教宗聖誕祝禱，下午漫步聖天使堡與聖天使橋，欣賞台伯河金色落日。",
+      l: "行李全日留置公寓內！聖伯多祿廣場有嚴格反恐安檢，禁止大型包包、保溫瓶，輕裝出門最快通關。",
+      n: "明日 (12/26) 高鐵 1h10m 前往南義拿坡里與龐貝古城一日遊！大行李留在羅馬房間，只帶隨身小包出門！",
+      evs: [
+        { tm: "10:30", k: "spot", kt: "🕊️ 神聖", ti: "聖伯多祿大殿廣場：見證教宗聖誕祝禱「全城與全球」 (Urbi et Orbi)", map: "St+Peters+Square+Vatican", de: "每年全世界僅聖誕與復活節兩次！教宗親臨正中央陽台發表祝福，數萬信眾揮舞國旗齊聲歡呼。免費入場，務必 10:30 前過安檢卡位！" },
+        { tr: "🚶‍♂️ 沿協和大道直行步行 10 分鐘即抵聖天使堡" },
+        { tm: "14:30", k: "spot", kt: "🏰 古堡", ti: "聖天使堡 (Castel Sant'Angelo) ＆ 聖天使橋台伯河夕陽", map: "Castel+Sant+Angelo+Rome", de: "原為哈德良陵墓，中世紀教宗避難城堡。聖天使橋上十二尊貝尼尼天使石雕護衛兩側，夕陽金光灑在台伯河上波光粼粼。" }
+      ]
+    },
+    {
+      d: 4, dt: "12/26", w: "週六", icon: "🍕",
+      t: "高鐵 1h10m 輕裝往返拿坡里 ＆ 龐貝千年古城 ＆ 披薩發源地",
+      wt: "☀️ 拿坡里 7°C ~ 15°C (陽光溫和・防風外套)", h: "住 Roma CentrArte (Via Modena 32，連住 5 晚免搬家！)",
+      s: "高鐵極速南下！探訪西元79年火山封存的龐貝古城，品嚐世界第一薄脆瑪格麗特披薩，漫步蛋堡海灣遠眺維蘇威火山。",
+      l: "往返南義大行李絕不拖出門！安穩留在羅馬 Roma CentrArte 房間內。只帶隨身斜背包搭高鐵！",
+      n: "明日 (12/27) 羅馬藝術深遊！上午參觀博爾蓋塞美術館欣賞貝尼尼曠世神雕，下午漫步西班牙階梯！",
+      evs: [
+        { tm: "08:20", k: "train", kt: "🚅 高鐵", ti: "Roma Termini ➔ Napoli Centrale (高鐵直達 1 小時 10 分鐘)", map: "Napoli+Centrale", de: "搭乘 Italo / Frecciarossa 紅箭高鐵，時速 300km 飛馳，09:30 順暢抵達拿坡里！大行李在羅馬，全身輕鬆！" },
+        { tr: "🚆 車站地下一樓轉乘環山鐵路 35 分鐘直達龐貝景區" },
+        { tm: "10:30", k: "spot", kt: "🌋 奇蹟", ti: "世界文化遺產：龐貝古城 (Scavi di Pompei) 千年時空膠囊", map: "Pompei+Archaeological+Park", de: "西元 79 年被火山掩埋的古羅馬繁華都市！漫步在大劇院、阿波羅神殿與二千年石板車轍間。提前線上預約 Fast Track！" },
+        { tr: "🚆 搭乘環山鐵路返回拿坡里老城區" },
+        { tm: "14:00", k: "food", kt: "🍕 殿堂", ti: "世界披薩發源地：L'Antica Pizzeria da Michele 百年名店", map: "L'Antica+Pizzeria+da+Michele+Napoli", de: "1870 年創立，《享受吧！一個人的旅行》同款名店！只賣瑪格麗特與水手披薩，外酥內軟Q彈焦香，單片僅約 €5~€6！" },
+        { tr: "🚶‍♂️ 漫步至托雷多大道與蛋堡海濱" },
+        { tm: "16:30", k: "spot", kt: "🌊 海灣", ti: "蛋堡 (Castel dell'Ovo) 遠眺維蘇威火山 ＆ 拿坡里海灣日落", map: "Castel+dell'Ovo+Naples", de: "矗立在蔚藍海灣巨礁上，傍晚夕陽金光灑滿海面，回望維蘇威火山壯麗山形。拿坡里車站防扒，小包背胸前！" },
+        { tr: "🚅 19:00 Napoli Centrale 搭乘高鐵 1h10m 舒適返回 Roma Termini 步行回公寓休息" }
+      ]
+    },
+    {
+      d: 5, dt: "12/27", w: "週日", icon: "🎨",
+      t: "博爾蓋塞美術館貝尼尼神雕 ＆ 人民廣場 ＆ 西班牙階梯漫步",
+      wt: "⛅ 羅馬 5°C ~ 14°C (舒適宜人)", h: "住 Roma CentrArte (Via Modena 32，連住 5 晚免搬家！)",
+      s: "朝聖全羅馬最難預約的博爾蓋塞頂級私藏神雕，下午漫步人民廣場、蘋丘俯瞰全城落日，西班牙階梯精品街慢活悠閒。",
+      l: "行李留置 Roma CentrArte 內！全日步行與地鐵短途漫遊，買好的名產直接放回房間。",
+      n: "明日 (12/28) 告別羅馬，搭乘 Italo 高鐵 1.5h 直奔翡冷翠佛羅倫斯！入住百花大教堂正對面景觀公寓！",
+      evs: [
+        { tm: "09:00", k: "spot", kt: "🗿 巔峰", ti: "博爾蓋塞美術館 (Galleria Borghese) 貝尼尼神級大理石雕塑", map: "Galleria+Borghese+Rome", de: "近距離欣賞貝尼尼 23 歲神作《阿波羅與黛芙妮》（指尖化為月桂枝葉的透明薄度神蹟）、《普魯托搶截珀耳塞福涅》與卡拉瓦喬名畫。必須提前預約！" },
+        { tr: "🚶‍♂️ 穿過綠蔭公園步行至蘋丘觀景台" },
+        { tm: "13:30", k: "spot", kt: "🏛️ 漫步", ti: "蘋丘觀景台俯瞰羅馬全景 ＆ 人民廣場 (Piazza del Popolo)", map: "Piazza+del+Popolo+Rome", de: "蘋丘上 180 度俯瞰聖伯多祿大殿圓頂全景。下山至人民廣場波波洛聖母堂看卡拉瓦喬壁畫真跡。" },
+        { tr: "🚶‍♂️ 沿巴布伊諾大道精品街步行 10 分鐘抵西班牙廣場" },
+        { tm: "16:00", k: "spot", kt: "☕ 優雅", ti: "古希臘咖啡館 (Antico Caffè Greco) ＆ 西班牙階梯夜景", map: "Antico+Caffe+Greco+Rome", de: "1760 年開業，歌德、蕭邦昔日常駐沙龍！在燕尾服侍者服務下品嚐熱可可與咖啡。西班牙階梯嚴禁坐下飲食（罰款 €250）。" }
+      ]
+    },
+    {
+      d: 6, dt: "12/28", w: "週一", icon: "🚅",
+      t: "告別羅馬 ➔ Italo 高鐵 1.5h 直奔翡冷翠佛羅倫斯 ＆ 百花宮",
+      wt: "🍂 佛羅倫斯 2°C ~ 11°C (內陸早晚偏冷)", h: "住 Palazzo Gamba (聖母百花大教堂正對面)",
+      s: "早晨退房搭高鐵直奔佛羅倫斯，入住百花大教堂正對面景觀客廳，登喬托鐘樓俯瞰紅磚圓頂，下午沉浸烏菲茲美術館美第奇寶藏。",
+      l: "行李移動日：09:00 退房步行 8 分鐘進特米尼站上高鐵。11:00 抵佛羅倫斯 SMN 車站出站 7 分鐘直奔 Gamba 公寓放行李！",
+      n: "明日 (12/29) 區間火車 50m 輕裝往返比薩斜塔趣味拍照，下午參觀學院美術館《大衛像》，晚宴享用 Il Latini 巨無霸牛排！",
+      evs: [
+        { tm: "09:30", k: "train", kt: "🚅 高鐵", ti: "搭乘 Italo 高鐵 1h36m 飛馳至佛羅倫斯 SMN 車站", map: "Firenze+Santa+Maria+Novella", de: "搭乘深紅色法拉利高鐵穿行托斯卡尼丘陵。出站步行 7 分鐘入住百花大教堂旁 Palazzo Gamba 公寓放行李！" },
+        { tr: "🚶‍♂️ 步行 2 分鐘進百花大教堂廣場" },
+        { tm: "12:00", k: "spot", kt: "🏛️ 穹頂", ti: "聖母百花大教堂 (Duomo) ＆ 喬托鐘樓 414 階登頂俯瞰", map: "Cathedral+of+Santa+Maria+del+Fiore+Florence", de: "布魯內萊斯基紅磚大圓頂神蹟！攀登 414 階喬托鐘樓俯瞰翡冷翠。中午在中央市場一樓 Da Nerbone 吃慢燉牛肚包（€5）！" },
+        { tr: "🚶‍♂️ 沿卡爾查依歐利大道步行 8 分鐘抵烏菲茲" },
+        { tm: "14:30", k: "spot", kt: "🎨 巔峰", ti: "烏菲茲美術館 (Galleria degli Uffizi) 文藝復興大師朝聖", map: "Uffizi+Gallery+Florence", de: "欣賞波提切利《維納斯的誕生》與《春》；達文西《天使報喜》；米開朗基羅《多尼圓幅》。黑店警戒：Via Dei Calzaiuoli 79 號門牌黑店冰淇淋絕不要進！" }
+      ]
+    },
+    {
+      d: 7, dt: "12/29", w: "週二", icon: "🥩",
+      t: "比薩斜塔趣味推塔 ＆ 學院大衛像 ＆ 1.2kg 丁骨大牛排晚宴",
+      wt: "🍂 佛羅倫斯/比薩 3°C ~ 11°C (草坪開闊防風)", h: "住 Palazzo Gamba (聖母百花大教堂正對面)",
+      s: "火車 50m 往返比薩拍攝創意推塔照，下午參觀學院美術館《大衛像》真品，傍晚米開朗基羅廣場看夕陽，晚宴享用 Il Latini 巨無霸牛排。",
+      l: "往返比薩絕不帶行李！大行李存放在佛羅倫斯房間內。只帶隨身小包搭火車，進出比薩火車站極其俐落。",
+      n: "明日 (12/30) 前往水都威尼斯！抵達威尼斯搭乘 ACTV 水上巴士直達里亞托橋（下船步行 2 分鐘進公寓免爬橋）！",
+      evs: [
+        { tm: "09:00", k: "spot", kt: "📐 奇蹟", ti: "比薩斜塔 (Torre di Pisa) ＆ 奇蹟廣場草坪趣味拍照", map: "Leaning+Tower+of+Pisa", de: "佛羅倫斯 SMN 車站搭區間火車（50分鐘）直達！草坪上借位「推斜塔」、「踢斜塔」趣味合照；登上 294 階傾斜大理石旋轉階梯體驗自由落體之地！" },
+        { tr: "🚆 火車 50 分鐘返回佛羅倫斯 SMN ➔ 步行 10 分鐘至學院美術館" },
+        { tm: "15:00", k: "spot", kt: "🗿 神雕", ti: "學院美術館 (Galleria dell'Accademia) 米開朗基羅《大衛像》真跡", map: "Galleria+dell+Accademia+Florence", de: "米開朗基羅 26 歲以整塊卡拉拉大理石耗時 3 年雕刻出的 5.17 米巨作《大衛》真品！暴起的手背青筋、凝視巨人的銳利眼神無懈可擊。" },
+        { tr: "🚌 搭 12/13 號公車上米開朗基羅廣場看夕陽" },
+        { tm: "19:30", k: "food", kt: "🥩 霸王", ti: "百年老店 Il Latini 享用 1.2kg 炭烤丁骨大牛排盛宴", map: "Ristorante+Il+Latini+Florence", de: "百年地窖內享用炭火烤架烤至外焦酥脆、內部鮮紅柔嫩的巨無霸托斯卡尼大牛排，灑粗海鹽配 Chianti 紅酒！" }
+      ]
+    },
+    {
+      d: 8, dt: "12/30", w: "週三", icon: "🛶",
+      t: "Italo 高鐵直奔威尼斯 ＆ 聖馬可金箔大教堂 ＆ 貢多拉夜遊",
+      wt: "🌊 威尼斯 1°C ~ 8°C (海風濕冷體感0°C)", h: "住 Rialto Prestige Apartments (里亞托橋旁免爬階，連住 3 晚！)",
+      s: "高鐵 2h 跨過海上長堤抵達威尼斯，搭水上巴士入住里亞托橋公寓，下午參觀聖馬可金碧輝煌大教堂，傍晚體驗貢多拉水巷夜遊。",
+      l: "威尼斯免扛行李密技！抵達 Santa Lucia 站後直接搭 ACTV 水上巴士到「Rialto 站」下船，步行 2 分鐘直達公寓（免爬跨河大拱橋）放行李！",
+      n: "明日是跨年夜 (12/31)！下午探訪彩色島，夜晚在聖馬可廣場欣賞全歐洲最浪漫的水上跨年煙火！",
+      evs: [
+        { tm: "11:30", k: "train", kt: "🚅 水都", ti: "Italo 高鐵 2h 抵達威尼斯聖露西亞站 ➔ 水上巴士進駐", map: "Venezia+Santa+Lucia", de: "高鐵直抵威尼斯本島終點站！搭乘 1 號或 2 號船直達里亞托橋（Rialto），步行 2 分鐘進公寓免扛大行李爬階梯！" },
+        { tr: "🚤 搭水上巴士或步行 12 分鐘直達聖馬可廣場" },
+        { tm: "14:00", k: "spot", kt: "🛶 拜占庭", ti: "聖馬可大教堂金箔天頂 ＆ 花神咖啡 ＆ 貢多拉黑夜穿梭", map: "St+Marks+Basilica+Venice", de: "仰望 4000 平米真金箔馬賽克壁畫；在花神咖啡戶外樂隊演奏下品嚐熱可可；傍晚包乘黑漆貢多拉穿梭在昏黃路燈映照的狹窄水道。晚餐吃墨魚麵！" }
+      ]
+    },
+    {
+      d: 9, dt: "12/31", w: "週四", icon: "🎆",
+      t: "童話彩色島 (Burano) ＆ 總督宮歎息橋 ＆ 聖馬可廣場水上跨年煙火",
+      wt: "🌊 威尼斯 0°C ~ 7°C (跨年夜近冰點・全身貼暖暖包)", h: "住 Rialto Prestige Apartments (里亞托橋旁，跨年連住！)",
+      s: "白天探訪如七彩調色盤的彩色島 (Burano)，下午參觀總督宮與歎息橋，深夜在聖馬可廣場萬人倒數、欣賞瀉湖璀璨水上煙火迎接 2027！",
+      l: "行李安穩留置里亞托公寓內！全天輕裝搭船，跨年散場直接步行 10 分鐘回公寓溫暖入睡，完全無需擠爆水上巴士！",
+      n: "明日是元旦 (01/01)！悠閒睡到自然醒，搭乘水上巴士漫遊大運河，品嚐元旦海鮮大餐！",
+      evs: [
+        { tm: "09:30", k: "spot", kt: "🌈 調色盤", ti: "童話彩色島 / 布拉諾島 (Burano) 漫步 ＆ 炸海鮮", map: "Burano+Venice", de: "搭 12 號水上巴士（40分鐘）直達！昔日漁夫漆成七彩的小屋如童話繪本般繽紛。木橋上欣賞水面倒影，品嚐炸海鮮拼盤！" },
+        { tr: "🚤 搭乘水上巴士 45 分鐘返回聖馬可碼頭" },
+        { tm: "14:30", k: "spot", kt: "🏛️ 歷史", ti: "總督宮 (Palazzo Ducale) ＆ 歎息橋 (Ponte dei Sospiri)", map: "Doge+Palace+Venice", de: "威尼斯共和國權力中心！走過囚犯走入死牢前最後一眼望向自由世界的「歎息橋」。" },
+        { tr: "🚶‍♂️ 步行回公寓小憩取暖 ➔ 21:30 漫步進入聖馬可廣場" },
+        { tm: "22:00", k: "spot", kt: "🎆 盛典", ti: "聖馬可廣場水上跨年夜音樂會 ＆ 瀉湖萬人倒數午夜煙火", map: "Piazza+San+Marco+Venice", de: "全世界最浪漫跨年！伴隨樂聲倒數，午夜十二點萬發煙火自瀉湖海面上綻放，倒映在水面上！散場步行 10 分鐘直接回公寓入睡！" }
+      ]
+    },
+    {
+      d: 10, dt: "01/01", w: "週五", icon: "🌅",
+      t: "水都元旦迎晨曦 ＆ 大運河水上巴士巡禮 ＆ 玻璃島藝匠",
+      wt: "🌊 威尼斯 1°C ~ 8°C (海風清澈舒爽)", h: "住 Rialto Prestige Apartments (里亞托橋旁)",
+      s: "新年的第一天悠閒睡到自然醒，搭 1 號水上巴士慢速巡禮大運河兩岸貴族宮殿，下午探訪玻璃島 Murano 手工吹玻璃工藝，晚宴享用威尼斯海鮮盛宴。",
+      l: "行李留置里亞托公寓內！連住最後一晚，今晚整理大行李準備明日前往最後一站米蘭。",
+      n: "明日 (01/02) 搭乘 Italo 高鐵 2.5h 直達米蘭中央站！入住大教堂旁景觀公寓，登頂 135 座大理石尖塔天台！",
+      evs: [
+        { tm: "10:30", k: "spot", kt: "🚤 巡禮", ti: "搭乘 1 號水上巴士慢速漫遊大運河 (Canal Grande) 貴族宮殿群", map: "Grand+Canal+Venice", de: "坐在船頭以最優雅視角欣賞兩側數百座拜占庭與哥德式大理石宮殿倒影，穿過里亞托橋下感受威尼斯靜謐新年氛圍。" },
+        { tr: "🚤 搭水上巴士 20 分鐘前往玻璃島 Murano" },
+        { tm: "14:00", k: "spot", kt: "✨ 工藝", ti: "穆拉諾玻璃島 (Murano) 參觀千年手工吹製玻璃神技", map: "Murano+Venice", de: "觀摩工匠大師在千度高溫爐火前數秒內吹製拉拔出奔騰駿馬與千花琉璃杯具。" },
+        { tm: "18:30", k: "food", kt: "🍽️ 元旦", ti: "Trattoria Al Gazzettino 享用威尼斯元旦海鮮燉飯大餐", map: "Trattoria+Al+Gazzettino+Venice", de: "品嚐滿滿干貝、鮮蝦與淡菜的威尼斯海鮮燉飯（Risotto ai Frutti di Mare），佐白葡萄酒慶祝 2027 新年！" }
+      ]
+    },
+    {
+      d: 11, dt: "01/02", w: "週六", icon: "👑",
+      t: "Italo 高鐵直奔米蘭 ➔ 米蘭大教堂 135 尖塔天台 ＆ 迴廊踩公牛",
+      wt: "❄️ 米蘭 -1°C ~ 7°C (天台迎風刺骨・羽絨厚大衣)", h: "住 Duomo Cathedral Apartments (米蘭大教堂旁，精緻住 2 晚！)",
+      s: "搭 Italo 高鐵 2.5h 直達米蘭，入住大教堂旁景觀公寓，搭升降機登頂 135 座石雕尖塔大理石森林，艾曼紐二世迴廊踩公牛求好運。",
+      l: "威尼斯退房搭水上巴士上高鐵。抵達米蘭中央車站轉地鐵 3 號線直達 Duomo 站入住公寓，行李一次性攤開，步行 2 分鐘進大教堂！",
+      n: "明日 (01/03) 朝聖達文西千古神作《最後的晚餐》，下午在蒙特拿破崙精品街與文藝復興百貨最後採買退稅整理！",
+      evs: [
+        { tm: "11:00", k: "train", kt: "🚅 高鐵", ti: "Italo 高鐵 2h27m 抵達米蘭中央車站 ➔ 入住大教堂旁公寓", map: "Milano+Centrale", de: "抵達米蘭中央車站，搭地鐵 3 號線 5 分鐘直達 Duomo 站入住大教堂旁公寓！下樓即是大教堂廣場！" },
+        { tr: "🚶‍♂️ 下樓步行 2 分鐘直接抵達米蘭大教堂售票處" },
+        { tm: "14:00", k: "spot", kt: "👑 刺繡", ti: "米蘭大教堂 (Duomo di Milano) 電梯登頂天台 (Rooftop)", map: "Duomo+di+Milano", de: "白色大理石奇蹟！搭電梯登上天台漫步在大理石森林間，仰望鍍金聖母像遠眺阿爾卑斯雪山天際線！廣場黑人套紅繩堅決說 No！" },
+        { tr: "🚶‍♂️ 步行 1 分鐘穿過大教堂旁拱門進入艾曼紐二世迴廊" },
+        { tm: "16:30", k: "spot", kt: "✨ 迴廊", ti: "艾曼紐二世迴廊 (Galleria) 公牛馬賽克地磚 ＆ Luini 烤餡餅", map: "Galleria+Vittorio+Emanuele+II+Milan", de: "在十字圓頂下公牛馬賽克地磚上用右腳跟旋轉三圈祈求新年好運！吃 Luini 爆漿起司烤餡餅。" }
+      ]
+    },
+    {
+      d: 12, dt: "01/03", w: "週日", icon: "🎨",
+      t: "朝聖達文西《最後的晚餐》 ＆ 蒙特拿破崙精品退稅衝刺採買",
+      wt: "❄️ 米蘭 0°C ~ 7°C (洋蔥式穿搭・進店脫外衣)", h: "住 Duomo Cathedral Apartments (米蘭大教堂旁)",
+      s: "朝聖文藝復興千古真跡《最後的晚餐》，午後於蒙特拿破崙大道與文藝復興百貨最後衝刺採買精品與頂級名產，整理退稅單與大行李箱。",
+      l: "行李留置公寓＋今晚大行李打包封箱！採買的 Amedei 巧克力、起司松露等裝箱。所有液體伴手禮必須託運！集中整理退稅單據。",
+      n: "🚨 明日 (01/04) 返航日・米蘭機場大塞車警報！米蘭 MXP 出境安檢海關曾塞車達 3 小時！明早 06:45 準時出發搭機場快線，07:30~07:45 務必抵達 MXP 機場！",
+      evs: [
+        { tm: "09:30", k: "spot", kt: "🖼️ 神作", ti: "感恩聖母堂 (Santa Maria delle Grazie) 達文西《最後的晚餐》", map: "Santa+Maria+delle+Grazie+Milan", de: "修士食堂牆面透視法巔峰神作！耶穌說出「你們之中有一人出賣了我」瞬間十二門徒震驚神態。實名制核對必須帶護照正本！" },
+        { tr: "🚶‍♂️ 步行至蒙特拿破崙精品大道與文藝復興百貨" },
+        { tm: "14:00", k: "gift", kt: "🛍️ 採買", ti: "布雷拉藝術街區 ＆ 蒙特拿破崙精品街 ＆ 整理退稅單", map: "Via+Monte+Napoleone+Milan", de: "最後採買衝刺！採買 Amedei 9號黑巧克力、真空帕馬森乾酪、黑松露醬、巴薩米克醋與皮件，晚間打包行李！" }
+      ]
+    },
+    {
+      d: 13, dt: "01/04", w: "週一", icon: "✈️",
+      t: "提早 3.5h 抵達 MXP 機場避開安檢海關大排長龍 ➔ 直飛返程",
+      wt: "❄️ 米蘭 0°C ~ 6°C (清晨出發保暖防凍)", h: "平安賦歸航程 ｜ 台灣長榮直飛 ＆ 佛州達美航空",
+      s: "早晨搭 Malpensa 快線直奔機場，辦理 Global Blue / Planet 退稅與大行李托運，雙向啟程飛返台灣與美國。",
+      l: "大行李直接託運直掛返國！06:45 帶齊所有行李退房搭地鐵轉機場快線。抵達 MXP T1 後，先海關蓋章退稅，再到櫃檯託運行李！",
+      n: "台灣組長榮 BR 96 於 01/05 清晨 06:10 抵達台北桃園 (TPE)；佛州組達美班機於 01/04 晚間 21:38 抵達傑克遜維爾 (JAX)！",
+      evs: [
+        { tm: "06:45", k: "train", kt: "🚆 機場快線", ti: "米蘭中央車站搭乘 Malpensa Express 直達 MXP 第一航廈", map: "Milano+Centrale", de: "地鐵 5 分鐘抵中央車站，搭機場快線（52 分鐘直達 T1，票價 €13），免受公路塞車困擾！" },
+        { tr: "🚶‍♂️ 抵達 MXP 機場辦理退稅手續與託運行李" },
+        { tm: "07:40", k: "flight", kt: "🚨 警報", ti: "MXP 第一航廈辦理退稅、托運、安檢與海關蓋章", map: "Milan+Malpensa+Airport+T1", de: "米蘭 MXP 出境安檢與海關大排長龍，務必在 07:30~07:45 前抵達機場，保留充裕時間辦理退稅與安檢！" },
+        { tr: "✈️ 雙向班機起飛返航" },
+        { tm: "11:00", k: "flight", kt: "🇹🇼 台灣返航", ti: "米蘭 MXP ➔ 台北桃園 TPE (長榮航空 BR 96 直飛)", de: "波音 777-300ER 豪華直飛（航程 12h 10m）。01/04 11:00 起飛 ➔ 01/05 06:10 抵達台北，舒適返抵國門！" },
+        { tm: "12:00", k: "flight", kt: "🇺🇸 佛州返航", ti: "米蘭 MXP ➔ 傑克遜維爾 JAX (達美 Flight 2 經 ATL)", de: "達美航空經亞特蘭大 ATL 跨大西洋直飛（轉機 3h，航程 15h 38m），同日晚間 21:38 平安到家！" }
+      ]
+    },
+    {
+      d: 14, dt: "01/05", w: "週二", icon: "🏡",
+      t: "清晨 06:10 順利抵達台北桃園 (TPE)・圓滿凱旋",
+      wt: "🏡 台北 16°C ~ 20°C (平安抵台)", h: "平安回到溫暖的家",
+      s: "長榮班機順利降落台北桃園機場，為 14 天義大利文藝聖誕與威尼斯米蘭跨年之旅劃下完美句點！",
+      l: "提取行李後搭乘機場捷運或返家專車，將義大利名產與戰利品帶回溫暖的家。",
+      n: "旅程圓滿凱旋，好好休息調時差，回味美好的義大利回憶！",
+      evs: [
+        { tm: "06:10", k: "spot", kt: "🇹🇼 抵台", ti: "長榮 BR 96 平安降落台北桃園機場", map: "Taiwan+Taoyuan+International+Airport", de: "帶著滿滿的義大利文藝聖誕與威尼斯米蘭跨年回憶、頂級巧克力與名牌精品，平安返抵國門！" }
+      ]
+    }
+  ];
 
-          let mapBtnHtml = '';
-          if (ev.mapQuery) {
-            mapBtnHtml = `<div class="link-row" style="margin:4px 0 8px;"><a class="link-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ev.mapQuery)}" target="_blank">📍 Google Maps 導航</a></div>`;
-          }
+  const PHRASES = [
+    { c: "dining", cn: "這個請給我。", it: "Questo, per favore.", pro: "奎斯托，佩爾法沃雷" },
+    { c: "dining", cn: "請給我菜單。", it: "Il menu, per favore.", pro: "伊爾 梅紐，佩爾法沃雷" },
+    { c: "dining", cn: "有英文菜單嗎？", it: "Avete un menu in inglese?", pro: "阿維特 溫 梅紐 因 英格萊賽？" },
+    { c: "dining", cn: "請給我兩人份。", it: "Per due persone, per favore.", pro: "佩爾 杜耶 佩爾索內，佩爾法沃雷" },
+    { c: "dining", cn: "請不要加肉 / 請做蔬食。", it: "Senza carne, per favore. (Vegetariano)", pro: "森札 卡爾內，佩爾法沃雷" },
+    { c: "dining", cn: "請不要太鹹 / 少放鹽。", it: "Poco sale, per favore.", pro: "波科 薩萊，佩爾法沃雷" },
+    { c: "dining", cn: "請給我瓶裝天然水 / 氣泡水。", it: "Acqua naturale / frizzante, per favore.", pro: "阿誇 納圖拉萊 / 弗利贊特" },
+    { c: "bill", cn: "買單 / 請給我帳單。", it: "Il conto, per favore.", pro: "伊爾 孔托，佩爾法沃雷" },
+    { c: "bill", cn: "可以刷信用卡嗎？", it: "Posso pagare con la carta?", pro: "波索 帕加雷 控 拉 卡爾塔？" },
+    { c: "bill", cn: "我們可以分開結帳嗎？", it: "Possiamo pagare separatamente?", pro: "波西亞莫 帕加雷 塞帕拉塔門特？" },
+    { c: "transit", cn: "請問火車站在哪裡？", it: "Dov'è la stazione ferroviaria?", pro: "多韋 拉 斯塔齊奧內 費羅維亞利亞？" },
+    { c: "transit", cn: "請問月台在哪裡？", it: "Dov'è il binario?", pro: "多韋 伊爾 比納利歐？" },
+    { c: "transit", cn: "請幫我叫一輛計程車。", it: "Mi può chiamare un taxi, per favore?", pro: "米 波 恰馬雷 溫 特克西，佩爾法沃雷？" },
+    { c: "shop", cn: "請問這個多少錢？", it: "Quanto costa questo?", pro: "關托 考斯塔 奎斯托？" },
+    { c: "shop", cn: "可以辦理免稅/退稅嗎？", it: "Posso avere il Tax Free?", pro: "波索 阿維雷 伊爾 泰克斯 弗利？" },
+    { c: "help", cn: "請問洗手間在哪裡？", it: "Dov'è il bagno?", pro: "多韋 伊爾 巴紐？" },
+    { c: "help", cn: "請幫幫我。", it: "Mi può aiutare, per favore?", pro: "米 波 阿尤塔雷，佩爾法沃雷？" }
+  ];
 
-          eventsHtml += `
-            <div class="time-entry">
-              <div class="time-tag-col">${ev.time}</div>
-              <div class="time-node"></div>
-              <div class="schedule-box">
-                <div class="box-header">
-                  <span class="badge-kind ${ev.kind}">${ev.kindText}</span>
-                  <div class="box-title">${ev.title}</div>
-                </div>
-                ${mapBtnHtml}
-                <div class="box-desc">${ev.desc}</div>
-                ${tipsHtml ? `<div class="tactical-list">${tipsHtml}</div>` : ''}
+  const PRESETS = [
+    { cat: "🥗 Antipasti 前菜類", list: [
+      { it: "Bruschetta", cn: "番茄羅勒香蒜烤麵包", p: 8 },
+      { it: "Insalata Caprese", cn: "水牛莫札瑞拉起司番茄沙拉", p: 12 },
+      { it: "Prosciutto e Melone", cn: "帕瑪生火腿哈密瓜", p: 15 }
+    ]},
+    { cat: "🍝 Primi Piatti 第一道 (麵/飯類)", list: [
+      { it: "Carbonara", cn: "正統羅馬培根蛋黃麵", p: 14 },
+      { it: "Spaghetti al Nero di Seppia", cn: "威尼斯道地黑墨魚麵", p: 18 },
+      { it: "Risotto alla Milanese", cn: "米蘭金黃番紅花燉飯", p: 16 }
+    ]},
+    { cat: "🍕 Pizze 經典披薩 (拿坡里發源地)", list: [
+      { it: "Pizza Margherita", cn: "正統拿坡里水牛起司瑪格麗特披薩", p: 6 },
+      { it: "Pizza Marinara", cn: "經典水手披薩 (番茄、大蒜、牛至)", p: 5 },
+      { it: "Pizza Quattro Formaggi", cn: "濃郁四種起司披薩", p: 10 }
+    ]},
+    { cat: "🥩 Secondi Piatti 第二道 (肉類/主菜)", list: [
+      { it: "Bistecca alla Fiorentina", cn: "佛羅倫斯丁骨大牛排 (1kg)", p: 60 },
+      { it: "Cotoletta alla Milanese", cn: "米蘭香煎帶骨大炸牛排", p: 26 },
+      { it: "Fritto Misto di Mare", cn: "酥炸綜合海鮮拼盤", p: 22 }
+    ]},
+    { cat: "🍰 Dolci 甜點與飲品", list: [
+      { it: "Tiramisù", cn: "正宗馬斯卡彭咖啡提拉米蘇", p: 7 },
+      { it: "Aperol Spritz", cn: "國民開胃橘雞尾酒", p: 6 },
+      { it: "Acqua Naturale", cn: "瓶裝常溫無氣泡礦泉水", p: 3 }
+    ]}
+  ];
+
+  let curDay = 1;
+
+  function renderDay(idx) {
+    const d = DAYS[idx];
+    if (!d) return;
+    let evHtml = '';
+    d.evs.forEach(ev => {
+      if (ev.tr) {
+        evHtml += `<div class="transit-bar"><div class="transit-pill"><span>⬇️</span> ${ev.tr}</div></div>`;
+      } else {
+        let mapHtml = ev.map ? `<div class="link-row"><a class="link-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ev.map)}" target="_blank">📍 Google Maps 導航</a></div>` : '';
+        evHtml += `
+          <div class="t-entry">
+            <div class="t-time">${ev.tm}</div>
+            <div class="t-node"></div>
+            <div class="s-box">
+              <div class="s-header">
+                <span class="badge-k ${ev.k}">${ev.kt}</span>
+                <div class="s-title">${ev.ti}</div>
               </div>
-            </div>`;
-        }
-      });
+              ${mapHtml}
+              <div class="s-desc">${ev.de}</div>
+            </div>
+          </div>`;
+      }
+    });
 
-      const dayHtml = `
-        <div class="day-banner">
-          <div class="day-icon-box">${d.icon}</div>
-          <div class="day-title-wrap">
-            <h3>Day ${d.day} ｜ ${d.date} (${d.weekday}) <span style="font-size:0.75rem; background:#ffffff; border:1px solid var(--ghibli-border); padding:2px 8px; border-radius:999px; color:var(--ghibli-forest); margin-left:6px;">${d.weather}</span></h3>
-            <h2>${d.title}</h2>
-            <p>${d.hotel}</p>
-          </div>
+    document.getElementById('day-box').innerHTML = `
+      <div class="banner">
+        <div class="b-icon">${d.icon}</div>
+        <div class="b-title">
+          <h3>Day ${d.d} ｜ ${d.dt} (${d.w}) <span style="font-size:0.75rem; background:#fff; border:1px solid var(--border); padding:2px 7px; border-radius:999px; color:var(--forest); margin-left:4px;">${d.wt}</span></h3>
+          <h2>${d.t}</h2>
+          <p>${d.h}</p>
         </div>
+      </div>
+      <div class="strat-card">
+        <div class="strat-row"><span class="strat-badge" style="background:#eaf3ec; color:#1c4826;">📝 今日摘要</span><div>${d.s}</div></div>
+        <div class="strat-row"><span class="strat-badge" style="background:#fbf3e2; color:#78480d;">🧳 行李安置</span><div>${d.l}</div></div>
+        <div class="strat-row"><span class="strat-badge" style="background:#fbeee8; color:#9c3319;">🔔 明日提醒</span><div>${d.n}</div></div>
+      </div>
+      <div class="v-timeline">
+        <div class="v-line"></div>
+        ${evHtml}
+      </div>
+    `;
+    document.getElementById('day-lbl').innerHTML = `📍 Day ${d.d} ｜ ${d.dt} (${d.w}) ${d.t.split(' ＆ ')[0]}`;
+  }
 
-        <div class="day-strategy-card">
-          <div class="strategy-row">
-            <span class="strategy-badge badge-summary">📝 今日摘要</span>
-            <div>${d.summary}</div>
-          </div>
-          <div class="strategy-row">
-            <span class="strategy-badge badge-luggage">🧳 行李安置</span>
-            <div>${d.luggage}</div>
-          </div>
-          <div class="strategy-row">
-            <span class="strategy-badge badge-nextday">🔔 明日提醒</span>
-            <div>${d.nextday}</div>
-          </div>
-        </div>
+  function goDay(idx) {
+    curDay = idx;
+    document.querySelectorAll('.stop').forEach((el, i) => {
+      if (i === idx) el.classList.add('active'); else el.classList.remove('active');
+    });
+    renderDay(idx);
+  }
 
-        <div class="timeline-container">
-          <div class="v-line"></div>
-          ${eventsHtml}
-        </div>
-      `;
+  function step(offset) {
+    let next = curDay + offset;
+    if (next < 0) next = 0;
+    if (next >= DAYS.length) next = DAYS.length - 1;
+    goDay(next);
+    const stops = document.querySelectorAll('.stop');
+    if (stops[next]) stops[next].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
 
-      document.getElementById('day-content-container').innerHTML = dayHtml;
-      document.getElementById('current-day-label').innerHTML = `📍 Day ${d.day} ｜ ${d.date} (${d.weekday}) ${d.title.split(' ＆ ')[0]}`;
-    }
+  function showSec(id, btn) {
+    document.querySelectorAll('.main-sec').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+    const target = document.getElementById('sec-' + id);
+    if (target) target.style.display = 'block';
+    btn.classList.add('active');
+  }
 
-    // 點擊鐵軌選擇天數
-    function selectDay(dayNum, stopElem) {
-      currentDayIndex = dayNum;
-      document.querySelectorAll('.date-stop').forEach((s, idx) => {
-        if (idx === dayNum) s.classList.add('active');
-        else s.classList.remove('active');
-      });
-      renderDayView(dayNum);
-    }
-
-    // 上一天 / 下一天跳轉
-    function stepDay(offset) {
-      let nextIndex = currentDayIndex + offset;
-      if (nextIndex < 0) nextIndex = 0;
-      if (nextIndex >= DAYS_DATA.length) nextIndex = DAYS_DATA.length - 1;
-      selectDay(nextIndex, null);
-
-      const stops = document.querySelectorAll('.date-stop');
-      if (stops[nextIndex]) {
-        stops[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      }
-    }
-
-    // 模組導航切換
-    function switchMainSection(secId, btn) {
-      document.querySelectorAll('.main-sec').forEach(s => s.style.display = 'none');
-      document.querySelectorAll('.nav-pill').forEach(b => b.classList.remove('active'));
-
-      const target = document.getElementById('sec-' + secId);
-      if (target) {
-        target.style.display = 'block';
-      }
-      btn.classList.add('active');
-    }
-
-    // 航班雙出發視窗切換
-    function switchFlightWindow(mode) {
-      const winTpe = document.getElementById('win-fl-tpe');
-      const winJax = document.getElementById('win-fl-jax');
-      const btnTpe = document.getElementById('btn-fl-tpe');
-      const btnJax = document.getElementById('btn-fl-jax');
-
-      if (mode === 'tpe') {
-        winTpe.style.display = 'block'; winJax.style.display = 'none';
-        btnTpe.classList.add('active'); btnJax.classList.remove('active');
-      } else {
-        winTpe.style.display = 'none'; winJax.style.display = 'block';
-        btnTpe.classList.remove('active'); btnJax.classList.add('active');
-      }
-    }
-
-    // 語句卡渲染與過濾
-    function renderPhraseCards(filterCat) {
-      if (!filterCat) filterCat = 'all';
-      const container = document.getElementById('phrase-card-list-container');
-      if (!container) return;
-      let cardsHtml = '';
-      PHRASES_DATA.forEach((p, idx) => {
-        if (filterCat === 'all' || p.cat === filterCat) {
-          cardsHtml += `
-            <div class="phrase-bubble-card" data-cat="${p.cat}" onclick="selectPhraseByIdx(${idx})">
-              <div class="phrase-cn-label">${p.cn}</div>
-              <div class="phrase-it-text">${p.it}</div>
-              <div class="phrase-zoom-hint">點擊放大 🔍</div>
-            </div>`;
-        }
-      });
-      container.innerHTML = cardsHtml;
-    }
-
-    function selectPhraseByIdx(idx) {
-      const p = PHRASES_DATA[idx];
-      if (p) {
-        openBigCard(p.it, p.cn, p.pronun);
-      }
-    }
-
-    function filterCards(cat, btnElem) {
-      document.querySelectorAll('.card-filter-btn').forEach(b => b.classList.remove('active'));
-      btnElem.classList.add('active');
-      renderPhraseCards(cat);
-    }
-
-    // 全螢幕大字卡彈窗
-    let currentModalText = '';
-    function openBigCard(itText, cnText, pronunText) {
-      currentModalText = itText;
-      document.getElementById('modal-it-text').innerText = itText;
-      document.getElementById('modal-cn-text').innerText = cnText;
-      document.getElementById('modal-pronun-text').innerText = '發音提示：' + pronunText;
-      document.getElementById('bigcard-modal').style.display = 'flex';
-    }
-    function closeBigCard() { document.getElementById('bigcard-modal').style.display = 'none'; }
-    function speakCurrentModal() { if (currentModalText) speakText(currentModalText, 'it-IT'); }
-
-    // 菜單預設圖鑑渲染
-    function renderMenuPresets() {
-      const container = document.getElementById('menu-preset-container');
-      let html = '';
-      MENU_PRESETS.forEach(sec => {
-        html += `<div style="font-size:0.95rem; font-weight:900; color:var(--ghibli-forest); margin:14px 0 8px;">${sec.catName}</div>`;
-        sec.items.forEach(item => {
-          const approxTwd = Math.round(item.price * 35.5);
-          html += `
-            <div class="menu-item-row" onclick="quickFillMenu('${item.it}', '${item.cn}', ${item.price})">
-              <div><strong>${item.it}</strong> <span style="font-size:0.85rem; color:var(--ghibli-muted);">${item.cn}</span></div>
-              <div><span style="font-weight:900; color:var(--ghibli-calcifer);">€${item.price} (約 NT$${approxTwd})</span> <button class="audio-btn" onclick="event.stopPropagation(); speakText('${item.it}', 'it-IT')">🔊</button></div>
-            </div>`;
-        });
-      });
-      container.innerHTML = html;
-    }
-
-    // 歐元轉台幣計算機
-    function calcTWD() {
-      const eurInput = parseFloat(document.getElementById('eur-amount').value) || 0;
-      const addCoperto = document.getElementById('add-coperto').checked;
-      const rate = 35.5;
-      const diners = parseInt(document.getElementById('diners-count').value) || 1;
-      let totalEur = eurInput;
-      let copertoTotal = 0;
-      if (addCoperto && eurInput > 0) {
-        copertoTotal = 2.5 * diners;
-        totalEur += copertoTotal;
-      }
-      const twd = Math.round(totalEur * rate);
-      const twdPerPerson = Math.round(twd / diners);
-      document.getElementById('twd-result').innerText = 'NT$ ' + twd.toLocaleString();
-      document.getElementById('twd-per-person').innerText = diners > 1 ? ('每人約 NT$ ' + twdPerPerson.toLocaleString() + ' (' + diners + '人均分)') : '';
-      if (addCoperto && eurInput > 0) {
-        document.getElementById('calc-breakdown').innerText = '餐費 €' + eurInput + ' ＋ ' + diners + '人桌巾費 €' + copertoTotal.toFixed(1) + ' ＝ 總計 €' + totalEur.toFixed(1);
-      } else {
-        document.getElementById('calc-breakdown').innerText = '單純餐費 €' + eurInput + ' (匯率 35.5)';
-      }
-    }
-
-    function quickFillMenu(itName, cnName, avgPrice) {
-      document.getElementById('eur-amount').value = avgPrice;
-      calcTWD();
-      openBigCard(itName, cnName, '約 €' + avgPrice);
-    }
-
-    function handleMenuPhoto(e) {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-          document.getElementById('photo-preview').src = event.target.result;
-          document.getElementById('photo-preview-wrap').style.display = 'block';
-        };
-        reader.readAsDataURL(file);
-      }
-    }
-    function clearPhoto() {
-      document.getElementById('camera-input').value = '';
-      document.getElementById('photo-preview-wrap').style.display = 'none';
-    }
-
-    // 菜單即時詞典搜尋
-    const menuDictionary = {
-      'carne': '肉類 (Carne)', 'pesce': '魚類 / 海鮮 (Pesce)', 'pollo': '雞肉 (Pollo)',
-      'manzo': '牛肉 (Manzo)', 'maiale': '豬肉 (Maiale)', 'agnello': '羊肉 (Agnello)',
-      'tartufo': '松露 (Tartufo)', 'funghi': '蘑菇 / 蕈菇 (Funghi)', 'formaggio': '起司 / 乳酪 (Formaggio)',
-      'pomodoro': '番茄 (Pomodoro)', 'vegetariano': '蛋奶素 / 蔬食 (Vegetariano)',
-      'coperto': '桌巾麵包服務費 (通常每人 €2~3)', 'conto': '帳單 (Il conto)',
-      'vino': '葡萄酒 (Vino rosso 紅酒 / Vino bianco 白酒)', 'acqua': '水 (Acqua naturale 常溫水 / Frizzante 氣泡水)',
-      'spaghetti': '義大利細麵', 'risotto': '義大利燉飯', 'gnocchi': '義式馬鈴薯麵疙瘩', 'bistecca': '牛排 (Bistecca)'
-    };
-
-    function searchMenuDict() {
-      const q = document.getElementById('menu-search-input').value.trim().toLowerCase();
-      const resElem = document.getElementById('search-result-box');
-      if (!q) { resElem.innerText = ''; return; }
-      let found = [];
-      for (let k in menuDictionary) {
-        if (k.includes(q)) found.push(k + ' ➔ ' + menuDictionary[k]);
-      }
-      if (found.length > 0) resElem.innerHTML = '💡 翻譯結果：<br>' + found.join('<br>');
-      else resElem.innerText = '未找到完全相符詞彙，建議直接使用 iPhone 相機原況文字或 Google 智慧鏡頭拍照直翻！';
-    }
-
-    function speakText(text, lang) {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = lang;
-        utterance.rate = 0.85;
-        window.speechSynthesis.speak(utterance);
-      } else {
-        alert('您的瀏覽器不支援語音發音功能，建議使用 Chrome 或 Safari。');
-      }
-    }
-
-    function initApp() {
-      renderDayView(1); // 預設展示 Day 1
-      renderPhraseCards('all');
-      renderMenuPresets();
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initApp);
+  function toggleFlight(m) {
+    const tpeBox = document.getElementById('box-fl-tpe');
+    const jaxBox = document.getElementById('box-fl-jax');
+    const tpeBtn = document.getElementById('btn-fl-tpe');
+    const jaxBtn = document.getElementById('btn-fl-jax');
+    if (m === 'tpe') {
+      tpeBox.style.display = 'block'; jaxBox.style.display = 'none';
+      tpeBtn.style.background = 'var(--sky)'; tpeBtn.style.color = '#fff';
+      jaxBtn.style.background = '#fff'; jaxBtn.style.color = 'var(--text)';
     } else {
-      initApp();
+      tpeBox.style.display = 'none'; jaxBox.style.display = 'block';
+      jaxBtn.style.background = 'var(--sky)'; jaxBtn.style.color = '#fff';
+      tpeBtn.style.background = '#fff'; tpeBtn.style.color = 'var(--text)';
     }
-  </script>
+  }
+
+  function renderCards(cat = 'all') {
+    const list = document.getElementById('card-list');
+    let html = '';
+    PHRASES.forEach((p, idx) => {
+      if (cat === 'all' || p.c === cat) {
+        html += `
+          <div class="p-card" onclick="openM(${idx})">
+            <div class="p-cn">${p.cn}</div>
+            <div class="p-it">${p.it}</div>
+            <div class="p-zoom">點擊放大 🔍</div>
+          </div>`;
+      }
+    });
+    list.innerHTML = html;
+  }
+
+  function filterP(cat, btn) {
+    document.querySelectorAll('.f-btn').forEach(el => el.classList.remove('active'));
+    btn.classList.add('active');
+    renderCards(cat);
+  }
+
+  let curModalText = '';
+  function openM(idx) {
+    const p = PHRASES[idx];
+    if (!p) return;
+    curModalText = p.it;
+    document.getElementById('m-it').innerText = p.it;
+    document.getElementById('m-cn').innerText = p.cn;
+    document.getElementById('m-pro').innerText = '發音提示：' + p.pro;
+    document.getElementById('modal').style.display = 'flex';
+  }
+  function closeM() { document.getElementById('modal').style.display = 'none'; }
+  function speakM() { if (curModalText) speak(curModalText); }
+
+  function renderPresets() {
+    const box = document.getElementById('menu-items');
+    let html = '';
+    PRESETS.forEach(sec => {
+      html += `<div style="font-size:0.92rem; font-weight:900; color:var(--forest); margin:12px 0 6px;">${sec.cat}</div>`;
+      sec.list.forEach(item => {
+        const twd = Math.round(item.p * 35.5);
+        html += `
+          <div class="m-item" onclick="quickFill('${item.it}', '${item.cn}', ${item.p})">
+            <div><strong>${item.it}</strong> <span style="font-size:0.82rem; color:var(--muted);">${item.cn}</span></div>
+            <div><span style="font-weight:900; color:var(--calcifer);">€${item.p} (約 NT$${twd})</span> <button class="audio-btn" onclick="event.stopPropagation(); speak('${item.it}')">🔊</button></div>
+          </div>`;
+      });
+    });
+    box.innerHTML = html;
+  }
+
+  function calc() {
+    const eur = parseFloat(document.getElementById('eur-in').value) || 0;
+    const addCop = document.getElementById('chk-coperto').checked;
+    const diners = parseInt(document.getElementById('sel-diners').value) || 1;
+    let totEur = eur;
+    let cop = 0;
+    if (addCop && eur > 0) { cop = 2.5 * diners; totEur += cop; }
+    const twd = Math.round(totEur * 35.5);
+    const twdPP = Math.round(twd / diners);
+    document.getElementById('twd-out').innerText = 'NT$ ' + twd.toLocaleString();
+    document.getElementById('twd-pp').innerText = diners > 1 ? ('每人約 NT$ ' + twdPP.toLocaleString() + ' (' + diners + '人均分)') : '';
+    if (addCop && eur > 0) {
+      document.getElementById('calc-note').innerText = '餐費 €' + eur + ' ＋ ' + diners + '人桌巾費 €' + cop.toFixed(1) + ' ＝ €' + totEur.toFixed(1);
+    } else {
+      document.getElementById('calc-note').innerText = '單純餐費 €' + eur + ' (匯率 35.5)';
+    }
+  }
+
+  function quickFill(it, cn, price) {
+    document.getElementById('eur-in').value = price;
+    calc();
+    curModalText = it;
+    document.getElementById('m-it').innerText = it;
+    document.getElementById('m-cn').innerText = cn;
+    document.getElementById('m-pro').innerText = '菜單價格：約 €' + price;
+    document.getElementById('modal').style.display = 'flex';
+  }
+
+  function speak(text) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'it-IT'; u.rate = 0.85;
+      window.speechSynthesis.speak(u);
+    } else {
+      alert('您的瀏覽器不支援語音合成功能。');
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    renderDay(1);
+    renderCards('all');
+    renderPresets();
+  });
+</script>
 </body>
 </html>
