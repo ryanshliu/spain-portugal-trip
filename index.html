@@ -102,6 +102,17 @@
     .badge-k.flight { background: var(--sky-bg); color: #225170; }
     .s-title { font-size: 1.02rem; font-weight: 900; }
     .s-desc { font-size: 0.88rem; color: #3e3831; line-height: 1.65; margin-top: 4px; }
+    
+    /* 💎 頂級精緻詳細景點導覽 Card UI */
+    .sc-way { background: #fdfaf4; border: 1.5px dashed #b8a892; border-radius: 10px; padding: 8px 12px; margin: 8px 0; font-size: 0.85rem; line-height: 1.6; color: #40382d; }
+    .sc-guide { margin: 8px 0; font-size: 0.88rem; line-height: 1.7; color: #2b241c; }
+    .sc-block { padding: 8px 12px; border-radius: 10px; margin: 7px 0; font-size: 0.84rem; line-height: 1.6; border: 1.5px solid transparent; display: flex; align-items: flex-start; gap: 8px; }
+    .sc-must { background: #f0fdf4; border-color: #86efac; color: #166534; }
+    .sc-avoid { background: #fef2f2; border-color: #fca5a5; color: #991b1b; }
+    .sc-photo { background: #eff6ff; border-color: #93c5fd; color: #1e40af; }
+    .sc-food { background: #fffbeb; border-color: #fde047; color: #854d0e; }
+    .sc-gift { background: #fdf2f8; border-color: #f9a8d4; color: #9d174d; }
+
     .transit-bar { margin: 2px 0 12px 60px; }
     .transit-pill { background: #fdfaf4; border: 1.5px solid var(--border); border-radius: 999px; padding: 4px 12px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 5px; box-shadow: 1px 1px 0px var(--border); }
     .link-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
@@ -514,9 +525,16 @@
               <td>ACTV<br>水上巴士 (Vaporetto)</td>
               <td>• 單程票：<strong>€9.50 (超貴！)</strong><br>• 24h 交通卡：€25.00<br>• <strong>48h 交通卡：€35.00</strong><br>• 72h 交通卡：€45.00</td>
               <td>
-                • <strong>🔥 唯一強烈建議購買「多日交通卡 (ACTV Time Ticket)」的城市！</strong><br>
-                • 威尼斯水上巴士單程高達 €9.50，<strong>搭 4 次就超過 €38</strong>！<br>
-                • 建議購買 <strong>48 小時卡 (€35) 或 72 小時卡 (€45)</strong>，彩色島 (Burano)、玻璃島 (Murano)、大運河巡禮無限次隨意上下船，省時又省錢！
+                • <strong>🔥 唯一強烈建議購買「多日交通卡 (ACTV Time-Limited Ticket)」的城市！</strong><br>
+                • <strong>單程極貴：</strong>單趟船票高達 €9.50，搭 4 次就超過 €38，跳島＋大運河必買多日卡！<br>
+                • <strong>🔗 唯一官方購票管道：</strong><a href="https://www.veneziaunica.it/en/e-commerce/services" target="_blank" style="color:var(--sky); font-weight:900; text-decoration:underline;">Venezia Unica 官方網站</a> 或抵達聖露西亞站現場購買。<br>
+                • <strong>📍 何時購買 ＆ 地點：</strong><br>
+                &nbsp;&nbsp;1. <strong>線上預購：</strong>出發前於 Venezia Unica 官網購買，憑 QR Code 在車站碼頭自動售票機掃描換取實體感應紙卡。<br>
+                &nbsp;&nbsp;2. <strong>現場直接買（最推薦）：</strong><strong>12/30 上午 11:30 抵達威尼斯聖露西亞火車站</strong>，走出大門正前方「Ferrovia 水上巴士碼頭」，白色自動售票機（支援中文/刷卡）或人工票亭直接購買，隨買隨拿！<br>
+                • <strong>⏱️ 何時啟用（精準計時）：</strong><br>
+                &nbsp;&nbsp;• <strong>12/30 中午約 12:00</strong> 首次進站搭 1 號/2 號船前往里亞托橋時，<strong>第一次感應過閘即正式啟動計時</strong>！<br>
+                &nbsp;&nbsp;• <strong>天數推薦【72 小時卡 €45 / 人】：</strong>12/30 12:00 啟用 ➔ 一路有效至 <strong>01/02 12:00</strong>，完美涵蓋威尼斯 3 晚跨年、彩色島、玻璃島、大運河及 01/02 搭船回火車站的全部水上交通！<br>
+                • <strong>⚠️ 鐵則：</strong>每次踏上碼頭浮橋前，務必將票卡碰觸黃白圓形感應機「嗶卡」（亮綠燈），否則查票員抓到視同無票重罰 €60+！
               </td>
             </tr>
             <tr>
@@ -571,19 +589,60 @@
   </div>
 
   <!-- 8. 準備 -->
+    <!-- 8. 準備與實戰避雷 -->
   <div id="sec-tips" class="main-sec" style="display:none;">
-    <div class="card">
-      <h3>🛡️ 義大利防騙與避雷守則</h3>
-      <p>
-        • <strong>佛羅倫斯黑店冰淇淋警戒：</strong>Via Dei Calzaiuoli 79 號（紅底79號門牌，招牌大寫 GELATERIA），口頭喊價 2歐5歐，結帳強索 10~15 歐！絕對避開！<br>
-        • <strong>羅馬市區千萬不要坐地鐵：</strong>站點少且出站走很遠，改騎共享滑板車或步行、Uber 最方便！<br>
-        • <strong>大教堂廣場防騙：</strong>黑人強塞鴿子飼料或套紅繩，雙手插口袋堅決說 No 走開。<br>
-        • <strong>語言不通求助：</strong>遇到菜單、飯店細節，直接語音或拍照問 <strong>Google Gemini</strong>！
+    <!-- 1: 火車一等車廂新型扒竊警報 -->
+    <div class="card" style="border-left: 6px solid #b3261e; background:#fffcfb;">
+      <h3 style="color:#b3261e;">🚨 義大利高鐵/火車一等車廂「假調行李掩護行竊」重大警報</h3>
+      <p style="font-size:0.88rem; color:#3e3831; line-height:1.7;">
+        • <strong>真實作案手法（米蘭中央車站等各大幹線常見）：</strong>小偷（常為外表入時的女子，手上隨手披著一件長外套作掩護）趁剛上車混亂之際，主動靠近大行李架，藉口「你的大行李放錯了、那是放小孩行李的」，故意伸手將架上的大行李拿上拿下吸引注意力。在此同時，<strong>暗中伸手拉開旅客隨身後背包的拉鍊行竊</strong>！<br>
+        • <strong>防範鐵則：</strong><br>
+        &nbsp;&nbsp;1. 大件行李放妥後<strong>立即回到座位</strong>，切勿站在走道與陌生人拉扯大行李！<br>
+        &nbsp;&nbsp;2. <strong>隨身重要小包（護照、錢包、手機）永遠緊貼胸前</strong>，絕對不背在後背、也不隨手擱置在座椅或頭頂行李架！
+      </p>
+    </div>
+
+    <!-- 2: 羅馬競技場搶票實戰技巧 -->
+    <div class="card" style="border-left: 6px solid var(--calcifer);">
+      <h3>⚔️ 羅馬競技場 (Colosseo) 門票搶票最新實戰秘笈</h3>
+      <p style="font-size:0.88rem; color:#3e3831; line-height:1.7;">
+        • <strong>放票時差與規則：</strong>官方提前 <strong>30 天</strong> 依照場次時間精準釋出門票。冬令時間義大利與台灣時差為 <strong>7 小時</strong>（義大利時間 08:30 相當於台灣時間 15:30）。<br>
+        • <strong>每半小時一場：</strong>現行最新機制改為<strong>每 30 分鐘釋放一個場次</strong>（首場自 08:30 開始），地下層 (Underground)、頂層、含導覽地下層等多種票種會分別跳出。<br>
+        • <strong>⚠️ 15 分鐘鎖定防呆陷阱：</strong>搶到名額後系統會給 15 分鐘輸入護照資料；如果因為人數不足放棄重新整理，<strong>該帳號/瀏覽器會被系統鎖死 15 分鐘無法再進</strong>！建議出動多台設備，或事先將英文姓名護照號碼存好剪貼簿直接貼上！
+      </p>
+    </div>
+
+    <!-- 3: 梵蒂岡聖伯多祿大殿安檢排隊警報 -->
+    <div class="card" style="border-left: 6px solid var(--forest);">
+      <h3>🕊️ 梵蒂岡聖伯多祿大殿：已預約仍需提早 1~1.5 小時排安檢</h3>
+      <p style="font-size:0.88rem; color:#3e3831; line-height:1.7;">
+        • <strong>排隊真相：</strong>即使已經在官網成功預約大殿與圓頂登頂時段（如預約 15:00 / 16:00），進入聖伯多祿廣場進行反恐安全檢查（X光機與金屬探測門）的隊伍極長。<br>
+        • <strong>通關策略：</strong>務必在<strong>預約時段前至少 60～90 分鐘</strong>抵達廣場加入安檢隊伍，隨身包不要攜帶保溫瓶、小刀與大型腳架，以最快速度通過安檢！
+      </p>
+    </div>
+
+    <!-- 4: 威尼斯私房絕景與跳島攻略 -->
+    <div class="card" style="border-left: 6px solid var(--sky);">
+      <h3>🛶 威尼斯本島絕美攝影點 ＆ 離島跳島黃金順序</h3>
+      <p style="font-size:0.88rem; color:#3e3831; line-height:1.7;">
+        • <strong>🌅 絕美攝影時刻：</strong><br>
+        &nbsp;&nbsp;1. <strong>清晨日出：</strong>清晨 07:00 前往【聖馬可廣場】與【歎息橋】，無人空景配潟湖晨光倒影美如畫卷。<br>
+        &nbsp;&nbsp;2. <strong>黃昏夕陽：</strong>傍晚前往【學院橋 (Ponte dell'Accademia)】捕捉大運河金光；或在<strong>日落前半小時搭電梯登上【聖馬可鐘樓】</strong>，俯瞰全威尼斯水都島群，驚嘆程度更勝百花大教堂！<br>
+        • <strong>🎵 私房景點【威尼斯鳳凰劇院 (Teatro La Fenice)】：</strong>周杰倫經典神曲《黑色毛衣》MV 取景地！內部金碧輝煌極致華麗，現場買票即可入內參觀，人潮較少非常優雅好拍。<br>
+        • <strong>🏝️ 離島跳島順序密技：</strong>早晨搭乘水上巴士，<strong>「先搭直達最遠的彩色島 (Burano)」</strong>，避開排隊船潮；中午再順路玩回「玻璃島 (Murano)」，下午回本島陰涼處或咖啡館休息最順暢！
+      </p>
+    </div>
+
+    <!-- 5: 米蘭中央車站治安與酸痛貼布提醒 -->
+    <div class="card" style="border-left: 6px solid var(--hay);">
+      <h3>🏨 米蘭中央車站治安環境 ＆ 🧳 行李必備「酸痛貼布」</h3>
+      <p style="font-size:0.88rem; color:#3e3831; line-height:1.7;">
+        • <strong>米蘭中央車站周邊治安守則：</strong>車站兩側（如 Scarlatti 街方向）入夜後遊民較多，天黑後切勿單獨走入幽暗巷弄，出入車站一律走明亮寬闊主幹道，清晨或深夜搭車請多人結伴同行。<br>
+        • <strong>💊 行李必帶「休足時間／撒隆巴斯酸痛貼布」：</strong>義大利全程為堅硬古老石板路，梵蒂岡、百花喬托鐘樓（414階）、米蘭大教堂天台每日動輒 1.5 萬～ 2 萬步，極易「鐵腿腳底痛」！請出發前備足酸痛貼布、小腿舒緩貼與消炎藥膏！
       </p>
     </div>
   </div>
 </div>
-
 <!-- 全螢幕大字卡彈窗 -->
 <div id="modal" class="modal" onclick="closeM()">
   <div class="m-box" onclick="event.stopPropagation()">
@@ -622,9 +681,21 @@
       evs: [
         { tm: "08:30", k: "train", kt: "🚆 接駁會師", ti: "羅馬 FCO 機場大會師 ➔ Leonardo 快線直達公寓安置行李", map: "Roma+CentrArte+Via+Modena+32+Rome", de: "持台灣晶片護照走 E-Gates 自動通關（30秒極速出關）。搭 Leonardo 機場快線直達 Termini 站，步行 10 分鐘（或轉 Metro B 線 1 站至 Castro Pretorio 出站走 3 分鐘）抵達 Via Palestro 35！10:00 後可先寄放大行李與拿鑰匙，由接待員 Guido 碰頭辦理。" },
         { tr: "🚶‍♂️ 步行 15 分鐘 (輕裝沿國家大道直達古城中心)" },
-        { tm: "11:30", k: "spot", kt: "🏛️ 經典", ti: "特雷維許願池 (Fontana di Trevi) 巴洛克巨作", map: "Trevi+Fountain+Rome", de: "巴洛克雕刻巔峰！右手越過左肩拋擲硬幣（一枚重返羅馬，二枚找到真愛）。水池右側低角度仰拍駿馬與宮殿雕刻最壯觀！" },
-        { tr: "🚶‍♂️ 穿過古老石板小巷步行 8 分鐘抵達萬神殿廣場" },
-        { tm: "13:30", k: "spot", kt: "🏛️ 奇蹟", ti: "萬神殿 (Pantheon) 兩千年無樑柱混凝土天窗神蹟", map: "Pantheon+Rome", de: "直徑 43.3 米純混凝土無樑柱圓頂，中央 9 米天窗採光神聖震撼。拉斐爾長眠於此。全面預約購票制 (€5)，提早線上預約！" },
+        {
+          tm: "11:30", k: "spot", kt: "🏛️ 奇蹟經典",
+          ti: "特雷維許願池 (Fontana di Trevi) ＆ 萬神殿 (Pantheon) 奇蹟天窗",
+          map: "Trevi+Fountain+Rome",
+          way: "從特米尼站步行或路邊租借共享電動滑板車（避免擠地鐵），約 15 分鐘達許願池；續向西步行 8 分鐘達萬神殿。",
+          guide: "• <strong>特雷維許願池：</strong>巴洛克風格巔峰之作，以海神尼普頓乘駕飛馬戰車為中心，水流自人造岩石奔湧而出，磅礡震撼。<br>• <strong>萬神殿：</strong>西元 125 年建造至今近兩千年完好無損，直徑 43.3 米純混凝土無樑柱穹頂，中央 9 米露天採光圓眼（Oculus）象徵連結天地，下雨時雨水經地面 22 個排水小孔流走。拉斐爾與義大利開國國王長眠於此。",
+          must: "背對許願池右手越過左肩拋擲硬幣（一枚代表重返羅馬）；走入萬神殿仰望直瀉而下的自然天光。",
+          avoid: "萬神殿自 2023 年起週末全面實行收費預約制 (€5)，現場購票大排長龍，務必提早於官網購票。許願池周邊扒手極多，背包永遠背胸前！",
+          photo: "許願池右側石階平視海神駿馬雕刻、萬神殿巨大科林斯花崗岩柱廊正下方仰拍天頂。",
+          food: "萬神殿旁傳奇名店「金杯咖啡 (Tazza d'Oro)」品嚐濃縮咖啡 Espresso 與咖啡碎冰沙佐雙層鮮奶油 (Granita di Caffè con Panna)；附近 Giolitti 百年冰淇淋（必吃開心果與黑無花果口味）。",
+          gift: "金杯咖啡經典女王咖啡豆 (La Regina dei Caffè) 與黑底金字摩卡壺、義大利純手工皮革書籤。",
+          links: [
+            { t: "萬神殿官方訂票 (€5)", u: "https://www.pantheonroma.com/", i: "🏛️" }
+          ]
+        },
         { tr: "🚶‍♂️ 萬神殿旁小巷步行 2 分鐘即達金杯咖啡" },
         { tm: "15:00", k: "food", kt: "☕ 老饕", ti: "金杯咖啡 (Tazza d'Oro) ＆ Giolitti 百年冰淇淋", map: "La+Casa+del+Caffe+al+Pantheon", de: "站在吧台喝 Espresso，點招牌 Granita 咖啡碎冰沙佐鮮奶油。接著步行 3 分鐘至 Giolitti 吃開心果與黑無花果冰淇淋！" },
         { tr: "🚶‍♂️ 向西步行 6 分鐘抵達納沃納廣場" },
@@ -639,7 +710,18 @@
       l: "行李安穩留在羅馬公寓內！今日景點嚴禁大背包，只攜帶隨身小包出發。",
       n: "明日是聖誕節 (12/25)！中午 12:00 教宗祝禱人潮洶湧，上午 10:00 前必須抵達梵蒂岡聖伯多祿廣場排隊過安檢卡位！",
       evs: [
-        { tm: "09:00", k: "spot", kt: "⚔️ 震撼", ti: "羅馬競技場 (Colosseo) 地下層 Full Experience 深度導覽", map: "Colosseum+Rome", de: "深入地下層通道（Hypogeum），感受關押角鬥士與猛獸的機關構造。提前 30 天搶票！場外假戰士合照強索 €20，堅決不合照。" },
+        {
+          tm: "09:00", k: "spot", kt: "⚔️ 帝國奇蹟",
+          ti: "羅馬競技場 (Colosseo) 地下層 Full Experience 深度導覽 ＆ 古羅馬廣場",
+          map: "Colosseum+Rome",
+          way: "地鐵 B 線至 Colosseo 站出站即達；或自公寓搭乘 Uber 約 10 分鐘直達君士坦丁凱旋門旁。",
+          guide: "世界七大奇蹟！西元 80 年落成，可容納五萬名觀眾。地下層（Hypogeum）為當年關押猛獸與角鬥士候場的升降機關迷宮，持 Full Experience 特殊票由專業導覽帶領踏足競技場舞台木地板與地下坑道。",
+          must: "踏上重建的角鬥士競技台木甲板，以神鬼戰士視角 360 度仰望四層環形大理石看台；深入地下木造升降機複製品通道。",
+          avoid: "【搶票實戰警報】：提前 30 天於義大利 08:30 (台灣15:30) 起每 30 分鐘釋放場次，搶到後限時 15 分鐘填寫護照，放棄重整畫面會被系統鎖死 15 分鐘！場外穿盔甲假戰士搭訕合照強索 €20，雙手插口袋堅決說 No！",
+          photo: "競技場二樓外廊拱窗遠眺君士坦丁凱旋門；古羅馬廣場提圖斯凱旋門旁高處俯瞰帝國斷垣殘壁全景。",
+          food: "中午於蒙蒂區 (Monti) 漫步品嚐 Pinsa 羅馬傳統長型脆皮披薩與 Trapizzino 羅馬三角口袋披薩包。",
+          gift: "競技場官方紀念碑石雕模型、古羅馬硬幣造型金屬鑰匙圈。"
+        },
         { tr: "🚶‍♂️ 步行 3 分鐘穿過君士坦丁凱旋門進入遺址區" },
         { tm: "13:30", k: "spot", kt: "🏛️ 遺址", ti: "古羅馬廣場 (Foro Romano) ＆ 帕拉蒂尼山 (Palatino)", map: "Roman+Forum+Rome", desc: "漫步在凱撒神廟、元老院等千年斷垣殘壁間；登上帕拉蒂尼山俯瞰大競技場遺跡。" },
         { tr: "🚗 搭 Uber 15 分鐘直達梵蒂岡協和大道" },
@@ -704,7 +786,20 @@
         { tr: "🚊 SMN 站前搭 Tram T1 輕軌 7 分鐘（刷信用卡 €1.7・無階梯好推大箱）至 Leopoldo 站，步行 4 分鐘搭電梯入住 Casa Viesseux" },
         { tm: "12:00", k: "spot", kt: "🏡 安置", ti: "Casa Viesseux 高樓層景觀公寓卸下大行李休整", map: "Piazza+Giampietro+Vieusseux+Florence", de: "50㎡ 單臥室獨立公寓！高樓層電梯直達、獨立客廳廚房、洗碗機、電熱水壺與景觀露台，乾爽舒適完全沒有地下室濕冷問題。" },
         { tr: "🚊 搭 Tram T1 輕軌 7 分鐘回到 SMN 站，步行漫步進入文藝復興老城核心" },
-        { tm: "13:30", k: "spot", kt: "🏛️ 穹頂", ti: "聖母百花大教堂 (Duomo) ＆ 喬托鐘樓 414 階登頂俯瞰", map: "Cathedral+of+Santa+Maria+del+Fiore+Florence", de: "建築天才布魯內萊斯基紅磚大圓頂神蹟！攀登 414 階喬托鐘樓，平視大圓頂並 360 度俯瞰翡冷翠古城美景。" },
+        {
+          tm: "13:30", k: "spot", kt: "🏛️ 文藝復興奇蹟",
+          ti: "聖母百花大教堂 (Duomo) ＆ 喬托鐘樓 414 階登頂俯瞰",
+          map: "Cathedral+of+Santa+Maria+del+Fiore+Florence",
+          way: "自 SMN 車站出站沿 Via de' Panzani 步行 8 分鐘直達百花大教堂廣場。",
+          guide: "布魯內萊斯基以獨創魚骨砌磚法、完全無木架支撐建造出直徑 45 米的世界最大紅磚圓頂。外觀以白、綠、粉紅三色托斯卡尼大理石拼貼，宛如翡冷翠的一塊刺繡瑰寶。",
+          must: "登上 414 階喬托鐘樓（Giotto's Campanile），平視大圓頂外觀並 360 度俯瞰全城磚紅屋頂；參觀洗禮堂東門吉貝爾蒂「天堂之門」浮雕。",
+          avoid: "登頂樓梯狹窄且無電梯，患有幽閉恐懼症或腿腳不便者建議量力而行；大教堂進入需著著遮肩過膝服裝。",
+          photo: "登上喬托鐘樓頂層，隔著鐵網拍攝大圓頂與身後托斯卡尼遠山的明信片角度。",
+          food: "順道至中央市場一樓品嚐慢燉牛肚包；或在共和廣場 Caffè Gilli 品嚐百年經典提拉米蘇。",
+          links: [
+            { t: "百花大教堂官方登頂套票 (Brunelleschi Pass)", u: "https://operaduomofirenze.skiperformance.com/", i: "🏛️" }
+          ]
+        },
         { tr: "🚶‍♂️ 沿卡爾查依歐利大道步行 8 分鐘抵達領主廣場與烏菲茲" },
         { tm: "15:30", k: "spot", kt: "🎨 巔峰", ti: "領主廣場 ＆ 烏菲茲美術館 (Galleria degli Uffizi) 文藝復興大師朝聖", map: "Uffizi+Gallery+Florence", de: "欣賞波提切利《維納斯的誕生》與《春》、達文西《天使報喜》、米開朗基羅《多尼圓幅》。黑店警戒：大道 79 號門牌黑店冰淇淋絕不要進！晚餐品嚐 Caffè Gilli 提拉米蘇，搭 Tram T1 回公寓。" }
       ]
@@ -739,9 +834,9 @@
         { tm: "08:30", k: "food", kt: "🥣 早餐二", ti: "早餐方案二：中央市場一樓百年 Da Nerbone 招牌熱騰騰慢燉牛肚包早餐", map: "Mercato+Centrale+Firenze", de: "在地老饕最愛早點！步行 5 分鐘進入中央市場，直奔 1872 年創立的 Da Nerbone，大口咬下剛起鍋熱氣蒸騰的慢燉牛肚包（Lampredotto，€5）或燉牛肉三明治，淋滿特製濃郁羅勒青醬與辣油，無敵鮮美過癮！" },
         { tr: "🚶‍♂️ 漫步至阿諾河畔欣賞老橋 (Ponte Vecchio) 與金匠工坊街景" },
         { tm: "10:30", k: "spot", kt: "🌉 老橋", ti: "老橋 (Ponte Vecchio) ＆ 阿諾河畔晨光漫步 ➔ 步行回 SMN 火車站", map: "Ponte+Vecchio+Florence", de: "二戰唯一倖免的古老石造拱橋！欣賞河畔彩色倒影與瓦薩利走廊。漫步返回 SMN 車站準備登車。" },
-        { tm: "11:30", k: "train", kt: "🚅 水都", ti: "Italo 高鐵 2h 抵達威尼斯聖露西亞站 ➔ 水上巴士進駐", map: "Venezia+Santa+Lucia", de: "高鐵直抵威尼斯本島終點站！搭乘 1 號或 2 號船直達里亞托橋（Rialto），步行 2 分鐘進公寓免扛大行李爬階梯！" },
+        { tm: "11:30", k: "train", kt: "🎫 購票啟用", ti: "抵達威尼斯聖露西亞站 ➔ 碼頭購買 ACTV 72小時交通卡 ＆ 首次嗶卡啟用", map: "Venezia+Santa+Lucia", de: "Italo 高鐵直抵威尼斯本島！出火車站正前方即是 Ferrovia 水上巴士碼頭。在此購買【ACTV 72小時交通卡 (€45/人)】（官網 Venezia Unica 或現場自動售票機刷卡）。約 12:00 第一次嗶卡感應過閘（正式啟用，72小時內無限次搭乘至 01/02 12:00！）。搭 1 號或 2 號船直達里亞托橋（Rialto），下船步行 2 分鐘直達 Rialto Prestige 公寓放行李（免爬跨河大拱橋）！" },
         { tr: "🚤 搭水上巴士或步行 12 分鐘直達聖馬可廣場" },
-        { tm: "14:30", k: "spot", kt: "🛶 拜占庭", ti: "聖馬可大教堂金箔天頂 ＆ 花神咖啡 ＆ 貢多拉黑夜穿梭", map: "St+Marks+Basilica+Venice", de: "仰望 4000 平米真金箔馬賽克壁畫；在花神咖啡戶外樂隊演奏下品嚐熱可可；傍晚包乘黑漆貢多拉穿梭在昏黃路燈映照的狹窄水道。晚餐吃墨魚麵！" }
+        { tm: "14:30", k: "spot", kt: "🛶 拜占庭", ti: "聖馬可大教堂金箔天頂 ＆ 花神咖啡 ＆ 貢多拉黑夜穿梭", map: "St+Marks+Basilica+Venice", de: "仰望 4000 平米真金箔馬賽克壁畫；在花神咖啡戶外樂隊演奏下品嚐熱可可；日落前半小時可搭電梯登頂【聖馬可鐘樓】俯瞰水都金光（視角更勝百花穹頂！），或造訪周杰倫《黑色毛衣》MV 取景地【鳳凰劇院 (Teatro La Fenice)】！傍晚包乘黑漆貢多拉穿梭水道。晚餐吃墨魚麵！" }
       ]
     },
     {
@@ -752,7 +847,7 @@
       l: "行李安穩留置里亞托公寓內！全天輕裝搭船，跨年散場直接步行 10 分鐘回公寓溫暖入睡，完全無需擠爆水上巴士！",
       n: "明日是元旦 (01/01)！悠閒睡到自然醒，搭乘水上巴士漫遊大運河，品嚐元旦海鮮大餐！",
       evs: [
-        { tm: "09:30", k: "spot", kt: "🌈 調色盤", ti: "童話彩色島 / 布拉諾島 (Burano) 漫步 ＆ 炸海鮮", map: "Burano+Venice", de: "搭 12 號水上巴士（40分鐘）直達！昔日漁夫漆成七彩的小屋如童話繪本般繽紛。木橋上欣賞水面倒影，品嚐炸海鮮拼盤！" },
+        { tm: "09:30", k: "spot", kt: "🌈 調色盤", ti: "童話彩色島 / 布拉諾島 (Burano) 漫步 ＆ 炸海鮮", map: "Burano+Venice", de: "跳島秘笈：早晨先直奔最遠的彩色島 (Burano) 避開人潮排隊長龍！回程再順遊玻璃島 (Murano)。昔日漁夫漆成七彩的小屋如童話繪本般繽紛。木橋上欣賞水面倒影，品嚐炸海鮮拼盤！" },
         { tr: "🚤 搭乘水上巴士 45 分鐘返回聖馬可碼頭" },
         { tm: "14:30", k: "spot", kt: "🏛️ 歷史", ti: "總督宮 (Palazzo Ducale) ＆ 歎息橋 (Ponte dei Sospiri)", map: "Doge+Palace+Venice", de: "威尼斯共和國權力中心！走過囚犯走入死牢前最後一眼望向自由世界的「歎息橋」。" },
         { tr: "🚶‍♂️ 步行回公寓小憩取暖 ➔ 21:30 漫步進入聖馬可廣場" },
@@ -781,9 +876,21 @@
       l: "威尼斯退房搭水上巴士上高鐵。抵達米蘭中央車站轉地鐵 3 號線直達 Duomo 站入住公寓，行李一次性攤開，步行 2 分鐘進大教堂！",
       n: "明日 (01/03) 朝聖達文西千古神作《最後的晚餐》，下午在蒙特拿破崙精品街與文藝復興百貨最後採買退稅整理！",
       evs: [
-        { tm: "11:00", k: "train", kt: "🚅 高鐵", ti: "Italo 高鐵 2h27m 抵達米蘭中央車站 ➔ 入住大教堂旁公寓", map: "Milano+Centrale", de: "抵達米蘭中央車站，搭地鐵 3 號線 5 分鐘直達 Duomo 站入住大教堂旁公寓！下樓即是大教堂廣場！" },
+        { tm: "11:00", k: "train", kt: "🚅 高鐵", ti: "Italo 高鐵 2h27m 抵達米蘭中央車站 ➔ 入住大教堂旁公寓", map: "Milano+Centrale", de: "抵達米蘭中央車站！重大防竊警報：高鐵上放好大行李立即回座，提防披外套藉口「調行李」暗中拉開隨身背包的小偷！搭地鐵 3 號線直達 Duomo 站入住公寓！下樓即是大教堂廣場！" },
         { tr: "🚶‍♂️ 下樓步行 2 分鐘直接抵達米蘭大教堂售票處" },
-        { tm: "14:00", k: "spot", kt: "👑 刺繡", ti: "米蘭大教堂 (Duomo di Milano) 電梯登頂天台 (Rooftop)", map: "Duomo+di+Milano", de: "白色大理石奇蹟！搭電梯登上天台漫步在大理石森林間，仰望鍍金聖母像遠眺阿爾卑斯雪山天際線！廣場黑人套紅繩堅決說 No！" },
+        {
+          tm: "14:00", k: "spot", kt: "👑 大理石刺繡",
+          ti: "米蘭大教堂 (Duomo di Milano) 電梯登頂天台 (Rooftop)",
+          map: "Duomo+di+Milano",
+          way: "公寓下樓穿過廣場即達大教堂電梯入口（Fast Track）。",
+          guide: "耗時近六百年建造的白色哥德式奇蹟！外觀矗立 135 座大理石尖塔與 3400 尊聖徒雕像。搭乘升降機登上大教堂天台，漫步在石雕森林間，最高尖塔鍍金聖母像（Madonnina）在陽光下熠熠生輝，晴天可遠眺阿爾卑斯雪山天際線！",
+          must: "搭電梯登頂天台漫步於大理石尖塔叢林中；進入大教堂內部欣賞世界最大彩繪玻璃窗。",
+          avoid: "【大教堂廣場防騙】：廣場黑人強行套「編織幸運手繩」或塞玉米粒餵鴿子，套上立刻強索 €10~€20！雙手插外套口袋完全不給他碰，堅決說 No！",
+          photo: "天台斜坡通道以層層疊疊的哥德式大理石飛券尖塔為前景，拍人物走過剪影。",
+          links: [
+            { t: "米蘭大教堂天台電梯官方票", u: "https://ticket.duomomilano.it/", i: "👑" }
+          ]
+        },
         { tr: "🚶‍♂️ 步行 1 分鐘穿過大教堂旁拱門進入艾曼紐二世迴廊" },
         { tm: "16:30", k: "spot", kt: "✨ 迴廊", ti: "艾曼紐二世迴廊 (Galleria) 公牛馬賽克地磚 ＆ Luini 烤餡餅", map: "Galleria+Vittorio+Emanuele+II+Milan", de: "在十字圓頂下公牛馬賽克地磚上用右腳跟旋轉三圈祈求新年好運！吃 Luini 爆漿起司烤餡餅。" }
       ]
@@ -888,7 +995,22 @@
       if (ev.tr) {
         evHtml += `<div class="transit-bar"><div class="transit-pill"><span>⬇️</span> ${ev.tr}</div></div>`;
       } else {
-        let mapHtml = ev.map ? `<div class="link-row"><a class="link-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ev.map)}" target="_blank">📍 Google Maps 導航</a></div>` : '';
+        let mapBtn = ev.map ? `<a class="link-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ev.map)}" target="_blank">📍 Google Maps 導航</a>` : '';
+        let linksHtml = '';
+        if (ev.links && ev.links.length > 0) {
+          linksHtml = ev.links.map(l => `<a class="link-btn" href="${l.u}" target="_blank">${l.i ? l.i + ' ' : ''}${l.t}</a>`).join(' ');
+        }
+        let allLinks = (mapBtn || linksHtml) ? `<div class="link-row">${mapBtn} ${linksHtml}</div>` : '';
+        
+        let wayHtml = ev.way ? `<div class="sc-way">🏃 <strong>前往方式：</strong>${ev.way}</div>` : '';
+        let guideHtml = ev.guide ? `<div class="sc-guide">🏛️ <strong>詳細景點導覽：</strong><br>${ev.guide}</div>` : '';
+        let descHtml = (!ev.guide && ev.de) ? `<div class="s-desc">${ev.de}</div>` : '';
+        let mustHtml = ev.must ? `<div class="sc-block sc-must"><div>🌟</div><div><strong>必選/必看：</strong>${ev.must}</div></div>` : '';
+        let avoidHtml = ev.avoid ? `<div class="sc-block sc-avoid"><div>⚠️</div><div><strong>避雷/注意：</strong>${ev.avoid}</div></div>` : '';
+        let photoHtml = ev.photo ? `<div class="sc-block sc-photo"><div>📸</div><div><strong>推薦打卡熱點：</strong>${ev.photo}</div></div>` : '';
+        let foodHtml = ev.food ? `<div class="sc-block sc-food"><div>🍽️</div><div><strong>必吃美食與推薦餐廳：</strong>${ev.food}</div></div>` : '';
+        let giftHtml = ev.gift ? `<div class="sc-block sc-gift"><div>🎁</div><div><strong>必買小物與伴手禮：</strong>${ev.gift}</div></div>` : '';
+        
         evHtml += `
           <div class="t-entry">
             <div class="t-time">${ev.tm}</div>
@@ -898,8 +1020,15 @@
                 <span class="badge-k ${ev.k}">${ev.kt}</span>
                 <div class="s-title">${ev.ti}</div>
               </div>
-              ${mapHtml}
-              <div class="s-desc">${ev.de}</div>
+              ${wayHtml}
+              ${guideHtml}
+              ${descHtml}
+              ${mustHtml}
+              ${avoidHtml}
+              ${photoHtml}
+              ${foodHtml}
+              ${giftHtml}
+              ${allLinks}
             </div>
           </div>`;
       }
