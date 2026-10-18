@@ -153,6 +153,7 @@
     <button class="nav-btn" onclick="showSec('flights', this)">✈️ 航班</button>
     <button class="nav-btn active" onclick="showSec('overview', this)">🗺️ 總覽</button>
     <button class="nav-btn" onclick="showSec('schedule', this)">📅 行程</button>
+    <button class="nav-btn" onclick="showSec('booking', this)">🎟️ 訂票攻略</button>
     <button class="nav-btn" onclick="showSec('menu', this)">🍽️ 菜單匯率</button>
     <button class="nav-btn" onclick="showSec('cards', this)">🗣️ 語句卡</button>
     <button class="nav-btn" onclick="showSec('trains', this)">🚅 交通票券</button>
@@ -194,6 +195,20 @@
   <!-- 2. 總覽 -->
   <div id="sec-overview" class="main-sec">
     <!-- 視覺化高鐵動線地圖 -->
+    
+    <!-- 🎟️ 訂票攻略快速通道卡 -->
+    <div class="card" style="border-left: 6px solid var(--calcifer); background:#fffdf9; margin-bottom:18px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+        <h3 style="margin-bottom:0; color:var(--calcifer);">🎟️ 行程必搶景點門票 ＆ 高鐵早鳥劃位攻略 (含行事曆提醒)</h3>
+        <button class="link-btn" onclick="showSec('booking', document.querySelectorAll('.nav-btn')[3])" style="background:var(--calcifer); color:#fff; border-color:var(--calcifer); cursor:pointer;">
+          點此開啟完整訂票提醒 ➔
+        </button>
+      </div>
+      <p style="margin:8px 0 0; font-size:0.86rem; color:#403b35; line-height:1.65;">
+        手冊已完整收錄 <strong>10 大必搶門票時程</strong>（達文西《最後的晚餐》、競技場地下層、百花圓頂登頂、Italo 跨年高鐵等）。每個項目皆支援 <strong>【📅 一鍵加入 Google 日曆】</strong> 與 <strong>【📲 手機行事曆 (.ics 內建 15 分鐘提前震動提醒)】</strong>，請儘速設定鬧鐘！
+      </p>
+    </div>
+
     <div class="card" style="border-left: 6px solid var(--sky);">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
         <h3 style="margin-bottom:0;">🗺️ 義大利 14 天黃金高鐵北上動線全景地圖</h3>
@@ -261,7 +276,7 @@
           <div style="flex:1;">
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
               <strong>4. 時尚米蘭 ＆ 達文西 ＆ 返航 (Milano)</strong>
-              <span style="font-size:0.75rem; font-weight:800; background:var(--hay-bg); color:var(--hay); padding:2px 6px; border-radius:5px; border:1px solid var(--border);">01/02 - 01/04 ｜ 精緻住 2 晚 (Duomo Cathedral)</span>
+              <span style="font-size:0.75rem; font-weight:800; background:var(--hay-bg); color:var(--hay); padding:2px 6px; border-radius:5px; border:1px solid var(--border);">01/02 - 01/04 ｜ 精緻住 2 晚 (Residence De La Gare 德拉葛雷住宅酒店)</span>
             </div>
             <div style="font-size:0.82rem; color:var(--muted); margin-top:2px;">
               米蘭大教堂 135 尖塔天台 ➔ 艾曼紐二世迴廊踩公牛 ➔ 達文西《最後的晚餐》 ➔ 蒙特拿破崙退稅採買
@@ -514,8 +529,8 @@
             <tr><td><strong>D8</strong> 12/30 (三)</td><td>🇮🇹 比薩 ＆ 翡冷翠</td><td>區間火車 50m 往返比薩斜塔推塔 ➔ 學院美術館《大衛像》真跡 ➔ 中央市場牛肚包早餐 ➔ 皮件街採買</td><td>🚆 區間火車 50m</td><td>Residence Leopoldo (住3晚)</td></tr>
             <tr><td><strong>D9</strong> 12/31 (四)</td><td>🇮🇹 威尼斯跨年</td><td>高鐵直達水都 ➔ 步行3分進駐 Centrale Mazzoni (火車站旁免扛行李！) ➔ 聖馬可廣場＋總督宮 ➔ 水上跨年煙火！</td><td>🚅 Italo 高鐵 2h</td><td>Centrale Mazzoni (住2晚 跨年)</td></tr>
             <tr><td><strong>D10</strong> 01/01 (五)</td><td>🇮🇹 威尼斯跳島</td><td>元旦布拉諾彩色島 (Burano) ＆ 慕拉諾玻璃島 (Murano) 半日-1日 ➔ 大運河水上巴士 ➔ 元旦海鮮大餐</td><td>🚤 ACTV 水上巴士</td><td>Centrale Mazzoni (住2晚)</td></tr>
-            <tr><td><strong>D11</strong> 01/02 (六)</td><td>🇮🇹 米蘭</td><td>火車站旁直達月台上高鐵 ➔ 米蘭大教堂 135 尖塔天台 ➔ 艾曼紐迴廊踩公牛 ➔ 炸牛排燉飯</td><td>🚅 Italo 高鐵 2.5h</td><td>Duomo Cathedral (住2晚)</td></tr>
-            <tr><td><strong>D12</strong> 01/03 (日)</td><td>🇮🇹 米蘭</td><td>感恩聖母堂朝聖達文西《最後的晚餐》 ➔ 蒙特拿破崙最後採買退稅整理</td><td>🚇 地鐵 / 步行</td><td>Duomo Cathedral (住2晚)</td></tr>
+            <tr><td><strong>D11</strong> 01/02 (六)</td><td>🇮🇹 米蘭</td><td>火車站旁直達月台上高鐵 ➔ 米蘭大教堂 135 尖塔天台 ➔ 艾曼紐迴廊踩公牛 ➔ 炸牛排燉飯</td><td>🚅 Italo 高鐵 2.5h</td><td>Residence De La Gare 德拉葛雷 (住2晚)</td></tr>
+            <tr><td><strong>D12</strong> 01/03 (日)</td><td>🇮🇹 米蘭</td><td>感恩聖母堂朝聖達文西《最後的晚餐》 ➔ 蒙特拿破崙最後採買退稅整理</td><td>🚇 地鐵 / 步行</td><td>Residence De La Gare 德拉葛雷 (住2晚)</td></tr>
             <tr><td><strong>D13</strong> 01/04 (一)</td><td>🇮🇹 返航日</td><td>提早 3.5h 抵達 MXP 機場避開安檢長龍 ➔ 長榮 BR 96 (11:00) 直飛返台</td><td>🚆 機場快線 52m</td><td>夜宿機上 / JAX返家</td></tr>
             <tr><td><strong>D14</strong> 01/05 (二)</td><td>🇹🇼 抵台</td><td>清晨 06:10 長榮班機順暢降落台北桃園機場 (TPE)，圓滿凱旋！</td><td>-</td><td>溫暖的家</td></tr>
           </tbody>
@@ -554,6 +569,452 @@
 
     <div id="day-box"></div>
   </div>
+
+  
+  <!-- 搶票訂票全攻略專區 -->
+  <div id="sec-booking" class="main-sec" style="display:none;">
+    <!-- 總覽前言卡 -->
+    <div class="card" style="border-left: 6px solid var(--calcifer); background:#fffcfb;">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+        <h3 style="margin-bottom:0; color:var(--calcifer);">🎟️ 義大利景點與交通 搶票訂票全攻略 ＆ 行事曆提醒中心</h3>
+        <span style="font-size:0.78rem; font-weight:800; background:var(--calcifer-bg); color:var(--calcifer); padding:3px 9px; border-radius:6px; border:1px solid var(--border);">搶票倒數零時差</span>
+      </div>
+      <p style="margin:8px 0 10px; font-size:0.88rem; color:#403b35; line-height:1.7;">
+        義大利世界級景點與跨城高鐵熱門時段極為搶手，冬季旅遊更碰上<strong>聖誕節、跨年夜與元旦連假</strong>！<br>
+        • <strong>時差提醒：</strong>義大利冬季比台灣慢 <strong>7 小時</strong>（義大利時間 08:30 ＝ 台灣時間 <strong>15:30</strong>）。<br>
+        • <strong>行事曆提醒功能：</strong>點擊各項目的<strong>【📅 加入 Google 日曆提醒】</strong>可直接存入 Google Calendar；點擊<strong>【📲 Apple / 手機行事曆 (.ics)】</strong>會直接下載檔案並自動於開搶前 <strong>15 分鐘震動提醒</strong>，讓您絕不錯過任何關鍵放票時刻！
+      </p>
+    </div>
+
+    <!-- 搶票時程時序 (按照開搶日期排列) -->
+    <div class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:12px;">
+        <h3 style="margin-bottom:0;">🚨 搶票時程倒數時間軸 (按開搶日期順序排列)</h3>
+        <span style="font-size:0.75rem; font-weight:800; background:#f1ebd9; padding:2px 8px; border-radius:5px; border:1px solid var(--border);">倒數開搶・一鍵設鬧鐘</span>
+      </div>
+      <div style="display:flex; flex-direction:column;">
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">1</span>
+              <strong style="font-size:1.02rem;">米蘭：達文西《最後的晚餐》 (Cenacolo Vinciano)</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:var(--calcifer); color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🔥 季初秒殺搶票</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">2027/01/03 (週日) 09:30 [D12]</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/09/20 (日) 09:00 台灣時間 (季初統一放票)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>官方每季統一放票（冬季11/12/1月門票通常於9月中下旬釋出，幾分鐘秒殺）。每次僅限35人參觀15分鐘，入場嚴格核對護照正本，姓名需與訂票完全相符！</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://cenacolovinciano.vivaticket.it/" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%E7%B1%B3%E8%98%AD%EF%BC%9A%E9%81%94%E6%96%87%E8%A5%BF%E3%80%8A%E6%9C%80%E5%BE%8C%E7%9A%84%E6%99%9A%E9%A4%90%E3%80%8B%20%28Cenacolo%20Vinciano%29&dates=20260920T010000Z/20260920T020000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9A%E7%B1%B3%E8%98%AD%EF%BC%9A%E9%81%94%E6%96%87%E8%A5%BF%E3%80%8A%E6%9C%80%E5%BE%8C%E7%9A%84%E6%99%9A%E9%A4%90%E3%80%8B%20%28Cenacolo%20Vinciano%29%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A2027/01/03%20%28%E9%80%B1%E6%97%A5%29%2009%3A30%20%5BD12%5D%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/09/20%20%28%E6%97%A5%29%2009%3A00%20%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%93%20%28%E5%AD%A3%E5%88%9D%E7%B5%B1%E4%B8%80%E6%94%BE%E7%A5%A8%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//cenacolovinciano.vivaticket.it/%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E5%AE%98%E6%96%B9%E6%AF%8F%E5%AD%A3%E7%B5%B1%E4%B8%80%E6%94%BE%E7%A5%A8%EF%BC%88%E5%86%AC%E5%AD%A311/12/1%E6%9C%88%E9%96%80%E7%A5%A8%E9%80%9A%E5%B8%B8%E6%96%BC9%E6%9C%88%E4%B8%AD%E4%B8%8B%E6%97%AC%E9%87%8B%E5%87%BA%EF%BC%8C%E5%B9%BE%E5%88%86%E9%90%98%E7%A7%92%E6%AE%BA%EF%BC%89%E3%80%82%E6%AF%8F%E6%AC%A1%E5%83%85%E9%99%9035%E4%BA%BA%E5%8F%83%E8%A7%8015%E5%88%86%E9%90%98%EF%BC%8C%E5%85%A5%E5%A0%B4%E5%9A%B4%E6%A0%BC%E6%A0%B8%E5%B0%8D%E8%AD%B7%E7%85%A7%E6%AD%A3%E6%9C%AC%EF%BC%8C%E5%A7%93%E5%90%8D%E9%9C%80%E8%88%87%E8%A8%82%E7%A5%A8%E5%AE%8C%E5%85%A8%E7%9B%B8%E7%AC%A6%EF%BC%81&location=%E7%B1%B3%E8%98%AD%E6%84%9F%E6%81%A9%E8%81%96%E6%AF%8D%E5%A0%82%20%28Santa%20Maria%20delle%20Grazie%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('米蘭：達文西《最後的晚餐》 (Cenacolo Vinciano)', '20260920T010000Z', '20260920T020000Z', '【義大利之旅搶票】米蘭：達文西《最後的晚餐》 (Cenacolo Vinciano) | 參觀日: 2027/01/03 (週日) 09:30 [D12] | 官網: https://cenacolovinciano.vivaticket.it/ | 提醒: 官方每季統一放票（冬季11/12/1月門票通常於9月中下旬釋出，幾分鐘秒殺）。每次僅限35人參觀15分鐘，入場嚴格核對護照正本，姓名需與訂票完全相符！', '米蘭感恩聖母堂 (Santa Maria delle Grazie)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">2</span>
+              <strong style="font-size:1.02rem;">Italo 法拉利高鐵 全線早鳥劃位 (4大跨城路段)</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:var(--calcifer); color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🚆 長途高鐵劃位</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">12/26 (D4), 12/28 (D6), 12/31 (D9 跨年), 01/02 (D11)</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/10/01 (四) 10:00 台灣時間 (提前2~3個月)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>提前2~3個月早鳥票下殺5折！涵蓋12/26羅馬拿坡里當天往返、12/28羅馬赴佛羅倫斯、12/31佛羅倫斯赴威尼斯(跨年夜極熱門！)、01/02威尼斯赴米蘭。威尼斯請選Venezia S. Lucia本島站！</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://www.italotreno.it/en" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91Italo%20%E6%B3%95%E6%8B%89%E5%88%A9%E9%AB%98%E9%90%B5%20%E5%85%A8%E7%B7%9A%E6%97%A9%E9%B3%A5%E5%8A%83%E4%BD%8D%20%284%E5%A4%A7%E8%B7%A8%E5%9F%8E%E8%B7%AF%E6%AE%B5%29&dates=20261001T020000Z/20261001T030000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9AItalo%20%E6%B3%95%E6%8B%89%E5%88%A9%E9%AB%98%E9%90%B5%20%E5%85%A8%E7%B7%9A%E6%97%A9%E9%B3%A5%E5%8A%83%E4%BD%8D%20%284%E5%A4%A7%E8%B7%A8%E5%9F%8E%E8%B7%AF%E6%AE%B5%29%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A12/26%20%28D4%29%2C%2012/28%20%28D6%29%2C%2012/31%20%28D9%20%E8%B7%A8%E5%B9%B4%29%2C%2001/02%20%28D11%29%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/10/01%20%28%E5%9B%9B%29%2010%3A00%20%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%93%20%28%E6%8F%90%E5%89%8D2~3%E5%80%8B%E6%9C%88%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//www.italotreno.it/en%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E6%8F%90%E5%89%8D2~3%E5%80%8B%E6%9C%88%E6%97%A9%E9%B3%A5%E7%A5%A8%E4%B8%8B%E6%AE%BA5%E6%8A%98%EF%BC%81%E6%B6%B5%E8%93%8B12/26%E7%BE%85%E9%A6%AC%E6%8B%BF%E5%9D%A1%E9%87%8C%E7%95%B6%E5%A4%A9%E5%BE%80%E8%BF%94%E3%80%8112/28%E7%BE%85%E9%A6%AC%E8%B5%B4%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%E3%80%8112/31%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%E8%B5%B4%E5%A8%81%E5%B0%BC%E6%96%AF%28%E8%B7%A8%E5%B9%B4%E5%A4%9C%E6%A5%B5%E7%86%B1%E9%96%80%EF%BC%81%29%E3%80%8101/02%E5%A8%81%E5%B0%BC%E6%96%AF%E8%B5%B4%E7%B1%B3%E8%98%AD%E3%80%82%E5%A8%81%E5%B0%BC%E6%96%AF%E8%AB%8B%E9%81%B8Venezia%20S.%20Lucia%E6%9C%AC%E5%B3%B6%E7%AB%99%EF%BC%81&location=%E7%BE%A9%E5%A4%A7%E5%88%A9%E5%90%84%E5%A4%A7%E7%81%AB%E8%BB%8A%E7%AB%99%20%28Italo%20Treno%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('Italo 法拉利高鐵 全線早鳥劃位 (4大跨城路段)', '20261001T020000Z', '20261001T030000Z', '【義大利之旅搶票】Italo 法拉利高鐵 全線早鳥劃位 (4大跨城路段) | 參觀日: 12/26 (D4), 12/28 (D6), 12/31 (D9 跨年), 01/02 (D11) | 官網: https://www.italotreno.it/en | 提醒: 提前2~3個月早鳥票下殺5折！涵蓋12/26羅馬拿坡里當天往返、12/28羅馬赴佛羅倫斯、12/31佛羅倫斯赴威尼斯(跨年夜極熱門！)、01/02威尼斯赴米蘭。威尼斯請選Venezia S. Lucia本島站！', '義大利各大火車站 (Italo Treno)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">3</span>
+              <strong style="font-size:1.02rem;">米蘭：米蘭大教堂天台電梯 Fast Track (Duomo Rooftop Lift)</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:var(--hay); color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🎫 需提前預約</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">2027/01/02 (週六) 14:00 [D11]</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/11/02 (一) 10:00 台灣時間 (提前2個月)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>強烈建議選購搭乘電梯(Lift)票種免爬石階，預留排隊安檢時間，天台迎風面極寒冷注意保暖。</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://ticket.duomomilano.it/" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%E7%B1%B3%E8%98%AD%EF%BC%9A%E7%B1%B3%E8%98%AD%E5%A4%A7%E6%95%99%E5%A0%82%E5%A4%A9%E5%8F%B0%E9%9B%BB%E6%A2%AF%20Fast%20Track%20%28Duomo%20Rooftop%20Lift%29&dates=20261102T020000Z/20261102T030000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9A%E7%B1%B3%E8%98%AD%EF%BC%9A%E7%B1%B3%E8%98%AD%E5%A4%A7%E6%95%99%E5%A0%82%E5%A4%A9%E5%8F%B0%E9%9B%BB%E6%A2%AF%20Fast%20Track%20%28Duomo%20Rooftop%20Lift%29%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A2027/01/02%20%28%E9%80%B1%E5%85%AD%29%2014%3A00%20%5BD11%5D%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/11/02%20%28%E4%B8%80%29%2010%3A00%20%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%93%20%28%E6%8F%90%E5%89%8D2%E5%80%8B%E6%9C%88%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//ticket.duomomilano.it/%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E5%BC%B7%E7%83%88%E5%BB%BA%E8%AD%B0%E9%81%B8%E8%B3%BC%E6%90%AD%E4%B9%98%E9%9B%BB%E6%A2%AF%28Lift%29%E7%A5%A8%E7%A8%AE%E5%85%8D%E7%88%AC%E7%9F%B3%E9%9A%8E%EF%BC%8C%E9%A0%90%E7%95%99%E6%8E%92%E9%9A%8A%E5%AE%89%E6%AA%A2%E6%99%82%E9%96%93%EF%BC%8C%E5%A4%A9%E5%8F%B0%E8%BF%8E%E9%A2%A8%E9%9D%A2%E6%A5%B5%E5%AF%92%E5%86%B7%E6%B3%A8%E6%84%8F%E4%BF%9D%E6%9A%96%E3%80%82&location=%E7%B1%B3%E8%98%AD%E5%A4%A7%E6%95%99%E5%A0%82%E5%A4%A9%E5%8F%B0%20%28Duomo%20di%20Milano%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('米蘭：米蘭大教堂天台電梯 Fast Track (Duomo Rooftop Lift)', '20261102T020000Z', '20261102T030000Z', '【義大利之旅搶票】米蘭：米蘭大教堂天台電梯 Fast Track (Duomo Rooftop Lift) | 參觀日: 2027/01/02 (週六) 14:00 [D11] | 官網: https://ticket.duomomilano.it/ | 提醒: 強烈建議選購搭乘電梯(Lift)票種免爬石階，預留排隊安檢時間，天台迎風面極寒冷注意保暖。', '米蘭大教堂天台 (Duomo di Milano)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">4</span>
+              <strong style="font-size:1.02rem;">佛羅倫斯：烏菲茲美術館 (Galleria degli Uffizi)</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:var(--forest); color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🎫 需提前預約</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">2026/12/29 (週二) 13:30 [D7]</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/11/05 (四) 10:00 台灣時間 (提前1~2個月)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>建議預約13:30避開上午人潮。持電子確認單至 Door 3 換實體票，再走 Door 1 快速通道安檢進場。</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://www.b-ticket.com/b-ticket/uffizi/" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%EF%BC%9A%E7%83%8F%E8%8F%B2%E8%8C%B2%E7%BE%8E%E8%A1%93%E9%A4%A8%20%28Galleria%20degli%20Uffizi%29&dates=20261105T020000Z/20261105T030000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9A%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%EF%BC%9A%E7%83%8F%E8%8F%B2%E8%8C%B2%E7%BE%8E%E8%A1%93%E9%A4%A8%20%28Galleria%20degli%20Uffizi%29%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A2026/12/29%20%28%E9%80%B1%E4%BA%8C%29%2013%3A30%20%5BD7%5D%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/11/05%20%28%E5%9B%9B%29%2010%3A00%20%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%93%20%28%E6%8F%90%E5%89%8D1~2%E5%80%8B%E6%9C%88%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//www.b-ticket.com/b-ticket/uffizi/%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E5%BB%BA%E8%AD%B0%E9%A0%90%E7%B4%8413%3A30%E9%81%BF%E9%96%8B%E4%B8%8A%E5%8D%88%E4%BA%BA%E6%BD%AE%E3%80%82%E6%8C%81%E9%9B%BB%E5%AD%90%E7%A2%BA%E8%AA%8D%E5%96%AE%E8%87%B3%20Door%203%20%E6%8F%9B%E5%AF%A6%E9%AB%94%E7%A5%A8%EF%BC%8C%E5%86%8D%E8%B5%B0%20Door%201%20%E5%BF%AB%E9%80%9F%E9%80%9A%E9%81%93%E5%AE%89%E6%AA%A2%E9%80%B2%E5%A0%B4%E3%80%82&location=%E7%83%8F%E8%8F%B2%E8%8C%B2%E7%BE%8E%E8%A1%93%E9%A4%A8%20%28Uffizi%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('佛羅倫斯：烏菲茲美術館 (Galleria degli Uffizi)', '20261105T020000Z', '20261105T030000Z', '【義大利之旅搶票】佛羅倫斯：烏菲茲美術館 (Galleria degli Uffizi) | 參觀日: 2026/12/29 (週二) 13:30 [D7] | 官網: https://www.b-ticket.com/b-ticket/uffizi/ | 提醒: 建議預約13:30避開上午人潮。持電子確認單至 Door 3 換實體票，再走 Door 1 快速通道安檢進場。', '烏菲茲美術館 (Uffizi)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">5</span>
+              <strong style="font-size:1.02rem;">佛羅倫斯：學院美術館《大衛像》真跡 (Galleria dell'Accademia)</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:var(--forest); color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🎫 需提前預約</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">2026/12/30 (週三) 14:00 [D8]</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/11/05 (四) 10:30 台灣時間 (提前1~2個月)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>預約下午14:00(比薩返回後)。現場排隊常超2小時，持預約票10分鐘快速通關。此處才是唯一無價真品！</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://www.b-ticket.com/b-ticket/uffizi/" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%EF%BC%9A%E5%AD%B8%E9%99%A2%E7%BE%8E%E8%A1%93%E9%A4%A8%E3%80%8A%E5%A4%A7%E8%A1%9B%E5%83%8F%E3%80%8B%E7%9C%9F%E8%B7%A1%20%28Galleria%20dell%27Accademia%29&dates=20261105T023000Z/20261105T033000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9A%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%EF%BC%9A%E5%AD%B8%E9%99%A2%E7%BE%8E%E8%A1%93%E9%A4%A8%E3%80%8A%E5%A4%A7%E8%A1%9B%E5%83%8F%E3%80%8B%E7%9C%9F%E8%B7%A1%20%28Galleria%20dell%27Accademia%29%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A2026/12/30%20%28%E9%80%B1%E4%B8%89%29%2014%3A00%20%5BD8%5D%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/11/05%20%28%E5%9B%9B%29%2010%3A30%20%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%93%20%28%E6%8F%90%E5%89%8D1~2%E5%80%8B%E6%9C%88%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//www.b-ticket.com/b-ticket/uffizi/%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E9%A0%90%E7%B4%84%E4%B8%8B%E5%8D%8814%3A00%28%E6%AF%94%E8%96%A9%E8%BF%94%E5%9B%9E%E5%BE%8C%29%E3%80%82%E7%8F%BE%E5%A0%B4%E6%8E%92%E9%9A%8A%E5%B8%B8%E8%B6%852%E5%B0%8F%E6%99%82%EF%BC%8C%E6%8C%81%E9%A0%90%E7%B4%84%E7%A5%A810%E5%88%86%E9%90%98%E5%BF%AB%E9%80%9F%E9%80%9A%E9%97%9C%E3%80%82%E6%AD%A4%E8%99%95%E6%89%8D%E6%98%AF%E5%94%AF%E4%B8%80%E7%84%A1%E5%83%B9%E7%9C%9F%E5%93%81%EF%BC%81&location=%E5%AD%B8%E9%99%A2%E7%BE%8E%E8%A1%93%E9%A4%A8%20%28Accademia%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('佛羅倫斯：學院美術館《大衛像》真跡 (Galleria dell\'Accademia)', '20261105T023000Z', '20261105T033000Z', '【義大利之旅搶票】佛羅倫斯：學院美術館《大衛像》真跡 (Galleria dell\'Accademia) | 參觀日: 2026/12/30 (週三) 14:00 [D8] | 官網: https://www.b-ticket.com/b-ticket/uffizi/ | 提醒: 預約下午14:00(比薩返回後)。現場排隊常超2小時，持預約票10分鐘快速通關。此處才是唯一無價真品！', '學院美術館 (Accademia)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">6</span>
+              <strong style="font-size:1.02rem;">羅馬：萬神殿 (Pantheon) 快速通關門票</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:var(--forest); color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🎫 需提前預約</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">2026/12/23 (週三) 11:30 [D1]</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/11/20 (五) 10:00 台灣時間 (提前1個月)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>票價€5，週末與旺季全面收費預約，現場購票常排隊超1小時，預約首日抵達後11:30梯次。</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://www.pantheonroma.com/" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%E7%BE%85%E9%A6%AC%EF%BC%9A%E8%90%AC%E7%A5%9E%E6%AE%BF%20%28Pantheon%29%20%E5%BF%AB%E9%80%9F%E9%80%9A%E9%97%9C%E9%96%80%E7%A5%A8&dates=20261120T020000Z/20261120T030000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9A%E7%BE%85%E9%A6%AC%EF%BC%9A%E8%90%AC%E7%A5%9E%E6%AE%BF%20%28Pantheon%29%20%E5%BF%AB%E9%80%9F%E9%80%9A%E9%97%9C%E9%96%80%E7%A5%A8%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A2026/12/23%20%28%E9%80%B1%E4%B8%89%29%2011%3A30%20%5BD1%5D%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/11/20%20%28%E4%BA%94%29%2010%3A00%20%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%93%20%28%E6%8F%90%E5%89%8D1%E5%80%8B%E6%9C%88%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//www.pantheonroma.com/%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E7%A5%A8%E5%83%B9%E2%82%AC5%EF%BC%8C%E9%80%B1%E6%9C%AB%E8%88%87%E6%97%BA%E5%AD%A3%E5%85%A8%E9%9D%A2%E6%94%B6%E8%B2%BB%E9%A0%90%E7%B4%84%EF%BC%8C%E7%8F%BE%E5%A0%B4%E8%B3%BC%E7%A5%A8%E5%B8%B8%E6%8E%92%E9%9A%8A%E8%B6%851%E5%B0%8F%E6%99%82%EF%BC%8C%E9%A0%90%E7%B4%84%E9%A6%96%E6%97%A5%E6%8A%B5%E9%81%94%E5%BE%8C11%3A30%E6%A2%AF%E6%AC%A1%E3%80%82&location=%E8%90%AC%E7%A5%9E%E6%AE%BF%20%28Pantheon%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('羅馬：萬神殿 (Pantheon) 快速通關門票', '20261120T020000Z', '20261120T030000Z', '【義大利之旅搶票】羅馬：萬神殿 (Pantheon) 快速通關門票 | 參觀日: 2026/12/23 (週三) 11:30 [D1] | 官網: https://www.pantheonroma.com/ | 提醒: 票價€5，週末與旺季全面收費預約，現場購票常排隊超1小時，預約首日抵達後11:30梯次。', '萬神殿 (Pantheon)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">7</span>
+              <strong style="font-size:1.02rem;">南義：龐貝古城 (Pompeii) Fast Track 門票</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:var(--forest); color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🎫 需提前預約</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">2026/12/26 (週六) 10:30 [D4]</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/11/20 (五) 10:30 台灣時間 (提前1個月)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>自拿坡里搭環山鐵路至 Pompei Scavi 站出站即達大門，掃預購QR碼直接快速通關入場。</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://www.ticketone.it/en/artist/scavi-pompei/" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%E5%8D%97%E7%BE%A9%EF%BC%9A%E9%BE%90%E8%B2%9D%E5%8F%A4%E5%9F%8E%20%28Pompeii%29%20Fast%20Track%20%E9%96%80%E7%A5%A8&dates=20261120T023000Z/20261120T033000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9A%E5%8D%97%E7%BE%A9%EF%BC%9A%E9%BE%90%E8%B2%9D%E5%8F%A4%E5%9F%8E%20%28Pompeii%29%20Fast%20Track%20%E9%96%80%E7%A5%A8%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A2026/12/26%20%28%E9%80%B1%E5%85%AD%29%2010%3A30%20%5BD4%5D%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/11/20%20%28%E4%BA%94%29%2010%3A30%20%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%93%20%28%E6%8F%90%E5%89%8D1%E5%80%8B%E6%9C%88%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//www.ticketone.it/en/artist/scavi-pompei/%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E8%87%AA%E6%8B%BF%E5%9D%A1%E9%87%8C%E6%90%AD%E7%92%B0%E5%B1%B1%E9%90%B5%E8%B7%AF%E8%87%B3%20Pompei%20Scavi%20%E7%AB%99%E5%87%BA%E7%AB%99%E5%8D%B3%E9%81%94%E5%A4%A7%E9%96%80%EF%BC%8C%E6%8E%83%E9%A0%90%E8%B3%BCQR%E7%A2%BC%E7%9B%B4%E6%8E%A5%E5%BF%AB%E9%80%9F%E9%80%9A%E9%97%9C%E5%85%A5%E5%A0%B4%E3%80%82&location=%E9%BE%90%E8%B2%9D%E8%80%83%E5%8F%A4%E9%81%BA%E5%9D%80%E5%85%AC%E5%9C%92%20%28Pompei%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('南義：龐貝古城 (Pompeii) Fast Track 門票', '20261120T023000Z', '20261120T033000Z', '【義大利之旅搶票】南義：龐貝古城 (Pompeii) Fast Track 門票 | 參觀日: 2026/12/26 (週六) 10:30 [D4] | 官網: https://www.ticketone.it/en/artist/scavi-pompei/ | 提醒: 自拿坡里搭環山鐵路至 Pompei Scavi 站出站即達大門，掃預購QR碼直接快速通關入場。', '龐貝考古遺址公園 (Pompei)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">8</span>
+              <strong style="font-size:1.02rem;">羅馬：羅馬競技場地下層 Full Experience 門票 (最關鍵！)</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:#b3261e; color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🔥 提前30天秒殺</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">2026/12/24 (週四) 09:00 平安夜 [D2]</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/11/24 (二) 15:15 鬧鐘準備・15:30 開搶！(精準提前30天)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>義大利時間08:30=台灣時間15:30開搶！每30分鐘釋出一場。搶到後限時15分鐘填護照資料，放棄會被鎖死15分鐘！請備好護照英文名與信用卡號。</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://ticketing.colosseo.it/en/" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%E7%BE%85%E9%A6%AC%EF%BC%9A%E7%BE%85%E9%A6%AC%E7%AB%B6%E6%8A%80%E5%A0%B4%E5%9C%B0%E4%B8%8B%E5%B1%A4%20Full%20Experience%20%E9%96%80%E7%A5%A8%20%28%E6%9C%80%E9%97%9C%E9%8D%B5%EF%BC%81%29&dates=20261124T071500Z/20261124T080000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9A%E7%BE%85%E9%A6%AC%EF%BC%9A%E7%BE%85%E9%A6%AC%E7%AB%B6%E6%8A%80%E5%A0%B4%E5%9C%B0%E4%B8%8B%E5%B1%A4%20Full%20Experience%20%E9%96%80%E7%A5%A8%20%28%E6%9C%80%E9%97%9C%E9%8D%B5%EF%BC%81%29%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A2026/12/24%20%28%E9%80%B1%E5%9B%9B%29%2009%3A00%20%E5%B9%B3%E5%AE%89%E5%A4%9C%20%5BD2%5D%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/11/24%20%28%E4%BA%8C%29%2015%3A15%20%E9%AC%A7%E9%90%98%E6%BA%96%E5%82%99%E3%83%BB15%3A30%20%E9%96%8B%E6%90%B6%EF%BC%81%28%E7%B2%BE%E6%BA%96%E6%8F%90%E5%89%8D30%E5%A4%A9%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//ticketing.colosseo.it/en/%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E7%BE%A9%E5%A4%A7%E5%88%A9%E6%99%82%E9%96%9308%3A30%3D%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%9315%3A30%E9%96%8B%E6%90%B6%EF%BC%81%E6%AF%8F30%E5%88%86%E9%90%98%E9%87%8B%E5%87%BA%E4%B8%80%E5%A0%B4%E3%80%82%E6%90%B6%E5%88%B0%E5%BE%8C%E9%99%90%E6%99%8215%E5%88%86%E9%90%98%E5%A1%AB%E8%AD%B7%E7%85%A7%E8%B3%87%E6%96%99%EF%BC%8C%E6%94%BE%E6%A3%84%E6%9C%83%E8%A2%AB%E9%8E%96%E6%AD%BB15%E5%88%86%E9%90%98%EF%BC%81%E8%AB%8B%E5%82%99%E5%A5%BD%E8%AD%B7%E7%85%A7%E8%8B%B1%E6%96%87%E5%90%8D%E8%88%87%E4%BF%A1%E7%94%A8%E5%8D%A1%E8%99%9F%E3%80%82&location=%E7%BE%85%E9%A6%AC%E7%AB%B6%E6%8A%80%E5%A0%B4%20%28Colosseo%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('羅馬：羅馬競技場地下層 Full Experience 門票 (最關鍵！)', '20261124T071500Z', '20261124T080000Z', '【義大利之旅搶票】羅馬：羅馬競技場地下層 Full Experience 門票 (最關鍵！) | 參觀日: 2026/12/24 (週四) 09:00 平安夜 [D2] | 官網: https://ticketing.colosseo.it/en/ | 提醒: 義大利時間08:30=台灣時間15:30開搶！每30分鐘釋出一場。搶到後限時15分鐘填護照資料，放棄會被鎖死15分鐘！請備好護照英文名與信用卡號。', '羅馬競技場 (Colosseo)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">9</span>
+              <strong style="font-size:1.02rem;">羅馬：博爾蓋塞美術館神雕 (Galleria Borghese)</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:#b3261e; color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🔥 提前30天秒殺</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">2026/12/27 (週日) 09:00 [D5]</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/11/27 (五) 15:00 台灣時間 (精準提前30天)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>每梯次嚴格限額360人，參觀限時2小時。全館強制免費寄放所有隨身背包，請提早30分鐘抵達。</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://www.gebart.it/musei/galleria-borghese/" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%E7%BE%85%E9%A6%AC%EF%BC%9A%E5%8D%9A%E7%88%BE%E8%93%8B%E5%A1%9E%E7%BE%8E%E8%A1%93%E9%A4%A8%E7%A5%9E%E9%9B%95%20%28Galleria%20Borghese%29&dates=20261127T070000Z/20261127T080000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9A%E7%BE%85%E9%A6%AC%EF%BC%9A%E5%8D%9A%E7%88%BE%E8%93%8B%E5%A1%9E%E7%BE%8E%E8%A1%93%E9%A4%A8%E7%A5%9E%E9%9B%95%20%28Galleria%20Borghese%29%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A2026/12/27%20%28%E9%80%B1%E6%97%A5%29%2009%3A00%20%5BD5%5D%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/11/27%20%28%E4%BA%94%29%2015%3A00%20%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%93%20%28%E7%B2%BE%E6%BA%96%E6%8F%90%E5%89%8D30%E5%A4%A9%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//www.gebart.it/musei/galleria-borghese/%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E6%AF%8F%E6%A2%AF%E6%AC%A1%E5%9A%B4%E6%A0%BC%E9%99%90%E9%A1%8D360%E4%BA%BA%EF%BC%8C%E5%8F%83%E8%A7%80%E9%99%90%E6%99%822%E5%B0%8F%E6%99%82%E3%80%82%E5%85%A8%E9%A4%A8%E5%BC%B7%E5%88%B6%E5%85%8D%E8%B2%BB%E5%AF%84%E6%94%BE%E6%89%80%E6%9C%89%E9%9A%A8%E8%BA%AB%E8%83%8C%E5%8C%85%EF%BC%8C%E8%AB%8B%E6%8F%90%E6%97%A930%E5%88%86%E9%90%98%E6%8A%B5%E9%81%94%E3%80%82&location=%E5%8D%9A%E7%88%BE%E8%93%8B%E5%A1%9E%E7%BE%8E%E8%A1%93%E9%A4%A8%20%28Galleria%20Borghese%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('羅馬：博爾蓋塞美術館神雕 (Galleria Borghese)', '20261127T070000Z', '20261127T080000Z', '【義大利之旅搶票】羅馬：博爾蓋塞美術館神雕 (Galleria Borghese) | 參觀日: 2026/12/27 (週日) 09:00 [D5] | 官網: https://www.gebart.it/musei/galleria-borghese/ | 提醒: 每梯次嚴格限額360人，參觀限時2小時。全館強制免費寄放所有隨身背包，請提早30分鐘抵達。', '博爾蓋塞美術館 (Galleria Borghese)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+        <div style="background:#fff; border:2px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow); margin-bottom:14px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="background:var(--border); color:#fff; font-weight:900; font-size:0.8rem; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center;">10</span>
+              <strong style="font-size:1.02rem;">佛羅倫斯：聖母百花大教堂圓頂登頂 (Brunelleschi Pass)</strong>
+            </div>
+            <span style="font-size:0.75rem; font-weight:900; background:#b3261e; color:#fff; padding:2px 8px; border-radius:6px; border:1px solid var(--border);">🔥 提前30天秒殺</span>
+          </div>
+
+          <div style="background:#fdfaf4; border:1.5px dashed var(--border); border-radius:10px; padding:10px 12px; font-size:0.85rem; line-height:1.65; margin-bottom:10px;">
+            <div>📅 <strong>行程參觀／搭乘日：</strong><span style="color:var(--forest); font-weight:900;">2026/12/29 (週二) 09:00 [D7]</span></div>
+            <div>⏰ <strong>搶票鬧鐘（台灣時間）：</strong><span style="color:#b3261e; font-weight:900;">2026/11/29 (日) 15:00 台灣時間 (精準提前30天)</span></div>
+            <div style="margin-top:4px; color:#4a3f35;">💡 <strong>搶票攻略與注意事項：</strong>官方精準提前30天放票！登頂463階無電梯，預約時間為圓頂登頂專屬梯次，逾時無法補登。</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a class="link-btn" href="https://operaduomofirenze.skiperformance.com/" target="_blank" style="background:var(--hay-bg); font-weight:900; border-color:var(--hay); color:#875c12;">
+              🔗 官方訂票網站
+            </a>
+            <a class="link-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E3%80%90%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%EF%BC%9A%E8%81%96%E6%AF%8D%E7%99%BE%E8%8A%B1%E5%A4%A7%E6%95%99%E5%A0%82%E5%9C%93%E9%A0%82%E7%99%BB%E9%A0%82%20%28Brunelleschi%20Pass%29&dates=20261129T070000Z/20261129T080000Z&details=%E3%80%90%E7%BE%A9%E5%A4%A7%E5%88%A9%2014%20%E5%A4%A9%E4%B9%8B%E6%97%85%E3%83%BB%E6%90%B6%E7%A5%A8%E6%8F%90%E9%86%92%E3%80%91%5Cn%E9%A0%85%E7%9B%AE%EF%BC%9A%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%EF%BC%9A%E8%81%96%E6%AF%8D%E7%99%BE%E8%8A%B1%E5%A4%A7%E6%95%99%E5%A0%82%E5%9C%93%E9%A0%82%E7%99%BB%E9%A0%82%20%28Brunelleschi%20Pass%29%5Cn%E8%A1%8C%E7%A8%8B%E5%8F%83%E8%A7%80%E6%97%A5%EF%BC%9A2026/12/29%20%28%E9%80%B1%E4%BA%8C%29%2009%3A00%20%5BD7%5D%5Cn%E9%96%8B%E6%90%B6%E6%99%82%E9%96%93%EF%BC%9A2026/11/29%20%28%E6%97%A5%29%2015%3A00%20%E5%8F%B0%E7%81%A3%E6%99%82%E9%96%93%20%28%E7%B2%BE%E6%BA%96%E6%8F%90%E5%89%8D30%E5%A4%A9%29%5Cn%E5%AE%98%E6%96%B9%E8%A8%82%E7%A5%A8%E7%B6%B2%E5%9D%80%EF%BC%9Ahttps%3A//operaduomofirenze.skiperformance.com/%5Cn%5Cn%F0%9F%92%A1%20%E6%A0%B8%E5%BF%83%E6%90%B6%E7%A5%A8%E5%AF%86%E6%8A%80%E8%88%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85%EF%BC%9A%5Cn%E5%AE%98%E6%96%B9%E7%B2%BE%E6%BA%96%E6%8F%90%E5%89%8D30%E5%A4%A9%E6%94%BE%E7%A5%A8%EF%BC%81%E7%99%BB%E9%A0%82463%E9%9A%8E%E7%84%A1%E9%9B%BB%E6%A2%AF%EF%BC%8C%E9%A0%90%E7%B4%84%E6%99%82%E9%96%93%E7%82%BA%E5%9C%93%E9%A0%82%E7%99%BB%E9%A0%82%E5%B0%88%E5%B1%AC%E6%A2%AF%E6%AC%A1%EF%BC%8C%E9%80%BE%E6%99%82%E7%84%A1%E6%B3%95%E8%A3%9C%E7%99%BB%E3%80%82&location=%E7%99%BE%E8%8A%B1%E5%A4%A7%E6%95%99%E5%A0%82%E5%9C%93%E9%A0%82%20%28Cupola%29" target="_blank" style="background:#e8f0fe; color:#1a73e8; border-color:#aecbfa;">
+              📅 加入 Google 日曆提醒
+            </a>
+            <button class="link-btn" onclick="downloadICS('佛羅倫斯：聖母百花大教堂圓頂登頂 (Brunelleschi Pass)', '20261129T070000Z', '20261129T080000Z', '【義大利之旅搶票】佛羅倫斯：聖母百花大教堂圓頂登頂 (Brunelleschi Pass) | 參觀日: 2026/12/29 (週二) 09:00 [D7] | 官網: https://operaduomofirenze.skiperformance.com/ | 提醒: 官方精準提前30天放票！登頂463階無電梯，預約時間為圓頂登頂專屬梯次，逾時無法補登。', '百花大教堂圓頂 (Cupola)')" style="background:#f1f5f9; color:#334155; border-color:#cbd5e1; cursor:pointer;">
+              📲 Apple / 手機行事曆 (.ics 內建15分提醒)
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- 行程參觀時序快查表 (按出發參觀日排列) -->
+    <div class="card">
+      <h3>📋 景點門票與高鐵劃位 參觀時序快查對照表</h3>
+      <div style="overflow-x:auto;">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th style="width:36px;">#</th>
+              <th style="width:110px;">分類</th>
+              <th>景點門票／交通項目</th>
+              <th style="width:150px;">行程參觀／搭乘日</th>
+              <th style="width:140px;">搶票開賣時間</th>
+              <th style="width:75px;">購票</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><strong>1</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:var(--calcifer); color:#fff; padding:1px 5px; border-radius:4px;">🔥 季初秒殺搶票</span></td>
+          <td><strong>米蘭：達文西《最後的晚餐》 (Cenacolo Vinciano)</strong></td>
+          <td>2027/01/03 (週日) 09:30 [D12]</td>
+          <td style="color:#b3261e; font-weight:800;">2026/09/20 </td>
+          <td><a href="https://cenacolovinciano.vivaticket.it/" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+        <tr>
+          <td><strong>2</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:var(--calcifer); color:#fff; padding:1px 5px; border-radius:4px;">🚆 長途高鐵劃位</span></td>
+          <td><strong>Italo 法拉利高鐵 全線早鳥劃位 (4大跨城路段)</strong></td>
+          <td>12/26 (D4), 12/28 (D6), 12/31 (D9 跨年), 01/02 (D11)</td>
+          <td style="color:#b3261e; font-weight:800;">2026/10/01 </td>
+          <td><a href="https://www.italotreno.it/en" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+        <tr>
+          <td><strong>3</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:var(--hay); color:#fff; padding:1px 5px; border-radius:4px;">🎫 需提前預約</span></td>
+          <td><strong>米蘭：米蘭大教堂天台電梯 Fast Track (Duomo Rooftop Lift)</strong></td>
+          <td>2027/01/02 (週六) 14:00 [D11]</td>
+          <td style="color:#b3261e; font-weight:800;">2026/11/02 </td>
+          <td><a href="https://ticket.duomomilano.it/" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+        <tr>
+          <td><strong>4</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:var(--forest); color:#fff; padding:1px 5px; border-radius:4px;">🎫 需提前預約</span></td>
+          <td><strong>佛羅倫斯：烏菲茲美術館 (Galleria degli Uffizi)</strong></td>
+          <td>2026/12/29 (週二) 13:30 [D7]</td>
+          <td style="color:#b3261e; font-weight:800;">2026/11/05 </td>
+          <td><a href="https://www.b-ticket.com/b-ticket/uffizi/" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+        <tr>
+          <td><strong>5</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:var(--forest); color:#fff; padding:1px 5px; border-radius:4px;">🎫 需提前預約</span></td>
+          <td><strong>佛羅倫斯：學院美術館《大衛像》真跡 (Galleria dell'Accademia)</strong></td>
+          <td>2026/12/30 (週三) 14:00 [D8]</td>
+          <td style="color:#b3261e; font-weight:800;">2026/11/05 </td>
+          <td><a href="https://www.b-ticket.com/b-ticket/uffizi/" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+        <tr>
+          <td><strong>6</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:var(--forest); color:#fff; padding:1px 5px; border-radius:4px;">🎫 需提前預約</span></td>
+          <td><strong>羅馬：萬神殿 (Pantheon) 快速通關門票</strong></td>
+          <td>2026/12/23 (週三) 11:30 [D1]</td>
+          <td style="color:#b3261e; font-weight:800;">2026/11/20 </td>
+          <td><a href="https://www.pantheonroma.com/" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+        <tr>
+          <td><strong>7</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:var(--forest); color:#fff; padding:1px 5px; border-radius:4px;">🎫 需提前預約</span></td>
+          <td><strong>南義：龐貝古城 (Pompeii) Fast Track 門票</strong></td>
+          <td>2026/12/26 (週六) 10:30 [D4]</td>
+          <td style="color:#b3261e; font-weight:800;">2026/11/20 </td>
+          <td><a href="https://www.ticketone.it/en/artist/scavi-pompei/" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+        <tr>
+          <td><strong>8</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:#b3261e; color:#fff; padding:1px 5px; border-radius:4px;">🔥 提前30天秒殺</span></td>
+          <td><strong>羅馬：羅馬競技場地下層 Full Experience 門票 (最關鍵！)</strong></td>
+          <td>2026/12/24 (週四) 09:00 平安夜 [D2]</td>
+          <td style="color:#b3261e; font-weight:800;">2026/11/24 </td>
+          <td><a href="https://ticketing.colosseo.it/en/" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+        <tr>
+          <td><strong>9</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:#b3261e; color:#fff; padding:1px 5px; border-radius:4px;">🔥 提前30天秒殺</span></td>
+          <td><strong>羅馬：博爾蓋塞美術館神雕 (Galleria Borghese)</strong></td>
+          <td>2026/12/27 (週日) 09:00 [D5]</td>
+          <td style="color:#b3261e; font-weight:800;">2026/11/27 </td>
+          <td><a href="https://www.gebart.it/musei/galleria-borghese/" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+        <tr>
+          <td><strong>10</strong></td>
+          <td><span style="font-size:0.75rem; font-weight:800; background:#b3261e; color:#fff; padding:1px 5px; border-radius:4px;">🔥 提前30天秒殺</span></td>
+          <td><strong>佛羅倫斯：聖母百花大教堂圓頂登頂 (Brunelleschi Pass)</strong></td>
+          <td>2026/12/29 (週二) 09:00 [D7]</td>
+          <td style="color:#b3261e; font-weight:800;">2026/11/29 </td>
+          <td><a href="https://operaduomofirenze.skiperformance.com/" target="_blank" style="font-weight:800; color:var(--sky); text-decoration:underline;">官網連結</a></td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 免搶票現場隨到隨搭專區 -->
+    <div class="card" style="border-left: 6px solid var(--forest); background:#fdfdfd;">
+      <h3>💡 現場隨到隨買／晶片信用卡感應（免事先搶票項目）</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:10px; margin-top:10px;">
+        <div style="background:#fff; border:1.5px solid var(--border); border-radius:12px; padding:10px 12px; box-shadow:1.5px 1.5px 0px var(--border);">
+          <div style="font-weight:900; color:var(--forest); font-size:0.9rem;">💳 1. 羅馬/佛羅倫斯/米蘭 市區地鐵與電車</div>
+          <div style="font-size:0.83rem; line-height:1.6; color:#3e3831; margin-top:4px;">
+            • <strong>Tap & Go 晶片信用卡感應過閘：</strong>完全不用預先買票或在機台排隊！持實體晶片信用卡或 Apple Pay / Google Pay「嗶卡進出」，米蘭單日搭超過 4 趟自動以 24h 日票上限 €7.60 封頂！
+          </div>
+        </div>
+        <div style="background:#fff; border:1.5px solid var(--border); border-radius:12px; padding:10px 12px; box-shadow:1.5px 1.5px 0px var(--border);">
+          <div style="font-weight:900; color:var(--sky); font-size:0.9rem;">🛶 2. 威尼斯 ACTV 48小時水上巴士卡 (€35)</div>
+          <div style="font-size:0.83rem; line-height:1.6; color:#3e3831; margin-top:4px;">
+            • <strong>抵達聖露西亞火車站現場買：</strong>12/31 抵達威尼斯聖露西亞站，出大門正前方 Ferrovia 碼頭白色自動售票機隨到隨買（支援中文/刷卡），12:30 首次過閘啟用，一路有效至 01/02 12:30！
+          </div>
+        </div>
+        <div style="background:#fff; border:1.5px solid var(--border); border-radius:12px; padding:10px 12px; box-shadow:1.5px 1.5px 0px var(--border);">
+          <div style="font-weight:900; color:var(--hay); font-size:0.9rem;">🚆 3. 佛羅倫斯 往返 比薩 (Pisa) 區間火車</div>
+          <div style="font-size:0.83rem; line-height:1.6; color:#3e3831; margin-top:4px;">
+            • <strong>國鐵 Regionale 慢車免劃位：</strong>班次每 15~20 分鐘一班，票價單程固定 €8.9，12/30 出發當日在 SMN 車站自動售票機或 Trenitalia App 隨時購買即可，完全不怕沒位！
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
 
   <!-- 4. 菜單匯率 -->
   <div id="sec-menu" class="main-sec" style="display:none;">
@@ -820,7 +1281,8 @@
 
   const DAYS = [
     {
-      d: 0, dt: "12/22", w: "週二", icon: "🛫",
+      d: 0,
+      hotel: { name: "長程客機機艙", type: "夜宿機上", addr: "空中航線 (TPE / JAX ➔ FCO)", map: "", tip: "機艙保濕防乾燥，充足睡眠調整時差。" }, dt: "12/22", w: "週二", icon: "🛫",
       t: "雙向跨洋啟程・台北 ＆ 佛州飛往羅馬",
       wt: "✈️ 長程機艙防乾燥保溫", h: "機上過夜 ｜ 華航直飛 ＆ 達美轉亞特蘭大",
       s: "台灣組深夜由桃園直飛羅馬；佛州組午後由傑克遜維爾經亞特蘭大轉機跨大西洋，夜宿機上調時差。",
@@ -832,7 +1294,8 @@
       ]
     },
     {
-      d: 1, dt: "12/23", w: "週三", icon: "🏛️",
+      d: 1,
+      hotel: { name: "羅馬 Palestro Apartments", type: "第 1 晚 (連住 5 晚)", addr: "Via Palestro 35, 00185 Roma", map: "Palestro+Apartments+Via+Palestro+35+Rome", tip: "近特米尼中央火車站，地鐵 B 線 Castro Pretorio 站步行 3 分鐘。城市稅現金 €90 (€6/人/晚 × 3人 × 5晚)。" }, dt: "12/23", w: "週三", icon: "🏛️",
       t: "羅馬大會師 ＆ 萬神殿天窗 ＆ 許願池漫步",
       wt: "⛅ 羅馬 5°C ~ 14°C (涼爽微寒)", h: "住 Palestro Apartments (Via Palestro 35，連住 5 晚！)",
       s: "機場快線直達市區！下午慢遊特雷維許願池、萬神殿天窗，品嚐金杯咖啡碎冰沙，傍晚逛納沃納廣場聖誕市集。",
@@ -871,7 +1334,8 @@
       ]
     },
     {
-      d: 2, dt: "12/24", w: "週四", icon: "🎄",
+      d: 2,
+      hotel: { name: "羅馬 Palestro Apartments", type: "第 2 晚 (連住 5 晚)", addr: "Via Palestro 35, 00185 Roma", map: "Palestro+Apartments+Via+Palestro+35+Rome", tip: "行李免動，平安夜回公寓自炊托斯卡尼牛排大餐。" }, dt: "12/24", w: "週四", icon: "🎄",
       t: "競技場地下層 ＆ 聖伯多祿廣場聖誕樹點燈",
       wt: "⛅ 羅馬 4°C ~ 13°C (平安夜戶外轉涼)", h: "住 Palestro Apartments (Via Palestro 35，連住 5 晚！)",
       s: "深入競技場地下層神鬼戰士機關通道，午後訪古羅馬帝國心臟，黃昏至梵蒂岡看巨型聖誕樹點燈，回公寓過平安夜。",
@@ -907,7 +1371,8 @@
       ]
     },
     {
-      d: 3, dt: "12/25", w: "週五", icon: "🕊️",
+      d: 3,
+      hotel: { name: "羅馬 Palestro Apartments", type: "第 3 晚 (連住 5 晚)", addr: "Via Palestro 35, 00185 Roma", map: "Palestro+Apartments+Via+Palestro+35+Rome", tip: "全日輕裝出門，參加教宗祝禱聖典。" }, dt: "12/25", w: "週五", icon: "🕊️",
       t: "教宗聖誕祝福 Urbi et Orbi ＆ 聖天使堡夕陽",
       wt: "⛅ 羅馬 4°C ~ 13°C (廣場久站需圍巾)", h: "住 Palestro Apartments (Via Palestro 35，連住 5 晚！)",
       s: "一生一次在聖伯多祿廣場聆聽教宗聖誕祝禱，下午漫步聖天使堡與聖天使橋，欣賞台伯河金色落日。",
@@ -929,7 +1394,8 @@
       ]
     },
     {
-      d: 4, dt: "12/26", w: "週六", icon: "🍕",
+      d: 4,
+      hotel: { name: "羅馬 Palestro Apartments", type: "第 4 晚 (連住 5 晚)", addr: "Via Palestro 35, 00185 Roma", map: "Palestro+Apartments+Via+Palestro+35+Rome", tip: "大行李留羅馬房間，只帶隨身小包搭高鐵輕裝往返龐貝拿坡里。" }, dt: "12/26", w: "週六", icon: "🍕",
       t: "高鐵 1h10m 輕裝往返拿坡里 ＆ 龐貝千年古城 ＆ 披薩發源地",
       wt: "☀️ 拿坡里 7°C ~ 15°C (陽光溫和・防風外套)", h: "住 Palestro Apartments (Via Palestro 35，連住 5 晚！)",
       s: "高鐵極速南下！探訪西元79年火山封存的龐貝古城，品嚐世界第一薄脆瑪格麗特披薩，漫步蛋堡海灣遠眺維蘇威火山。",
@@ -955,7 +1421,8 @@
       ]
     },
     {
-      d: 5, dt: "12/27", w: "週日", icon: "🎨",
+      d: 5,
+      hotel: { name: "羅馬 Palestro Apartments", type: "第 5 晚 (連住 5 晚)", addr: "Via Palestro 35, 00185 Roma", map: "Palestro+Apartments+Via+Palestro+35+Rome", tip: "今晚整理打包大行李，明早退房搭 Italo 高鐵赴佛羅倫斯。" }, dt: "12/27", w: "週日", icon: "🎨",
       t: "博爾蓋塞美術館貝尼尼神雕 ＆ 人民廣場 ＆ 西班牙階梯漫步",
       wt: "⛅ 羅馬 5°C ~ 14°C (舒適宜人)", h: "住 Palestro Apartments (Via Palestro 35，連住 5 晚！)",
       s: "朝聖全羅馬最難預約的博爾蓋塞頂級私藏神雕，下午漫步人民廣場、蘋丘俯瞰全城落日，西班牙階梯精品街慢活悠閒。",
@@ -979,7 +1446,8 @@
       ]
     },
     {
-      d: 6, dt: "12/28", w: "週一", icon: "🚅",
+      d: 6,
+      hotel: { name: "佛羅倫斯 萊奧波爾多住宅 (Residence Leopoldo) ★★★★", type: "第 1 晚 (連住 3 晚)", addr: "Via Giovanni Fabroni 68/B, 50134 Firenze", map: "Via+Giovanni+Fabroni+68+Florence", tip: "45㎡尊貴公寓，Tram T1 輕軌 7 分鐘直達 SMN 車站。到店付城市稅 €54。" }, dt: "12/28", w: "週一", icon: "🚅",
       t: "告別羅馬 ➔ Italo 高鐵 1.5h 直奔佛羅倫斯 ➔ Tram T1 輕軌進駐 Residence Leopoldo ＆ 百花宮老橋夕陽",
       wt: "🍂 佛羅倫斯 2°C ~ 11°C (內陸早晚偏冷)", h: "住 Residence Leopoldo 萊奧波爾多住宅 (45㎡公寓・近輕軌・連住 3 晚！)",
       s: "搭 Italo 高鐵直奔佛羅倫斯，SMN 站轉乘 Tram T1 輕軌 7 分鐘直達 Residence Leopoldo 入住放行李。下午漫步文藝復興老城核心、老橋夕陽與共和廣場。",
@@ -1023,7 +1491,8 @@
       ]
     },
     {
-      d: 7, dt: "12/29", w: "週二", icon: "🎨",
+      d: 7,
+      hotel: { name: "佛羅倫斯 萊奧波爾多住宅 (Residence Leopoldo) ★★★★", type: "第 2 晚 (連住 3 晚)", addr: "Via Giovanni Fabroni 68/B, 50134 Firenze", map: "Via+Giovanni+Fabroni+68+Florence", tip: "連住免搬行李，晚間大啖 Il Latini 1.2kg 炭烤大牛排。" }, dt: "12/29", w: "週二", icon: "🎨",
       t: "聖母百花大教堂登頂爬梯 ➔ 烏菲茲美術館留足時間朝聖 ➔ 米開朗基羅廣場金色夕陽 ➔ 丁骨大牛排",
       wt: "🍂 佛羅倫斯 3°C ~ 11°C (黃昏山頂偏冷・備圍巾)", h: "住 Residence Leopoldo (連住第 2 晚)",
       s: "早晨體驗在地立飲咖啡與開心果可頌，上午挑戰大教堂穹頂爬梯俯瞰全城，下午烏菲茲美術館留足充裕時間飽覽文藝復興大師真跡，傍晚搭 12 號公車至米開朗基羅廣場看黃昏絕美夕陽，晚宴大啖 Il Latini 1.2kg 炭烤大牛排！",
@@ -1090,7 +1559,8 @@
       ]
     },
     {
-      d: 8, dt: "12/30", w: "週三", icon: "📐",
+      d: 8,
+      hotel: { name: "佛羅倫斯 萊奧波爾多住宅 (Residence Leopoldo) ★★★★", type: "第 3 晚 (連住 3 晚)", addr: "Via Giovanni Fabroni 68/B, 50134 Firenze", map: "Via+Giovanni+Fabroni+68+Florence", tip: "今晚整理好大行李打包封箱，明早退房搭高鐵直奔威尼斯跨年！" }, dt: "12/30", w: "週三", icon: "📐",
       t: "比薩斜塔趣味推塔半日遊 ➔ 中央市場百年熱牛肚包早餐 ➔ 學院美術館《大衛像》真跡 ＆ 皮件街漫步",
       wt: "🍂 佛羅倫斯/比薩 3°C ~ 11°C (草坪開闊防風)", h: "住 Residence Leopoldo (連住第 3 晚)",
       s: "早晨更換口味至中央市場大啖老字號熱騰騰慢燉牛肚包與牛肉包，上午搭區間火車 50m 往返比薩斜塔趣味推塔合照，下午朝聖米開朗基羅《大衛像》5.17米真跡，傍晚逛托斯卡尼手工皮件街。",
@@ -1145,7 +1615,8 @@
       ]
     },
     {
-      d: 9, dt: "12/31", w: "週四", icon: "🎆",
+      d: 9,
+      hotel: { name: "威尼斯 Centrale Mazzoni Apartments R&R ★★★", type: "第 1 晚 (連住 2 晚 跨年)", addr: "96 Fondamenta Priuli dei Cavaletti, 30121 Venezia", map: "Centrale+Mazzoni+Apartments+Venice", tip: "80㎡挑高閣樓，聖露西亞火車站正門出站右轉步行 2-3 分鐘平路直達（免搭船免爬橋！）。到店付城市稅 €30。" }, dt: "12/31", w: "週四", icon: "🎆",
       t: "告別佛羅倫斯 ➔ Italo 高鐵直奔威尼斯 ➔ 步行3分進駐 Centrale Mazzoni (免扛行李搭船！) ➔ 聖馬可廣場水上跨年煙火！",
       wt: "🌊 威尼斯 0°C ~ 7°C (跨年夜近冰點・全身貼暖暖包)", h: "住 Centrale Mazzoni Apartments R&R (火車站正門旁・連住 2 晚 跨年！)",
       s: "退房前享用在地傳統烘焙坊甜點或公寓廚房自煎歐姆蛋（三日完全不重複），搭 Italo 高鐵 2h 跨過海上長堤抵達威尼斯聖露西亞站，步行 2-3 分鐘平路直達 Centrale Mazzoni Apartments R&R 閣樓放行李（神級免扛行李搭船爬橋！到店付城市稅 €30.00）。下午搭船暢遊聖馬可廣場與總督宮，深夜在聖馬可廣場欣賞全歐洲最浪漫的水上跨年煙火迎接 2027！",
@@ -1194,7 +1665,8 @@
       ]
     },
     {
-      d: 10, dt: "01/01", w: "週五", icon: "🌈",
+      d: 10,
+      hotel: { name: "威尼斯 Centrale Mazzoni Apartments R&R ★★★", type: "第 2 晚 (連住 2 晚)", addr: "96 Fondamenta Priuli dei Cavaletti, 30121 Venezia", map: "Centrale+Mazzoni+Apartments+Venice", tip: "持 ACTV 交通卡無限次搭船跳島，今晚整理大行李，明早退房搭高鐵直奔米蘭！" }, dt: "01/01", w: "週五", icon: "🌈",
       t: "布拉諾彩色島 (Burano) ＆ 慕拉諾玻璃島 (Murano) 元旦跳島巡禮 ➔ 大運河水上漫遊 ＆ 元旦海鮮大餐",
       wt: "🌊 威尼斯 1°C ~ 8°C (海風清澈舒爽)", h: "住 Centrale Mazzoni Apartments R&R (連住第 2 晚)",
       s: "早晨漫步至車站旁百年名店品嚐熱呼呼卡士達甜甜圈，持 ACTV 交通卡直奔童話【布拉諾彩色島 (Burano)】七彩漁村漫步拍倒影＋品嚐炸海鮮，順路探訪【慕拉諾玻璃島 (Murano)】觀賞千年手工吹玻璃藝匠表演（半日至一日遊），下午大運河水上巴士漫遊，晚宴享用威尼斯元旦海鮮大餐！",
@@ -1244,10 +1716,17 @@
     },
     {
       d: 11, dt: "01/02", w: "週六", icon: "👑",
-      t: "Italo 高鐵直奔米蘭 ➔ 米蘭大教堂 135 尖塔天台 ＆ 迴廊踩公牛",
-      wt: "❄️ 米蘭 -1°C ~ 7°C (天台迎風刺骨・羽絨厚大衣)", h: "住 Duomo Cathedral Apartments (米蘭大教堂旁，精緻住 2 晚！)",
-      s: "早晨品嚐水都運河畔飽滿鹹點三明治，火車站旁平路步行 3 分鐘直接進月台上高鐵，搭 Italo 高鐵 2.5h 直達米蘭，入住大教堂旁景觀公寓，搭升降機登頂 135 座石雕尖塔大理石森林，艾曼紐二世迴廊踩公牛求好運。",
-      l: "【極致輕鬆退房日】：Centrale Mazzoni 就在聖露西亞火車站正門旁，拉行李步行 2-3 分鐘平路直接踏進月台！完全免扛大行李搭船爬階。抵達米蘭中央車站轉地鐵 3 號線直達 Duomo 站入住公寓，行李一次性攤開，步行 2 分鐘進大教堂！",
+      t: "Italo 高鐵直奔米蘭 ➔ 德拉葛雷入住 ➔ 米蘭大教堂 135 尖塔天台 ＆ 迴廊踩公牛",
+      wt: "❄️ 米蘭 -1°C ~ 7°C (天台迎風刺骨・羽絨厚大衣)", h: "住 德拉葛雷住宅酒店 (Residence De La Gare・中央車站旁步行5分・連住2晚！)",
+      hotel: {
+        name: "米蘭 德拉葛雷住宅酒店 (Residence De La Gare) ★★★★",
+        type: "入住安置行李・連住 2 晚",
+        addr: "Via Pirelli 20, 20124 Milano",
+        map: "Residence+De+La+Gare+Milan",
+        tip: "歷史宮殿住宅酒店，距米蘭中央車站步行 5 分鐘、近 Caiazzo 地鐵站。到店付城市稅約 €30。"
+      },
+      s: "早晨品嚐水都運河畔飽滿鹹點三明治，火車站旁平路步行 3 分鐘直接進月台上高鐵，搭 Italo 高鐵 2.5h 直達米蘭中央車站，步行 5 分鐘抵達德拉葛雷住宅酒店放行李，搭地鐵 M3 直達大教堂廣場，搭升降機登頂 135 座石雕尖塔大理石森林，艾曼紐二世迴廊踩公牛求好運。",
+      l: "【極致輕鬆移動日】：Centrale Mazzoni 就在威尼斯車站旁，出門 3 分鐘平路進月台！13:00 抵米蘭中央車站，出站步行 5 分鐘抵達 Residence De La Gare 寓所卸下大行李，搭地鐵直奔大教堂輕裝玩！",
       n: "明日 (01/03) 朝聖達文西千古神作《最後的晚餐》，下午在蒙特拿破崙精品街與文藝復興百貨最後採買退稅整理！",
       evs: [
         {
@@ -1259,8 +1738,10 @@
           must: "品嚐經典鮪魚水煮蛋三明治 (Tramezzino con Tonno e Uova) 配現打柳橙汁。",
           photo: "大運河畔露天石階上，手拿飽滿三角形 Tramezzini 與晨光水波合照。"
         },
-        { tm: "10:30", k: "train", kt: "🚅 火車站旁直達月台", ti: "步行 2-3 分鐘平路進站！Italo 高鐵 2h27m 直奔米蘭中央車站", map: "Milano+Centrale", de: "寓所就在火車站旁，退房後拉大箱 3 分鐘平路進月台，完全免搭船搬箱！搭乘法拉利高鐵飛馳，13:00 順暢抵達米蘭中央車站！重大防竊警報：高鐵上放好大行李立即回座，提防披外套藉口「調行李」暗中拉開隨身背包的小偷！搭地鐵 3 號線直達 Duomo 站入住公寓！下樓即是大教堂廣場！" },
-        { tr: "🚶‍♂️ 下樓步行 2 分鐘直接抵達米蘭大教堂售票處" },
+        { tm: "10:30", k: "train", kt: "🚅 火車站旁直達月台", ti: "步行 2-3 分鐘平路進站！Italo 高鐵 2h27m 直奔米蘭中央車站", map: "Milano+Centrale", de: "寓所就在火車站旁，退房後拉大箱 3 分鐘平路進月台，完全免搭船搬箱！搭乘法拉利高鐵飛馳，13:00 順暢抵達米蘭中央車站！重大防竊警報：高鐵上放好大行李立即回座，提防披外套藉口「調行李」暗中拉開隨身背包的小偷！" },
+        { tr: "🚶‍♂️ 出車站步行 5 分鐘抵達德拉葛雷住宅酒店安置大行李" },
+        { tm: "13:30", k: "spot", kt: "🏨 飯店安置", ti: "德拉葛雷住宅酒店 (Residence De La Gare) 辦理入住放置大行李", map: "Residence+De+La+Gare+Milan", de: "歷史宮殿住宅酒店，挑高氣派、配備廚房與客廳。距中央車站僅 5 分鐘步行路程，安置好大行李後輕裝出門！" },
+        { tr: "🚇 步行至 Centrale 或 Caiazzo 站搭地鐵 3 號線 4 站直達 Duomo 站" },
         {
           tm: "14:00", k: "spot", kt: "👑 大理石刺繡",
           ti: "米蘭大教堂 (Duomo di Milano) 電梯登頂天台 (Rooftop)",
@@ -1281,7 +1762,14 @@
     {
       d: 12, dt: "01/03", w: "週日", icon: "🎨",
       t: "朝聖達文西《最後的晚餐》 ＆ 蒙特拿破崙精品退稅衝刺採買",
-      wt: "❄️ 米蘭 0°C ~ 7°C (洋蔥式穿搭・進店脫外衣)", h: "住 Duomo Cathedral Apartments (米蘭大教堂旁)",
+      wt: "❄️ 米蘭 0°C ~ 7°C (洋蔥式穿搭・進店脫外衣)", h: "住 德拉葛雷住宅酒店 (Residence De La Gare・連住第 2 晚)",
+      hotel: {
+        name: "米蘭 德拉葛雷住宅酒店 (Residence De La Gare) ★★★★",
+        type: "連住第 2 晚 (最後打包)",
+        addr: "Via Pirelli 20, 20124 Milano",
+        map: "Residence+De+La+Gare+Milan",
+        tip: "今晚所有行李徹底打包封箱，液體伴手禮集中托運，退稅單據整理齊備。"
+      },
       s: "朝聖文藝復興千古真跡《最後的晚餐》，午後於蒙特拿破崙大道與文藝復興百貨最後衝刺採買精品與頂級名產，整理退稅單與大行李箱。",
       l: "行李留置公寓＋今晚大行李打包封箱！採買的 Amedei 巧克力、起司松露等裝箱。所有液體伴手禮必須託運！集中整理退稅單據。",
       n: "🚨 明日 (01/04) 返航日・米蘭機場大塞車警報！米蘭 MXP 出境安檢海關曾塞車達 3 小時！明早 06:45 準時出發搭機場快線，07:30~07:45 務必抵達 MXP 機場！",
@@ -1301,7 +1789,8 @@
       ]
     },
     {
-      d: 13, dt: "01/04", w: "週一", icon: "✈️",
+      d: 13,
+      hotel: { name: "長程客機機艙 / JAX 家中", type: "平安返航", addr: "空中航線 (MXP ➔ TPE / JAX)", map: "", tip: "清晨 06:15 退房，步行 5 分鐘抵中央車站搭 Malpensa Express。" }, dt: "01/04", w: "週一", icon: "✈️",
       t: "提早 3.5h 抵達 MXP 機場避開安檢海關大排長龍 ➔ 直飛返程",
       wt: "❄️ 米蘭 0°C ~ 6°C (清晨出發保暖防凍)", h: "平安賦歸航程 ｜ 台灣長榮直飛 ＆ 佛州達美航空",
       s: "早晨搭 Malpensa 快線直奔機場，辦理 Global Blue / Planet 退稅與大行李托運，雙向啟程飛返台灣與美國。",
@@ -1325,7 +1814,8 @@
       ]
     },
     {
-      d: 14, dt: "01/05", w: "週二", icon: "🏡",
+      d: 14,
+      hotel: { name: "溫暖的家 (台灣)", type: "圓滿凱旋", addr: "台灣", map: "", tip: "清晨 06:10 抵達台北桃園 (TPE)，旅程圓滿凱旋！" }, dt: "01/05", w: "週二", icon: "🏡",
       t: "清晨 06:10 順利抵達台北桃園 (TPE)・圓滿凱旋",
       wt: "🏡 台北 16°C ~ 20°C (平安抵台)", h: "平安回到溫暖的家",
       s: "長榮班機順利降落台北桃園機場，為 14 天義大利文藝聖誕與威尼斯米蘭跨年之旅劃下完美句點！",
@@ -1446,6 +1936,21 @@
       <div class="strat-card">
         <div class="strat-row"><span class="strat-badge" style="background:#eaf3ec; color:#1c4826;">📝 今日摘要</span><div>${d.s}</div></div>
         <div class="strat-row"><span class="strat-badge" style="background:#fbf3e2; color:#78480d;">🧳 行李安置</span><div>${d.l}</div></div>
+        ${d.hotel ? `
+        <div class="strat-row" style="background:#f6f9fe; border:1.5px solid #bfdbfe; border-radius:10px; padding:7px 10px; margin:2px 0;">
+          <span class="strat-badge" style="background:#dbeafe; color:#1e40af; border-color:#93c5fd;">🏨 當日住宿</span>
+          <div style="flex:1;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px;">
+              <strong>${d.hotel.name}</strong>
+              <span style="font-size:0.74rem; font-weight:800; background:#eff6ff; color:#1d4ed8; padding:1px 6px; border-radius:4px; border:1px solid #bfdbfe;">${d.hotel.type}</span>
+            </div>
+            <div style="font-size:0.8rem; color:#475569; margin-top:2px;">
+              📍 ${d.hotel.addr}
+              ${d.hotel.map ? `<a class="link-btn" style="padding:2px 7px; font-size:0.74rem; margin-left:6px; background:#fff;" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(d.hotel.map)}" target="_blank">🗺️ 導航</a>` : ''}
+            </div>
+            <div style="font-size:0.78rem; color:#64748b; margin-top:1px;">💡 ${d.hotel.tip}</div>
+          </div>
+        </div>` : ''}
         <div class="strat-row"><span class="strat-badge" style="background:#fbeee8; color:#9c3319;">🔔 明日提醒</span><div>${d.n}</div></div>
       </div>
       <div class="v-timeline">
@@ -1593,6 +2098,38 @@
     renderCards('all');
     renderPresets();
   });
+
+
+  function downloadICS(title, startUTC, endUTC, details, location) {
+    const icsContent = 
+      "BEGIN:VCALENDAR\r\n" +
+      "VERSION:2.0\r\n" +
+      "PRODID:-//Italy Trip 2026//Booking Reminder//TW\r\n" +
+      "CALSCALE:GREGORIAN\r\n" +
+      "METHOD:PUBLISH\r\n" +
+      "BEGIN:VEVENT\r\n" +
+      "SUMMARY:" + title + "\r\n" +
+      "DESCRIPTION:" + details.replace(/\n/g, "\\n") + "\r\n" +
+      "LOCATION:" + location + "\r\n" +
+      "DTSTART:" + startUTC + "\r\n" +
+      "DTEND:" + endUTC + "\r\n" +
+      "STATUS:CONFIRMED\r\n" +
+      "BEGIN:VALARM\r\n" +
+      "TRIGGER:-PT15M\r\n" +
+      "ACTION:DISPLAY\r\n" +
+      "DESCRIPTION:提醒：" + title + "\r\n" +
+      "END:VALARM\r\n" +
+      "END:VEVENT\r\n" +
+      "END:VCALENDAR";
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.setAttribute('download', title.replace(/[^a-zA-Z0-9一-龥]/g, '_') + '.ics');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
 </script>
 </body>
