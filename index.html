@@ -112,6 +112,11 @@
     .sc-photo { background: #eff6ff; border-color: #93c5fd; color: #1e40af; }
     .sc-food { background: #fffbeb; border-color: #fde047; color: #854d0e; }
     .sc-gift { background: #fdf2f8; border-color: #f9a8d4; color: #9d174d; }
+    /* 旅人原話與精華介紹 */
+    .sc-quote { background: #fff5ee; border-left: 3.5px solid var(--calcifer); border-radius: 10px; padding: 8px 12px; margin: 7px 0; font-size: 0.85rem; line-height: 1.65; color: #2c251e; }
+    .sc-intro { background: #fdfaf4; border: 1.5px solid #e2d7c5; border-radius: 10px; padding: 8px 12px; margin: 7px 0; font-size: 0.85rem; line-height: 1.65; color: #3e3831; }
+    .sc-note { background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: 10px; padding: 8px 12px; margin: 7px 0; font-size: 0.84rem; line-height: 1.6; color: #991b1b; display: flex; align-items: flex-start; gap: 8px; }
+
 
     .transit-bar { margin: 2px 0 12px 60px; }
     .transit-pill { background: #fdfaf4; border: 1.5px solid var(--border); border-radius: 999px; padding: 4px 12px; font-size: 0.8rem; font-weight: 800; display: inline-flex; align-items: center; gap: 5px; box-shadow: 1px 1px 0px var(--border); }
@@ -1315,6 +1320,9 @@
         {
           tm: "11:30", k: "spot", kt: "🏛️ 奇蹟經典",
           ti: "特雷維許願池 (Fontana di Trevi) ＆ 萬神殿 (Pantheon) 奇蹟天窗",
+          quote: "【特雷維噴泉】：巴洛克藝術的顛峰之作，海神駕著馬車破浪而出，背對噴泉拋一枚硬幣許願，傳說就能重返羅馬，現場的水聲與人聲交織得太迷人！\n【萬神殿】：直徑43.3公尺的無鋼筋混凝土大圓頂，中央9公尺的天窗讓一道光柱神聖地灑落。",
+          intro: "特雷維高26公尺的立面劇場，是羅馬最華麗的巴洛克噴泉。18世紀的雕塑仍在每日上演光影秀，正午陽光穿透水霧，是攝影最美時刻；萬神殿公元125年哈德良皇帝重建，兩千年來屋頂從未倒塌。進入瞬間會被那道移動的光束震懾，雨天還能看見雨絲從天窗飄落的奇景。",
+          note: "【特雷維噴泉】：2024年起實施人流管制，需排隊入場觀賞區，投幣請用右手往左肩後拋，避免丟到人。\n【萬神殿】：2023年起收費5歐元，需線上預約時段，週日彌撒期間不開放觀光。",
           map: "Trevi+Fountain+Rome",
           way: "從特米尼站步行或路邊租借共享電動滑板車（避免擠地鐵），約 15 分鐘達許願池；續向西步行 8 分鐘達萬神殿。",
           guide: "• <strong>特雷維許願池：</strong>巴洛克風格巔峰之作，以海神尼普頓乘駕飛馬戰車為中心，水流自人造岩石奔湧而出，磅礡震撼。<br>• <strong>萬神殿：</strong>西元 125 年建造至今近兩千年完好無損，直徑 43.3 米純混凝土無樑柱穹頂，中央 9 米露天採光圓眼（Oculus）象徵連結天地，下雨時雨水經地面 22 個排水小孔流走。拉斐爾與義大利開國國王長眠於此。",
@@ -1328,9 +1336,22 @@
           ]
         },
         { tr: "🚶‍♂️ 萬神殿旁小巷步行 2 分鐘即達金杯咖啡" },
-        { tm: "15:00", k: "food", kt: "☕ 老饕", ti: "金杯咖啡 (Tazza d'Oro) ＆ Giolitti 百年冰淇淋", map: "La+Casa+del+Caffe+al+Pantheon", de: "站在吧台喝 Espresso，點招牌 Granita 咖啡碎冰沙佐鮮奶油。接著步行 3 分鐘至 Giolitti 吃開心果與黑無花果冰淇淋！" },
+        { tm: "15:00", k: "food", kt: "☕ 老饕", ti: "金杯咖啡 (Tazza d'Oro) ＆ Giolitti 百年冰淇淋",
+          quote: "百家爭鳴的Gelato店家，每家都好吃到讓人想天天一杯，完全是這趟旅行的肥胖元兇！",
+          intro: "1900年創立的百年老店，開心果與榛果口味是招牌。羅馬人吃Gelato是日常，從早到晚都能看到排隊人龍，甜而不膩的秘訣在於當日鮮奶。",
+          note: "義式冰淇淋脂肪含量低、融化超快，拿到手30秒內要開吃，冬天點小杯即可享受純濃風味。", map: "La+Casa+del+Caffe+al+Pantheon", de: "站在吧台喝 Espresso，點招牌 Granita 咖啡碎冰沙佐鮮奶油。接著步行 3 分鐘至 Giolitti 吃開心果與黑無花果冰淇淋！" },
         { tr: "🚶‍♂️ 向西步行 6 分鐘抵達納沃納廣場" },
-        { tm: "17:00", k: "spot", kt: "🎪 市集", ti: "納沃納廣場 (Piazza Navona) 聖誕市集 ＆ 老字號晚宴", map: "Piazza+Navona+Rome", de: "四河噴泉聳立中央，旋轉木馬與熱紅酒香料攤位洋溢節慶溫馨。晚餐預約 Trattoria Vecchia Roma 品嚐火焰羊乳酪培根麵！" }
+        { tm: "17:00", k: "spot", kt: "🎪 市集", ti: "納沃納廣場 (Piazza Navona) 聖誕市集 ＆ 老字號晚宴", map: "Piazza+Navona+Rome", de: "四河噴泉聳立中央，旋轉木馬與熱紅酒香料攤位洋溢節慶溫馨。晚餐預約 Trattoria Vecchia Roma 品嚐火焰羊乳酪培根麵！" },
+        { tr: "🚶‍♂️ 沿途步行穿過老城區漫步返回特米尼寓所周邊" },
+        {
+          tm: "19:30", k: "spot", kt: "🕊️ 暮光噴泉",
+          ti: "奈亞德噴泉廣場 (Piazza della Repubblica)",
+          map: "Piazza+della+Repubblica+Rome",
+          way: "寓所 Via Palestro 35 步行 5 分鐘即達共和廣場。",
+          quote: "清晨從飯店窗景俯瞰奈亞德噴泉，水霧與天使雕塑在晨光中特別寧靜。",
+          intro: "曾是戴克里先浴場舊址，現在是羅馬最優雅的圓形廣場。夜晚噴泉打燈後極美，四尊奈亞德仙女雕像在水柱交織中散發柔和金光，鄰近中央車站，是許多旅人對羅馬最優雅的第一印象。",
+          note: "廣場鴿子多、拍照時注意隨身背包防竊；清晨6-7點光線最柔和，入夜後打燈水霧幽靜美麗。"
+        }
       ]
     },
     {
@@ -1354,7 +1375,10 @@
         { tr: "🚶‍♂️ 步行 12 分鐘穿過蒙蒂區抵達競技場入場處" },
         {
           tm: "09:00", k: "spot", kt: "⚔️ 帝國奇蹟",
-          ti: "羅馬競技場 (Colosseo) 地下層 Full Experience 深度導覽 ＆ 古羅馬廣場",
+          ti: "羅馬競技場 (Colosseo) 地下層 Full Experience 深度導覽 ＆ 古羅馬廣場 (Foro Romano)",
+          quote: "想像千年以前曾經的繁華強盛，來過這裡，看古羅馬劇超有fu！",
+          intro: "羅馬帝國的心臟，所有凱旋、演說與審判都在此發生。從帕拉丁山俯瞰，斷柱與拱門拼湊出元老院、神廟與市集的痕跡，是理解西方文明起點最直接的現場。",
+          note: "建議購買古羅馬廣場+鬥獸場+帕拉丁山聯票，至少提前預約，石板路凹凸不平，務必穿防滑運動鞋。",
           map: "Colosseum+Rome",
           way: "地鐵 B 線至 Colosseo 站出站即達；或自公寓搭乘 Uber 約 10 分鐘直達君士坦丁凱旋門旁。",
           guide: "世界七大奇蹟！西元 80 年落成，可容納五萬名觀眾。地下層（Hypogeum）為當年關押猛獸與角鬥士候場的升降機關迷宮，持 Full Experience 特殊票由專業導覽帶領踏足競技場舞台木地板與地下坑道。",
@@ -1367,7 +1391,18 @@
         { tr: "🚶‍♂️ 步行 3 分鐘穿過君士坦丁凱旋門進入遺址區" },
         { tm: "13:30", k: "spot", kt: "🏛️ 遺址", ti: "古羅馬廣場 (Foro Romano) ＆ 帕拉蒂尼山 (Palatino)", map: "Roman+Forum+Rome", desc: "漫步在凱撒神廟、元老院等千年斷垣殘壁間；登上帕拉蒂尼山俯瞰大競技場遺跡。" },
         { tr: "🚗 搭 Uber 15 分鐘直達梵蒂岡協和大道" },
-        { tm: "17:00", k: "spot", kt: "✨ 聖誕", ti: "梵蒂岡聖伯多祿廣場聖誕樹點燈 ➔ 公寓平安夜自炊牛排大餐", map: "St+Peters+Square+Vatican", de: "聖伯多祿大殿前數十公尺巨型聖誕樹與木雕馬槽璀璨點燈。全羅馬餐廳 18:00 前打烊，回公寓廚房享用自炊托斯卡尼牛排平安夜盛宴！" }
+        {
+          tm: "14:30", k: "spot", kt: "✝️ 藝術聖殿",
+          ti: "梵蒂岡博物館 (Vatican Museums) ＆ 西斯汀禮拜堂 (Sistine Chapel)",
+          map: "Vatican+Museums",
+          way: "自羅馬古城區搭 Metro A 線至 Ottaviano 站，出站沿城牆步行 8 分鐘即抵博物館大門。",
+          quote: "走進西斯汀教堂的瞬間，米開朗基羅的創世紀就在頭頂，感動到說不出話，只能抬頭仰望！",
+          intro: "世界最小的國家，卻收藏了最龐大的藝術。從地圖長廊到拉斐爾房間，每一步都是文藝復興。西斯汀教堂穹頂是米開朗基羅耗時四年獨自仰頭繪製的《創世紀》，祭壇則是震撼靈魂的《最後的審判》。",
+          note: "【重大休館避坑】：梵蒂岡博物館於 12/25（聖誕節）及 12/26 固定全日休館！故必須安排在平安夜 12/24 下午參觀！西斯汀教堂內部嚴格禁止拍照與喧嘩，安檢極嚴禁止大背包，服裝需遮肩蔽膝。",
+          photo: "地圖長廊金碧輝煌的浮雕拱頂透視構圖；雙螺旋旋轉樓梯由上往下的幾何螺旋全景。"
+        },
+        { tr: "🚶‍♂️ 穿過梵蒂岡城牆通道步行 10 分鐘進入聖伯多祿廣場" },
+        { tm: "17:15", k: "spot", kt: "✨ 聖誕點燈", ti: "梵蒂岡聖伯多祿廣場聖誕樹點燈 ➔ 公寓平安夜自炊牛排大餐", map: "St+Peters+Square+Vatican", de: "聖伯多祿大殿前數十公尺巨型聖誕樹與木雕馬槽璀璨點燈。全羅馬超市與餐廳 18:00 前打烊，回公寓廚房享用自炊托斯卡尼牛排平安夜盛宴！" }
       ]
     },
     {
@@ -1442,7 +1477,10 @@
         { tr: "🚶‍♂️ 穿過綠蔭公園步行至蘋丘觀景台" },
         { tm: "13:30", k: "spot", kt: "🏛️ 漫步", ti: "蘋丘觀景台俯瞰羅馬全景 ＆ 人民廣場 (Piazza del Popolo)", map: "Piazza+del+Popolo+Rome", de: "蘋丘上 180 度俯瞰聖伯多祿大殿圓頂全景。下山至人民廣場波波洛聖母堂看卡拉瓦喬壁畫真跡。" },
         { tr: "🚶‍♂️ 沿巴布伊諾大道精品街步行 10 分鐘抵西班牙廣場" },
-        { tm: "16:00", k: "spot", kt: "☕ 優雅", ti: "古希臘咖啡館 (Antico Caffè Greco) ＆ 西班牙階梯夜景", map: "Antico+Caffe+Greco+Rome", de: "1760 年開業，歌德、蕭邦昔日常駐沙龍！在燕尾服侍者服務下品嚐熱可可與咖啡。西班牙階梯嚴禁坐下飲食（罰款 €250）。" }
+        { tm: "16:00", k: "spot", kt: "☕ 優雅", ti: "古希臘咖啡館 (Antico Caffè Greco) ＆ 西班牙階梯 (Piazza di Spagna) 夕陽與夜景",
+          quote: "人山人海的遊客已無法複製羅馬假期奧黛麗赫本的閒情逸致，但站在階梯前依然能感受到永恆之城的浪漫脈動！",
+          intro: "138階蝴蝶型階梯連接西班牙廣場與聖三一教堂，夕陽時分整條階梯坐滿人。曾是文人與藝術家的社交場，現在則是羅馬最熱鬧的相遇點。破船噴泉在階梯下方靜靜流淌。",
+          note: "【羅馬市府嚴格法規】：羅馬市政府嚴格執法，禁止坐在階梯上飲食、喝飲料或拖行重型行李箱，違者罰款250歐元，只能站著走動拍照。", map: "Antico+Caffe+Greco+Rome", de: "1760 年開業，歌德、蕭邦昔日常駐沙龍！在燕尾服侍者服務下品嚐熱可可與咖啡。西班牙階梯嚴禁坐下飲食（罰款 €250）。" }
       ]
     },
     {
@@ -1480,6 +1518,9 @@
         {
           tm: "16:00", k: "spot", kt: "🌉 老橋夕陽",
           ti: "老橋 (Ponte Vecchio) ＆ 共和廣場 (Piazza della Repubblica) 漫步",
+          quote: "黃昏時的老橋，珠寶店燈光倒映在阿諾河上，像一串發光的項鍊。",
+          intro: "二戰中唯一未被炸毀的橋，橋上至今仍是金匠與珠寶店。中段的瓦薩里走廊曾是美第奇家族的秘密通道，現在仍是情侶鎖定愛情的地方。",
+          note: "橋上珠寶店價格偏高，適合欣賞不適合衝動購物；夜晚河面反光最美，注意路面鋪畫強索賠償之騙術。",
           map: "Ponte+Vecchio+Florence",
           way: "穿過領主廣場沿舊宮南側通道步行 3 分鐘即抵達老橋頭。",
           guide: "佛羅倫斯最古老的石造圓弧拱橋，二戰中唯一倖免於難的橋樑。自十四世紀起橋上即聚集傳統金銀工匠金匠舖。上方瓦薩利走廊 (Corridoio Vasariano) 曾是美第奇家族穿梭往返兩岸宮殿的秘密通道。",
@@ -1512,6 +1553,9 @@
         {
           tm: "09:00", k: "spot", kt: "🏛️ 穹頂爬梯",
           ti: "聖母百花大教堂穹頂 (Cupola) 爬梯登頂 ＆ 喬托鐘樓俯瞰翡冷翠",
+          quote: "紅磚大圓頂主宰著整個城市天際線，爬上463階才能體會布魯內萊斯基的瘋狂與天才！",
+          intro: "沒有使用鷹架與中心柱完成的人類建築奇蹟，外牆粉紅、綠、白大理石鑲嵌，內部穹頂是瓦薩里的最後審判，震撼人心。",
+          note: "登頂需持 Brunelleschi Pass 事先精準預約時段，登頂463階無電梯，穹頂夾層通道狹窄，有幽閉恐懼者慎入，建議穿著防滑透氣運動鞋。",
           map: "Cathedral+of+Santa+Maria+del+Fiore+Florence",
           way: "大教堂北方門戶持 Brunelleschi Pass 專屬預約通道入場。",
           guide: "建築巨匠布魯內萊斯基的曠世神蹟！攀登 463 階狹窄石階穿行於雙層拱頂夾層之間，近距離仰望瓦薩利巨大天頂壁畫《最後的審判》，登頂露台 360 度俯瞰全城磚紅屋頂與托斯卡尼丘陵！",
@@ -1538,6 +1582,9 @@
         {
           tm: "16:30", k: "spot", kt: "🌅 黃昏最美",
           ti: "米開朗基羅廣場 (Piazzale Michelangelo) 金色托斯卡尼落日",
+          quote: "欣賞佛羅倫斯夕陽的絕佳制高點，整座城市的紅屋頂在腳下被夕陽點亮！",
+          intro: "登上廣場，百花大教堂的紅色圓頂、老橋與阿諾河盡收眼底。街頭藝人彈著吉他，遊客席地而坐等待日落，是佛羅倫斯最溫柔的儀式。",
+          note: "建議夕陽前一小時抵達卡位，上山可於 SMN 站旁搭乘 12 或 13 號公車（刷卡 €1.7），下山步行20分鐘穿過玫瑰園更美。",
           map: "Piazzale+Michelangelo+Florence",
           way: "搭乘市區公車 12 號直達山頂廣場（刷信用卡 €1.7，免去走石階爬山疲勞）。",
           guide: "全佛羅倫斯黃昏最值得造訪的制高點！當夕陽西下，阿諾河水波閃耀金光，百花大教堂巨大圓頂與舊宮鐘樓在晚霞餘暉中染成金紅色，美得令人嘆為觀止。",
@@ -1644,7 +1691,10 @@
         { tr: "🚤 搭 1 號或 2 號水上巴士沿大運河直達聖馬可廣場" },
         {
           tm: "14:30", k: "spot", kt: "🏛️ 水都精華",
-          ti: "聖馬可大教堂 (Basilica di San Marco) ＆ 總督宮 ＆ 歎息橋",
+          ti: "聖馬可廣場 (Piazza San Marco) ＆ 總督宮 ＆ 歎息橋",
+          quote: "聖馬可廣場的咖啡座貴得嚇人，但花神咖啡的現場演奏與鴿子飛舞，值得坐下來被當盤子一次！",
+          intro: "拿破崙稱之為歐洲最美的客廳，總督府、鐘樓與聖馬可教堂圍出中世紀的權力中心。穿過歎息橋，據說是死囚最後一次看見自由的天空。",
+          note: "廣場漲潮時會淹水，冬季需準備防水鞋套，餵鴿子會被重罰，貢多拉議價前先確認時間與市府公定價。",
           map: "St+Marks+Basilica+Venice",
           way: "水上巴士 San Marco 碼頭下船即達廣場。",
           guide: "威尼斯的心臟！仰望大教堂內部 4000 平米真金箔馬賽克天頂壁畫；參觀哥德式總督宮 (Palazzo Ducale) 權力中樞，走過囚犯走入死牢前最後一眼望向自由海洋的「歎息橋」。在花神咖啡館 (Caffè Florian) 聆聽戶外樂隊演奏品嚐熱可可。",
@@ -1744,7 +1794,10 @@
         { tr: "🚇 步行至 Centrale 或 Caiazzo 站搭地鐵 3 號線 4 站直達 Duomo 站" },
         {
           tm: "14:00", k: "spot", kt: "👑 大理石刺繡",
-          ti: "米蘭大教堂 (Duomo di Milano) 電梯登頂天台 (Rooftop)",
+          ti: "米蘭大教堂屋頂天台 (Duomo di Milano Terrazze) 135座尖塔大理石森林",
+          quote: "登頂遠眺米蘭市景，135座尖塔與3440座雕像在腳下，最純粹的哥德式瘋狂！",
+          intro: "建了600年才完工的世界最大哥德式教堂，屋頂平台讓你可以近距離觸摸尖塔與飛扶壁。晴天時甚至能看見阿爾卑斯山脈的雪線。",
+          note: "屋頂分步行與電梯兩種票，選電梯仍需爬約50階石階，屋頂風大且白色大理石反光極強，需戴墨鏡、防滑平底鞋與防風厚大衣。",
           map: "Duomo+di+Milano",
           way: "公寓下樓穿過廣場即達大教堂電梯入口（Fast Track）。",
           guide: "耗時近六百年建造的白色哥德式奇蹟！外觀矗立 135 座大理石尖塔與 3400 尊聖徒雕像。搭乘升降機登上大教堂天台，漫步在石雕森林間，最高尖塔鍍金聖母像（Madonnina）在陽光下熠熠生輝，晴天可遠眺阿爾卑斯雪山天際線！",
@@ -1893,10 +1946,13 @@
         let allLinks = (mapBtn || linksHtml) ? `<div class="link-row">${mapBtn} ${linksHtml}</div>` : '';
         
         let wayHtml = ev.way ? `<div class="sc-way">🏃 <strong>前往方式：</strong>${ev.way}</div>` : '';
+        let quoteHtml = ev.quote ? `<div class="sc-quote">❝ <strong style="color:var(--calcifer);">作者親歷原話：</strong>${ev.quote}</div>` : '';
+        let introHtml = ev.intro ? `<div class="sc-intro">📖 <strong style="color:var(--forest);">景點精華介紹：</strong>${ev.intro}</div>` : '';
         let guideHtml = ev.guide ? `<div class="sc-guide">🏛️ <strong>詳細景點導覽：</strong><br>${ev.guide}</div>` : '';
         let descHtml = (!ev.guide && ev.de) ? `<div class="s-desc">${ev.de}</div>` : '';
         let mustHtml = ev.must ? `<div class="sc-block sc-must"><div>🌟</div><div><strong>必選/必看：</strong>${ev.must}</div></div>` : '';
         let avoidHtml = ev.avoid ? `<div class="sc-block sc-avoid"><div>⚠️</div><div><strong>避雷/注意：</strong>${ev.avoid}</div></div>` : '';
+        let noteHtml = ev.note ? `<div class="sc-note"><div>⚠️</div><div><strong>注意事項與法規：</strong>${ev.note}</div></div>` : '';
         let photoHtml = ev.photo ? `<div class="sc-block sc-photo"><div>📸</div><div><strong>推薦打卡熱點：</strong>${ev.photo}</div></div>` : '';
         let foodHtml = ev.food ? `<div class="sc-block sc-food"><div>🍽️</div><div><strong>必吃美食與推薦餐廳：</strong>${ev.food}</div></div>` : '';
         let giftHtml = ev.gift ? `<div class="sc-block sc-gift"><div>🎁</div><div><strong>必買小物與伴手禮：</strong>${ev.gift}</div></div>` : '';
@@ -1911,10 +1967,13 @@
                 <div class="s-title">${ev.ti}</div>
               </div>
               ${wayHtml}
+              ${quoteHtml}
+              ${introHtml}
               ${guideHtml}
               ${descHtml}
               ${mustHtml}
               ${avoidHtml}
+              ${noteHtml}
               ${photoHtml}
               ${foodHtml}
               ${giftHtml}
